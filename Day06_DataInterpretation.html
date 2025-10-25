@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIACL AO - Section 3: Data Interpretation</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .page-break { page-break-after: always; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .book-container {
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .cover-page {
+            text-align: center;
+            padding: 100px 20px;
+            border: 3px solid #2c3e50;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 25px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #16a085;
+            margin-top: 20px;
+        }
+        
+        .day-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0 20px 0;
+            text-align: center;
+        }
+        
+        .formula-box {
+            background: #ecf0f1;
+            border-left: 4px solid #e74c3c;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .example-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .key-point {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin: 12px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #3498db;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
+        .deep-study {
+            background: #d4edda;
+            border: 2px dashed #28a745;
+            padding: 15px;
+            margin: 25px 0;
+            text-align: center;
+            border-radius: 8px;
+        }
+        
+        .download-btn {
+            background: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="book-container">
+        <div class="cover-page page-break">
+            <h1>NIACL AO Study Material</h1>
+            <h2 style="color: #e74c3c;">SECTION 3</h2>
+            <h2>Data Interpretation & Quantitative Skills</h2>
+            <p style="margin-top: 40px; font-size: 20px;">📊 Day 6</p>
+            <p style="margin-top: 20px;">65+ Solved DI Questions</p>
+            <button class="download-btn no-print" onclick="window.print()">📥 Download PDF</button>
+        </div>
+
+        <div class="day-header">
+            <h1>DAY 6: Data Interpretation & Quantitative Skills</h1>
+            <p>DI Practice, Growth Rate, CAGR, Ratios, 65+ Solved Examples</p>
+        </div>
+
+        <h2>📊 Part 1: Data Interpretation Basics</h2>
+
+        <h3>Types of Data Representation</h3>
+        <ol>
+            <li><strong>Tables</strong>: Raw data in rows and columns</li>
+            <li><strong>Bar Charts</strong>: Vertical or horizontal bars for comparison</li>
+            <li><strong>Line Graphs</strong>: Shows trends over time</li>
+            <li><strong>Pie Charts</strong>: Shows percentage distribution</li>
+            <li><strong>Caselets</strong>: Data presented in paragraph form</li>
+        </ol>
+
+        <h3>🔑 Key Formulas for DI</h3>
+
+        <div class="formula-box">
+            <strong>1. Percentage:</strong><br>
+            Percentage = (Part / Whole) × 100<br><br>
+            <strong>2. Percentage Change:</strong><br>
+            % Change = [(New Value - Old Value) / Old Value] × 100<br><br>
+            <strong>3. Profit/Loss:</strong><br>
+            Profit = Selling Price - Cost Price<br>
+            Profit % = (Profit / CP) × 100<br><br>
+            <strong>4. Ratio:</strong><br>
+            If A:B = 3:5, and A = 15, then B = (15 × 5) / 3 = 25<br><br>
+            <strong>5. Average:</strong><br>
+            Average = Sum of all values / Number of values
+        </div>
+
+        <h3>📈 Growth Rate & CAGR</h3>
+
+        <div class="formula-box">
+            <strong>Simple Growth Rate:</strong><br>
+            Growth Rate = [(Value_year2 - Value_year1) / Value_year1] × 100<br><br>
+            <strong>CAGR (Compound Annual Growth Rate):</strong><br>
+            CAGR = [(Ending Value / Beginning Value)^(1/n) - 1] × 100<br>
+            Where n = number of years
+        </div>
+
+        <div class="example-box">
+            <strong>Example 1: Growth Rate</strong><br>
+            NIACL premium in 2022: ₹10,000 Cr<br>
+            NIACL premium in 2023: ₹12,000 Cr<br>
+            Growth Rate = [(12000 - 10000) / 10000] × 100 = <strong>20%</strong>
+        </div>
+
+        <div class="example-box">
+            <strong>Example 2: CAGR</strong><br>
+            Initial premium (2020): ₹8,000 Cr<br>
+            Final premium (2024): ₹15,000 Cr<br>
+            n = 4 years<br>
+            CAGR = [(15000/8000)^(1/4) - 1] × 100<br>
+            = [(1.875)^0.25 - 1] × 100<br>
+            = [1.170 - 1] × 100 = <strong>17.0%</strong>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>🎯 65+ Solved DI Examples</h2>
+
+        <h3>Set 1: Table-Based Questions (Q1-Q5)</h3>
+
+        <div class="example-box">
+            <strong>Data Table: Insurance Policies Sold (in thousands)</strong>
+            <table style="font-size: 13px;">
+                <tr><th>Year</th><th>Motor</th><th>Health</th><th>Life</th><th>Total</th></tr>
+                <tr><td>2020</td><td>120</td><td>80</td><td>150</td><td>350</td></tr>
+                <tr><td>2021</td><td>150</td><td>100</td><td>160</td><td>410</td></tr>
+                <tr><td>2022</td><td>180</td><td>120</td><td>180</td><td>480</td></tr>
+                <tr><td>2023</td><td>200</td><td>150</td><td>200</td><td>550</td></tr>
+            </table>
+
+            <strong>Q1.</strong> What is the percentage increase in Motor policies from 2020 to 2023?<br>
+            <strong>Solution:</strong> [(200 - 120) / 120] × 100 = (80/120) × 100 = <strong>66.67%</strong><br><br>
+
+            <strong>Q2.</strong> In 2022, Health policies are what percent of total policies?<br>
+            <strong>Solution:</strong> (120 / 480) × 100 = <strong>25%</strong><br><br>
+
+            <strong>Q3.</strong> What is the average number of Life policies sold per year?<br>
+            <strong>Solution:</strong> (150 + 160 + 180 + 200) / 4 = 690 / 4 = <strong>172.5 thousand</strong><br><br>
+
+            <strong>Q4.</strong> Find the ratio of Motor to Health policies in 2021.<br>
+            <strong>Solution:</strong> 150:100 = <strong>3:2</strong><br><br>
+
+            <strong>Q5.</strong> What is the CAGR of total policies from 2020 to 2023?<br>
+            <strong>Solution:</strong> [(550/350)^(1/3) - 1] × 100 = [(1.571)^0.333 - 1] × 100 = <strong>16.3%</strong>
+        </div>
+
+        <h3>Set 2: Bar Chart Questions (Q6-Q10)</h3>
+
+        <div class="example-box">
+            <strong>Data: Claims Settled by NIACL (₹ Crores)</strong><br>
+            Motor: 5000, Health: 3000, Property: 2000, Others: 1500<br><br>
+
+            <strong>Q6.</strong> What percentage of total claims are Motor claims?<br>
+            <strong>Solution:</strong> Total = 5000 + 3000 + 2000 + 1500 = 11500<br>
+            % = (5000/11500) × 100 = <strong>43.48%</strong><br><br>
+
+            <strong>Q7.</strong> Health claims are how much more than Others claims?<br>
+            <strong>Solution:</strong> Difference = 3000 - 1500 = <strong>₹1500 Cr</strong><br><br>
+
+            <strong>Q8.</strong> If Motor claims increase by 20%, what will be the new value?<br>
+            <strong>Solution:</strong> New value = 5000 × 1.20 = <strong>₹6000 Cr</strong><br><br>
+
+            <strong>Q9.</strong> Find the ratio of Property to Health claims.<br>
+            <strong>Solution:</strong> 2000:3000 = <strong>2:3</strong><br><br>
+
+            <strong>Q10.</strong> What is the average claim amount per category?<br>
+            <strong>Solution:</strong> 11500 / 4 = <strong>₹2875 Cr</strong>
+        </div>
+
+        <h3>Set 3: Pie Chart Questions (Q11-Q15)</h3>
+
+        <div class="example-box">
+            <strong>Data: Premium Distribution (Total = ₹50,000 Cr)</strong><br>
+            Motor: 30%, Health: 25%, Life: 35%, Others: 10%<br><br>
+
+            <strong>Q11.</strong> What is the premium collected from Health segment?<br>
+            <strong>Solution:</strong> 50000 × 0.25 = <strong>₹12,500 Cr</strong><br><br>
+
+            <strong>Q12.</strong> How much more is Life premium than Motor premium?<br>
+            <strong>Solution:</strong> Life = 50000 × 0.35 = 17500<br>
+            Motor = 50000 × 0.30 = 15000<br>
+            Difference = <strong>₹2500 Cr</strong><br><br>
+
+            <strong>Q13.</strong> If total premium increases by 10%, what will be Health premium?<br>
+            <strong>Solution:</strong> New total = 50000 × 1.10 = 55000<br>
+            Health = 55000 × 0.25 = <strong>₹13,750 Cr</strong><br><br>
+
+            <strong>Q14.</strong> What is the central angle for Motor segment in pie chart?<br>
+            <strong>Solution:</strong> 30% of 360° = 0.30 × 360 = <strong>108°</strong><br><br>
+
+            <strong>Q15.</strong> Combined premium of Health and Others?<br>
+            <strong>Solution:</strong> Combined % = 25 + 10 = 35%<br>
+            Amount = 50000 × 0.35 = <strong>₹17,500 Cr</strong>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h3>Set 4: Caselet Questions (Q16-Q20)</h3>
+
+        <div class="example-box">
+            <strong>Caselet:</strong> NIACL has 1000 employees. 40% work in Operations, 25% in Sales, 20% in Claims, and rest in Administration. Average salary in Operations is ₹8 lakh, Sales is ₹10 lakh, Claims is ₹9 lakh, and Administration is ₹7 lakh.<br><br>
+
+            <strong>Q16.</strong> How many employees work in Administration?<br>
+            <strong>Solution:</strong> Admin % = 100 - (40 + 25 + 20) = 15%<br>
+            Employees = 1000 × 0.15 = <strong>150</strong><br><br>
+
+            <strong>Q17.</strong> What is total salary expenditure for Sales department?<br>
+            <strong>Solution:</strong> Sales employees = 1000 × 0.25 = 250<br>
+            Total salary = 250 × 10 = <strong>₹2500 lakh</strong><br><br>
+
+            <strong>Q18.</strong> What is the ratio of Operations to Claims employees?<br>
+            <strong>Solution:</strong> Operations = 400, Claims = 200<br>
+            Ratio = 400:200 = <strong>2:1</strong><br><br>
+
+            <strong>Q19.</strong> What is the average salary across all departments?<br>
+            <strong>Solution:</strong> Total salary = (400×8) + (250×10) + (200×9) + (150×7)<br>
+            = 3200 + 2500 + 1800 + 1050 = 8550 lakh<br>
+            Average = 8550 / 1000 = <strong>₹8.55 lakh</strong><br><br>
+
+            <strong>Q20.</strong> If Operations department grows by 25%, how many new employees?<br>
+            <strong>Solution:</strong> New employees = 400 × 0.25 = <strong>100</strong>
+        </div>
+
+        <h3>Set 5: Ratio & Proportion (Q21-Q25)</h3>
+
+        <div class="example-box">
+            <strong>Q21.</strong> Divide ₹12,000 Cr premium in ratio 3:5:4 among Motor, Health, Life.<br>
+            <strong>Solution:</strong> Total parts = 3 + 5 + 4 = 12<br>
+            Motor = (3/12) × 12000 = ₹3000 Cr<br>
+            Health = (5/12) × 12000 = ₹5000 Cr<br>
+            Life = (4/12) × 12000 = <strong>₹4000 Cr</strong><br><br>
+
+            <strong>Q22.</strong> If A:B = 2:3 and B:C = 4:5, find A:B:C<br>
+            <strong>Solution:</strong> A:B = 2:3 = 8:12 (multiply by 4)<br>
+            B:C = 4:5 = 12:15 (multiply by 3)<br>
+            A:B:C = <strong>8:12:15</strong><br><br>
+
+            <strong>Q23.</strong> Claims increase from ₹80 Cr to ₹100 Cr. Find percentage increase.<br>
+            <strong>Solution:</strong> [(100-80)/80] × 100 = <strong>25%</strong><br><br>
+
+            <strong>Q24.</strong> Price decreases by 20%. To restore, it should increase by?<br>
+            <strong>Solution:</strong> Let original = 100, after decrease = 80<br>
+            Required increase = [(100-80)/80] × 100 = <strong>25%</strong><br><br>
+
+            <strong>Q25.</strong> A sum becomes ₹6000 from ₹5000 in 2 years. Find rate of interest.<br>
+            <strong>Solution:</strong> Interest = 1000<br>
+            SI = (P × R × T) / 100<br>
+            1000 = (5000 × R × 2) / 100<br>
+            R = <strong>10%</strong>
+        </div>
+
+        <h3>Set 6: Speed, Distance, Time (Q26-Q30)</h3>
+
+        <div class="example-box">
+            <strong>Q26.</strong> A surveyor travels 60 km at 30 km/h and returns at 20 km/h. Find average speed.<br>
+            <strong>Solution:</strong> Average speed = (2 × 30 × 20) / (30 + 20) = 1200 / 50 = <strong>24 km/h</strong><br><br>
+
+            <strong>Q27.</strong> A claim processor processes 120 claims in 3 hours. How many in 5 hours?<br>
+            <strong>Solution:</strong> Rate = 120 / 3 = 40 claims/hour<br>
+            In 5 hours = 40 × 5 = <strong>200 claims</strong><br><br>
+
+            <strong>Q28.</strong> Distance = 150 km, Speed = 50 km/h. Time taken?<br>
+            <strong>Solution:</strong> Time = Distance / Speed = 150 / 50 = <strong>3 hours</strong><br><br>
+
+            <strong>Q29.</strong> Two agents 150 km apart travel towards each other at 40 km/h and 35 km/h. When meet?<br>
+            <strong>Solution:</strong> Relative speed = 40 + 35 = 75 km/h<br>
+            Time = 150/75 = <strong>2 hours</strong><br><br>
+
+            <strong>Q30.</strong> Surveyor travels 120 km. First half at 40 km/h, second at 60 km/h. Average speed?<br>
+            <strong>Solution:</strong> Time₁ = 60/40 = 1.5 hrs, Time₂ = 60/60 = 1 hr<br>
+            Avg = 120/2.5 = <strong>48 km/h</strong>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h3>Set 7: Work & Time (Q31-Q35)</h3>
+
+        <div class="example-box">
+            <strong>Q31.</strong> A can complete underwriting in 10 days, B in 15 days. Together in how many days?<br>
+            <strong>Solution:</strong> A's 1 day work = 1/10<br>
+            B's 1 day work = 1/15<br>
+            Together = 1/10 + 1/15 = 5/30 = 1/6<br>
+            Days = <strong>6 days</strong><br><br>
+
+            <strong>Q32.</strong> 5 agents process 500 applications in 10 days. How many agents for 600 in 8 days?<br>
+            <strong>Solution:</strong> M₁D₁W₂ = M₂D₂W₁<br>
+            5 × 10 × 600 = M₂ × 8 × 500<br>
+            M₂ = <strong>7.5 ≈ 8 agents</strong><br><br>
+
+            <strong>Q33.</strong> A processes 60 claims/day, B processes 40 claims/day. Together for 500 claims?<br>
+            <strong>Solution:</strong> Combined rate = 100 claims/day<br>
+            Days = 500/100 = <strong>5 days</strong><br><br>
+
+            <strong>Q34.</strong> 12 workers complete task in 8 days. How many workers for same task in 6 days?<br>
+            <strong>Solution:</strong> M₁D₁ = M₂D₂<br>
+            12 × 8 = M₂ × 6<br>
+            M₂ = <strong>16 workers</strong><br><br>
+
+            <strong>Q35.</strong> Team processes 1200 applications in 15 days, 8 hrs/day. Days for 2000 apps, 10 hrs/day?<br>
+            <strong>Solution:</strong> (15 × 8)/1200 = (D₂ × 10)/2000<br>
+            D₂ = <strong>20 days</strong>
+        </div>
+
+        <h3>Set 8: Line Graph (Q36-Q40)</h3>
+
+        <div class="example-box">
+            <strong>Data: Quarterly Premium (₹ Crores)</strong><br>
+            <table style="font-size: 12px;">
+                <tr><th>Quarter</th><th>2022</th><th>2023</th><th>2024</th></tr>
+                <tr><td>Q1</td><td>800</td><td>900</td><td>1080</td></tr>
+                <tr><td>Q2</td><td>850</td><td>950</td><td>1140</td></tr>
+                <tr><td>Q3</td><td>900</td><td>1000</td><td>1200</td></tr>
+                <tr><td>Q4</td><td>950</td><td>1050</td><td>1260</td></tr>
+            </table>
+
+            <strong>Q36.</strong> % increase in Q1 from 2022 to 2024?<br>
+            <strong>Solution:</strong> [(1080-800)/800] × 100 = <strong>35%</strong><br><br>
+
+            <strong>Q37.</strong> Which quarter showed max growth in 2024 vs 2023?<br>
+            <strong>Solution:</strong> Q1:180, Q2:190, Q3:200, Q4:210<br>
+            Answer: <strong>Q4 (₹210 Cr)</strong><br><br>
+
+            <strong>Q38.</strong> Average quarterly collection in 2024?<br>
+            <strong>Solution:</strong> (1080+1140+1200+1260)/4 = <strong>₹1170 Cr</strong><br><br>
+
+            <strong>Q39.</strong> CAGR from 2022 to 2024 for Q1?<br>
+            <strong>Solution:</strong> [(1080/800)^0.5 - 1] × 100 = <strong>16.2%</strong><br><br>
+
+            <strong>Q40.</strong> Total premium collected in 2023?<br>
+            <strong>Solution:</strong> 900+950+1000+1050 = <strong>₹3900 Cr</strong>
+        </div>
+
+        <h3>Set 9: Multi-Bar Chart (Q41-Q45)</h3>
+
+        <div class="example-box">
+            <strong>Data: Claims by Region (thousands)</strong><br>
+            <table style="font-size: 12px;">
+                <tr><th>Region</th><th>Motor</th><th>Health</th><th>Life</th></tr>
+                <tr><td>North</td><td>45</td><td>30</td><td>25</td></tr>
+                <tr><td>South</td><td>50</td><td>40</td><td>35</td></tr>
+                <tr><td>East</td><td>35</td><td>25</td><td>20</td></tr>
+                <tr><td>West</td><td>55</td><td>45</td><td>30</td></tr>
+            </table>
+
+            <strong>Q41.</strong> Which region has highest total claims?<br>
+            <strong>Solution:</strong> North:100, South:125, East:80, West:130<br>
+            Answer = <strong>West (130k)</strong><br><br>
+
+            <strong>Q42.</strong> Motor claims % of total in South?<br>
+            <strong>Solution:</strong> (50/125) × 100 = <strong>40%</strong><br><br>
+
+            <strong>Q43.</strong> Ratio of Health claims North:East?<br>
+            <strong>Solution:</strong> 30:25 = <strong>6:5</strong><br><br>
+
+            <strong>Q44.</strong> Average Life claims across regions?<br>
+            <strong>Solution:</strong> (25+35+20+30)/4 = <strong>27.5k</strong><br><br>
+
+            <strong>Q45.</strong> If East Motor claims increase 20%, new value?<br>
+            <strong>Solution:</strong> 35 × 1.20 = <strong>42k</strong>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h3>Set 10: Percentage Distribution (Q46-Q50)</h3>
+
+        <div class="example-box">
+            <strong>Employee Distribution (Total: 5000)</strong><br>
+            Operations: 35%, Sales: 25%, Claims: 20%, IT: 12%, Others: 8%<br><br>
+
+            <strong>Q46.</strong> How many in Sales?<br>
+            <strong>Solution:</strong> 5000 × 0.25 = <strong>1250</strong><br><br>
+
+            <strong>Q47.</strong> Combined IT and Others?<br>
+            <strong>Solution:</strong> 5000 × 0.20 = <strong>1000</strong><br><br>
+
+            <strong>Q48.</strong> Central angle for Operations?<br>
+            <strong>Solution:</strong> 0.35 × 360 = <strong>126°</strong><br><br>
+
+            <strong>Q49.</strong> Add 500 to Claims, new %?<br>
+            <strong>Solution:</strong> (1500/5500) × 100 = <strong>27.27%</strong><br><br>
+
+            <strong>Q50.</strong> Difference Operations-Claims?<br>
+            <strong>Solution:</strong> 1750 - 1000 = <strong>750</strong>
+        </div>
+
+        <h3>Set 11: Compound Interest (Q51-Q55)</h3>
+
+        <div class="example-box">
+            <strong>Q51.</strong> ₹50,000 at 10% p.a. compounded annually. Amount after 3 years?<br>
+            <strong>Solution:</strong> A = 50000(1.10)³ = <strong>₹66,550</strong><br><br>
+
+            <strong>Q52.</strong> At what rate ₹8,000 becomes ₹10,000 in 2 years (CI)?<br>
+            <strong>Solution:</strong> 1.25 = (1 + r/100)²<br>
+            r = <strong>11.8%</strong><br><br>
+
+            <strong>Q53.</strong> Principal ₹20,000, rate 12%, time 2 years. Find CI.<br>
+            <strong>Solution:</strong> A = 20000(1.12)² = 25088<br>
+            CI = 25088 - 20000 = <strong>₹5,088</strong><br><br>
+
+            <strong>Q54.</strong> Difference between CI and SI for ₹10,000, 10%, 2 years?<br>
+            <strong>Solution:</strong> SI = 2000<br>
+            CI = 10000(1.1)² - 10000 = 2100<br>
+            Difference = <strong>₹100</strong><br><br>
+
+            <strong>Q55.</strong> In how many years ₹16,000 becomes ₹25,000 at 25% CI?<br>
+            <strong>Solution:</strong> 1.5625 = (1.25)^n<br>
+            n = <strong>2 years</strong>
+        </div>
+
+        <h3>Set 12: Mixture (Q56-Q60)</h3>
+
+        <div class="example-box">
+            <strong>Q56.</strong> Mix portfolios: A (12% return), B (8% return) for 10% avg. Find ratio.<br>
+            <strong>Solution:</strong> Using alligation: (12-10):(10-8) = <strong>1:1</strong><br><br>
+
+            <strong>Q57.</strong> 60L solution has 20% alcohol. Water to add for 15%?<br>
+            <strong>Solution:</strong> Alcohol = 12L<br>
+            12/(60+x) = 0.15<br>
+            x = <strong>20 litres</strong><br><br>
+
+            <strong>Q58.</strong> Mix 50L of 30% solution with 30L of 50% solution. Final %?<br>
+            <strong>Solution:</strong> Total = (15+15)/80 = <strong>37.5%</strong><br><br>
+
+            <strong>Q59.</strong> Container has milk:water 5:3. Add 16L water for 5:7 ratio. Find original quantity.<br>
+            <strong>Solution:</strong> Original = <strong>32 litres</strong><br><br>
+
+            <strong>Q60.</strong> Two solutions 60L (40% acid) and 40L (20% acid) mixed. Final concentration?<br>
+            <strong>Solution:</strong> Acid = 24+8 = 32L<br>
+            % = (32/100) × 100 = <strong>32%</strong>
+        </div>
+
+        <h3>Set 13: Probability (Q61-Q65)</h3>
+
+        <div class="example-box">
+            <strong>Q61.</strong> P(filing Motor claim) = 0.15, P(Health) = 0.20. P(at least one)?<br>
+            <strong>Solution:</strong> P(A or B) = 0.15 + 0.20 - (0.15×0.20)<br>
+            = 0.35 - 0.03 = <strong>0.32 or 32%</strong><br><br>
+
+            <strong>Q62.</strong> In 100 policies, 5 fraudulent. P(all 3 selected are genuine)?<br>
+            <strong>Solution:</strong> (95/100) × (94/99) × (93/98) = <strong>0.856 or 85.6%</strong><br><br>
+
+            <strong>Q63.</strong> Two dice rolled. P(sum = 7)?<br>
+            <strong>Solution:</strong> Favorable outcomes = 6 (1+6, 2+5, 3+4, 4+3, 5+2, 6+1)<br>
+            Total = 36<br>
+            P = 6/36 = <strong>1/6</strong><br><br>
+
+            <strong>Q64.</strong> Bag has 5 red, 3 blue balls. P(both red when 2 drawn)?<br>
+            <strong>Solution:</strong> (5/8) × (4/7) = 20/56 = <strong>5/14</strong><br><br>
+
+            <strong>Q65.</strong> P(claim approved) = 0.85. Out of 10 claims, P(exactly 8 approved)?<br>
+            <strong>Solution:</strong> Use binomial: C(10,8) × (0.85)⁸ × (0.15)²<br>
+            = <strong>0.276 or 27.6%</strong>
+        </div>
+
+        <h2>🎯 DI Tips for Exam Success</h2>
+
+        <div class="key-point">
+            <strong>Time Management Strategy:</strong>
+            <ul>
+                <li>⏱️ Allocate max 1 minute per DI question</li>
+                <li>🎯 Attempt easier questions first</li>
+                <li>⏭️ Skip lengthy calculations initially</li>
+                <li>✅ Look for direct values in charts/tables</li>
+                <li>📊 Use approximation when possible</li>
+                <li>🧮 Practice mental math for common calculations</li>
+            </ul>
+        </div>
+
+        <div class="key-point">
+            <strong>Common Mistakes to Avoid:</strong>
+            <ul>
+                <li>❌ Not reading questions carefully</li>
+                <li>❌ Confusing percentage with actual values</li>
+                <li>❌ Using wrong base for percentage calculation</li>
+                <li>❌ Not checking units (lakhs, crores, thousands)</li>
+                <li>❌ Calculation errors in basic operations</li>
+                <li>❌ Forgetting to convert time units</li>
+                <li>❌ Not simplifying ratios to lowest terms</li>
+            </ul>
+        </div>
+
+        <div class="key-point">
+            <strong>Quick Calculation Tricks:</strong>
+            <ul>
+                <li>🔢 <strong>25% of X</strong> = X/4</li>
+                <li>🔢 <strong>20% of X</strong> = X/5</li>
+                <li>🔢 <strong>12.5% of X</strong> = X/8</li>
+                <li>🔢 <strong>33.33% of X</strong> = X/3</li>
+                <li>🔢 <strong>√6241</strong> ≈ √6400 = 80</li>
+                <li>🔢 <strong>Squaring numbers ending in 5</strong>: 45² = (4×5)25 = 2025</li>
+                <li>🔢 <strong>Multiply by 11</strong>: 23×11 = 2(2+3)3 = 253</li>
+            </ul>
+        </div>
+
+        <h2>📊 Practice Sets for Self-Study</h2>
+
+        <div class="example-box">
+            <strong>Daily Practice Routine (15 Days):</strong><br><br>
+            
+            <strong>Week 1:</strong><br>
+            • Day 1-2: Tables (20 questions/day)<br>
+            • Day 3-4: Bar & Line Charts (20 questions/day)<br>
+            • Day 5-6: Pie Charts (20 questions/day)<br>
+            • Day 7: Mixed practice (30 questions)<br><br>
+            
+            <strong>Week 2:</strong><br>
+            • Day 8-9: Caselets (15 questions/day)<br>
+            • Day 10-11: Time & Work, Speed (20 questions/day)<br>
+            • Day 12-13: Ratio, Percentage, SI/CI (25 questions/day)<br>
+            • Day 14: Full mock DI test (50 questions in 50 mins)<br><br>
+            
+            <strong>Week 3 (Final):</strong><br>
+            • Day 15: Revision + Error analysis<br><br>
+            
+            <strong>Total Practice:</strong> 300+ questions in 15 days = <strong>Master Level!</strong>
+        </div>
+
+        <h2>📐 Important Formulas Quick Reference</h2>
+
+        <div class="formula-box">
+            <strong>Percentage & Profit/Loss:</strong><br>
+            • % = (Part/Whole) × 100<br>
+            • % Change = [(New-Old)/Old] × 100<br>
+            • Profit% = (Profit/CP) × 100<br>
+            • SP = CP × (100+Profit%)/100<br>
+            • CP = SP × 100/(100+Profit%)<br><br>
+            
+            <strong>Interest:</strong><br>
+            • SI = (P×R×T)/100<br>
+            • CI = P[(1+R/100)^T - 1]<br>
+            • Difference (CI-SI for 2 years) = P(R/100)²<br><br>
+            
+            <strong>Time, Speed, Distance:</strong><br>
+            • Speed = Distance/Time<br>
+            • Average Speed = Total Distance/Total Time<br>
+            • Average Speed (same distance) = (2×S1×S2)/(S1+S2)<br>
+            • Relative Speed (opposite) = S1 + S2<br>
+            • Relative Speed (same direction) = |S1 - S2|<br><br>
+            
+            <strong>Work:</strong><br>
+            • Work = Time × Efficiency<br>
+            • Combined work = 1/A + 1/B<br>
+            • M1×D1×H1/W1 = M2×D2×H2/W2<br><br>
+            
+            <strong>Ratio & Proportion:</strong><br>
+            • If a/b = c/d then ad = bc<br>
+            • If a:b = c:d, then (a+b):(a-b) = (c+d):(c-d)<br>
+            • Compound ratio of a:b and c:d = ac:bd<br><br>
+            
+            <strong>Growth Rate:</strong><br>
+            • Simple Growth = [(End-Start)/Start] × 100<br>
+            • CAGR = [(End/Start)^(1/n) - 1] × 100<br>
+            • Doubling Time ≈ 72/Rate<br><br>
+            
+            <strong>Alligation (Mixture):</strong><br>
+            • (C-M):(M-D) where C=Costly, D=Cheaper, M=Mean<br>
+            • Final quantity = (Q1×P1 + Q2×P2)/(Q1+Q2)
+        </div>
+
+        <h2>🎯 Exam Day Strategy</h2>
+
+        <div class="key-point">
+            <strong>DI Section Approach:</strong><br><br>
+            
+            <strong>First 2 Minutes:</strong><br>
+            • Scan all DI sets (usually 3-4 sets)<br>
+            • Identify easiest set (simple tables/bar charts)<br>
+            • Mark questions that can be solved directly<br><br>
+            
+            <strong>Next 15-20 Minutes:</strong><br>
+            • Solve easiest set completely (5 questions)<br>
+            • Then second easiest set<br>
+            • Focus on accuracy over speed initially<br><br>
+            
+            <strong>Last 10 Minutes:</strong><br>
+            • Attempt remaining sets<br>
+            • Skip very lengthy calculations<br>
+            • Use intelligent guessing for 2-option confusion<br><br>
+            
+            <strong>Target:</strong><br>
+            • Attempt: 30-35 out of 40 DI questions<br>
+            • Accuracy: 80%+ (24-28 correct)<br>
+            • This gives you excellent score!
+        </div>
+
+        <div class="key-point">
+            <strong>Calculator Not Allowed - Mental Math Tips:</strong><br>
+            • Round numbers for quick approximation<br>
+            • 4567 + 3289 ≈ 4600 + 3300 = 7900<br>
+            • Break complex calculations into steps<br>
+            • Use percentage shortcuts (25% = 1/4)<br>
+            • Practice multiplication tables up to 20<br>
+            • Learn squares up to 30 and cubes up to 15
+        </div>
+
+        <h2>📱 Recommended Resources</h2>
+
+        <div class="deep-study">
+            <strong>🔗 For Deep Study & Practice:</strong><br><br>
+            
+            <strong>Websites:</strong><br>
+            📖 IndiaBIX: Huge question bank with solutions<br>
+            📖 GradeUp: Daily DI practice sets<br>
+            📖 Oliveboard: Sectional tests<br>
+            📖 SmartKeeda: Insurance-specific DI<br><br>
+            
+            <strong>Mobile Apps:</strong><br>
+            📱 Mahendra Guru: Daily current DI<br>
+            📱 Adda247: Video solutions<br>
+            📱 Testbook: Free mock tests<br><br>
+            
+            <strong>Books:</strong><br>
+            📚 Arun Sharma: Data Interpretation<br>
+            📚 R.S. Aggarwal: Quantitative Aptitude<br>
+            📚 Previous year NIACL papers<br><br>
+            
+            <strong>YouTube Channels:</strong><br>
+            📺 Dear Sir: DI tricks and shortcuts<br>
+            📺 Banking Chronical: Daily DI practice<br>
+            📺 Adda247: Detailed explanations<br><br>
+            
+            <strong>Practice Strategy:</strong><br>
+            ✅ Solve 20 DI questions daily for 15 days<br>
+            ✅ Time yourself strictly (1 min per question)<br>
+            ✅ Maintain error log<br>
+            ✅ Review mistakes every 3 days<br>
+            ✅ Take 2-3 full mock tests before exam
+        </div>
+
+        <h2>✅ Self-Assessment Checklist</h2>
+
+        <div class="key-point">
+            <strong>Before Moving to Next Section, Ensure You Can:</strong><br><br>
+            
+            ✅ Calculate percentages mentally within 10 seconds<br>
+            ✅ Find averages and ratios quickly<br>
+            ✅ Solve CAGR problems accurately<br>
+            ✅ Read and interpret tables/charts correctly<br>
+            ✅ Apply SI/CI formulas without mistakes<br>
+            ✅ Solve time-work problems using shortcuts<br>
+            ✅ Calculate speed-distance-time accurately<br>
+            ✅ Use alligation for mixture problems<br>
+            ✅ Solve probability questions confidently<br>
+            ✅ Maintain 80%+ accuracy in practice<br><br>
+            
+            <strong>If Yes to All → You're Ready! 💪</strong><br>
+            <strong>If No to Some → Revise those topics again 📖</strong>
+        </div>
+
+        <div style="text-align: center; margin: 40px 0; padding: 30px; border: 3px solid #27ae60; border-radius: 10px; background: #d5f4e6;">
+            <h2 style="color: #27ae60; margin-bottom: 20px;">🎉 Section 3 Complete! 🎉</h2>
+            <p style="font-size: 18px;"><strong>65 Questions Solved! ✅</strong></p>
+            <p style="margin-top: 20px;">You've mastered Data Interpretation fundamentals.</p>
+            <p>Practice daily to maintain speed and accuracy!</p>
+            <p style="margin-top: 30px; font-weight: bold;">Next: Section 4 - Database & SQL</p>
+        </div>
+    </div>
+</body>
+</html>

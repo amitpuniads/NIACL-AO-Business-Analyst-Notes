@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIACL AO Business Analyst - 15-Day Study Notes</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .page-break { page-break-after: always; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .book-container {
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .cover-page {
+            text-align: center;
+            padding: 100px 20px;
+            border: 3px solid #2c3e50;
+            margin-bottom: 40px;
+        }
+        
+        .cover-page h1 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .cover-page h2 {
+            font-size: 24px;
+            color: #e74c3c;
+            margin-bottom: 30px;
+        }
+        
+        .cover-page p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 25px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #16a085;
+            margin-top: 20px;
+        }
+        
+        .day-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0 20px 0;
+            text-align: center;
+        }
+        
+        .formula-box {
+            background: #ecf0f1;
+            border-left: 4px solid #e74c3c;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .example-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .key-point {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin: 12px 0;
+        }
+        
+        .hindi-meaning {
+            color: #d35400;
+            font-style: italic;
+            font-size: 14px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #3498db;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
+        .deep-study {
+            background: #d4edda;
+            border: 2px dashed #28a745;
+            padding: 15px;
+            margin: 25px 0;
+            text-align: center;
+            border-radius: 8px;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .toc {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .toc a {
+            color: #2c3e50;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+        }
+        
+        .toc a:hover {
+            color: #e74c3c;
+        }
+        
+        .download-btn {
+            background: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px 0;
+        }
+        
+        .download-btn:hover {
+            background: #c0392b;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .sql-code {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="book-container">
+        <!-- COVER PAGE -->
+        <div class="cover-page page-break">
+            <h1>🧾 NIACL AO</h1>
+            <h2>Business Analyst</h2>
+            <h2>15-Day Complete Study Notes</h2>
+            <p style="margin-top: 40px; font-size: 20px;">📚 Comprehensive Guide | 85-95 Pages</p>
+            <p>✅ Business Analysis & Insurance Fundamentals</p>
+            <p>✅ Statistics & Data Interpretation</p>
+            <p>✅ Database & SQL</p>
+            <p>✅ Business Analytics & Tools</p>
+            <p>✅ Case Studies & Mock Tests</p>
+            <p style="margin-top: 50px; font-style: italic;">Self-Study Edition 2025</p>
+            <button class="download-btn no-print" onclick="window.print()">📥 Download as PDF</button>
+        </div>
+
+        <!-- TABLE OF CONTENTS -->
+        <div class="toc page-break">
+            <h1>📑 Table of Contents</h1>
+            <h3>SECTION 1: Business & Insurance Fundamentals</h3>
+            <a href="#day1">Day 1-2: Business Analyst Role, SDLC, Insurance Basics</a>
+            
+            <h3>SECTION 2: Descriptive & Inferential Statistics</h3>
+            <a href="#day3">Day 3-5: Statistics, Probability, Regression, Hypothesis Testing</a>
+            
+            <h3>SECTION 3: Data Interpretation & Quantitative Skills</h3>
+            <a href="#day6">Day 6: Data Interpretation & 65+ Practice Questions</a>
+            
+            <h3>SECTION 4: Database & SQL Concepts</h3>
+            <a href="#day7">Day 7: DBMS, SQL Queries, Normalization, Advanced SQL</a>
+            
+            <h3>SECTION 5: Business Analytics Tools & Visualization</h3>
+            <a href="#day8">Day 8: Dashboards, Power BI, Tableau, KPIs</a>
+            
+            <h3>SECTION 6: Business Process & MIS</h3>
+            <a href="#day9">Day 9: BPM, MIS, Agile, Scrum</a>
+            
+            <h3>SECTION 7: IT & Data Concepts</h3>
+            <a href="#day10">Day 10: Cloud, Cybersecurity, AI/ML Overview</a>
+            
+            <h3>SECTION 8: Insurance Analytics & Case Studies</h3>
+            <a href="#day11">Day 11-12: Predictive Modeling, Fraud Detection, Case Studies</a>
+            
+            <h3>SECTION 9: Aptitude, Reasoning & English</h3>
+            <a href="#day13">Day 13: Quantitative Aptitude, Reasoning, English</a>
+            
+            <h3>SECTION 10: General Awareness + Revision</h3>
+            <a href="#day14">Day 14-15: Current Affairs, Revision, Mock Tests</a>
+        </div>
+
+        <!-- DAY 1-2: Complete Business & Insurance Section -->
+        <div id="day1" class="page-break">
+            <div class="day-header">
+                <h1>DAY 1-2: Business & Insurance Fundamentals</h1>
+                <p>Business Analyst Role, SDLC, Agile & Waterfall, Insurance Industry Basics</p>
+            </div>
+
+            <h2>🎯 Part 1: Role of Business Analyst</h2>
+            
+            <h3>What is a Business Analyst?</h3>
+            <p>A Business Analyst (BA) <span class="hindi-meaning">(व्यवसाय विश्लेषक)</span> acts as a bridge between business stakeholders and IT teams. They identify business needs, gather requirements, and ensure that solutions align with organizational goals.</p>
+
+            <div class="key-point">
+                <strong>Key Responsibilities:</strong>
+                <ul>
+                    <li><strong>Requirement Gathering</strong> <span class="hindi-meaning">(आवश्यकता संग्रह)</span>: Understanding what stakeholders need</li>
+                    <li><strong>Documentation</strong>: Creating BRD, FRD, and use cases</li>
+                    <li><strong>Stakeholder Management</strong>: Communication between business and IT</li>
+                    <li><strong>Solution Design</strong>: Proposing system improvements</li>
+                    <li><strong>Testing & Validation</strong>: Ensuring solutions meet requirements</li>
+                </ul>
+            </div>
+
+            <h3>📄 Key Documents Created by BA</h3>
+            
+            <table>
+                <tr>
+                    <th>Document</th>
+                    <th>Full Form</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td><strong>BRD</strong></td>
+                    <td>Business Requirement Document</td>
+                    <td>High-level business needs and objectives</td>
+                </tr>
+                <tr>
+                    <td><strong>FRD</strong></td>
+                    <td>Functional Requirement Document</td>
+                    <td>Detailed functional specifications of the system</td>
+                </tr>
+                <tr>
+                    <td><strong>SRS</strong></td>
+                    <td>Software Requirement Specification</td>
+                    <td>Technical specifications for developers</td>
+                </tr>
+                <tr>
+                    <td><strong>RTM</strong></td>
+                    <td>Requirements Traceability Matrix</td>
+                    <td>Mapping requirements to test cases</td>
+                </tr>
+            </table>
+
+            <h3>🔄 SDLC (Software Development Life Cycle)</h3>
+            <p>SDLC <span class="hindi-meaning">(सॉफ्टवेयर विकास जीवन चक्र)</span> is a systematic process for developing software applications.</p>
+
+            <div class="key-point">
+                <strong>6 Phases of SDLC:</strong>
+                <ol>
+                    <li><strong>Requirement Analysis</strong>: Gather and document what is needed</li>
+                    <li><strong>Design</strong>: Create architecture and system design</li>
+                    <li><strong>Development</strong>: Actual coding and implementation</li>
+                    <li><strong>Testing</strong>: Verify functionality and find bugs</li>
+                    <li><strong>Deployment</strong>: Release to production environment</li>
+                    <li><strong>Maintenance</strong>: Ongoing support and updates</li>
+                </ol>
+            </div>
+
+            <h3>🌊 Waterfall vs Agile Methodology</h3>
+            
+            <table>
+                <tr>
+                    <th>Aspect</th>
+                    <th>Waterfall</th>
+                    <th>Agile</th>
+                </tr>
+                <tr>
+                    <td><strong>Approach</strong></td>
+                    <td>Linear and sequential</td>
+                    <td>Iterative and incremental</td>
+                </tr>
+                <tr>
+                    <td><strong>Flexibility</strong></td>
+                    <td>Rigid, difficult to change</td>
+                    <td>Highly flexible to changes</td>
+                </tr>
+                <tr>
+                    <td><strong>Testing</strong></td>
+                    <td>After development phase</td>
+                    <td>Continuous throughout</td>
+                </tr>
+                <tr>
+                    <td><strong>Documentation</strong></td>
+                    <td>Heavy documentation</td>
+                    <td>Light documentation</td>
+                </tr>
+                <tr>
+                    <td><strong>Customer Involvement</strong></td>
+                    <td>Limited (beginning & end)</td>
+                    <td>Continuous involvement</td>
+                </tr>
+                <tr>
+                    <td><strong>Best For</strong></td>
+                    <td>Fixed requirements, small projects</td>
+                    <td>Dynamic requirements, large projects</td>
+                </tr>
+            </table>
+
+            <h3>📊 UML Diagrams</h3>
+            <p>UML (Unified Modeling Language) <span class="hindi-meaning">(एकीकृत मॉडलिंग भाषा)</span> provides visual representations of system structure and behavior.</p>
+
+            <div class="key-point">
+                <strong>Common UML Diagrams:</strong>
+                <ul>
+                    <li><strong>Use Case Diagram</strong>: Shows interactions between users and system</li>
+                    <li><strong>Class Diagram</strong>: Represents system structure with classes and relationships</li>
+                    <li><strong>Sequence Diagram</strong>: Shows object interactions in time sequence</li>
+                    <li><strong>Activity Diagram</strong>: Workflow of activities and actions</li>
+                    <li><strong>State Diagram</strong>: States and transitions of an object</li>
+                </ul>
+            </div>
+
+            <h2>🏦 Part 2: Insurance Industry Basics</h2>
+
+            <h3>What is Insurance?</h3>
+            <p>Insurance <span class="hindi-meaning">(बीमा)</span> is a contract (policy) where an insurer agrees to compensate the insured for specific losses in exchange for premium payments.</p>
+
+            <div class="key-point">
+                <strong>Fundamental Concepts:</strong>
+                <ul>
+                    <li><strong>Policy</strong> <span class="hindi-meaning">(पॉलिसी)</span>: Legal contract between insurer and insured</li>
+                    <li><strong>Premium</strong> <span class="hindi-meaning">(प्रीमियम)</span>: Amount paid for insurance coverage</li>
+                    <li><strong>Risk</strong> <span class="hindi-meaning">(जोखिम)</span>: Uncertainty of financial loss</li>
+                    <li><strong>Claim</strong> <span class="hindi-meaning">(दावा)</span>: Request for compensation for covered loss</li>
+                    <li><strong>Sum Assured</strong> <span class="hindi-meaning">(बीमित राशि)</span>: Maximum amount payable</li>
+                    <li><strong>Underwriting</strong> <span class="hindi-meaning">(हामीदारी)</span>: Process of evaluating and accepting risk</li>
+                </ul>
+            </div>
+
+            <h3>Types of Insurance</h3>
+            
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Coverage</th>
+                    <th>Examples</th>
+                </tr>
+                <tr>
+                    <td><strong>Life Insurance</strong></td>
+                    <td>Death or maturity benefit</td>
+                    <td>Term, Endowment, ULIP</td>
+                </tr>
+                <tr>
+                    <td><strong>Health Insurance</strong></td>
+                    <td>Medical expenses</td>
+                    <td>Individual, Family Floater, Critical Illness</td>
+                </tr>
+                <tr>
+                    <td><strong>Motor Insurance</strong></td>
+                    <td>Vehicle damage/theft</td>
+                    <td>Third Party, Comprehensive</td>
+                </tr>
+                <tr>
+                    <td><strong>Property Insurance</strong></td>
+                    <td>Property damage</td>
+                    <td>Fire, Burglary, Natural disasters</td>
+                </tr>
+                <tr>
+                    <td><strong>Travel Insurance</strong></td>
+                    <td>Travel-related risks</td>
+                    <td>Trip cancellation, Medical emergencies abroad</td>
+                </tr>
+            </table>
+
+            <h3>⚙️ Key Insurance Processes</h3>
+
+            <div class="example-box">
+                <strong>1. Underwriting Process:</strong>
+                <ol>
+                    <li>Application submission by proposer</li>
+                    <li>Risk assessment by underwriter</li>
+                    <li>Medical examination (if required)</li>
+                    <li>Premium calculation based on risk profile</li>
+                    <li>Policy issuance or rejection</li>
+                </ol>
+            </div>
+
+            <div class="example-box">
+                <strong>2. Claim Settlement Process:</strong>
+                <ol>
+                    <li>Claim intimation by policyholder</li>
+                    <li>Document submission</li>
+                    <li>Claim investigation and verification</li>
+                    <li>Assessment of loss amount</li>
+                    <li>Claim approval and settlement</li>
+                </ol>
+            </div>
+
+            <h3>🔄 Reinsurance</h3>
+            <p>Reinsurance <span class="hindi-meaning">(पुनर्बीमा)</span> is "insurance for insurance companies." Insurers transfer portions of their risk to reinsurers to reduce exposure to large claims.</p>
+
+            <div class="key-point">
+                <strong>Why Reinsurance?</strong>
+                <ul>
+                    <li>Risk distribution across multiple parties</li>
+                    <li>Protection against catastrophic losses</li>
+                    <li>Improved solvency and financial stability</li>
+                    <li>Increased underwriting capacity</li>
+                </ul>
+            </div>
+
+            <h2>🏢 NIACL Structure & Organization</h2>
+
+            <h3>About NIACL</h3>
+            <p><strong>New India Assurance Company Limited (NIACL)</strong> is India's largest general insurance company, established in 1919. It's a government-owned company under the Ministry of Finance.</p>
+
+            <div class="key-point">
+                <strong>Key Facts:</strong>
+                <ul>
+                    <li>Headquarters: Mumbai, Maharashtra</li>
+                    <li>Founded: 1919</li>
+                    <li>Type: Public Sector General Insurance Company</li>
+                    <li>Business Lines: Motor, Health, Fire, Marine, Engineering, Crop, Aviation, etc.</li>
+                    <li>Network: 2000+ offices across India and international presence</li>
+                </ul>
+            </div>
+
+            <h3>📋 IRDAI (Insurance Regulatory and Development Authority of India)</h3>
+            <p>IRDAI <span class="hindi-meaning">(भारतीय बीमा नियामक और विकास प्राधिकरण)</span> is the regulatory body for insurance in India.</p>
+
+            <div class="key-point">
+                <strong>Key Points:</strong>
+                <ul>
+                    <li>Established: 1999 (Act passed), 2000 (operational)</li>
+                    <li>Headquarters: Hyderabad, Telangana</li>
+                    <li>Chairperson: Debasish Panda (as of 2024)</li>
+                    <li>Functions: Licensing, regulation, consumer protection, policy guidelines</li>
+                </ul>
+            </div>
+
+            <h3>📜 Important IRDAI Regulations</h3>
+            <ul>
+                <li><strong>IRDAI (Protection of Policyholders' Interests) Regulations, 2017</strong></li>
+                <li><strong>IRDAI (Insurance Advertisements and Disclosure) Regulations, 2021</strong></li>
+                <li><strong>IRDAI (Outsourcing of Activities) Regulations, 2017</strong></li>
+                <li><strong>Solvency Margin Requirements</strong>: Minimum capital insurers must maintain</li>
+                <li><strong>Free Look Period</strong>: 15-30 days for policy cancellation</li>
+            </ul>
+
+            <div class="deep-study">
+                <strong>🔗 For Deep Study:</strong><br>
+                <p>📖 IRDAI Official Website: <code>www.irdai.gov.in</code></p>
+                <p>📖 NIACL Official Website: <code>www.newindia.co.in</code></p>
+                <p>📖 Insurance Institute of India: <code>www.insuranceinstituteofindia.com</code></p>
+                <p>📖 Search Topics: "Business Analyst in Insurance", "Insurance Domain Knowledge for BA"</p>
+            </div>
+        </div>
+
+        <!-- Continue karna hai baaki ke days... Is format mein properly -->
+        
+    </div>
+</body>
+</html>

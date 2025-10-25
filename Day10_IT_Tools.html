@@ -1,0 +1,2374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIACL AO - Section 7: IT & Data Concepts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #f093fb;
+        }
+        
+        .header h1 {
+            color: #f093fb;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            color: #f5576c;
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+        
+        .day-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: white;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        
+        .section {
+            margin: 30px 0;
+            padding: 25px;
+            background: #fff5f7;
+            border-left: 5px solid #f093fb;
+            border-radius: 8px;
+        }
+        
+        .section h3 {
+            color: #f093fb;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h4 {
+            color: #f5576c;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+        }
+        
+        .key-point {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #f5576c;
+        }
+        
+        .key-point strong {
+            color: #f093fb;
+        }
+        
+        .formula-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .example-box {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        
+        .example-box h5 {
+            color: #28a745;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .question-set {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .question {
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff5f7;
+            border-radius: 8px;
+        }
+        
+        .question-num {
+            color: #f093fb;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .solution {
+            background: #e8f5e9;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .solution strong {
+            color: #28a745;
+        }
+        
+        .tip-box {
+            background: #e3f2fd;
+            border-left: 5px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .tip-box::before {
+            content: "💡 ";
+            font-size: 1.2em;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .warning-box::before {
+            content: "⚠️ ";
+            font-size: 1.2em;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tr:hover {
+            background: #fff5f7;
+        }
+        
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            padding: 10px;
+            margin: 5px 0;
+            background: white;
+            border-radius: 5px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .checklist li::before {
+            content: "✅ ";
+            margin-right: 10px;
+        }
+        
+        .diagram {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .flow-item {
+            display: inline-block;
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: white;
+            padding: 15px 25px;
+            margin: 10px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        
+        .arrow {
+            font-size: 2em;
+            color: #f093fb;
+        }
+        
+        .category-badge {
+            display: inline-block;
+            background: #f093fb;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            margin: 5px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.5em;
+            }
+            
+            .header h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💻 NIACL AO Study Material</h1>
+            <h2>SECTION 7</h2>
+            <h2>IT & Data Concepts</h2>
+            <div class="day-badge">📅 Day 10</div>
+            <p style="margin-top: 15px; color: #666;">Software Engineering, Cloud, Cybersecurity, Data Warehousing, ETL, AI/ML + 60+ Practice Questions</p>
+        </div>
+
+        <!-- Part 1: Software Engineering Basics -->
+        <div class="section">
+            <h3>⚙️ Part 1: Software Engineering Fundamentals</h3>
+            
+            <h4>What is Software Engineering?</h4>
+            <div class="key-point">
+                <strong>Definition:</strong> Software Engineering is the systematic application of engineering approaches to develop, operate, and maintain software systems.
+            </div>
+            
+            <div class="key-point">
+                <strong>Hindi:</strong> सॉफ्टवेयर इंजीनियरिंग - सॉफ्टवेयर सिस्टम विकसित करने, संचालित करने और बनाए रखने के लिए इंजीनियरिंग दृष्टिकोण का व्यवस्थित अनुप्रयोग।
+            </div>
+            
+            <h4>Software Development Principles</h4>
+            <div class="key-point">
+                <strong>1. Modularity (मॉड्यूलरिटी):</strong> Breaking software into smaller, independent modules
+                <br>Example: Login module, Payment module, Report module in insurance system
+            </div>
+            
+            <div class="key-point">
+                <strong>2. Abstraction (अमूर्तता):</strong> Hiding complex details, showing only essential features
+                <br>Example: User clicks "Calculate Premium" button without knowing complex calculation logic
+            </div>
+            
+            <div class="key-point">
+                <strong>3. Encapsulation (एनकैप्सुलेशन):</strong> Bundling data and methods together, restricting direct access
+                <br>Example: Customer data can only be accessed through specific functions, not directly
+            </div>
+            
+            <div class="key-point">
+                <strong>4. Reusability (पुन: उपयोग):</strong> Writing code once and using it multiple times
+                <br>Example: Date validation function used across all forms
+            </div>
+            
+            <h4>Software Quality Attributes</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Description</th>
+                        <th>Insurance Example</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Reliability</strong></td>
+                        <td>System works correctly under specified conditions</td>
+                        <td>Premium calculation always accurate</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Usability</strong></td>
+                        <td>Easy to learn and use</td>
+                        <td>Simple policy purchase process</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Efficiency</strong></td>
+                        <td>Optimal use of resources (memory, CPU)</td>
+                        <td>Claim system processes 1000 requests/sec</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Maintainability</strong></td>
+                        <td>Easy to modify and fix</td>
+                        <td>Adding new policy type takes 2 days</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Portability</strong></td>
+                        <td>Can run on different platforms</td>
+                        <td>App works on Android, iOS, Web</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scalability</strong></td>
+                        <td>Handles increasing workload</td>
+                        <td>System supports growth from 1M to 10M users</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h4>Software Testing Types</h4>
+            <div class="key-point">
+                <strong>1. Unit Testing:</strong> Testing individual components/modules
+                <br>Example: Testing premium calculation function independently
+            </div>
+            
+            <div class="key-point">
+                <strong>2. Integration Testing:</strong> Testing combined modules
+                <br>Example: Testing premium calculation + payment gateway together
+            </div>
+            
+            <div class="key-point">
+                <strong>3. System Testing:</strong> Testing complete integrated system
+                <br>Example: Testing entire policy issuance workflow end-to-end
+            </div>
+            
+            <div class="key-point">
+                <strong>4. Acceptance Testing (UAT):</strong> Testing by end users
+                <br>Example: Branch managers testing new claim system before go-live
+            </div>
+            
+            <div class="key-point">
+                <strong>5. Regression Testing:</strong> Testing after changes to ensure nothing broke
+                <br>Example: After adding new feature, verify old features still work
+            </div>
+            
+            <div class="key-point">
+                <strong>6. Performance Testing:</strong> Testing speed, load capacity, stability
+                <br>Example: Testing if system handles 10,000 concurrent users
+            </div>
+        </div>
+
+        <!-- Part 2: Cloud Computing -->
+        <div class="section">
+            <h3>☁️ Part 2: Cloud Computing</h3>
+            
+            <h4>What is Cloud Computing?</h4>
+            <div class="key-point">
+                <strong>Definition:</strong> Delivery of computing services (servers, storage, databases, networking, software) over the internet ("the cloud") on a pay-as-you-go basis.
+            </div>
+            
+            <div class="key-point">
+                <strong>Hindi:</strong> क्लाउड कंप्यूटिंग - इंटरनेट के माध्यम से कंप्यूटिंग सेवाओं की डिलीवरी जो उपयोग के आधार पर भुगतान करने की सुविधा प्रदान करती है।
+            </div>
+            
+            <h4>Cloud Service Models (SPI Model)</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Model</th>
+                        <th>Full Form</th>
+                        <th>What You Get</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td><strong>IaaS</strong></td>
+                        <td>Infrastructure as a Service</td>
+                        <td>Virtual machines, storage, networks</td>
+                        <td>AWS EC2, Azure VMs, Google Compute</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PaaS</strong></td>
+                        <td>Platform as a Service</td>
+                        <td>Development platform, databases, tools</td>
+                        <td>Google App Engine, Heroku, Azure App Service</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SaaS</strong></td>
+                        <td>Software as a Service</td>
+                        <td>Ready-to-use software applications</td>
+                        <td>Gmail, Salesforce, Microsoft 365, Zoom</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="example-box">
+                <h5>📋 Analogy: Pizza as a Service</h5>
+                <p><strong>On-Premise:</strong> Make pizza at home (buy ingredients, oven, make it yourself)</p>
+                <p><strong>IaaS:</strong> Take & Bake (get ready dough, you bake it)</p>
+                <p><strong>PaaS:</strong> Pizza delivered (chef makes it, you just eat)</p>
+                <p><strong>SaaS:</strong> Dine at restaurant (everything provided, just consume)</p>
+            </div>
+            
+            <h4>Cloud Deployment Models</h4>
+            <div class="key-point">
+                <strong>1. Public Cloud (सार्वजनिक क्लाउड):</strong> Services offered over public internet, shared by multiple organizations
+                <br>Examples: AWS, Azure, Google Cloud
+                <br>Benefits: Cost-effective, scalable, no maintenance
+            </div>
+            
+            <div class="key-point">
+                <strong>2. Private Cloud (निजी क्लाउड):</strong> Dedicated cloud infrastructure for single organization
+                <br>Use Case: Banks, insurance companies with sensitive data
+                <br>Benefits: Better security, control, compliance
+            </div>
+            
+            <div class="key-point">
+                <strong>3. Hybrid Cloud (हाइब्रिड क्लाउड):</strong> Combination of public and private cloud
+                <br>Example: Critical data in private cloud, web apps in public cloud
+                <br>Benefits: Flexibility, optimized costs
+            </div>
+            
+            <div class="key-point">
+                <strong>4. Community Cloud:</strong> Shared by specific community (e.g., all insurance companies)
+                <br>Benefits: Shared costs, common compliance requirements
+            </div>
+            
+            <h4>Benefits of Cloud Computing</h4>
+            <ul class="checklist">
+                <li>Cost Savings: No upfront infrastructure investment</li>
+                <li>Scalability: Scale up/down based on demand</li>
+                <li>Accessibility: Access from anywhere, any device</li>
+                <li>Disaster Recovery: Automatic backups and redundancy</li>
+                <li>Automatic Updates: Provider handles maintenance</li>
+                <li>Collaboration: Teams work together in real-time</li>
+            </ul>
+            
+            <h4>Major Cloud Providers</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Provider</th>
+                        <th>Market Share</th>
+                        <th>Key Services</th>
+                    </tr>
+                    <tr>
+                        <td><strong>AWS (Amazon)</strong></td>
+                        <td>~32%</td>
+                        <td>EC2, S3, Lambda, RDS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Microsoft Azure</strong></td>
+                        <td>~23%</td>
+                        <td>Azure VMs, Blob Storage, Functions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Cloud</strong></td>
+                        <td>~10%</td>
+                        <td>Compute Engine, BigQuery, Cloud Storage</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Others</strong></td>
+                        <td>~35%</td>
+                        <td>IBM Cloud, Oracle Cloud, Alibaba Cloud</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Part 3: Cybersecurity -->
+        <div class="section">
+            <h3>🔒 Part 3: Cybersecurity Fundamentals</h3>
+            
+            <h4>What is Cybersecurity?</h4>
+            <div class="key-point">
+                <strong>Definition:</strong> Practice of protecting systems, networks, programs, and data from digital attacks, unauthorized access, and damage.
+            </div>
+            
+            <div class="key-point">
+                <strong>Hindi:</strong> साइबर सुरक्षा - डिजिटल हमलों, अनधिकृत पहुंच और क्षति से सिस्टम, नेटवर्क और डेटा की सुरक्षा करने की प्रथा।
+            </div>
+            
+            <h4>CIA Triad (Core Security Principles)</h4>
+            <div class="diagram">
+                <div class="flow-item">Confidentiality<br>(गोपनीयता)</div>
+                <br>
+                <span class="arrow">↓</span>
+                <br>
+                <div class="flow-item">Integrity<br>(अखंडता)</div>
+                <br>
+                <span class="arrow">↓</span>
+                <br>
+                <div class="flow-item">Availability<br>(उपलब्धता)</div>
+            </div>
+            
+            <div class="key-point">
+                <strong>1. Confidentiality (गोपनीयता):</strong> Ensuring data is accessible only to authorized users
+                <br>Example: Only underwriters can see applicant's medical records
+                <br>Techniques: Encryption, Access Control, Authentication
+            </div>
+            
+            <div class="key-point">
+                <strong>2. Integrity (अखंडता):</strong> Ensuring data is accurate and hasn't been tampered with
+                <br>Example: Premium amount cannot be altered after approval
+                <br>Techniques: Hashing, Digital Signatures, Version Control
+            </div>
+            
+            <div class="key-point">
+                <strong>3. Availability (उपलब्धता):</strong> Ensuring authorized users have access when needed
+                <br>Example: Claim system available 24/7 for customers
+                <br>Techniques: Redundancy, Backups, DDoS Protection
+            </div>
+            
+            <h4>Common Cyber Threats</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Threat</th>
+                        <th>Description</th>
+                        <th>Prevention</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Phishing</strong></td>
+                        <td>Fake emails/messages to steal credentials</td>
+                        <td>User awareness, email filters, 2FA</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Malware</strong></td>
+                        <td>Malicious software (viruses, trojans)</td>
+                        <td>Antivirus, firewalls, regular updates</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ransomware</strong></td>
+                        <td>Encrypts data, demands payment</td>
+                        <td>Regular backups, security patches</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DDoS Attack</strong></td>
+                        <td>Overwhelms system with traffic</td>
+                        <td>DDoS protection services, load balancers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SQL Injection</strong></td>
+                        <td>Inserts malicious SQL code</td>
+                        <td>Input validation, parameterized queries</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Social Engineering</strong></td>
+                        <td>Manipulates people to reveal information</td>
+                        <td>Security awareness training</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h4>Security Measures in Insurance</h4>
+            <div class="key-point">
+                <strong>1. Authentication (प्रमाणीकरण):</strong> Verifying user identity
+                <br>• Single Factor: Password only
+                <br>• Two-Factor (2FA): Password + OTP
+                <br>• Multi-Factor (MFA): Password + OTP + Biometric
+            </div>
+            
+            <div class="key-point">
+                <strong>2. Authorization (प्राधिकरण):</strong> Granting access rights
+                <br>Example: Agent can view policies but cannot approve claims
+            </div>
+            
+            <div class="key-point">
+                <strong>3. Encryption (एन्क्रिप्शन):</strong> Converting data into coded format
+                <br>• In Transit: HTTPS, SSL/TLS for data during transmission
+                <br>• At Rest: Encrypting stored database and files
+            </div>
+            
+            <div class="key-point">
+                <strong>4. Firewall:</strong> Monitors and controls network traffic
+                <br>Blocks unauthorized access, allows legitimate traffic
+            </div>
+            
+            <div class="key-point">
+                <strong>5. Backup & Recovery:</strong> Regular data backups for disaster recovery
+                <br>Follow 3-2-1 rule: 3 copies, 2 different media, 1 offsite
+            </div>
+            
+            <div class="example-box">
+                <h5>📋 Example: NIACL Cybersecurity Implementation</h5>
+                <p><strong>Confidentiality:</strong> Customer data encrypted, access only to authorized staff</p>
+                <p><strong>Integrity:</strong> Digital signatures on policies, audit trails on data changes</p>
+                <p><strong>Availability:</strong> 99.9% uptime, redundant servers, DDoS protection</p>
+                <p><strong>Authentication:</strong> Employees use 2FA (password + OTP) to access systems</p>
+            </div>
+        </div>
+
+        <!-- Part 4: Data Warehousing -->
+        <div class="section">
+            <h3>🗄️ Part 4: Data Warehousing</h3>
+            
+            <h4>What is Data Warehouse?</h4>
+            <div class="key-point">
+                <strong>Definition:</strong> A Data Warehouse (DW) is a large, centralized repository that stores integrated data from multiple sources for analysis and reporting.
+            </div>
+            
+            <div class="key-point">
+                <strong>Hindi:</strong> डेटा वेयरहाउस - एक बड़ा, केंद्रीकृत भंडार जो विश्लेषण और रिपोर्टिंग के लिए कई स्रोतों से एकीकृत डेटा संग्रहीत करता है।
+            </div>
+            
+            <h4>Database vs Data Warehouse</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Database (OLTP)</th>
+                        <th>Data Warehouse (OLAP)</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Purpose</strong></td>
+                        <td>Daily transactions</td>
+                        <td>Analysis and reporting</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Data Type</strong></td>
+                        <td>Current, operational</td>
+                        <td>Historical, aggregated</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Operations</strong></td>
+                        <td>Read, Write, Update, Delete</td>
+                        <td>Mostly Read (queries)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Users</strong></td>
+                        <td>Thousands (operational staff)</td>
+                        <td>Hundreds (analysts, managers)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Design</strong></td>
+                        <td>Normalized (3NF)</td>
+                        <td>Denormalized (Star/Snowflake schema)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Query Type</strong></td>
+                        <td>Simple, fast (get policy details)</td>
+                        <td>Complex (sales trend over 5 years)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Example</strong></td>
+                        <td>Policy Management System</td>
+                        <td>Sales Analytics System</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h4>Data Warehouse Architecture</h4>
+            <div class="diagram">
+                <div class="flow-item">Data Sources<br>(Policy DB, Claim DB, CRM)</div>
+                <span class="arrow">→</span>
+                <div class="flow-item">ETL Process<br>(Extract, Transform, Load)</div>
+                <span class="arrow">→</span>
+                <div class="flow-item">Data Warehouse<br>(Integrated Storage)</div>
+                <span class="arrow">→</span>
+                <div class="flow-item">BI Tools<br>(Reports, Dashboards)</div>
+            </div>
+            
+            <h4>Data Warehouse Schema Types</h4>
+            <div class="key-point">
+                <strong>1. Star Schema (स्टार स्कीमा):</strong>
+                <br>• Central Fact Table connected to multiple Dimension Tables
+                <br>• Simple structure, fast queries
+                <br>• Example: Fact_Sales table connected to Dim_Product, Dim_Time, Dim_Customer
+            </div>
+            
+            <div class="key-point">
+                <strong>2. Snowflake Schema (स्नोफ्लेक स्कीमा):</strong>
+                <br>• Normalized dimension tables (dimensions further split)
+                <br>• More complex, saves space
+                <br>• Example: Dim_Product splits into Dim_ProductCategory, Dim_Brand
+            </div>
+            
+            <div class="key-point">
+                <strong>3. Fact Constellation (Galaxy Schema):</strong>
+                <br>• Multiple fact tables sharing dimension tables
+                <br>• Most complex, handles multiple subject areas
+            </div>
+            
+            <h4>Key Components</h4>
+            <div class="key-point">
+                <strong>Fact Table (तथ्य तालिका):</strong> Contains measurable, quantitative data (metrics)
+                <br>Example: Premium_Amount, Claim_Amount, Policy_Count
+            </div>
+            
+            <div class="key-point">
+                <strong>Dimension Table (आयाम तालिका):</strong> Contains descriptive attributes
+                <br>Example: Product_Name, Customer_Name, Date, Location
+            </div>
+            
+            <div class="example-box">
+                <h5>📋 Example: Insurance Data Warehouse</h5>
+                <p><strong>Fact Table:</strong> Fact_Premium (Policy_ID, Customer_ID, Product_ID, Date_ID, Premium_Amount, Commission_Amount)</p>
+                <p><strong>Dimension Tables:</strong></p>
+                <p>• Dim_Customer (Customer_ID, Name, Age, City, State)</p>
+                <p>• Dim_Product (Product_ID, Product_Name, Category, Type)</p>
+                <p>• Dim_Date (Date_ID, Day, Month, Quarter, Year)</p>
+                <p>• Dim_Agent (Agent_ID, Name, Branch, Region)</p>
+            </div>
+        </div>
+
+        <!-- Part 5: ETL Process -->
+        <div class="section">
+            <h3>🔄 Part 5: ETL (Extract, Transform, Load)</h3>
+            
+            <h4>What is ETL?</h4>
+            <div class="key-point">
+                <strong>Definition:</strong> ETL is the process of extracting data from multiple sources, transforming it into a consistent format, and loading it into a data warehouse.
+            </div>
+            
+            <div class="key-point">
+                <strong>Hindi:</strong> ETL - कई स्रोतों से डेटा निकालना, इसे एक सुसंगत प्रारूप में बदलना और डेटा वेयरहाउस में लोड करना।
+            </div>
+            
+            <h4>ETL Process Steps</h4>
+            <div class="key-point">
+                <strong>1. Extract (निष्कर्षण):</strong> Pull data from source systems
+                <br>• Sources: Databases, APIs, CSV files, Excel, CRM systems
+                <br>• Methods: Full extraction or Incremental (only new/changed data)
+                <br>Example: Extract daily policy sales from branch databases
+            </div>
+            
+            <div class="key-point">
+                <strong>2. Transform (रूपांतरण):</strong> Clean, standardize, and prepare data
+                <br>• <strong>Cleaning:</strong> Remove duplicates, fix errors, handle nulls
+                <br>• <strong>Standardization:</strong> Convert date formats (DD/MM/YYYY to YYYY-MM-DD)
+                <br>• <strong>Validation:</strong> Check data quality rules
+                <br>• <strong>Aggregation:</strong> Sum, average, count operations
+                <br>• <strong>Enrichment:</strong> Add calculated fields (Age from DOB)
+                <br>• <strong>Integration:</strong> Merge data from multiple sources
+            </div>
+            
+            <div class="key-point">
+                <strong>3. Load (लोडिंग):</strong> Insert transformed data into warehouse
+                <br>• <strong>Full Load:</strong> Replace all data (for small datasets)
+                <br>• <strong>Incremental Load:</strong> Add only new/changed records
+                <br>• <strong>Real-time Load:</strong> Continuous loading as data arrives
+            </div>
+            
+            <div class="example-box">
+                <h5>📋 Example: NIACL Daily ETL Process</h5>
+                <p><strong>Extract (2 AM):</strong> Pull yesterday's policy sales from 500 branches</p>
+                <p><strong>Transform (2-4 AM):</strong></p>
+                <p>• Clean: Remove test policies, fix missing phone numbers</p>
+                <p>• Standardize: Convert all dates to YYYY-MM-DD format</p>
+                <p>• Calculate: Premium_with_GST = Premium * 1.18</p>
+                <p>• Aggregate: Calculate branch-wise totals</p>
+                <p><strong>Load (4-5 AM):</strong> Insert into Data Warehouse</p>
+                <p><strong>Result:</strong> Fresh reports ready by 6 AM for management</p>
+            </div>
+            
+            <h4>ETL vs ELT</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>ETL</th>
+                        <th>ELT</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Process</strong></td>
+                        <td>Extract → Transform → Load</td>
+                        <td>Extract → Load → Transform</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Where Transformation</strong></td>
+                        <td>In separate staging area</td>
+                        <td>Inside the target system</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Speed</strong></td>
+                        <td>Slower (transform first)</td>
+                        <td>Faster (raw data loaded quickly)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Best For</strong></td>
+                        <td>Traditional data warehouses</td>
+                        <td>Modern cloud data warehouses (BigQuery, Snowflake)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Data Size</strong></td>
+                        <td>Small to medium</td>
+                        <td>Large (Big Data)</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h4>Popular ETL Tools</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Tool</th>
+                        <th>Type</th>
+                        <th>Used By</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Informatica</strong></td>
+                        <td>Enterprise</td>
+                        <td>Large corporations, banks</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Talend</strong></td>
+                        <td>Open Source + Paid</td>
+                        <td>Mid-size companies</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Apache NiFi</strong></td>
+                        <td>Open Source</td>
+                        <td>Real-time data flows</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Microsoft SSIS</strong></td>
+                        <td>Microsoft Stack</td>
+                        <td>Organizations using SQL Server</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AWS Glue</strong></td>
+                        <td>Cloud (Serverless)</td>
+                        <td>AWS users</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Part 6: Python & R for Analytics -->
+        <div class="section">
+            <h3>🐍 Part 6: Python & R for Analytics (Awareness Level)</h3>
+            
+            <h4>Why Python for Analytics?</h4>
+            <div class="key-point">
+                <strong>Python:</strong> General-purpose programming language, easy to learn, extensive libraries for data analysis
+            </div>
+            
+            <h4>Key Python Libraries for Analytics</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Library</th>
+                        <th>Purpose</th>
+                        <th>Use Case in Insurance</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Pandas</strong></td>
+                        <td>Data manipulation & analysis</td>
+                        <td>Load policy data, calculate statistics</td>
+                    </tr>
+                    <tr>
+                        <td><strong>NumPy</strong></td>
+                        <td>Numerical computing, arrays</td>
+                        <td>Premium calculations, matrix operations</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Matplotlib</strong></td>
+                        <td>Data visualization (charts, plots)</td>
+                        <td>Plot sales trends, claim distributions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scikit-learn</strong></td>
+                        <td>Machine learning algorithms</td>
+                        <td>Predict claim amounts, customer churn</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TensorFlow/PyTorch</strong></td>
+                        <td>Deep learning, neural networks</td>
+                        <td>Fraud detection, image recognition</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h4>Why R for Analytics?</h4>
+            <div class="key-point">
+                <strong>R:</strong> Specialized language for statistical computing and graphics, preferred by statisticians and data scientists
+            </div>
+            
+            <h4>Python vs R</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Python</th>
+                        <th>R</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Learning Curve</strong></td>
+                        <td>Easier for beginners</td>
+                        <td>Steeper (statistics background helpful)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Purpose</strong></td>
+                        <td>General programming + analytics</td>
+                        <td>Specialized for statistics & analytics</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Visualization</strong></td>
+                        <td>Matplotlib, Seaborn</td>
+                        <td>ggplot2 (more elegant)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Industry Adoption</strong></td>
+                        <td>Wider (tech, finance, insurance)</td>
+                        <td>Academia, research, pharma</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Best For</strong></td>
+                        <td>ML, automation, web apps</td>
+                        <td>Statistical modeling, research</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="tip-box">
+                <strong>For NIACL AO:</strong> You need awareness-level knowledge only. Know what Python/R are used for, major libraries, and when to use which language. No coding required in exam!
+            </div>
+        </div>
+
+        <!-- Part 7: AI & ML Overview -->
+        <div class="section">
+            <h3>🤖 Part 7: Artificial Intelligence & Machine Learning (Conceptual)</h3>
+            
+            <h4>What is AI?</h4>
+            <div class="key-point">
+                <strong>Artificial Intelligence (AI):</strong> Simulation of human intelligence by machines - learning, reasoning, problem-solving, perception.
+            </div>
+            
+            <div class="key-point">
+                <strong>Hindi:</strong> कृत्रिम बुद्धिमत्ता - मशीनों द्वारा मानव बुद्धिमत्ता का अनुकरण - सीखना, तर्क करना, समस्या समाधान।
+            </div>
+            
+            <h4>AI → ML → DL Relationship</h4>
+            <div class="diagram">
+                <div style="text-align: center; margin: 20px 0;">
+                    <div style="display: inline-block; padding: 20px; border: 3px solid #f093fb; border-radius: 10px; margin: 10px;">
+                        <strong>Artificial Intelligence (AI)</strong>
+                        <div style="padding: 15px; border: 3px solid #f5576c; border-radius: 10px; margin: 10px;">
+                            <strong>Machine Learning (ML)</strong>
+                            <div style="padding: 10px; border: 3px solid #28a745; border-radius: 10px; margin: 10px;">
+                                <strong>Deep Learning (DL)</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="key-point">
+                <strong>AI:</strong> Broader concept - any technique that enables machines to mimic human intelligence
+                <br>Example: Chatbots, virtual assistants, game-playing programs
+            </div>
+            
+            <div class="key-point">
+                <strong>ML:</strong> Subset of AI - systems learn from data without explicit programming
+                <br>Example: Email spam filters, product recommendations
+            </div>
+            
+            <div class="key-point">
+                <strong>DL:</strong> Subset of ML - uses neural networks with multiple layers
+                <br>Example: Face recognition, voice assistants, self-driving cars
+            </div>
+            
+            <h4>Types of Machine Learning</h4>
+            <div class="key-point">
+                <strong>1. Supervised Learning (पर्यवेक्षित शिक्षण):</strong>
+                <br>• Learning from labeled data (input + correct output)
+                <br>• Algorithm learns pattern to predict outputs for new inputs
+                <br><strong>Insurance Examples:</strong>
+                <br>  - Predict claim amount based on policy details (Regression)
+                <br>  - Classify customer as high/low risk (Classification)
+                <br>  - Detect fraudulent claims (Classification)
+            </div>
+            
+            <div class="key-point">
+                <strong>2. Unsupervised Learning (अनपर्यवेक्षित शिक्षण):</strong>
+                <br>• Learning from unlabeled data (input only, no correct output)
+                <br>• Algorithm finds hidden patterns/groups
+                <br><strong>Insurance Examples:</strong>
+                <br>  - Customer segmentation (Clustering) - group similar customers
+                <br>  - Identify unusual patterns in claims (Anomaly Detection)
+            </div>
+            
+            <div class="key-point">
+                <strong>3. Reinforcement Learning (सुदृढीकरण शिक्षण):</strong>
+                <br>• Learning by trial and error, reward/penalty system
+                <br>• Agent learns to maximize rewards
+                <br><strong>Example:</strong> Optimizing investment portfolio, game-playing AI
+            </div>
+            
+            <h4>Common ML Algorithms (Awareness Level)</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Algorithm</th>
+                        <th>Type</th>
+                        <th>Use Case</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Linear Regression</strong></td>
+                        <td>Supervised (Regression)</td>
+                        <td>Predict premium amount</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Logistic Regression</strong></td>
+                        <td>Supervised (Classification)</td>
+                        <td>Predict claim approval (Yes/No)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Decision Trees</strong></td>
+                        <td>Supervised</td>
+                        <td>Risk assessment, underwriting decisions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Random Forest</strong></td>
+                        <td>Supervised (Ensemble)</td>
+                        <td>Fraud detection, churn prediction</td>
+                    </tr>
+                    <tr>
+                        <td><strong>K-Means</strong></td>
+                        <td>Unsupervised (Clustering)</td>
+                        <td>Customer segmentation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Neural Networks</strong></td>
+                        <td>Supervised/Unsupervised</td>
+                        <td>Complex pattern recognition, NLP</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h4>AI/ML Applications in Insurance</h4>
+            <ul class="checklist">
+                <li>Fraud Detection: Identify suspicious claims using pattern analysis</li>
+                <li>Risk Assessment: Predict risk level of applicants for underwriting</li>
+                <li>Customer Churn Prediction: Identify customers likely to cancel policies</li>
+                <li>Claims Processing: Automate claim assessment and approval</li>
+                <li>Chatbots: 24/7 customer support using NLP</li>
+                <li>Personalized Pricing: Dynamic premium calculation based on behavior</li>
+                <li>Document Processing: OCR + AI to extract data from forms</li>
+            </ul>
+            
+            <div class="example-box">
+                <h5>📋 Example: NIACL AI Implementation</h5>
+                <p><strong>Chatbot:</strong> Customer asks "What is claim status?" → AI understands query → Fetches data → Responds in natural language</p>
+                <p><strong>Fraud Detection:</strong> ML model trained on 1 million claims → Learns patterns of fraudulent vs genuine → Flags suspicious new claims (90% accuracy)</p>
+                <p><strong>Underwriting:</strong> AI analyzes applicant age, health, lifestyle → Predicts risk score → Suggests premium amount</p>
+            </div>
+            
+            <h4>Important AI/ML Terms</h4>
+            <div class="key-point">
+                <strong>Training Data:</strong> Historical data used to teach ML model
+            </div>
+            <div class="key-point">
+                <strong>Testing Data:</strong> Separate data used to evaluate model performance
+            </div>
+            <div class="key-point">
+                <strong>Features:</strong> Input variables (age, income, policy type)
+            </div>
+            <div class="key-point">
+                <strong>Label/Target:</strong> Output variable to predict (claim amount, risk score)
+            </div>
+            <div class="key-point">
+                <strong>Model Accuracy:</strong> Percentage of correct predictions
+            </div>
+            <div class="key-point">
+                <strong>Overfitting:</strong> Model performs well on training data but poorly on new data
+            </div>
+            <div class="key-point">
+                <strong>NLP (Natural Language Processing):</strong> AI understanding human language (chatbots)
+            </div>
+        </div>
+
+        <!-- Practice Questions -->
+        <div class="section">
+            <h3>📝 Part 8: Practice Questions (60+ Solved)</h3>
+            
+            <h4>Set 1: Software Engineering (Q1-Q10)</h4>
+            
+            <div class="question-set">
+                <div class="question">
+                    <span class="question-num">Q1.</span> Which software quality attribute ensures the system works correctly under specified conditions?
+                    <div class="solution">
+                        <strong>Solution:</strong> Reliability - The system consistently performs its intended function without failures.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q2.</span> What is the principle of hiding complex details and showing only essential features called?
+                    <div class="solution">
+                        <strong>Solution:</strong> Abstraction (अमूर्तता) - Users interact with simple interfaces without knowing internal complexity.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q3.</span> Which testing type involves business users validating the system before go-live?
+                    <div class="solution">
+                        <strong>Solution:</strong> User Acceptance Testing (UAT) - End users test to ensure system meets business requirements.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q4.</span> Testing individual components independently is called?
+                    <div class="solution">
+                        <strong>Solution:</strong> Unit Testing - Each module/function is tested in isolation.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q5.</span> A system handles growth from 1 million to 10 million users. This demonstrates which quality?
+                    <div class="solution">
+                        <strong>Solution:</strong> Scalability - Ability to handle increasing workload without performance degradation.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q6.</span> Which principle involves breaking software into smaller, independent modules?
+                    <div class="solution">
+                        <strong>Solution:</strong> Modularity (मॉड्यूलरिटी) - Dividing system into separate, manageable components.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q7.</span> After adding a new feature, testing all old features to ensure nothing broke is?
+                    <div class="solution">
+                        <strong>Solution:</strong> Regression Testing - Verifies that existing functionality still works after changes.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q8.</span> Testing speed, load capacity, and stability of a system is called?
+                    <div class="solution">
+                        <strong>Solution:</strong> Performance Testing - Evaluates system behavior under various load conditions.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q9.</span> How many main software quality attributes are commonly recognized?
+                    <div class="solution">
+                        <strong>Solution:</strong> 6 attributes - Reliability, Usability, Efficiency, Maintainability, Portability, Scalability
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q10.</span> Bundling data and methods together while restricting direct access is called?
+                    <div class="solution">
+                        <strong>Solution:</strong> Encapsulation (एनकैप्सुलेशन) - Data hiding and access control mechanism.
+                    </div>
+                </div>
+            </div>
+            
+            <h4>Set 2: Cloud Computing (Q11-Q20)</h4>
+            
+            <div class="question-set">
+                <div class="question">
+                    <span class="question-num">Q11.</span> What does SaaS stand for?
+                    <div class="solution">
+                        <strong>Solution:</strong> Software as a Service - Ready-to-use software applications delivered over the internet (e.g., Gmail, Salesforce).
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q12.</span> Which cloud deployment model is shared by multiple organizations?
+                    <div class="solution">
+                        <strong>Solution:</strong> Public Cloud (सार्वजनिक क्लाउड) - Services offered over public internet by providers like AWS, Azure.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q13.</span> A bank uses dedicated cloud infrastructure for security. This is which deployment model?
+                    <div class="solution">
+                        <strong>Solution:</strong> Private Cloud (निजी क्लाउड) - Exclusive cloud infrastructure for single organization.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q14.</span> What are the three cloud service models? (SPI Model)
+                    <div class="solution">
+                        <strong>Solution:</strong> 1. IaaS (Infrastructure as a Service), 2. PaaS (Platform as a Service), 3. SaaS (Software as a Service)
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q15.</span> AWS EC2, Azure VMs are examples of which service model?
+                    <div class="solution">
+                        <strong>Solution:</strong> IaaS (Infrastructure as a Service) - Provides virtual machines, storage, and networking.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q16.</span> Combining public and private cloud is called?
+                    <div class="solution">
+                        <strong>Solution:</strong> Hybrid Cloud (हाइब्रिड क्लाउड) - Mix of public and private, offers flexibility and security balance.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q17.</span> Which is the largest cloud provider by market share?
+                    <div class="solution">
+                        <strong>Solution:</strong> AWS (Amazon Web Services) - Approximately 32% market share, followed by Microsoft Azure (~23%).
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q18.</span> What is a major benefit of cloud computing regarding costs?
+                    <div class="solution">
+                        <strong>Solution:</strong> Pay-as-you-go pricing - No upfront infrastructure investment, pay only for what you use.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q19.</span> Google App Engine, Heroku are examples of which cloud service model?
+                    <div class="solution">
+                        <strong>Solution:</strong> PaaS (Platform as a Service) - Provides development platform, databases, and deployment tools.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q20.</span> Name three major benefits of cloud computing.
+                    <div class="solution">
+                        <strong>Solution:</strong> 1. Cost Savings (no infrastructure investment), 2. Scalability (scale up/down easily), 3. Accessibility (access from anywhere).
+                    </div>
+                </div>
+            </div>
+            
+            <h4>Set 3: Cybersecurity (Q21-Q30)</h4>
+            
+            <div class="question-set">
+                <div class="question">
+                    <span class="question-num">Q21.</span> What does CIA stand for in cybersecurity?
+                    <div class="solution">
+                        <strong>Solution:</strong> Confidentiality, Integrity, Availability - The three core principles of information security.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q22.</span> Fake emails attempting to steal credentials are called?
+                    <div class="solution">
+                        <strong>Solution:</strong> Phishing - Social engineering attack using fraudulent messages to trick users.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q23.</span> Which security principle ensures data is accessible only to authorized users?
+                    <div class="solution">
+                        <strong>Solution:</strong> Confidentiality (गोपनीयता) - Protecting information from unauthorized access.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q24.</span> What is 2FA?
+                    <div class="solution">
+                        <strong>Solution:</strong> Two-Factor Authentication - Security method requiring two forms of verification (e.g., password + OTP).
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q25.</span> Malware that encrypts data and demands payment is called?
+                    <div class="solution">
+                        <strong>Solution:</strong> Ransomware - Holds data hostage until ransom is paid. Prevention: Regular backups.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q26.</span> Which security measure monitors and controls network traffic?
+                    <div class="solution">
+                        <strong>Solution:</strong> Firewall - Acts as barrier between trusted internal network and untrusted external networks.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q27.</span> Converting data into coded format to protect it is called?
+                    <div class="solution">
+                        <strong>Solution:</strong> Encryption (एन्क्रिप्शन) - Scrambles data so only authorized parties with key can read it.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q28.</span> Attack that overwhelms system with traffic, making it unavailable, is?
+                    <div class="solution">
+                        <strong>Solution:</strong> DDoS (Distributed Denial of Service) Attack - Multiple systems flood target with traffic.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q29.</span> What is the 3-2-1 backup rule?
+                    <div class="solution">
+                        <strong>Solution:</strong> 3 copies of data, on 2 different media types, with 1 copy offsite - Ensures disaster recovery.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q30.</span> Verifying user identity is called _____, while granting access rights is called _____.
+                    <div class="solution">
+                        <strong>Solution:</strong> Authentication (प्रमाणीकरण) and Authorization (प्राधिकरण)
+                    </div>
+                </div>
+            </div>
+            
+            <h4>Set 4: Data Warehousing & ETL (Q31-Q45)</h4>
+            
+            <div class="question-set">
+                <div class="question">
+                    <span class="question-num">Q31.</span> What does OLTP stand for?
+                    <div class="solution">
+                        <strong>Solution:</strong> Online Transaction Processing - Database systems for daily operational transactions.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q32.</span> What does OLAP stand for?
+                    <div class="solution">
+                        <strong>Solution:</strong> Online Analytical Processing - Data warehouse systems for analysis and reporting.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q33.</span> Which table in data warehouse contains measurable, quantitative data?
+                    <div class="solution">
+                        <strong>Solution:</strong> Fact Table (तथ्य तालिका) - Stores metrics like Premium_Amount, Claim_Amount, Sales_Count.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q34.</span> Which table contains descriptive attributes like Product_Name, Customer_Name?
+                    <div class="solution">
+                        <strong>Solution:</strong> Dimension Table (आयाम तालिका) - Provides context and details about facts.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q35.</span> What does ETL stand for?
+                    <div class="solution">
+                        <strong>Solution:</strong> Extract, Transform, Load - Process of moving data from sources to data warehouse.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q36.</span> In Star Schema, Fact Table is connected to how many Dimension Tables?
+                    <div class="solution">
+                        <strong>Solution:</strong> Multiple Dimension Tables (typically 4-10) - Forms a star-like structure with Fact at center.
+                    </div>
+                   <div class="question">
+                    <span class="question-num">Q36.</span> In Star Schema, Fact Table is connected to how many Dimension Tables?
+                    <div class="solution">
+                        <strong>Solution:</strong> Multiple Dimension Tables (typically 4-10) - Forms a star-like structure with Fact at center.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q37.</span> Which schema has normalized dimension tables?
+                    <div class="solution">
+                        <strong>Solution:</strong> Snowflake Schema (स्नोफ्लेक स्कीमा) - Dimensions are further split into sub-dimensions.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q38.</span> Data Warehouse is optimized for which type of operations?
+                    <div class="solution">
+                        <strong>Solution:</strong> Read/Query operations (OLAP) - Not for frequent updates like OLTP databases.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q39.</span> Full form of OLAP?
+                    <div class="solution">
+                        <strong>Solution:</strong> Online Analytical Processing - Used for complex queries and business intelligence.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q40.</span> Which process moves data from source systems to data warehouse?
+                    <div class="solution">
+                        <strong>Solution:</strong> ETL (Extract, Transform, Load) - Systematic data migration and preparation process.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q41.</span> In ETL, cleaning and standardizing data happens in which phase?
+                    <div class="solution">
+                        <strong>Solution:</strong> Transform phase (रूपांतरण) - Data is cleaned, validated, and formatted.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q42.</span> What is the difference between Full Load and Incremental Load?
+                    <div class="solution">
+                        <strong>Solution:</strong> Full Load = Replace all data; Incremental Load = Add only new/changed records.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q43.</span> Which ETL tool is provided by AWS?
+                    <div class="solution">
+                        <strong>Solution:</strong> AWS Glue - Serverless ETL service for cloud data warehousing.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q44.</span> Name two popular enterprise ETL tools.
+                    <div class="solution">
+                        <strong>Solution:</strong> 1. Informatica, 2. Talend - Both widely used in large organizations.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q45.</span> In ELT, where does transformation happen?
+                    <div class="solution">
+                        <strong>Solution:</strong> Inside the target system (data warehouse) - Data loaded first, then transformed using warehouse computing power.
+                    </div>
+                </div>
+            </div>
+            
+            <h4>Set 5: Python & R (Q46-Q50)</h4>
+            
+            <div class="question-set">
+                <div class="question">
+                    <span class="question-num">Q46.</span> Which Python library is used for data manipulation and analysis?
+                    <div class="solution">
+                        <strong>Solution:</strong> Pandas - Provides DataFrame structure for easy data operations.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q47.</span> NumPy is primarily used for what type of computing?
+                    <div class="solution">
+                        <strong>Solution:</strong> Numerical computing and array operations - Foundation for scientific computing in Python.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q48.</span> Which library would you use for creating line charts and bar graphs in Python?
+                    <div class="solution">
+                        <strong>Solution:</strong> Matplotlib - Most popular Python visualization library.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q49.</span> Scikit-learn is used for which purpose?
+                    <div class="solution">
+                        <strong>Solution:</strong> Machine Learning - Provides algorithms for classification, regression, clustering.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q50.</span> R language is best known for which domain?
+                    <div class="solution">
+                        <strong>Solution:</strong> Statistical computing and data analysis - Preferred by statisticians and researchers.
+                    </div>
+                </div>
+            </div>
+            
+            <h4>Set 6: AI & Machine Learning (Q51-Q60)</h4>
+            
+            <div class="question-set">
+                <div class="question">
+                    <span class="question-num">Q51.</span> What is the relationship between AI, ML, and DL?
+                    <div class="solution">
+                        <strong>Solution:</strong> AI ⊃ ML ⊃ DL - Deep Learning is subset of Machine Learning, which is subset of AI.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q52.</span> In which type of ML, algorithm learns from labeled data (input + correct output)?
+                    <div class="solution">
+                        <strong>Solution:</strong> Supervised Learning (पर्यवेक्षित शिक्षण) - Examples: Classification, Regression.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q53.</span> Customer segmentation uses which type of machine learning?
+                    <div class="solution">
+                        <strong>Solution:</strong> Unsupervised Learning - Specifically Clustering (grouping similar customers).
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q54.</span> Predicting claim amount based on policy details is which ML task?
+                    <div class="solution">
+                        <strong>Solution:</strong> Regression - Predicting continuous numerical values.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q55.</span> Classifying customer as high/low risk is which ML task?
+                    <div class="solution">
+                        <strong>Solution:</strong> Classification - Categorizing into discrete classes.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q56.</span> What is overfitting in machine learning?
+                    <div class="solution">
+                        <strong>Solution:</strong> Model performs excellently on training data but poorly on new data - Model memorized instead of learning patterns.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q57.</span> NLP stands for?
+                    <div class="solution">
+                        <strong>Solution:</strong> Natural Language Processing - AI understanding and processing human language (used in chatbots).
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q58.</span> Name two applications of AI in insurance.
+                    <div class="solution">
+                        <strong>Solution:</strong> 1. Fraud Detection, 2. Chatbots for customer service - Many other applications exist.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q59.</span> What are features in machine learning?
+                    <div class="solution">
+                        <strong>Solution:</strong> Input variables used for prediction - Example: age, income, policy type, health score.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q60.</span> What is the target variable in ML?
+                    <div class="solution">
+                        <strong>Solution:</strong> Output variable to predict - Example: claim amount, risk score, approval status.
+                    </div>
+                </div>
+            </div>
+            
+            <h4>Set 7: Mixed Concepts (Q61-Q70)</h4>
+            
+            <div class="question-set">
+                <div class="question">
+                    <span class="question-num">Q61.</span> Which software quality ensures easy modification and fixing?
+                    <div class="solution">
+                        <strong>Solution:</strong> Maintainability - Code should be clean, documented, and modular.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q62.</span> HTTPS uses which security protocol?
+                    <div class="solution">
+                        <strong>Solution:</strong> SSL/TLS (Secure Sockets Layer / Transport Layer Security) - Encrypts data in transit.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q63.</span> What does MFA stand for in security?
+                    <div class="solution">
+                        <strong>Solution:</strong> Multi-Factor Authentication - Using multiple methods to verify identity (password + OTP + biometric).
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q64.</span> SQL Injection is prevented by which technique?
+                    <div class="solution">
+                        <strong>Solution:</strong> Input validation and parameterized queries - Never trust user input directly.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q65.</span> In cloud, what does "pay-as-you-go" mean?
+                    <div class="solution">
+                        <strong>Solution:</strong> Pay only for resources you actually use - No upfront investment, flexible scaling.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q66.</span> Which algorithm is commonly used for fraud detection?
+                    <div class="solution">
+                        <strong>Solution:</strong> Random Forest (ensemble learning) - Also Neural Networks, Logistic Regression are used.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q67.</span> What is the purpose of a firewall?
+                    <div class="solution">
+                        <strong>Solution:</strong> Monitor and control network traffic - Acts as barrier between trusted and untrusted networks.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q68.</span> Which cloud service model gives you virtual machines?
+                    <div class="solution">
+                        <strong>Solution:</strong> IaaS (Infrastructure as a Service) - Example: AWS EC2, Azure VMs.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q69.</span> Gmail and Microsoft 365 are examples of which cloud model?
+                    <div class="solution">
+                        <strong>Solution:</strong> SaaS (Software as a Service) - Ready-to-use applications.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q70.</span> What does CAGR stand for?
+                    <div class="solution">
+                        <strong>Solution:</strong> Compound Annual Growth Rate - Measures average growth rate over multiple years.
+                    </div>
+                </div>
+                
+                
+        <!-- Part 9: Recap & Tips -->
+        <div class="section">
+            <h3>📝 Part 9: Key Takeaways & Exam Tips</h3>
+            
+            <h4>Important Terms to Remember</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Term</th>
+                        <th>Definition</th>
+                        <th>Hindi</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Modularity</strong></td>
+                        <td>Breaking system into independent modules</td>
+                        <td>मॉड्यूलरिटी</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scalability</strong></td>
+                        <td>Ability to handle growth</td>
+                        <td>स्केलेबिलिटी</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Encryption</strong></td>
+                        <td>Converting data to coded format</td>
+                        <td>एन्क्रिप्शन</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phishing</strong></td>
+                        <td>Fraudulent emails to steal data</td>
+                        <td>फ़िशिंग</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ransomware</strong></td>
+                        <td>Malware that encrypts data for ransom</td>
+                        <td>रैंसमवेयर</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ETL</strong></td>
+                        <td>Extract, Transform, Load process</td>
+                        <td>ईटीएल</td>
+                    </tr>
+                    <tr>
+                        <td><strong>OLAP</strong></td>
+                        <td>Online Analytical Processing</td>
+                        <td>ओएलएपी</td>
+                    </tr>
+                    <tr>
+                        <td><strong>OLTP</strong></td>
+                        <td>Online Transaction Processing</td>
+                        <td>ओएलटीपी</td>
+                    </tr>
+                    <tr>
+                        <td><strong>NLP</strong></td>
+                        <td>Natural Language Processing</td>
+                        <td>प्राकृतिक भाषा प्रसंस्करण</td>
+                    </tr>
+                    <tr>
+                        <td><strong>IoT</strong></td>
+                        <td>Internet of Things</td>
+                        <td>इंटरनेट ऑफ़ थिंग्स</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h4>Quick Comparison Tables</h4>
+            
+            <div class="key-point">
+                <strong>Testing Types Comparison:</strong>
+                <table style="width: 100%; margin-top: 10px;">
+                    <tr>
+                        <th>Type</th>
+                        <th>What is Tested</th>
+                        <th>When</th>
+                    </tr>
+                    <tr>
+                        <td>Unit Testing</td>
+                        <td>Individual modules</td>
+                        <td>During development</td>
+                    </tr>
+                    <tr>
+                        <td>Integration Testing</td>
+                        <td>Combined modules</td>
+                        <td>After unit testing</td>
+                    </tr>
+                    <tr>
+                        <td>System Testing</td>
+                        <td>Complete system</td>
+                        <td>Before UAT</td>
+                    </tr>
+                    <tr>
+                        <td>UAT</td>
+                        <td>Business requirements</td>
+                        <td>Before go-live</td>
+                    </tr>
+                    <tr>
+                        <td>Regression Testing</td>
+                        <td>Existing functionality</td>
+                        <td>After any change</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="key-point">
+                <strong>Cloud Models Quick Reference:</strong>
+                <table style="width: 100%; margin-top: 10px;">
+                    <tr>
+                        <th>Model</th>
+                        <th>You Manage</th>
+                        <th>Provider Manages</th>
+                    </tr>
+                    <tr>
+                        <td>IaaS</td>
+                        <td>OS, Apps, Data</td>
+                        <td>Hardware, Network, Storage</td>
+                    </tr>
+                    <tr>
+                        <td>PaaS</td>
+                        <td>Apps, Data</td>
+                        <td>Runtime, Middleware, OS, Hardware</td>
+                    </tr>
+                    <tr>
+                        <td>SaaS</td>
+                        <td>Just use it!</td>
+                        <td>Everything</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h4>Exam Strategy for Section 7</h4>
+            
+            <div class="tip-box">
+                <strong>Time Management:</strong><br>
+                • This section typically has 15-20 questions in NIACL AO exam<br>
+                • Allocate 45 seconds per question<br>
+                • Focus on conceptual understanding, not deep technical details<br>
+                • Most questions are definition-based or scenario-based
+            </div>
+            
+            <div class="tip-box">
+                <strong>High-Weightage Topics:</strong><br>
+                1. Cloud Computing (IaaS, PaaS, SaaS, deployment models)<br>
+                2. Cybersecurity (CIA triad, common threats, 2FA)<br>
+                3. Data Warehousing (OLAP vs OLTP, Star schema)<br>
+                4. ETL Process (Extract, Transform, Load phases)<br>
+                5. AI/ML Basics (Supervised vs Unsupervised, applications in insurance)<br>
+                6. Software Testing Types<br>
+                7. Software Quality Attributes
+            </div>
+            
+            <div class="warning-box">
+                <strong>Common Mistakes to Avoid:</strong><br>
+                ❌ Confusing IaaS, PaaS, SaaS<br>
+                ❌ Mixing up OLAP and OLTP<br>
+                ❌ Not knowing difference between Fact and Dimension tables<br>
+                ❌ Confusing Supervised and Unsupervised learning<br>
+                ❌ Getting testing types mixed up<br>
+                ❌ Forgetting CIA triad components
+            </div>
+            
+            <h4>Memory Tricks (Mnemonics)</h4>
+            
+            <div class="example-box">
+                <h5>🧠 Remember CIA Triad:</h5>
+                <p><strong>"Can I Access?"</strong></p>
+                <p>C = Confidentiality (only authorized access)<br>
+                I = Integrity (data not tampered)<br>
+                A = Availability (access when needed)</p>
+            </div>
+            
+            <div class="example-box">
+                <h5>🧠 Remember Cloud Service Models:</h5>
+                <p><strong>"SPI" - "Software Platform Infrastructure"</strong></p>
+                <p>S = SaaS (Software as a Service)<br>
+                P = PaaS (Platform as a Service)<br>
+                I = IaaS (Infrastructure as a Service)</p>
+            </div>
+            
+            <div class="example-box">
+                <h5>🧠 Remember ETL Sequence:</h5>
+                <p><strong>"Every Time Load"</strong></p>
+                <p>E = Extract (get data from sources)<br>
+                T = Transform (clean and format)<br>
+                L = Load (insert into warehouse)</p>
+            </div>
+            
+            <div class="example-box">
+                <h5>🧠 Remember Testing Sequence:</h5>
+                <p><strong>"U-I-S-U-R"</strong> (User Is Super Ultra Ready)</p>
+                <p>U = Unit Testing<br>
+                I = Integration Testing<br>
+                S = System Testing<br>
+                U = UAT (User Acceptance Testing)<br>
+                R = Regression Testing (after changes)</p>
+            </div>
+            
+            <h4>Real-World Insurance Examples</h4>
+            
+            <div class="key-point">
+                <strong>Example 1: NIACL Cloud Migration</strong><br>
+                NIACL migrates its policy management system to cloud:<br>
+                • Uses <strong>Private Cloud</strong> for sensitive customer data (security)<br>
+                • Uses <strong>Public Cloud</strong> for customer portal (cost-effective)<br>
+                • This is <strong>Hybrid Cloud</strong> approach<br>
+                • Implements <strong>2FA</strong> for employee access<br>
+                • Uses <strong>Encryption</strong> for data at rest and in transit<br>
+                • Regular <strong>Backups</strong> following 3-2-1 rule
+            </div>
+            
+            <div class="key-point">
+                <strong>Example 2: Fraud Detection System</strong><br>
+                NIACL builds AI-powered fraud detection:<br>
+                • Uses <strong>Supervised Learning</strong> (trained on historical fraud cases)<br>
+                • <strong>Features</strong>: claim amount, time since policy purchase, claim frequency<br>
+                • <strong>Target</strong>: Fraudulent (Yes/No) - <strong>Classification</strong> problem<br>
+                • Uses <strong>Random Forest</strong> algorithm<br>
+                • Achieves 90% accuracy<br>
+                • <strong>Application</strong>: Flags suspicious claims for manual review
+            </div>
+            
+            <div class="key-point">
+                <strong>Example 3: Data Warehouse for Analytics</strong><br>
+                NIACL creates data warehouse for business intelligence:<br>
+                • <strong>Sources</strong>: Policy DB, Claim DB, Customer DB, Payment Gateway<br>
+                • <strong>ETL Process</strong>:<br>
+                  - Extract: Nightly pull of day's transactions<br>
+                  - Transform: Clean data, standardize formats, calculate metrics<br>
+                  - Load: Insert into warehouse<br>
+                • <strong>Schema</strong>: Star schema with Fact_Claims table<br>
+                • <strong>Dimensions</strong>: Customer, Product, Time, Location, Agent<br>
+                • <strong>Used for</strong>: Management dashboards, trend analysis, KPI tracking
+            </div>
+        </div>
+        
+        <!-- Part 10: Additional Important Topics -->
+        <div class="section">
+            <h3>🎯 Part 10: Additional Important Topics</h3>
+            
+            <h4>IoT (Internet of Things) in Insurance</h4>
+            <div class="key-point">
+                <strong>Definition:</strong> Network of physical devices embedded with sensors, software, and connectivity to exchange data.
+            </div>
+            
+            <div class="key-point">
+                <strong>Applications in Insurance:</strong><br>
+                • <strong>Telematics in Motor Insurance:</strong> Device in car tracks driving behavior (speed, braking, acceleration) → Usage-based insurance pricing<br>
+                • <strong>Health Insurance:</strong> Wearable fitness trackers (Fitbit, smartwatch) → Wellness programs, premium discounts<br>
+                • <strong>Home Insurance:</strong> Smart home sensors detect water leaks, fire, burglary → Risk prevention<br>
+                • <strong>Life Insurance:</strong> Health monitoring devices → Personalized policies
+            </div>
+            
+            <h4>Big Data in Insurance</h4>
+            <div class="key-point">
+                <strong>Definition:</strong> Extremely large datasets that cannot be processed using traditional methods.
+            </div>
+            
+            <div class="key-point">
+                <strong>5 V's of Big Data:</strong><br>
+                1. <strong>Volume:</strong> Large amount of data (terabytes, petabytes)<br>
+                2. <strong>Velocity:</strong> High speed of data generation and processing<br>
+                3. <strong>Variety:</strong> Different types (structured, unstructured, semi-structured)<br>
+                4. <strong>Veracity:</strong> Data quality and accuracy<br>
+                5. <strong>Value:</strong> Extracting meaningful insights
+            </div>
+            
+            <div class="key-point">
+                <strong>Insurance Applications:</strong><br>
+                • Analyzing millions of claims to detect fraud patterns<br>
+                • Processing social media data for customer sentiment<br>
+                • Real-time risk assessment using multiple data sources<br>
+                • Predictive modeling for claim amounts
+            </div>
+            
+            <h4>Blockchain in Insurance (Awareness)</h4>
+            <div class="key-point">
+                <strong>Definition:</strong> Distributed ledger technology where transactions are recorded in blocks, cryptographically linked.
+            </div>
+            
+            <div class="key-point">
+                <strong>Key Features:</strong><br>
+                • <strong>Decentralized:</strong> No single point of control<br>
+                • <strong>Immutable:</strong> Records cannot be altered<br>
+                • <strong>Transparent:</strong> All parties can view transactions<br>
+                • <strong>Secure:</strong> Cryptographic protection
+            </div>
+            
+            <div class="key-point">
+                <strong>Insurance Use Cases:</strong><br>
+                • <strong>Smart Contracts:</strong> Automatic claim payouts (e.g., flight delay insurance)<br>
+                • <strong>Fraud Prevention:</strong> Immutable records prevent duplicate claims<br>
+                • <strong>Reinsurance:</strong> Transparent transaction records<br>
+                • <strong>KYC:</strong> Shared customer verification across insurers
+            </div>
+            
+            <h4>RPA (Robotic Process Automation)</h4>
+            <div class="key-point">
+                <strong>Definition:</strong> Software robots that mimic human actions to automate repetitive tasks.
+            </div>
+            
+            <div class="key-point">
+                <strong>Insurance Applications:</strong><br>
+                • <strong>Policy Issuance:</strong> Automated data entry from application forms<br>
+                • <strong>Claims Processing:</strong> Extract data from claim documents, validate information<br>
+                • <strong>Compliance Reporting:</strong> Generate regulatory reports automatically<br>
+                • <strong>Customer Onboarding:</strong> Automated KYC verification<br>
+                • <strong>Premium Calculation:</strong> Rule-based automated computation
+            </div>
+            
+            <div class="key-point">
+                <strong>Benefits:</strong><br>
+                • Reduces processing time (hours → minutes)<br>
+                • Eliminates human errors<br>
+                • 24/7 operation<br>
+                • Cost savings (40-60% reduction)<br>
+                • Frees employees for higher-value work
+            </div>
+            
+            <h4>API (Application Programming Interface)</h4>
+            <div class="key-point">
+                <strong>Definition:</strong> Set of protocols and tools that allow different software applications to communicate with each other.
+            </div>
+            
+            <div class="key-point">
+                <strong>Insurance Examples:</strong><br>
+                • <strong>Payment Gateway API:</strong> Connects insurance portal to payment processors<br>
+                • <strong>KYC API:</strong> Verify customer identity using Aadhaar, PAN<br>
+                • <strong>Weather API:</strong> For crop insurance claim assessment<br>
+                • <strong>Hospital API:</strong> Cashless claim processing in health insurance<br>
+                • <strong>Vehicle Registration API:</strong> Verify vehicle details for motor insurance
+            </div>
+            
+            <h4>Agile vs DevOps</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Agile</th>
+                        <th>DevOps</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Focus</strong></td>
+                        <td>Software development</td>
+                        <td>Development + Operations</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Goal</strong></td>
+                        <td>Deliver working software iteratively</td>
+                        <td>Continuous delivery and deployment</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Teams</strong></td>
+                        <td>Development team</td>
+                        <td>Dev + Ops integrated</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Feedback</strong></td>
+                        <td>From customers (sprint review)</td>
+                        <td>From monitoring tools</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tools</strong></td>
+                        <td>Jira, Trello, Scrum boards</td>
+                        <td>Jenkins, Docker, Kubernetes</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Final Summary -->
+        <div class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none;">
+            <h3 style="color: white;">🎯 Day 10 Summary - Section 7 Complete!</h3>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                <h4 style="color: white;">✅ What You've Mastered Today:</h4>
+                <ul style="line-height: 2;">
+                    <li>✔️ Software Engineering fundamentals (Modularity, Abstraction, Encapsulation)</li>
+                    <li>✔️ Software Quality Attributes (Reliability, Scalability, Maintainability)</li>
+                    <li>✔️ Testing Types (Unit, Integration, System, UAT, Regression, Performance)</li>
+                    <li>✔️ Cloud Computing (IaaS, PaaS, SaaS, Public/Private/Hybrid)</li>
+                    <li>✔️ Cybersecurity (CIA Triad, Phishing, Ransomware, Encryption, 2FA)</li>
+                    <li>✔️ Data Warehousing (OLTP vs OLAP, Star/Snowflake Schema, Fact/Dimension)</li>
+                    <li>✔️ ETL Process (Extract, Transform, Load - complete pipeline)</li>
+                    <li>✔️ Python & R for Analytics (Pandas, NumPy, Matplotlib, Scikit-learn)</li>
+                    <li>✔️ AI & ML Concepts (Supervised, Unsupervised, Reinforcement Learning)</li>
+                    <li>✔️ ML Applications in Insurance (Fraud Detection, Risk Assessment, Churn Prediction)</li>
+                    <li>✔️ Emerging Technologies (IoT, Big Data, Blockchain, RPA, APIs)</li>
+                </ul>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                <h4 style="color: white;">📊 Practice Statistics:</h4>
+                <p style="font-size: 20px; font-weight: bold;">70 Questions Solved! ✅</p>
+                <p>• Software Engineering: 10 questions</p>
+                <p>• Cloud Computing: 10 questions</p>
+                <p>• Cybersecurity: 10 questions</p>
+                <p>• Data Warehousing & ETL: 15 questions</p>
+                <p>• Python & R: 5 questions</p>
+                <p>• AI & ML: 10 questions</p>
+                <p>• Mixed Concepts: 10 questions</p>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                <h4 style="color: white;">🎯 Expected Questions in Exam:</h4>
+                <p><strong>Section 7 typically has 15-20 questions in NIACL AO exam</strong></p>
+                <p style="margin-top: 10px;">Distribution:</p>
+                <p>• Cloud Computing: 3-4 questions</p>
+                <p>• Cybersecurity: 3-4 questions</p>
+                <p>• Data Warehousing/ETL: 2-3 questions</p>
+                <p>• AI/ML Basics: 2-3 questions</p>
+                <p>• Software Engineering: 2-3 questions</p>
+                <p>• Emerging Tech (IoT, RPA, Blockchain): 1-2 questions</p>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                <h4 style="color: white;">💡 Pro Tips for This Section:</h4>
+                <ul style="line-height: 1.8;">
+                    <li>🎯 <strong>Focus on Concepts, Not Coding:</strong> NIACL AO tests awareness, not programming skills</li>
+                    <li>🎯 <strong>Real-World Context:</strong> Always think in insurance context - how is this tech used in insurance?</li>
+                    <li>🎯 <strong>Definitions Matter:</strong> Know exact definitions of IaaS, PaaS, SaaS, OLAP, OLTP, ETL</li>
+                    <li>🎯 <strong>Comparison Questions:</strong> Be ready to compare (OLAP vs OLTP, Supervised vs Unsupervised)</li>
+                    <li>🎯 <strong>Security is Important:</strong> IRDAI emphasizes data security - know CIA triad well</li>
+                    <li>🎯 <strong>Current Trends:</strong> AI/ML, Cloud, IoT are hot topics - expect 1-2 questions each</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Revision Checklist -->
+        <div class="section">
+            <h3>✅ Revision Checklist - Before Moving to Section 8</h3>
+            
+            <div class="checklist">
+                <li>Can you explain Modularity, Abstraction, Encapsulation with examples?</li>
+                <li>Can you list all 6 software quality attributes?</li>
+                <li>Can you differentiate between Unit, Integration, System, and UAT testing?</li>
+                <li>Do you know the difference between IaaS, PaaS, and SaaS with examples?</li>
+                <li>Can you name 4 cloud deployment models?</li>
+                <li>Can you explain the CIA Triad with insurance examples?</li>
+                <li>Do you know the difference between Phishing, Malware, and Ransomware?</li>
+                <li>Can you explain what 2FA and MFA are?</li>
+                <li>Can you differentiate between OLTP and OLAP?</li>
+                <li>Do you know the difference between Fact and Dimension tables?</li>
+                <li>Can you explain Star Schema vs Snowflake Schema?</li>
+                <li>Can you describe all three ETL phases with examples?</li>
+                <li>Do you know the difference between ETL and ELT?</li>
+                <li>Can you name 3 Python libraries for analytics and their uses?</li>
+                <li>Can you explain the relationship between AI, ML, and Deep Learning?</li>
+                <li>Do you know the difference between Supervised and Unsupervised learning?</li>
+                <li>Can you give 3 insurance applications of AI/ML?</li>
+                <li>Do you know what overfitting means in ML?</li>
+                <li>Can you explain Classification vs Regression?</li>
+                <li>Do you understand how IoT is used in insurance (telematics)?</li>
+            </div>
+            
+            <div style="margin-top: 30px; padding: 20px; background: #fff3e0; border-left: 5px solid #ff9800; border-radius: 5px;">
+                <strong>⏰ Revision Time Allocation:</strong><br><br>
+                If you scored:<br>
+                • <strong>18-20/20 on checklist:</strong> 30 minutes revision (you're excellent!) ✅<br>
+                • <strong>15-17/20:</strong> 1 hour revision (focus on weak areas) ⚠️<br>
+                • <strong>Below 15/20:</strong> 2 hours revision + re-read entire section ❌
+            </div>
+        </div>
+        
+        <!-- Quick Reference Tables -->
+        <div class="section">
+            <h3>📋 Quick Reference - Copy This Page!</h3>
+            
+            <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                <h4 style="color: #f093fb;">Must Remember Definitions:</h4>
+                
+                <div style="margin: 10px 0;">
+                    <strong>1. Software Engineering:</strong> Systematic application of engineering approaches to develop, operate, and maintain software.
+                </div>
+                
+                <div style="margin: 10px 0;">
+                    <strong>2. Cloud Computing:</strong> Delivery of computing services over the internet on pay-as-you-go basis.
+                </div>
+                
+                <div style="margin: 10px 0;">
+                    <strong>3. Data Warehouse:</strong> Centralized repository storing integrated data from multiple sources for analysis.
+                </div>
+                
+                <div style="margin: 10px 0;">
+                    <strong>4. ETL:</strong> Extract, Transform, Load - process of moving data from sources to warehouse.
+                </div>
+                
+                <div style="margin: 10px 0;">
+                    <strong>5. Machine Learning:</strong> Systems that learn from data without explicit programming.
+                </div>
+                
+                <div style="margin: 10px 0;">
+                    <strong>6. Supervised Learning:</strong> Learning from labeled data (input + correct output).
+                </div>
+                
+                <div style="margin: 10px 0;">
+                    <strong>7. Unsupervised Learning:</strong> Learning from unlabeled data, finding hidden patterns.
+                </div>
+                
+                <div style="margin: 10px 0;">
+                    <strong>8. Classification:</strong> ML task of categorizing into discrete classes (High Risk/Low Risk).
+                </div>
+                
+                <div style="margin: 10px 0;">
+                    <strong>9. Regression:</strong> ML task of predicting continuous numerical values (claim amount).
+                </div>
+                
+                <div style="margin: 10px 0;">
+                    <strong>10. NLP:</strong> Natural Language Processing - AI understanding human language.
+                </div>
+            </div>
+            
+            <div style="background: #e3f2fd; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                <h4 style="color: #2196f3;">Most Important Comparisons:</h4>
+                
+                <table style="width: 100%; font-size: 13px;">
+                    <tr>
+                        <th>Concept A</th>
+                        <th>vs</th>
+                        <th>Concept B</th>
+                        <th>Key Difference</th>
+                    </tr>
+                    <tr>
+                        <td>OLTP</td>
+                        <td>vs</td>
+                        <td>OLAP</td>
+                        <td>Transaction vs Analysis</td>
+                    </tr>
+                    <tr>
+                        <td>IaaS</td>
+                        <td>vs</td>
+                        <td>PaaS vs SaaS</td>
+                        <td>Infrastructure vs Platform vs Software</td>
+                    </tr>
+                    <tr>
+                        <td>Public Cloud</td>
+                        <td>vs</td>
+                        <td>Private Cloud</td>
+                        <td>Shared vs Dedicated</td>
+                    </tr>
+                    <tr>
+                        <td>Star Schema</td>
+                        <td>vs</td>
+                        <td>Snowflake Schema</td>
+                        <td>Denormalized vs Normalized</td>
+                    </tr>
+                    <tr>
+                        <td>ETL</td>
+                        <td>vs</td>
+                        <td>ELT</td>
+                        <td>Transform before vs after Load</td>
+                    </tr>
+                    <tr>
+                        <td>Supervised</td>
+                        <td>vs</td>
+                        <td>Unsupervised</td>
+                        <td>Labeled vs Unlabeled data</td>
+                    </tr>
+                    <tr>
+                        <td>Classification</td>
+                        <td>vs</td>
+                        <td>Regression</td>
+                        <td>Discrete vs Continuous output</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>vs</td>
+                        <td>R</td>
+                        <td>General purpose vs Statistical</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                <h4 style="color: #28a745;">Acronyms to Remember:</h4>
+                
+                <div style="column-count: 2; column-gap: 20px;">
+                    <p><strong>CIA:</strong> Confidentiality, Integrity, Availability</p>
+                    <p><strong>ETL:</strong> Extract, Transform, Load</p>
+                    <p><strong>OLTP:</strong> Online Transaction Processing</p>
+                    <p><strong>OLAP:</strong> Online Analytical Processing</p>
+                    <p><strong>IaaS:</strong> Infrastructure as a Service</p>
+                    <p><strong>PaaS:</strong> Platform as a Service</p>
+                    <p><strong>SaaS:</strong> Software as a Service</p>
+                    <p><strong>2FA:</strong> Two-Factor Authentication</p>
+                    <p><strong>MFA:</strong> Multi-Factor Authentication</p>
+                    <p><strong>NLP:</strong> Natural Language Processing</p>
+                    <p><strong>ML:</strong> Machine Learning</p>
+                    <p><strong>AI:</strong> Artificial Intelligence</p>
+                    <p><strong>DL:</strong> Deep Learning</p>
+                    <p><strong>IoT:</strong> Internet of Things</p>
+                    <p><strong>RPA:</strong> Robotic Process Automation</p>
+                    <p><strong>API:</strong> Application Programming Interface</p>
+                    <p><strong>DDoS:</strong> Distributed Denial of Service</p>
+                    <p><strong>SSL/TLS:</strong> Secure Sockets Layer / Transport Layer Security</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- For Deep Study -->
+        <div class="section" style="background: #d4edda; border: 3px dashed #28a745;">
+            <h3 style="color: #28a745;">📚 For Deep Study & Additional Practice</h3>
+            
+            <div style="padding: 20px;">
+                <h4>🌐 Recommended Websites:</h4>
+                <ul style="line-height: 2;">
+                    <li><strong>Cloud Computing:</strong> AWS Cloud Practitioner Essentials (free course), Azure Fundamentals</li>
+                    <li><strong>Cybersecurity:</strong> Cisco's Cybersecurity Essentials, NIST Cybersecurity Framework basics</li>
+                    <li><strong>Data Warehousing:</strong> Kimball Group's articles on dimensional modeling</li>
+                    <li><strong>AI/ML:</strong> Google's Machine Learning Crash Course (free), Coursera's AI For Everyone</li>
+                    <li><strong>Python:</strong> Python.org tutorials, W3Schools Python section</li>
+                    <li><strong>SQL:</strong> SQLZoo, HackerRank SQL practice</li>
+                </ul>
+                
+                <h4 style="margin-top: 30px;">📺 YouTube Channels:</h4>
+                <ul style="line-height: 2;">
+                    <li><strong>SimpliLearn:</strong> Cloud, Cybersecurity, AI/ML concepts explained simply</li>
+                    <li><strong>Edureka:</strong> ETL, Data Warehousing, Big Data tutorials</li>
+                    <li><strong>TechWorld with Nana:</strong> DevOps, Cloud concepts</li>
+                    <li><strong>StatQuest:</strong> ML algorithms explained with great clarity</li>
+                    <li><strong>Corey Schafer:</strong> Python programming tutorials</li>
+                </ul>
+                
+                <h4 style="margin-top: 30px;">📱 Mobile Apps for Practice:</h4>
+                <ul style="line-height: 2;">
+                    <li><strong>Mimo:</strong> Learn Python basics on-the-go</li>
+                    <li><strong>Grasshopper:</strong> Coding fundamentals (Google app)</li>
+                    <li><strong>Kahoot:</strong> Quiz yourself on IT concepts</li>
+                    <li><strong>Quizlet:</strong> Create flashcards for definitions</li>
+                </ul>
+                
+                <h4 style="margin-top: 30px;">📖 Reference Books (Optional Deep Dive):</h4>
+                <ul style="line-height: 2;">
+                    <li><strong>Cloud Computing:</strong> "Cloud Computing: Concepts, Technology & Architecture" by Thomas Erl</li>
+                    <li><strong>Data Warehousing:</strong> "The Data Warehouse Toolkit" by Ralph Kimball</li>
+                    <li><strong>Machine Learning:</strong> "Hands-On Machine Learning" by Aurélien Géron</li>
+                    <li><strong>Python:</strong> "Python Crash Course" by Eric Matthes</li>
+                </ul>
+                
+                <h4 style="margin-top: 30px;">🎯 Practice Strategy:</h4>
+                <div style="background: white; padding: 15px; border-radius: 5px; margin-top: 10px;">
+                    <p><strong>Day 10 Evening:</strong> Review all 70 practice questions again</p>
+                    <p><strong>Day 11:</strong> Take a mixed quiz of 30 questions from Sections 1-7</p>
+                    <p><strong>Day 12:</strong> Focus on weak areas identified in quiz</p>
+                    <p><strong>Day 14:</strong> Final revision of all key concepts</p>
+                    <p><strong>Day 15:</strong> Full mock test covering all sections</p>
+                </div>
+                
+                <h4 style="margin-top: 30px;">🔗 Important Links:</h4>
+                <ul style="line-height: 2;">
+                    <li><strong>IRDAI Official Website:</strong> For insurance regulations and updates</li>
+                    <li><strong>NIACL Website:</strong> Latest company initiatives, reports</li>
+                    <li><strong>Google Cloud Platform Free Tier:</strong> Hands-on cloud practice</li>
+                    <li><strong>Kaggle:</strong> Free datasets and ML notebooks to explore</li>
+                    <li><strong>GitHub:</strong> Explore insurance analytics projects</li>
+                </ul>
+                
+                <div style="background: #fff3cd; padding: 15px; border-radius: 5px; margin-top: 30px; border-left: 4px solid #ffc107;">
+                    <p><strong>⚠️ Important Note:</strong> The "For Deep Study" resources are for those who want to understand concepts beyond exam requirements. For NIACL AO exam, the content in this document is sufficient. Use additional resources only if you have extra time or specific interest in certain topics.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Final Motivational Section -->
+        <div style="text-align: center; margin: 40px 0; padding: 40px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 15px; color: white;">
+            <h1 style="color: white; font-size: 2.5em; margin-bottom: 20px;">🎉 Congratulations! 🎉</h1>
+            <h2 style="color: white; margin-bottom: 30px;">Day 10 Complete - Section 7 Mastered!</h2>
+            
+            <div style="background: rgba(255,255,255,0.2); padding: 30px; border-radius: 10px; margin: 20px 0;">
+                <p style="font-size: 1.3em; line-height: 1.8;">
+                    <strong>You've conquered one of the most technical sections!</strong><br>
+                    From Software Engineering to AI/ML, you now understand<br>
+                    how modern technology powers the insurance industry.
+                </p>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                <h3 style="color: white;">📊 Your Progress So Far:</h3>
+                <p style="font-size: 1.2em; margin: 15px 0;"><strong>70/70 Practice Questions Solved ✅</strong></p>
+                <p style="font-size: 1.2em;">10 Major Topics Covered ✅</p>
+                <p style="font-size: 1.2em;">Real Insurance Examples Understood ✅</p>
+                <p style="font-size: 1.2em;">Ready for Emerging Technologies ✅</p>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                <h3 style="color: white;">🎯 What's Next?</h3>
+                <p style="font-size: 1.2em; margin-top: 15px;">
+                    <strong>Section 8: Insurance Analytics & Case Studies</strong><br>
+                    Days 11-12: Deep dive into real-world insurance analytics
+                </p>
+                <p style="margin-top: 15px; font-size: 1.1em;">
+                    You'll learn: Predictive Modeling, Fraud Detection,<br>
+                    Claim Analytics, Customer Churn, and real case studies!
+                </p>
+            </div>
+            
+            <div style="margin-top: 40px;">
+                <p style="font-size: 1.3em; font-weight: bold;">
+                    "Technology is best when it brings people together."<br>
+                    – Matt Mullenweg
+                </p>
+                <p style="font-size: 1.1em; margin-top: 20px;">
+                    You're not just learning IT concepts,<br>
+                    you're preparing to transform insurance operations! 💪
+                </p>
+            </div>
+            
+            <div style="margin-top: 40px; font-size: 1.4em;">
+                <p><strong>Keep Going! Success is Just Around the Corner! 🚀</strong></p>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div style="text-align: center; padding: 20px; background: #f0f0f0; border-radius: 8px; margin-top: 40px;">
+            <p style="font-size: 0.9em; color: #666;">
+                <strong>NIACL AO (Business Analyst) Study Material - Section 7</strong><br>
+                Day 10: IT & Data Concepts | 70 Practice Questions<br>
+                Complete Self-Study Book for Exam Preparation<br><br>
+                📧 Questions? Review, revise, and move to Section 8!<br>
+                🎯 Target: Master all 15 days before exam<br>
+                💪 You're 66% done with the journey! Keep pushing!
+            </p>
+        </div>
+    </div>
+</body>
+</html>     
+                

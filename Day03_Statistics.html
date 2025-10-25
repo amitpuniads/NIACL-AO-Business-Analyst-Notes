@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIACL AO - Section 2: Statistics</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .page-break { page-break-after: always; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .book-container {
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .cover-page {
+            text-align: center;
+            padding: 100px 20px;
+            border: 3px solid #2c3e50;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 25px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #16a085;
+            margin-top: 20px;
+        }
+        
+        .day-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0 20px 0;
+            text-align: center;
+        }
+        
+        .formula-box {
+            background: #ecf0f1;
+            border-left: 4px solid #e74c3c;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .example-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .key-point {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin: 12px 0;
+        }
+        
+        .hindi-meaning {
+            color: #d35400;
+            font-style: italic;
+            font-size: 14px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #3498db;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
+        .deep-study {
+            background: #d4edda;
+            border: 2px dashed #28a745;
+            padding: 15px;
+            margin: 25px 0;
+            text-align: center;
+            border-radius: 8px;
+        }
+        
+        .download-btn {
+            background: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px 0;
+        }
+        
+        .download-btn:hover {
+            background: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="book-container">
+        <div class="cover-page page-break">
+            <h1>NIACL AO Study Material</h1>
+            <h2 style="color: #e74c3c;">SECTION 2</h2>
+            <h2>Descriptive & Inferential Statistics</h2>
+            <p style="margin-top: 40px; font-size: 20px;">📊 Days 3-5</p>
+            <p style="margin-top: 20px;">Complete Statistics for Business Analytics</p>
+            <button class="download-btn no-print" onclick="window.print()">📥 Download PDF</button>
+        </div>
+
+        <div class="day-header">
+            <h1>DAY 3-5: Descriptive & Inferential Statistics</h1>
+            <p>Statistics, Probability, Regression, Hypothesis Testing</p>
+        </div>
+
+        <h2>📊 Part 1: Measures of Central Tendency</h2>
+
+        <h3>1. Mean (Average)</h3>
+        <p>Mean <span class="hindi-meaning">(माध्य/औसत)</span> is the sum of all values divided by the number of values.</p>
+
+        <div class="formula-box">
+            <strong>Formula:</strong><br>
+            Mean (x̄) = Σx / n<br>
+            Where: Σx = sum of all values, n = number of values
+        </div>
+
+        <div class="example-box">
+            <strong>Example:</strong> Insurance claims in a month: 50000, 75000, 60000, 80000, 45000<br>
+            Mean = (50000 + 75000 + 60000 + 80000 + 45000) / 5 = 310000 / 5 = <strong>₹62,000</strong>
+        </div>
+
+        <h3>2. Median</h3>
+        <p>Median <span class="hindi-meaning">(मध्यिका)</span> is the middle value when data is arranged in order.</p>
+
+        <div class="formula-box">
+            <strong>Formula:</strong><br>
+            For odd n: Median = Value at position (n+1)/2<br>
+            For even n: Median = Average of values at positions n/2 and (n/2)+1
+        </div>
+
+        <div class="example-box">
+            <strong>Example:</strong> Claims: 45000, 50000, 60000, 75000, 80000<br>
+            n = 5 (odd), Position = (5+1)/2 = 3rd position<br>
+            Median = <strong>₹60,000</strong>
+        </div>
+
+        <h3>3. Mode</h3>
+        <p>Mode <span class="hindi-meaning">(बहुलक)</span> is the most frequently occurring value in a dataset.</p>
+
+        <div class="example-box">
+            <strong>Example:</strong> Policy types sold: Motor, Health, Motor, Life, Motor, Health, Motor<br>
+            Mode = <strong>Motor</strong> (occurs 4 times)
+        </div>
+
+        <h2>📏 Part 2: Measures of Dispersion</h2>
+
+        <h3>1. Range</h3>
+        <p>Range <span class="hindi-meaning">(परिसर)</span> is the difference between maximum and minimum values.</p>
+
+        <div class="formula-box">
+            <strong>Formula:</strong> Range = Maximum value - Minimum value
+        </div>
+
+        <h3>2. Variance (σ²)</h3>
+        <p>Variance <span class="hindi-meaning">(विचरण)</span> measures how far data points spread from the mean.</p>
+
+        <div class="formula-box">
+            <strong>Formula:</strong><br>
+            Population Variance: σ² = Σ(x - μ)² / N<br>
+            Sample Variance: s² = Σ(x - x̄)² / (n-1)
+        </div>
+
+        <h3>3. Standard Deviation (σ or SD)</h3>
+        <p>Standard Deviation <span class="hindi-meaning">(मानक विचलन)</span> is the square root of variance.</p>
+
+        <div class="formula-box">
+            <strong>Formula:</strong> SD = √Variance
+        </div>
+
+        <div class="example-box">
+            <strong>Example:</strong> Claims: 50000, 60000, 70000<br>
+            Mean = 60000<br>
+            Variance = [(50000-60000)² + (60000-60000)² + (70000-60000)²] / 3<br>
+            = [100000000 + 0 + 100000000] / 3 = 66666666.67<br>
+            SD = √66666666.67 = <strong>₹8,165</strong>
+        </div>
+
+        <h3>4. Coefficient of Variation (CV)</h3>
+        <p>CV <span class="hindi-meaning">(विचरण गुणांक)</span> is used to compare variability of datasets with different units or means.</p>
+
+        <div class="formula-box">
+            <strong>Formula:</strong> CV = (SD / Mean) × 100%
+        </div>
+
+        <div class="example-box">
+            <strong>Example:</strong> If SD = 8165 and Mean = 60000<br>
+            CV = (8165 / 60000) × 100 = <strong>13.61%</strong>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>🎲 Part 3: Probability Basics</h2>
+
+        <h3>Fundamental Probability</h3>
+
+        <div class="formula-box">
+            <strong>Basic Formula:</strong><br>
+            P(Event) = Number of favorable outcomes / Total number of outcomes<br>
+            Range: 0 ≤ P(E) ≤ 1
+        </div>
+
+        <div class="key-point">
+            <strong>Key Rules:</strong>
+            <ul>
+                <li><strong>Addition Rule</strong>: P(A or B) = P(A) + P(B) - P(A and B)</li>
+                <li><strong>Multiplication Rule</strong>: P(A and B) = P(A) × P(B|A)</li>
+                <li><strong>Complement Rule</strong>: P(not A) = 1 - P(A)</li>
+            </ul>
+        </div>
+
+        <h3>📐 Bayes' Theorem</h3>
+        <p>Bayes' Theorem <span class="hindi-meaning">(बेयस प्रमेय)</span> calculates conditional probability.</p>
+
+        <div class="formula-box">
+            <strong>Formula:</strong><br>
+            P(A|B) = [P(B|A) × P(A)] / P(B)
+        </div>
+
+        <div class="example-box">
+            <strong>Insurance Example:</strong><br>
+            P(Fraud | High Claim) = [P(High Claim | Fraud) × P(Fraud)] / P(High Claim)<br><br>
+            Given:<br>
+            - P(Fraud) = 0.02 (2% of claims are fraudulent)<br>
+            - P(High Claim | Fraud) = 0.70 (70% of frauds involve high claims)<br>
+            - P(High Claim) = 0.15 (15% of all claims are high)<br><br>
+            P(Fraud | High Claim) = (0.70 × 0.02) / 0.15 = 0.014 / 0.15 = <strong>0.093 or 9.3%</strong>
+        </div>
+
+        <h2>🔗 Part 4: Correlation</h2>
+
+        <h3>Pearson Correlation Coefficient (r)</h3>
+        <p>Measures linear relationship between two continuous variables.</p>
+
+        <div class="formula-box">
+            <strong>Formula:</strong><br>
+            r = Σ[(x - x̄)(y - ȳ)] / √[Σ(x - x̄)² × Σ(y - ȳ)²]<br>
+            Range: -1 ≤ r ≤ +1
+        </div>
+
+        <div class="key-point">
+            <strong>Interpretation:</strong>
+            <ul>
+                <li>r = +1: Perfect positive correlation</li>
+                <li>r = 0: No correlation</li>
+                <li>r = -1: Perfect negative correlation</li>
+                <li>0.7 to 1.0: Strong positive</li>
+                <li>0.3 to 0.7: Moderate positive</li>
+                <li>0 to 0.3: Weak positive</li>
+            </ul>
+        </div>
+
+        <h3>Spearman Rank Correlation</h3>
+        <p>Used for ordinal data or non-linear relationships.</p>
+
+        <div class="formula-box">
+            <strong>Formula:</strong><br>
+            ρ = 1 - (6Σd²) / [n(n²-1)]<br>
+            Where: d = difference between ranks
+        </div>
+
+        <div class="example-box">
+            <strong>Insurance Example:</strong><br>
+            Correlation between Age and Premium: r = 0.85 (Strong positive)<br>
+            Interpretation: As age increases, insurance premium tends to increase significantly.
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>📈 Part 5: Regression Analysis</h2>
+
+        <h3>Simple Linear Regression</h3>
+        <p>Regression <span class="hindi-meaning">(प्रतिगमन)</span> predicts dependent variable (Y) based on independent variable (X).</p>
+
+        <div class="formula-box">
+            <strong>Regression Equation:</strong><br>
+            Y = a + bX<br>
+            Where:<br>
+            Y = Dependent variable (Premium)<br>
+            X = Independent variable (Age)<br>
+            a = Y-intercept<br>
+            b = Slope = r × (σy/σx)
+        </div>
+
+        <div class="example-box">
+            <strong>Insurance Premium Prediction:</strong><br>
+            Let's predict premium based on age:<br>
+            Data: Ages (25, 35, 45, 55) → Premiums (5000, 7000, 9000, 11000)<br><br>
+            Mean Age (x̄) = 40, Mean Premium (ȳ) = 8000<br>
+            After calculation: b = 200, a = 0<br>
+            <strong>Equation: Premium = 200 × Age</strong><br><br>
+            Prediction for 50 years: Premium = 200 × 50 = <strong>₹10,000</strong>
+        </div>
+
+        <h3>Multiple Linear Regression</h3>
+        <p>Predicts Y using multiple independent variables (X₁, X₂, X₃...).</p>
+
+        <div class="formula-box">
+            <strong>Equation:</strong><br>
+            Y = a + b₁X₁ + b₂X₂ + b₃X₃ + ... + error
+        </div>
+
+        <div class="example-box">
+            <strong>Health Insurance Premium Model:</strong><br>
+            Premium = 1000 + 150(Age) + 500(Smoker) + 200(BMI) - 100(Exercise)<br><br>
+            For 40-year-old smoker with BMI 28, exercises regularly:<br>
+            Premium = 1000 + 150(40) + 500(1) + 200(28) - 100(1)<br>
+            = 1000 + 6000 + 500 + 5600 - 100 = <strong>₹13,000</strong>
+        </div>
+
+        <h3>R² (Coefficient of Determination)</h3>
+        <p>R² <span class="hindi-meaning">(निर्धारण गुणांक)</span> measures how well the regression model fits the data.</p>
+
+        <div class="formula-box">
+            <strong>Formula:</strong> R² = 1 - (SS_residual / SS_total)<br>
+            Range: 0 to 1 (0% to 100%)
+        </div>
+
+        <div class="key-point">
+            <strong>Interpretation:</strong>
+            <ul>
+                <li>R² = 0.85 means 85% of variance in Y is explained by X</li>
+                <li>Higher R² = Better model fit</li>
+                <li>R² = 1 means perfect fit</li>
+            </ul>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>🧪 Part 6: Hypothesis Testing</h2>
+
+        <h3>Basic Concepts</h3>
+
+        <div class="key-point">
+            <strong>Key Terms:</strong>
+            <ul>
+                <li><strong>Null Hypothesis (H₀)</strong> <span class="hindi-meaning">(शून्य परिकल्पना)</span>: No effect/difference exists</li>
+                <li><strong>Alternative Hypothesis (H₁)</strong>: Effect/difference exists</li>
+                <li><strong>Significance Level (α)</strong>: Usually 0.05 (5%)</li>
+                <li><strong>p-value</strong>: Probability of getting results if H₀ is true</li>
+                <li><strong>Type I Error</strong>: Rejecting true H₀ (False Positive)</li>
+                <li><strong>Type II Error</strong>: Accepting false H₀ (False Negative)</li>
+            </ul>
+        </div>
+
+        <div class="key-point">
+            <strong>Decision Rule:</strong><br>
+            If p-value < α → Reject H₀ (Result is significant)<br>
+            If p-value ≥ α → Fail to reject H₀ (Result is not significant)
+        </div>
+
+        <h3>1️⃣ Z-Test</h3>
+        <p>Used when population SD is known and sample size is large (n > 30).</p>
+
+        <div class="formula-box">
+            <strong>Formula:</strong><br>
+            Z = (x̄ - μ) / (σ/√n)<br>
+            Where: x̄ = sample mean, μ = population mean, σ = population SD, n = sample size
+        </div>
+
+        <div class="example-box">
+            <strong>Insurance Example:</strong><br>
+            H₀: Average claim amount = ₹50,000<br>
+            H₁: Average claim amount ≠ ₹50,000<br><br>
+            Sample: n = 100, x̄ = ₹52,000, σ = ₹10,000<br>
+            Z = (52000 - 50000) / (10000/√100) = 2000 / 1000 = <strong>2.0</strong><br><br>
+            Critical value at α = 0.05 (two-tailed) = ±1.96<br>
+            Since Z (2.0) > 1.96, <strong>Reject H₀</strong><br>
+            Conclusion: Average claim is significantly different from ₹50,000
+        </div>
+
+        <h3>2️⃣ t-Test</h3>
+        <p>Used when population SD is unknown or sample size is small (n < 30).</p>
+
+        <div class="formula-box">
+            <strong>One Sample t-test:</strong><br>
+            t = (x̄ - μ) / (s/√n)<br>
+            Degrees of freedom (df) = n - 1
+        </div>
+
+        <div class="formula-box">
+            <strong>Two Sample t-test:</strong><br>
+            t = (x̄₁ - x̄₂) / √[(s₁²/n₁) + (s₂²/n₂)]
+        </div>
+
+        <div class="example-box">
+            <strong>Insurance Example:</strong><br>
+            Compare average premiums between two regions:<br>
+            Region A: n₁ = 25, x̄₁ = ₹8000, s₁ = ₹1500<br>
+            Region B: n₂ = 30, x̄₂ = ₹7500, s₂ = ₹1200<br><br>
+            H₀: μ₁ = μ₂ (No difference in premiums)<br>
+            H₁: μ₁ ≠ μ₂ (Difference exists)<br><br>
+            Calculate t-value and compare with critical value from t-table
+        </div>
+
+        <h3>3️⃣ F-Test (ANOVA)</h3>
+        <p>Compares variances or means of multiple groups (3 or more).</p>
+
+        <div class="formula-box">
+            <strong>Formula:</strong><br>
+            F = Variance between groups / Variance within groups<br>
+            F = MS_between / MS_within
+        </div>
+
+        <div class="example-box">
+            <strong>Insurance Example:</strong><br>
+            Compare average claims across 3 policy types: Motor, Health, Life<br>
+            H₀: μ_motor = μ_health = μ_life<br>
+            H₁: At least one mean is different<br><br>
+            Use ANOVA to test if claim amounts differ significantly across policy types
+        </div>
+
+        <h3>4️⃣ Chi-Square (χ²) Test</h3>
+        <p>Tests association between categorical variables.</p>
+
+        <div class="formula-box">
+            <strong>Formula:</strong><br>
+            χ² = Σ[(O - E)² / E]<br>
+            Where: O = Observed frequency, E = Expected frequency
+        </div>
+
+        <div class="example-box">
+            <strong>Insurance Example:</strong><br>
+            Test if claim approval is independent of policy type:<br><br>
+            <table style="font-size: 14px;">
+                <tr><th></th><th>Approved</th><th>Rejected</th><th>Total</th></tr>
+                <tr><td>Motor</td><td>80</td><td>20</td><td>100</td></tr>
+                <tr><td>Health</td><td>70</td><td>30</td><td>100</td></tr>
+                <tr><td>Total</td><td>150</td><td>50</td><td>200</td></tr>
+            </table><br>
+            H₀: Claim approval is independent of policy type<br>
+            Calculate χ² and compare with critical value
+        </div>
+
+        <h3>📊 Summary Table: When to Use Which Test</h3>
+
+        <table>
+            <tr>
+                <th>Scenario</th>
+                <th>Test to Use</th>
+            </tr>
+            <tr>
+                <td>Compare sample mean with population mean (n > 30, σ known)</td>
+                <td>Z-test</td>
+            </tr>
+            <tr>
+                <td>Compare sample mean with population mean (n < 30, σ unknown)</td>
+                <td>t-test</td>
+            </tr>
+            <tr>
+                <td>Compare means of two independent groups</td>
+                <td>Two-sample t-test</td>
+            </tr>
+            <tr>
+                <td>Compare means of 3+ groups</td>
+                <td>F-test (ANOVA)</td>
+            </tr>
+            <tr>
+                <td>Test association between categorical variables</td>
+                <td>Chi-square test</td>
+            </tr>
+            <tr>
+                <td>Compare two variances</td>
+                <td>F-test</td>
+            </tr>
+        </table>
+
+        <div class="deep-study">
+            <strong>🔗 For Deep Study:</strong><br>
+            <p>📖 Khan Academy Statistics: Free comprehensive videos</p>
+            <p>📖 StatQuest YouTube Channel: Excellent visual explanations</p>
+            <p>📖 Search: "Statistics for Business Analytics", "Hypothesis Testing Examples"</p>
+            <p>📖 Practice: Use Excel or Google Sheets for calculations</p>
+        </div>
+
+        <div style="text-align: center; margin: 40px 0; padding: 20px; border: 2px solid #27ae60; border-radius: 10px;">
+            <h3 style="color: #27ae60;">✅ Section 2 Complete!</h3>
+            <p>Next: Section 3 - Data Interpretation & Quantitative Skills</p>
+        </div>
+    </div>
+</body>
+</html>

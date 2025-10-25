@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIACL AO - Day 7: Database & SQL</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .page-break { page-break-after: always; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .book-container {
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .cover-page {
+            text-align: center;
+            padding: 100px 20px;
+            border: 3px solid #2c3e50;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 25px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #16a085;
+            margin-top: 20px;
+        }
+        
+        .day-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0 20px 0;
+            text-align: center;
+        }
+        
+        .formula-box {
+            background: #ecf0f1;
+            border-left: 4px solid #e74c3c;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .example-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .key-point {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin: 12px 0;
+        }
+        
+        .sql-code {
+            background: #1e1e1e;
+            color: #4ec9b0;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        th {
+            background: #3498db;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
+        .deep-study {
+            background: #d4edda;
+            border: 2px dashed #28a745;
+            padding: 15px;
+            margin: 25px 0;
+            text-align: center;
+            border-radius: 8px;
+        }
+        
+        .download-btn {
+            background: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px 0;
+        }
+
+        .practice-question {
+            background: #fff8e1;
+            border: 2px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .normalization-table {
+            background: #f3e5f5;
+            border: 2px solid #9c27b0;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="book-container">
+        <div class="cover-page page-break">
+            <h1>NIACL AO Study Material</h1>
+            <h2 style="color: #e74c3c;">DAY 7</h2>
+            <h2>Database & SQL Concepts</h2>
+            <p style="margin-top: 40px; font-size: 20px;">📊 DBMS Architecture</p>
+            <p>ER Models | Normalization | SQL Commands</p>
+            <p style="margin-top: 20px;">Complete with 30+ Practice Questions</p>
+            <button class="download-btn no-print" onclick="window.print()">📥 Download PDF</button>
+        </div>
+
+        <div class="day-header">
+            <h1>DAY 7: Database & SQL Concepts</h1>
+            <p>DBMS Fundamentals, ER Models, Normalization (1NF-3NF), SQL Queries</p>
+        </div>
+
+        <h2>📌 Why This Day is Critical for NIACL AO</h2>
+
+        <div class="key-point">
+            <strong>As NIACL Business Analyst, You'll Need Database Skills For:</strong><br>
+            ✓ Extracting policy and claim data for analysis<br>
+            ✓ Creating reports on premium collection, claim ratios<br>
+            ✓ Designing efficient database structures for new insurance products<br>
+            ✓ Communicating with IT teams using database terminology<br>
+            ✓ Writing SQL queries for fraud detection and risk analysis<br>
+            ✓ Understanding data normalization for data quality
+        </div>
+
+        <h2>📊 Part 1: DBMS Architecture & Fundamentals</h2>
+
+        <h3>🎯 What is DBMS?</h3>
+
+        <div class="example-box">
+            <strong>Database Management System (DBMS):</strong> Software that manages databases and provides interface between users and data.<br><br>
+            <strong>Hindi:</strong> डेटाबेस प्रबंधन प्रणाली<br><br>
+            <strong>Examples:</strong> MySQL, PostgreSQL, Oracle, MS SQL Server, MongoDB<br><br>
+            <strong>Why NIACL Uses DBMS:</strong><br>
+            • Stores millions of policy records<br>
+            • Manages claim data efficiently<br>
+            • Ensures data security and integrity<br>
+            • Enables quick data retrieval for reports
+        </div>
+
+        <h3>🔑 Key Advantages of DBMS</h3>
+
+        <table>
+            <tr>
+                <th>Advantage</th>
+                <th>Description</th>
+                <th>Insurance Example</th>
+            </tr>
+            <tr>
+                <td><strong>Data Redundancy Control</strong></td>
+                <td>Eliminates duplicate data</td>
+                <td>Customer details stored once, linked to multiple policies</td>
+            </tr>
+            <tr>
+                <td><strong>Data Consistency</strong></td>
+                <td>All users see same updated data</td>
+                <td>Claim status updated instantly for all departments</td>
+            </tr>
+            <tr>
+                <td><strong>Data Security</strong></td>
+                <td>Access control & authentication</td>
+                <td>Only authorized staff can view sensitive policy data</td>
+            </tr>
+            <tr>
+                <td><strong>Data Integrity</strong></td>
+                <td>Maintains accuracy & validity</td>
+                <td>Premium amount always matches policy type constraints</td>
+            </tr>
+            <tr>
+                <td><strong>Concurrent Access</strong></td>
+                <td>Multiple users simultaneously</td>
+                <td>Many agents can process claims at same time</td>
+            </tr>
+        </table>
+
+        <h3>📐 Three-Schema Architecture</h3>
+
+        <div class="formula-box">
+            <strong>1. External Schema (View Level) - What users see</strong><br>
+            • Different views for different user types<br>
+            • Claims officer sees only claim-related tables<br>
+            • Agent sees only policy and customer tables<br><br>
+
+            <strong>2. Conceptual Schema (Logical Level) - Complete structure</strong><br>
+            • All tables, relationships, constraints<br>
+            • ER diagram showing entire database design<br>
+            • Policy → Customer → Claim relationships<br><br>
+
+            <strong>3. Internal Schema (Physical Level) - Storage details</strong><br>
+            • How data stored on disk (files, indexes)<br>
+            • B-tree index on PolicyID for fast search<br>
+            • Physical storage optimization
+        </div>
+
+        <h3>🔐 ACID Properties (बहुत Important!)</h3>
+
+        <div class="example-box">
+            <strong>ACID ensures reliable database transactions:</strong><br><br>
+
+            <strong>A - Atomicity (अविभाज्यता)</strong><br>
+            • Transaction fully completed OR fully rolled back<br>
+            • No partial transactions<br>
+            <em>Example:</em> When processing claim, EITHER premium deducted AND claim approved, OR nothing happens<br><br>
+
+            <strong>C - Consistency (संगतता)</strong><br>
+            • Database remains in valid state before and after transaction<br>
+            • All constraints maintained<br>
+            <em>Example:</em> Total premium collected = sum of all individual premiums (no mismatch)<br><br>
+
+            <strong>I - Isolation (अलगाव)</strong><br>
+            • Concurrent transactions don't interfere<br>
+            • Each transaction independent<br>
+            <em>Example:</em> Two agents updating same customer's policy won't overwrite each other<br><br>
+
+            <strong>D - Durability (स्थायित्व)</strong><br>
+            • Once committed, data persists even after system failure<br>
+            • Changes permanent<br>
+            <em>Example:</em> Approved claim stays approved even if server crashes
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>🧩 Part 2: Entity-Relationship (ER) Models</h2>
+
+        <h3>Components of ER Model</h3>
+
+        <div class="formula-box">
+            <strong>1. Entity (इकाई):</strong> Real-world object with independent existence<br>
+            Examples: Customer, Policy, Claim, Agent, Branch<br><br>
+
+            <strong>2. Attribute (विशेषता):</strong> Property or characteristic of entity<br>
+            Customer attributes: CustomerID, Name, DOB, Phone, Email, City<br>
+            Policy attributes: PolicyID, PolicyType, Premium, StartDate, EndDate<br><br>
+
+            <strong>3. Relationship (संबंध):</strong> Association between entities<br>
+            • Customer "purchases" Policy<br>
+            • Policy "has" Claim<br>
+            • Agent "sells" Policy<br>
+            • Branch "manages" Agent
+        </div>
+
+        <h3>🔢 Types of Relationships (Cardinality)</h3>
+
+        <table>
+            <tr>
+                <th>Relationship Type</th>
+                <th>Description</th>
+                <th>Insurance Example</th>
+            </tr>
+            <tr>
+                <td><strong>One-to-One (1:1)</strong></td>
+                <td>One entity relates to one entity</td>
+                <td>One Customer has One PAN Card</td>
+            </tr>
+            <tr>
+                <td><strong>One-to-Many (1:N)</strong></td>
+                <td>One entity relates to many</td>
+                <td>One Customer can have Multiple Policies</td>
+            </tr>
+            <tr>
+                <td><strong>Many-to-Many (M:N)</strong></td>
+                <td>Many entities relate to many</td>
+                <td>Multiple Agents handle Multiple Claims</td>
+            </tr>
+        </table>
+
+        <h3>🎯 NIACL Database ER Example</h3>
+
+        <div class="example-box">
+            <strong>Core Insurance Database Structure:</strong><br><br>
+
+            <strong>📋 CUSTOMER Table</strong><br>
+            CustomerID (PK), Name, DOB, Phone, Email, Address, City, PAN<br><br>
+
+            <strong>📄 POLICY Table</strong><br>
+            PolicyID (PK), CustomerID (FK), PolicyType, Premium, SumAssured, StartDate, EndDate, AgentID (FK)<br><br>
+
+            <strong>💼 CLAIM Table</strong><br>
+            ClaimID (PK), PolicyID (FK), ClaimDate, ClaimAmount, ClaimType, Status, ApprovalDate<br><br>
+
+            <strong>👤 AGENT Table</strong><br>
+            AgentID (PK), AgentName, Phone, Email, Branch, JoinDate, Commission<br><br>
+
+            <strong>🏢 BRANCH Table</strong><br>
+            BranchID (PK), BranchName, City, State, ManagerName, Phone<br><br>
+
+            <strong>Relationships:</strong><br>
+            • CUSTOMER ←→ POLICY (1:N)<br>
+            • POLICY ←→ CLAIM (1:N)<br>
+            • AGENT ←→ POLICY (1:N)<br>
+            • BRANCH ←→ AGENT (1:N)
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>✅ Part 3: Normalization (1NF to 3NF)</h2>
+
+        <h3>❓ What is Normalization?</h3>
+
+        <div class="key-point">
+            <strong>Normalization (सामान्यीकरण):</strong> Process of organizing database to reduce redundancy and improve data integrity.<br><br>
+            <strong>Goals:</strong><br>
+            ✓ Eliminate duplicate data<br>
+            ✓ Ensure data dependencies make sense<br>
+            ✓ Reduce storage space<br>
+            ✓ Make updates easier and safer<br>
+            ✓ Prevent insertion, deletion, update anomalies
+        </div>
+
+        <h3>📌 First Normal Form (1NF)</h3>
+
+        <div class="normalization-table">
+            <strong>Rule:</strong> Each cell must contain atomic (single) values. No multiple values in one cell.<br><br>
+
+            <strong>❌ NOT in 1NF (Multiple values in one cell):</strong><br>
+            <table style="font-size: 12px;">
+                <tr>
+                    <th>CustomerID</th>
+                    <th>Name</th>
+                    <th>Policies</th>
+                    <th>Phone</th>
+                </tr>
+                <tr>
+                    <td>C101</td>
+                    <td>Amit Kumar</td>
+                    <td>Life, Health</td>
+                    <td>9876543210, 9123456789</td>
+                </tr>
+            </table>
+            <em>Problem:</em> Policies and Phone columns have multiple values!<br><br>
+
+            <strong>✅ In 1NF (Atomic values):</strong><br>
+            <table style="font-size: 12px;">
+                <tr>
+                    <th>CustomerID</th>
+                    <th>Name</th>
+                    <th>PolicyType</th>
+                    <th>Phone</th>
+                </tr>
+                <tr>
+                    <td>C101</td>
+                    <td>Amit Kumar</td>
+                    <td>Life</td>
+                    <td>9876543210</td>
+                </tr>
+                <tr>
+                    <td>C101</td>
+                    <td>Amit Kumar</td>
+                    <td>Health</td>
+                    <td>9123456789</td>
+                </tr>
+            </table>
+            <em>Solution:</em> Each cell contains single value only!
+        </div>
+
+        <h3>📌 Second Normal Form (2NF)</h3>
+
+        <div class="normalization-table">
+            <strong>Rule:</strong> Must be in 1NF + No partial dependency<br>
+            (All non-key attributes must fully depend on entire primary key)<br><br>
+
+            <strong>❌ NOT in 2NF:</strong><br>
+            <strong>Composite Primary Key: (PolicyID, AgentID)</strong><br>
+            <table style="font-size: 12px;">
+                <tr>
+                    <th>PolicyID</th>
+                    <th>AgentID</th>
+                    <th>AgentName</th>
+                    <th>AgentPhone</th>
+                    <th>Commission</th>
+                </tr>
+                <tr>
+                    <td>P001</td>
+                    <td>A01</td>
+                    <td>Rajesh Singh</td>
+                    <td>9988776655</td>
+                    <td>5000</td>
+                </tr>
+            </table>
+            <em>Problem:</em> AgentName and AgentPhone depend only on AgentID, not on full key (PolicyID + AgentID)!<br><br>
+
+            <strong>✅ In 2NF (Separate tables):</strong><br><br>
+            
+            <strong>Table 1: POLICY_AGENT</strong><br>
+            <table style="font-size: 12px;">
+                <tr><th>PolicyID</th><th>AgentID</th><th>Commission</th></tr>
+                <tr><td>P001</td><td>A01</td><td>5000</td></tr>
+            </table><br>
+
+            <strong>Table 2: AGENT</strong><br>
+            <table style="font-size: 12px;">
+                <tr><th>AgentID</th><th>AgentName</th><th>AgentPhone</th></tr>
+                <tr><td>A01</td><td>Rajesh Singh</td><td>9988776655</td></tr>
+            </table>
+        </div>
+
+        <h3>📌 Third Normal Form (3NF)</h3>
+
+        <div class="normalization-table">
+            <strong>Rule:</strong> Must be in 2NF + No transitive dependency<br>
+            (Non-key attributes should NOT depend on other non-key attributes)<br><br>
+
+            <strong>❌ NOT in 3NF:</strong><br>
+            <table style="font-size: 12px;">
+                <tr>
+                    <th>PolicyID</th>
+                    <th>CustomerID</th>
+                    <th>CustomerCity</th>
+                    <th>CityState</th>
+                    <th>CityPincode</th>
+                </tr>
+                <tr>
+                    <td>P001</td>
+                    <td>C101</td>
+                    <td>Mumbai</td>
+                    <td>Maharashtra</td>
+                    <td>400001</td>
+                </tr>
+            </table>
+            <em>Problem:</em> CityState and CityPincode depend on CustomerCity (non-key), not directly on PolicyID (key)!<br><br>
+
+            <strong>✅ In 3NF (Remove transitive dependency):</strong><br><br>
+
+            <strong>Table 1: POLICY</strong><br>
+            <table style="font-size: 12px;">
+                <tr><th>PolicyID</th><th>CustomerID</th><th>CityCode</th></tr>
+                <tr><td>P001</td><td>C101</td><td>MUM</td></tr>
+            </table><br>
+
+            <strong>Table 2: CITY_MASTER</strong><br>
+            <table style="font-size: 12px;">
+                <tr><th>CityCode</th><th>CityName</th><th>State</th><th>Pincode</th></tr>
+                <tr><td>MUM</td><td>Mumbai</td><td>Maharashtra</td><td>400001</td></tr>
+            </table>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>💻 Part 4: SQL Basics to Intermediate</h2>
+
+        <h3>📖 What is SQL?</h3>
+
+        <div class="example-box">
+            <strong>SQL (Structured Query Language):</strong> Standard language for managing relational databases.<br><br>
+
+            <strong>SQL Command Categories:</strong><br><br>
+
+            <strong>1. DDL (Data Definition Language)</strong><br>
+            CREATE, ALTER, DROP, TRUNCATE<br>
+            Purpose: Define database structure<br><br>
+
+            <strong>2. DML (Data Manipulation Language)</strong><br>
+            SELECT, INSERT, UPDATE, DELETE<br>
+            Purpose: Manipulate data<br><br>
+
+            <strong>3. DCL (Data Control Language)</strong><br>
+            GRANT, REVOKE<br>
+            Purpose: Control access rights<br><br>
+
+            <strong>4. TCL (Transaction Control Language)</strong><br>
+            COMMIT, ROLLBACK, SAVEPOINT<br>
+            Purpose: Manage transactions
+        </div>
+
+        <h3>🔤 Basic SQL Commands</h3>
+
+        <div class="example-box">
+            <strong>1. SELECT - Retrieve Data</strong>
+            <div class="sql-code">
+-- Get all customer records<br>
+SELECT * FROM Customer;<br><br>
+
+-- Get specific columns<br>
+SELECT Name, Phone, City FROM Customer;<br><br>
+
+-- Get customers from specific city<br>
+SELECT * FROM Customer WHERE City = 'Mumbai';
+            </div>
+        </div>
+
+        <div class="example-box">
+            <strong>2. WHERE - Filter Rows</strong>
+            <div class="sql-code">
+-- Policies with premium above 10000<br>
+SELECT * FROM Policy WHERE Premium > 10000;<br><br>
+
+-- Approved claims only<br>
+SELECT * FROM Claim WHERE Status = 'Approved';<br><br>
+
+-- Health policies started in 2023<br>
+SELECT * FROM Policy <br>
+WHERE PolicyType = 'Health' AND YEAR(StartDate) = 2023;
+            </div>
+        </div>
+
+        <div class="example-box">
+            <strong>3. ORDER BY - Sort Results</strong>
+            <div class="sql-code">
+-- Sort by premium (highest first)<br>
+SELECT * FROM Policy ORDER BY Premium DESC;<br><br>
+
+-- Sort by name alphabetically<br>
+SELECT * FROM Customer ORDER BY Name ASC;<br><br>
+
+-- Multiple column sorting<br>
+SELECT * FROM Policy ORDER BY PolicyType, Premium DESC;
+            </div>
+        </div>
+
+        <div class="example-box">
+            <strong>4. LIMIT - Restrict Number of Rows</strong>
+            <div class="sql-code">
+-- Top 10 highest claims<br>
+SELECT * FROM Claim ORDER BY ClaimAmount DESC LIMIT 10;<br><br>
+
+-- First 5 customers<br>
+SELECT * FROM Customer LIMIT 5;
+            </div>
+        </div>
+
+        <div class="example-box">
+            <strong>5. DISTINCT - Get Unique Values</strong>
+            <div class="sql-code">
+-- List all cities where we have customers<br>
+SELECT DISTINCT City FROM Customer;<br><br>
+
+-- All policy types available<br>
+SELECT DISTINCT PolicyType FROM Policy;
+            </div>
+        </div>
+
+        <div class="example-box">
+            <strong>6. Aggregate Functions</strong>
+            <div class="sql-code">
+-- Total number of policies<br>
+SELECT COUNT(*) FROM Policy;<br><br>
+
+-- Total claim amount paid<br>
+SELECT SUM(ClaimAmount) FROM Claim WHERE Status = 'Approved';<br><br>
+
+-- Average premium<br>
+SELECT AVG(Premium) FROM Policy;<br><br>
+
+-- Highest and lowest claim<br>
+SELECT MAX(ClaimAmount), MIN(ClaimAmount) FROM Claim;
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h3>📊 GROUP BY & HAVING</h3>
+
+        <div class="example-box">
+            <strong>GROUP BY - Group Rows with Same Values</strong>
+            <div class="sql-code">
+-- Count policies by type<br>
+SELECT PolicyType, COUNT(*) as TotalPolicies<br>
+FROM Policy<br>
+GROUP BY PolicyType;<br><br>
+
+-- Average premium by policy type<br>
+SELECT PolicyType, AVG(Premium) as AvgPremium<br>
+FROM Policy<br>
+GROUP BY PolicyType;<br><br>
+
+-- Total claims by status<br>
+SELECT Status, SUM(ClaimAmount) as TotalAmount<br>
+FROM Claim<br>
+GROUP BY Status;
+            </div>
+
+            <strong>Output Example:</strong><br>
+            <table style="font-size: 12px;">
+                <tr><th>PolicyType</th><th>TotalPolicies</th></tr>
+                <tr><td>Life</td><td>1500</td></tr>
+                <tr><td>Health</td><td>2300</td></tr>
+                <tr><td>Motor</td><td>900</td></tr>
+            </table>
+        </div>
+
+        <div class="example-box">
+            <strong>HAVING - Filter Grouped Results</strong>
+            <div class="sql-code">
+-- Cities with more than 100 customers<br>
+SELECT City, COUNT(*) as CustomerCount<br>
+FROM Customer<br>
+GROUP BY City<br>
+HAVING COUNT(*) > 100;<br><br>
+
+-- Agents who sold policies worth more than 5 lakh<br>
+SELECT AgentID, SUM(Premium) as TotalPremium<br>
+FROM Policy<br>
+GROUP BY AgentID<br>
+HAVING SUM(Premium) > 500000;
+            </div>
+
+            <strong>🔑 Key Difference:</strong><br>
+            <strong>WHERE</strong> filters rows BEFORE grouping<br>
+            <strong>HAVING</strong> filters groups AFTER grouping
+        </div>
+
+        <h3>🔗 SQL JOINS (बहुत Important!)</h3>
+
+        <div class="key-point">
+            <strong>JOINs combine rows from two or more tables based on related columns.</strong><br>
+            This is THE MOST important SQL concept for Business Analysts!
+        </div>
+
+        <div class="example-box">
+            <strong>1️⃣ INNER JOIN</strong><br>
+            Returns only matching rows from both tables
+            <div class="sql-code">
+-- Get customer names with their policy details<br>
+SELECT c.Name, c.Phone, p.PolicyType, p.Premium<br>
+FROM Customer c<br>
+INNER JOIN Policy p ON c.CustomerID = p.CustomerID;<br><br>
+
+-- Claims with policy information<br>
+SELECT cl.ClaimID, cl.ClaimAmount, p.PolicyType<br>
+FROM Claim cl<br>
+INNER JOIN Policy p ON cl.PolicyID = p.PolicyID;
+            </div>
+        </div>
+
+        <div class="example-box">
+            <strong>2️⃣ LEFT JOIN (LEFT OUTER JOIN)</strong><br>
+            Returns all rows from left table + matching from right table
+            <div class="sql-code">
+-- Get all customers, even those without policies<br>
+SELECT c.Name, p.PolicyType<br>
+FROM Customer c<br>
+LEFT JOIN Policy p ON c.CustomerID = p.CustomerID;<br><br>
+
+-- All policies with claim details (if any)<br>
+SELECT p.PolicyID, p.PolicyType, cl.ClaimAmount<br>
+FROM Policy p<br>
+LEFT JOIN Claim cl ON p.PolicyID = cl.PolicyID;
+            </div>
+            <em>Note: Customers without policies will show NULL in PolicyType</em>
+        </div>
+
+        <div class="example-box">
+            <strong>3️⃣ RIGHT JOIN</strong><br>
+            Returns all rows from right table + matching from left table
+            <div class="sql-code">
+-- All policies with customer details<br>
+SELECT c.Name, p.PolicyID, p.Premium<br>
+FROM Customer c<br>
+RIGHT JOIN Policy p ON c.CustomerID = p.CustomerID;
+            </div>
+        </div>
+
+        <div class="example-box">
+            <strong>4️⃣ Multiple JOINs - Real Insurance Query</strong>
+            <div class="sql-code">
+-- Get claim details with customer and policy info<br>
+SELECT <br>
+    c.Name as CustomerName,<br>
+    c.Phone,<br>
+    p.PolicyType,<br>
+    cl.ClaimAmount,<br>
+    cl.Status,<br>
+    a.AgentName<br>
+FROM Claim cl<br>
+INNER JOIN Policy p ON cl.PolicyID = p.PolicyID<br>
+INNER JOIN Customer c ON p.CustomerID = c.CustomerID<br>
+LEFT JOIN Agent a ON p.AgentID = a.AgentID<br>
+WHERE cl.Status = 'Pending'<br>
+ORDER BY cl.ClaimAmount DESC;
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h3>🎯 Subqueries (Nested Queries)</h3>
+
+        <div class="key-point">
+            <strong>Subquery:</strong> A query inside another query. Very useful for complex business logic!
+        </div>
+
+        <div class="example-box">
+            <strong>Example 1: Find customers with premium above average</strong>
+            <div class="sql-code">
+SELECT c.Name, p.Premium<br>
+FROM Customer c<br>
+JOIN Policy p ON c.CustomerID = p.CustomerID<br>
+WHERE p.Premium > (SELECT AVG(Premium) FROM Policy);
+            </div>
+        </div>
+
+        <div class="example-box">
+            <strong>Example 2: Find policies without any claims</strong>
+            <div class="sql-code">
+SELECT PolicyID, PolicyType<br>
+FROM Policy<br>
+WHERE PolicyID NOT IN (<br>
+    SELECT DISTINCT PolicyID FROM Claim<br>
+);
+            </div>
+        </div>
+
+        <div class="example-box">
+            <strong>Example 3: Customers with more than 3 policies</strong>
+            <div class="sql-code">
+SELECT c.Name, c.CustomerID<br>
+FROM Customer c<br>
+WHERE (<br>
+    SELECT COUNT(*) FROM Policy p<br>
+    WHERE p.CustomerID = c.CustomerID<br>
+) > 3;
+            </div>
+        </div>
+
+        <div class="example-box">
+            <strong>Example 4: Agents handling highest value claims</strong>
+            <div class="sql-code">
+SELECT AgentName<br>
+FROM Agent<br>
+WHERE AgentID IN (<br>
+    SELECT DISTINCT p.AgentID<br>
+    FROM Policy p<br>
+    JOIN Claim c ON p.PolicyID = c.PolicyID<br>
+    WHERE c.ClaimAmount > 100000<br>
+);
+            </div>
+        </div>
+
+        <h3>⚡ Important SQL Clauses & Functions</h3>
+
+        <div class="example-box">
+            <strong>LIKE - Pattern Matching</strong>
+            <div class="sql-code">
+-- Names starting with 'A'<br>
+SELECT * FROM Customer WHERE Name LIKE 'A%';<br><br>
+
+-- Phone numbers ending with '99'<br>
+SELECT * FROM Customer WHERE Phone LIKE '%99';<br><br>
+
+-- Names containing 'Kumar'<br>
+SELECT * FROM Customer WHERE Name LIKE '%Kumar%';
+            </div>
+        </div>
+
+        <div class="example-box">
+            <strong>BETWEEN - Range Filter</strong>
+            <div class="sql-code">
+-- Premiums between 5000 and 20000<br>
+SELECT * FROM Policy<br>
+WHERE Premium BETWEEN 5000 AND 20000;<br><br>
+
+-- Policies started in 2023<br>
+SELECT * FROM Policy<br>
+WHERE StartDate BETWEEN '2023-01-01' AND '2023-12-31';
+            </div>
+        </div>
+
+        <div class="example-box">
+            <strong>IN - Multiple Values</strong>
+            <div class="sql-code">
+-- Customers from specific cities<br>
+SELECT * FROM Customer<br>
+WHERE City IN ('Mumbai', 'Delhi', 'Bangalore', 'Kolkata');<br><br>
+
+-- Specific policy types<br>
+SELECT * FROM Policy<br>
+WHERE PolicyType IN ('Life', 'Health');
+            </div>
+        </div>
+
+        <div class="example-box">
+            <strong>IS NULL / IS NOT NULL</strong>
+            <div class="sql-code">
+-- Claims without approval date (pending)<br>
+SELECT * FROM Claim<br>
+WHERE ApprovalDate IS NULL;<br><br>
+
+-- Customers with email<br>
+SELECT * FROM Customer<br>
+WHERE Email IS NOT NULL;
+            </div>
+        </div>
+
+        <div class="example-box">
+            <strong>CASE WHEN - Conditional Logic</strong>
+            <div class="sql-code">
+-- Categorize policies by premium<br>
+SELECT PolicyID, Premium,<br>
+    CASE<br>
+        WHEN Premium < 10000 THEN 'Low'<br>
+        WHEN Premium < 50000 THEN 'Medium'<br>
+        ELSE 'High'<br>
+    END as PremiumCategory<br>
+FROM Policy;<br><br>
+
+-- Claim status description<br>
+SELECT ClaimID, Status,<br>
+    CASE Status<br>
+        WHEN 'P' THEN 'Pending'<br>
+        WHEN 'A' THEN 'Approved'<br>
+        WHEN 'R' THEN 'Rejected'<br>
+    END as StatusDescription<br>
+FROM Claim;
+            </div>
+        </div>
+
+        <div class="example-box">
+            <strong>Date Functions</strong>
+            <div class="sql-code">
+-- Policies expiring in next 30 days<br>
+SELECT * FROM Policy<br>
+WHERE EndDate BETWEEN CURDATE() <br>
+    AND DATE_ADD(CURDATE(), INTERVAL 30 DAY);<br><br>
+
+-- Claims filed this month<br>
+SELECT * FROM Claim<br>
+WHERE MONTH(ClaimDate) = MONTH(CURDATE())<br>
+    AND YEAR(ClaimDate) = YEAR(CURDATE());<br><br>
+
+-- Policy age in years<br>
+SELECT PolicyID, <br>
+    DATEDIFF(CURDATE(), StartDate) / 365 as PolicyAgeYears<br>
+FROM Policy;
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>🏢 Part 5: Insurance Dataset - Complete SQL Examples</h2>
+
+        <h3>Sample Database Schema</h3>
+
+        <div class="formula-box">
+            <strong>CUSTOMER</strong> (CustomerID, Name, DOB, Phone, Email, City, PAN)<br>
+            <strong>POLICY</strong> (PolicyID, CustomerID, PolicyType, Premium, SumAssured, StartDate, EndDate, AgentID)<br>
+            <strong>CLAIM</strong> (ClaimID, PolicyID, ClaimDate, ClaimAmount, ClaimType, Status, ApprovalDate)<br>
+            <strong>AGENT</strong> (AgentID, AgentName, Phone, Branch, JoinDate, Commission)<br>
+            <strong>BRANCH</strong> (BranchID, BranchName, City, State, ManagerName)
+        </div>
+
+        <div class="example-box">
+            <strong>Q1: Find top 5 customers by total premium paid</strong>
+            <div class="sql-code">
+SELECT c.CustomerID, c.Name, SUM(p.Premium) as TotalPremium<br>
+FROM Customer c<br>
+JOIN Policy p ON c.CustomerID = p.CustomerID<br>
+GROUP BY c.CustomerID, c.Name<br>
+ORDER BY TotalPremium DESC<br>
+LIMIT 5;
+            </div>
+            <strong>Output:</strong><br>
+            <table style="font-size: 12px;">
+                <tr><th>CustomerID</th><th>Name</th><th>TotalPremium</th></tr>
+                <tr><td>C105</td><td>Rajesh Sharma</td><td>₹2,50,000</td></tr>
+                <tr><td>C203</td><td>Priya Patel</td><td>₹2,25,000</td></tr>
+                <tr><td>C089</td><td>Amit Kumar</td><td>₹2,00,000</td></tr>
+            </table>
+        </div>
+
+        <div class="example-box">
+            <strong>Q2: Calculate claim settlement ratio by policy type</strong>
+            <div class="sql-code">
+SELECT <br>
+    p.PolicyType,<br>
+    COUNT(cl.ClaimID) as TotalClaims,<br>
+    SUM(CASE WHEN cl.Status = 'Approved' THEN 1 ELSE 0 END) as ApprovedClaims,<br>
+    ROUND(<br>
+        SUM(CASE WHEN cl.Status = 'Approved' THEN 1 ELSE 0 END) * 100.0 / COUNT(cl.ClaimID), <br>
+        2<br>
+    ) as SettlementRatio<br>
+FROM Policy p<br>
+LEFT JOIN Claim cl ON p.PolicyID = cl.PolicyID<br>
+GROUP BY p.PolicyType;
+            </div>
+            <strong>Business Insight:</strong> This helps identify which policy types have better claim approval rates.
+        </div>
+
+        <div class="example-box">
+            <strong>Q3: Find agents with highest claim approval rate (minimum 10 claims)</strong>
+            <div class="sql-code">
+SELECT <br>
+    a.AgentName,<br>
+    COUNT(cl.ClaimID) as TotalClaims,<br>
+    ROUND(<br>
+        AVG(CASE WHEN cl.Status = 'Approved' THEN 1 ELSE 0 END) * 100, <br>
+        2<br>
+    ) as ApprovalRate<br>
+FROM Agent a<br>
+JOIN Policy p ON a.AgentID = p.AgentID<br>
+JOIN Claim cl ON p.PolicyID = cl.PolicyID<br>
+GROUP BY a.AgentID, a.AgentName<br>
+HAVING COUNT(cl.ClaimID) > 10<br>
+ORDER BY ApprovalRate DESC;
+            </div>
+        </div>
+
+        <div class="example-box">
+            <strong>Q4: Identify customers likely to churn (no activity in 6 months)</strong>
+            <div class="sql-code">
+SELECT c.CustomerID, c.Name, c.Phone, <br>
+    MAX(p.EndDate) as LastPolicyEnd,<br>
+    DATEDIFF(CURDATE(), MAX(p.EndDate)) as DaysSinceLastPolicy<br>
+FROM Customer c<br>
+JOIN Policy p ON c.CustomerID = p.CustomerID<br>
+GROUP BY c.CustomerID, c.Name, c.Phone<br>
+HAVING MAX(p.EndDate) < DATE_SUB(CURDATE(), INTERVAL 6 MONTH);
+            </div>
+            <strong>Business Use:</strong> Target these customers for renewal campaigns!
+        </div>
+
+        <div class="example-box">
+            <strong>Q5: Fraud Detection - High claims soon after policy start</strong>
+            <div class="sql-code">
+SELECT <br>
+    c.Name,<br>
+    p.PolicyID,<br>
+    p.StartDate,<br>
+    cl.ClaimDate,<br>
+    cl.ClaimAmount,<br>
+    DATEDIFF(cl.ClaimDate, p.StartDate) as DaysToClaim<br>
+FROM Customer c<br>
+JOIN Policy p ON c.CustomerID = p.CustomerID<br>
+JOIN Claim cl ON p.PolicyID = cl.PolicyID<br>
+WHERE <br>
+    DATEDIFF(cl.ClaimDate, p.StartDate) < 30<br>
+    AND cl.ClaimAmount > 50000<br>
+ORDER BY cl.ClaimAmount DESC;
+            </div>
+            <strong>Red Flag:</strong> Claims filed within 30 days with high amount - possible fraud!
+        </div>
+
+        <div class="example-box">
+            <strong>Q6: Monthly premium collection trend</strong>
+            <div class="sql-code">
+SELECT <br>
+    DATE_FORMAT(StartDate, '%Y-%m') as Month,<br>
+    PolicyType,<br>
+    COUNT(*) as PoliciesSold,<br>
+    SUM(Premium) as TotalPremium<br>
+FROM Policy<br>
+WHERE YEAR(StartDate) = 2024<br>
+GROUP BY DATE_FORMAT(StartDate, '%Y-%m'), PolicyType<br>
+ORDER BY Month, PolicyType;
+            </div>
+        </div>
+
+        <div class="example-box">
+            <strong>Q7: Branch-wise performance analysis</strong>
+            <div class="sql-code">
+SELECT <br>
+    br.BranchName,<br>
+    br.City,<br>
+    COUNT(DISTINCT a.AgentID) as TotalAgents,<br>
+    COUNT(p.PolicyID) as PoliciesSold,<br>
+    SUM(p.Premium) as TotalPremium,<br>
+    ROUND(AVG(p.Premium), 2) as AvgPremium<br>
+FROM Branch br<br>
+LEFT JOIN Agent a ON br.BranchID = a.BranchID<br>
+LEFT JOIN Policy p ON a.AgentID = p.AgentID<br>
+GROUP BY br.BranchID, br.BranchName, br.City<br>
+ORDER BY TotalPremium DESC;
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>✍️ 30+ Practice Questions</h2>
+
+        <h3>Set 1: Basic SQL Queries (Q1-Q5)</h3>
+
+        <div class="practice-question">
+            <strong>Q1.</strong> Write a query to list all customers from Mumbai with their phone numbers.<br><br>
+
+            <strong>Q2.</strong> Find total number of Health insurance policies sold.<br><br>
+
+            <strong>Q3.</strong> List all claims with amount greater than ₹1,00,000, sorted by amount (highest first).<br><br>
+
+            <strong>Q4.</strong> Get distinct cities where NIACL has customers.<br><br>
+
+            <strong>Q5.</strong> Find average premium for Motor insurance policies.
+        </div>
+
+        <h3>Set 2: Aggregate Functions (Q6-Q10)</h3>
+
+        <div class="practice-question">
+            <strong>Q6.</strong> Calculate total sum assured across all Life insurance policies.<br><br>
+
+            <strong>Q7.</strong> Find the highest and lowest premium in Policy table.<br><br>
+
+            <strong>Q8.</strong> Count number of pending claims.<br><br>
+
+            <strong>Q9.</strong> Calculate average claim amount for approved claims.<br><br>
+
+            <strong>Q10.</strong> Find total number of unique customers who have filed claims.
+        </div>
+
+        <h3>Set 3: GROUP BY & HAVING (Q11-Q15)</h3>
+
+        <div class="practice-question">
+            <strong>Q11.</strong> Count number of policies sold by each agent. Show only agents with more than 50 policies.<br><br>
+
+            <strong>Q12.</strong> Calculate total premium collected from each city. Sort by premium (descending).<br><br>
+
+            <strong>Q13.</strong> Find policy types where average premium exceeds ₹25,000.<br><br>
+
+            <strong>Q14.</strong> List agents who have earned commission more than ₹5,00,000.<br><br>
+
+            <strong>Q15.</strong> Count claims by status. Show count for each status type.
+        </div>
+
+        <h3>Set 4: JOINs (Q16-Q20)</h3>
+
+        <div class="practice-question">
+            <strong>Q16.</strong> List customer names with their policy types and premiums.<br><br>
+
+            <strong>Q17.</strong> Show all claims with customer name, policy type, and claim amount.<br><br>
+
+            <strong>Q18.</strong> Find customers who have NOT filed any claims (use LEFT JOIN).<br><br>
+
+            <strong>Q19.</strong> Display agent names with total premium from policies they sold.<br><br>
+
+            <strong>Q20.</strong> List all policies with customer details and agent details (if available).
+        </div>
+
+        <h3>Set 5: Subqueries (Q21-Q25)</h3>
+
+        <div class="practice-question">
+            <strong>Q21.</strong> Find customers whose total premium paid is above average.<br><br>
+
+            <strong>Q22.</strong> List policies that have never had a claim filed.<br><br>
+
+            <strong>Q23.</strong> Find agents who have sold policies to customers from more than 5 different cities.<br><br>
+
+            <strong>Q24.</strong> Get details of the most expensive policy in each policy type.<br><br>
+
+            <strong>Q25.</strong> Find customers who have both Life and Health insurance.
+        </div>
+
+        <h3>Set 6: Date Functions & Advanced (Q26-Q30)</h3>
+
+        <div class="practice-question">
+            <strong>Q26.</strong> List policies that will expire in next 90 days.<br><br>
+
+            <strong>Q27.</strong> Calculate average claim settlement time (ClaimDate to ApprovalDate) in days.<br><br>
+
+            <strong>Q28.</strong> Find policies started in Q4 2023 (Oct-Dec).<br><br>
+
+            <strong>Q29.</strong> List customers whose age (from DOB) is between 25 and 40 years.<br><br>
+
+            <strong>Q30.</strong> Find month-wise claim amount trend for 2024.
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>📝 Quick Formula & Syntax Reference</h2>
+
+        <div class="formula-box">
+            <strong>Basic Query Structure:</strong><br>
+            SELECT columns<br>
+            FROM table<br>
+            WHERE condition<br>
+            GROUP BY columns<br>
+            HAVING group_condition<br>
+            ORDER BY columns<br>
+            LIMIT n;<br><br>
+
+            <strong>JOIN Syntax:</strong><br>
+            SELECT columns<br>
+            FROM table1 t1<br>
+            [INNER|LEFT|RIGHT|FULL] JOIN table2 t2<br>
+            ON t1.key = t2.key;<br><br>
+
+            <strong>Subquery:</strong><br>
+            SELECT * FROM table1<br>
+            WHERE column IN (SELECT column FROM table2);<br><br>
+
+            <strong>Aggregate Functions:</strong><br>
+            COUNT(*), COUNT(column)<br>
+            SUM(column), AVG(column)<br>
+            MAX(column), MIN(column)<br><br>
+
+            <strong>Common Date Functions:</strong><br>
+            CURDATE() - Current date<br>
+            NOW() - Current datetime<br>
+            DATE_ADD(date, INTERVAL n DAY/MONTH/YEAR)<br>
+            DATEDIFF(date1, date2)<br>
+            YEAR(date), MONTH(date), DAY(date)<br><br>
+
+            <strong>String Functions:</strong><br>
+            CONCAT(str1, str2)<br>
+            UPPER(str), LOWER(str)<br>
+            SUBSTRING(str, start, length)<br>
+            LENGTH(str)
+        </div>
+
+        <h2>🎯 SQL Tips for NIACL Exam</h2>
+
+        <div class="key-point">
+            <strong>Common Mistakes to Avoid:</strong><br>
+            ❌ Forgetting GROUP BY when using aggregate functions<br>
+            ❌ Using HAVING instead of WHERE (and vice versa)<br>
+            ❌ Not using table aliases in complex JOINs<br>
+            ❌ Forgetting to handle NULL values<br>
+            ❌ Confusing INNER JOIN with LEFT JOIN<br>
+            ❌ Not using proper date format in WHERE conditions<br>
+            ❌ Missing ORDER BY when using LIMIT for "top N" queries
+        </div>
+
+        <div class="key-point">
+            <strong>SQL Interview Tips:</strong><br>
+            ✓ Always write queries in proper format (indented)<br>
+            ✓ Use meaningful table aliases (c for Customer, p for Policy)<br>
+            ✓ Specify column sources in SELECT (c.Name, p.Premium)<br>
+            ✓ Use comments to explain complex queries<br>
+            ✓ Think about performance - use indexes wisely<br>
+            ✓ Consider NULL values in your logic<br>
+            ✓ Test edge cases (empty results, single row, etc.)
+        </div>
+
+        <div class="key-point">
+            <strong>Query Optimization Tips:</strong><br>
+            ⚡ Use WHERE before JOIN when possible<br>
+            ⚡ Avoid SELECT * - specify only needed columns<br>
+            ⚡ Use EXISTS instead of IN for large subqueries<br>
+            ⚡ Create indexes on frequently queried columns<br>
+            ⚡ Use LIMIT to test queries on large tables<br>
+            ⚡ Avoid using functions in WHERE clause on indexed columns
+        </div>
+
+        <h2>🎓 Day 7 Key Takeaways</h2>
+
+        <div class="example-box">
+            <strong>What You Should Remember:</strong><br><br>
+
+            ✅ <strong>DBMS:</strong> Provides centralized data management with ACID properties (Atomicity, Consistency, Isolation, Durability)<br><br>
+
+            ✅ <strong>ER Models:</strong> Help visualize database structure - Entity (object), Attribute (property), Relationship (connection)<br><br>
+
+            ✅ <strong>Normalization:</strong><br>
+            • 1NF: Atomic values (no multiple values in one cell)<br>
+            • 2NF: No partial dependency (depends on entire primary key)<br>
+            • 3NF: No transitive dependency (non-key not depending on non-key)<br><br>
+
+            ✅ <strong>SQL SELECT:</strong> Foundation of data retrieval with WHERE, GROUP BY, HAVING, ORDER BY<br><br>
+
+            ✅ <strong>JOINs:</strong> Combine multiple tables<br>
+            • INNER: Only matching rows<br>
+            • LEFT: All from left + matching from right<br>
+            • RIGHT: All from right + matching from left<br><br>
+
+            ✅ <strong>Subqueries:</strong> Enable complex business logic - query inside query<br><br>
+
+            ✅ <strong>Aggregate Functions:</strong> COUNT, SUM, AVG, MAX, MIN for data summarization<br><br>
+
+            ✅ <strong>Practice:</strong> Write 20-30 SQL queries daily on insurance datasets
+        </div>
+
+        <h2>📚 For Deep Study</h2>
+
+        <div class="deep-study">
+            <strong>🔗 Recommended Resources:</strong><br><br>
+
+            <strong>Interactive SQL Practice:</strong><br>
+            📖 <strong>W3Schools SQL Tutorial:</strong> w3schools.com/sql<br>
+            📖 <strong>SQLBolt:</strong> sqlbolt.com (Interactive exercises)<br>
+            📖 <strong>Mode Analytics SQL Tutorial:</strong> mode.com/sql-tutorial<br>
+            📖 <strong>HackerRank SQL:</strong> hackerrank.com/domains/sql<br>
+            📖 <strong>LeetCode Database:</strong> leetcode.com/problemset/database<br><br>
+
+            <strong>Theory & Concepts:</strong><br>
+            📚 <strong>Database Normalization:</strong> GeeksforGeeks detailed guide<br>
+            📚 <strong>DBMS Tutorials:</strong> Tutorialspoint, JavaTpoint<br>
+            📚 <strong>ER Diagram Tools:</strong> Lucidchart, Draw.io<br><br>
+
+            <strong>Practice Datasets:</strong><br>
+            💾 <strong>Kaggle Insurance Datasets:</strong> kaggle.com/datasets<br>
+            💾 <strong>Sample SQL Databases:</strong> mysqltutorial.org/mysql-sample-database<br><br>
+
+            <strong>Video Learning:</strong><br>
+            🎥 <strong>FreeCodeCamp SQL Course:</strong> Full tutorial on YouTube<br>
+            🎥 <strong>Programming with Mosh:</strong> SQL for Beginners<br>
+            🎥 <strong>Telusko:</strong> SQL Hindi tutorials<br><br>
+
+            <strong>Books:</strong><br>
+            📕 <strong>SQL Queries for Mere Mortals</strong> - John Viescas<br>
+            📕 <strong>Learning SQL</strong> - Alan Beaulieu<br><br>
+
+            <strong>Practice Strategy:</strong><br>
+            ✅ Solve 10 SQL queries daily for 15 days<br>
+            ✅ Focus on JOINs and GROUP BY - most common in interviews<br>
+            ✅ Practice on real insurance datasets<br>
+            ✅ Write queries by hand first, then test on computer<br>
+            ✅ Maintain a personal SQL cheat sheet
+        </div>
+
+        <h2>✅ Self-Assessment Checklist</h2>
+
+        <div class="key-point">
+            <strong>Before Moving to Day 8, Ensure You Can:</strong><br><br>
+
+            ☐ Explain ACID properties with examples<br>
+            ☐ Draw ER diagram for simple insurance database<br>
+            ☐ Identify whether table is in 1NF, 2NF, or 3NF<br>
+            ☐ Write SELECT queries with WHERE, ORDER BY, LIMIT<br>
+            ☐ Use aggregate functions (COUNT, SUM, AVG, MAX, MIN)<br>
+            ☐ Write GROUP BY queries with HAVING clause<br>
+            ☐ Perform INNER JOIN between 2-3 tables<br>
+            ☐ Use LEFT JOIN to find missing relationships<br>
+            ☐ Write subqueries for complex conditions<br>
+            ☐ Use LIKE, BETWEEN, IN, IS NULL operators<br>
+            ☐ Apply CASE WHEN for conditional logic<br>
+            ☐ Work with date functions<br><br>
+
+            <strong>Minimum Target:</strong> 70% confidence in above topics<br>
+            <strong>If Yes ✅ → You're Ready for Day 8! 💪</strong><br>
+            <strong>If No ❌ → Practice 20 more SQL queries 📖</strong>
+        </div>
+
+        <div style="text-align: center; margin: 40px 0; padding: 30px; border: 3px solid #27ae60; border-radius: 10px; background: #d5f4e6;">
+            <h2 style="color: #27ae60; margin-bottom: 20px;">🎉 Day 7 Complete! 🎉</h2>
+            <p style="font-size: 18px;"><strong>Database & SQL Mastered! ✅</strong></p>
+            <p style="margin-top: 20px;">You now understand DBMS, ER models, Normalization, and SQL queries.</p>
+            <p>Practice daily SQL queries to maintain sharpness!</p>
+            <p style="margin-top: 30px; font-weight: bold;">Next: Day 8 - Business Analytics Tools & Visualization</p>
+            <p style="margin-top: 10px; color: #666;">Power BI, Tableau, Dashboards, Data Storytelling</p>
+        </div>
+    </div>
+</body>
+</html>

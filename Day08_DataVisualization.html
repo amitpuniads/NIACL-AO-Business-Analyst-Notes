@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIACL AO - Section 4: Business Analytics Tools</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .page-break { page-break-after: always; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .book-container {
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .cover-page {
+            text-align: center;
+            padding: 100px 20px;
+            border: 3px solid #2c3e50;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 25px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #16a085;
+            margin-top: 20px;
+        }
+        
+        .day-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0 20px 0;
+            text-align: center;
+        }
+        
+        .formula-box {
+            background: #ecf0f1;
+            border-left: 4px solid #e74c3c;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .example-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .key-point {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin: 12px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        th {
+            background: #3498db;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
+        .deep-study {
+            background: #d4edda;
+            border: 2px dashed #28a745;
+            padding: 15px;
+            margin: 25px 0;
+            text-align: center;
+            border-radius: 8px;
+        }
+        
+        .download-btn {
+            background: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px 0;
+        }
+
+        .tool-box {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .dashboard-box {
+            background: #f3e5f5;
+            border: 2px solid #9c27b0;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .viz-box {
+            background: #fff8e1;
+            border: 2px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .case-study {
+            background: #fce4ec;
+            border: 2px solid #e91e63;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="book-container">
+        <div class="cover-page page-break">
+            <h1>NIACL AO Study Material</h1>
+            <h2 style="color: #e74c3c;">SECTION 4</h2>
+            <h2>Business Analytics Tools & Visualization</h2>
+            <p style="margin-top: 40px; font-size: 20px;">📊 Day 8</p>
+            <p>Power BI | Tableau | Dashboard Design | Data Storytelling</p>
+            <p style="margin-top: 20px;">Complete with Real Insurance Case Studies</p>
+            <button class="download-btn no-print" onclick="window.print()">📥 Download PDF</button>
+        </div>
+
+        <div class="day-header">
+            <h1>DAY 8: Business Analytics Tools & Visualization</h1>
+            <p>Dashboard Design, KPIs vs Metrics, Power BI, Tableau, Data Storytelling</p>
+        </div>
+
+        <h2>📌 Why Business Analytics Tools Matter for NIACL AO</h2>
+
+        <div class="key-point">
+            <strong>As NIACL Business Analyst, You'll Use Analytics Tools To:</strong><br>
+            ✓ Create executive dashboards showing claim ratios, premium trends<br>
+            ✓ Visualize regional performance across branches<br>
+            ✓ Identify fraud patterns through visual analytics<br>
+            ✓ Present insights to management for decision-making<br>
+            ✓ Monitor KPIs like claim settlement ratio, policy renewal rate<br>
+            ✓ Build interactive reports accessible to different stakeholders<br>
+            ✓ Tell compelling data stories to drive business actions
+        </div>
+
+        <h2>📊 Part 1: Dashboard Design Principles</h2>
+
+        <h3>🎯 What is a Dashboard?</h3>
+
+        <div class="example-box">
+            <strong>Dashboard:</strong> A visual display of the most important information needed to achieve objectives, consolidated on a single screen.<br><br>
+            <strong>Hindi:</strong> डैशबोर्ड - महत्वपूर्ण जानकारी का दृश्य प्रदर्शन<br><br>
+            <strong>Purpose:</strong><br>
+            • Provides at-a-glance view of KPIs<br>
+            • Enables quick decision-making<br>
+            • Monitors business health in real-time<br>
+            • Communicates data insights effectively
+        </div>
+
+        <h3>🔑 Key Dashboard Design Principles</h3>
+
+        <table>
+            <tr>
+                <th>Principle</th>
+                <th>Description</th>
+                <th>Insurance Example</th>
+            </tr>
+            <tr>
+                <td><strong>Simplicity</strong></td>
+                <td>Keep it clean, avoid clutter</td>
+                <td>Show only top 5 KPIs on main screen</td>
+            </tr>
+            <tr>
+                <td><strong>Hierarchy</strong></td>
+                <td>Most important info at top-left</td>
+                <td>Total premium collection at top</td>
+            </tr>
+            <tr>
+                <td><strong>Context</strong></td>
+                <td>Always provide comparison points</td>
+                <td>Current month vs last month vs target</td>
+            </tr>
+            <tr>
+                <td><strong>Consistency</strong></td>
+                <td>Use same colors, fonts, styles</td>
+                <td>Green = good, Red = alert across all charts</td>
+            </tr>
+            <tr>
+                <td><strong>Actionability</strong></td>
+                <td>Enable drill-down for details</td>
+                <td>Click on branch to see agent performance</td>
+            </tr>
+        </table>
+
+        <h3>📐 Dashboard Layout Best Practices</h3>
+
+        <div class="dashboard-box">
+            <strong>F-Pattern Layout (Most Common):</strong><br><br>
+            <table style="background: white;">
+                <tr style="background: #ffebee;">
+                    <td colspan="3" style="padding: 20px; text-align: center; font-weight: bold;">
+                        🏆 PRIMARY KPI (e.g., Total Premium: ₹500 Cr)
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 20px; background: #e3f2fd;">
+                        📊 Chart 1<br>Premium Trend
+                    </td>
+                    <td style="padding: 20px; background: #f3e5f5;">
+                        📈 Chart 2<br>Claim Ratio
+                    </td>
+                    <td style="padding: 20px; background: #e8f5e9;">
+                        🎯 Chart 3<br>Policy Mix
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding: 20px; background: #fff3e0;">
+                        📍 Large Chart 4<br>Regional Performance Map
+                    </td>
+                    <td style="padding: 20px; background: #fce4ec;">
+                        📋 Table<br>Top Agents
+                    </td>
+                </tr>
+            </table><br>
+
+            <strong>Key Points:</strong><br>
+            • Primary KPI at top (largest font)<br>
+            • Supporting charts in middle<br>
+            • Detailed tables at bottom<br>
+            • Use whitespace effectively
+        </div>
+
+        <h3>🎨 Color Psychology in Dashboards</h3>
+
+        <div class="viz-box">
+            <strong>Standard Color Meanings:</strong><br><br>
+
+            <table style="font-size: 13px;">
+                <tr>
+                    <th>Color</th>
+                    <th>Meaning</th>
+                    <th>Use Case</th>
+                </tr>
+                <tr>
+                    <td style="background: #4caf50; color: white;"><strong>Green</strong></td>
+                    <td>Positive, Success, Target Met</td>
+                    <td>Claims approved, Revenue growth</td>
+                </tr>
+                <tr>
+                    <td style="background: #f44336; color: white;"><strong>Red</strong></td>
+                    <td>Negative, Alert, Below Target</td>
+                    <td>High claim ratio, Policy lapses</td>
+                </tr>
+                <tr>
+                    <td style="background: #ff9800; color: white;"><strong>Orange</strong></td>
+                    <td>Warning, Attention Needed</td>
+                    <td>Near deadline, Moderate risk</td>
+                </tr>
+                <tr>
+                    <td style="background: #2196f3; color: white;"><strong>Blue</strong></td>
+                    <td>Neutral, Information</td>
+                    <td>General data, Navigation</td>
+                </tr>
+                <tr>
+                    <td style="background: #9c27b0; color: white;"><strong>Purple</strong></td>
+                    <td>Premium, High Value</td>
+                    <td>VIP customers, Large policies</td>
+                </tr>
+                <tr>
+                    <td style="background: #607d8b; color: white;"><strong>Grey</strong></td>
+                    <td>Inactive, Pending</td>
+                    <td>Suspended policies, Inactive agents</td>
+                </tr>
+            </table><br>
+
+            <strong>Best Practices:</strong><br>
+            ✓ Limit to 5-6 colors maximum<br>
+            ✓ Ensure color-blind friendly palette<br>
+            ✓ Use color consistently across all dashboards<br>
+            ✓ Avoid pure red-green combinations
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>🎯 Part 2: KPIs vs Metrics</h2>
+
+        <h3>📊 Understanding the Difference</h3>
+
+        <div class="formula-box">
+            <strong>Metric (मीट्रिक):</strong> Any measurable data point<br>
+            Example: Number of policies sold, Total premium collected<br><br>
+
+            <strong>KPI (Key Performance Indicator - मुख्य प्रदर्शन संकेतक):</strong> <br>
+            Strategic metric directly tied to business objectives<br>
+            Example: Policy renewal rate, Claim settlement ratio<br><br>
+
+            <strong>Rule:</strong> All KPIs are metrics, but NOT all metrics are KPIs!
+        </div>
+
+        <h3>🏢 NIACL Key Performance Indicators</h3>
+
+        <table>
+            <tr>
+                <th>KPI Category</th>
+                <th>KPI Name</th>
+                <th>Formula</th>
+                <th>Target</th>
+            </tr>
+            <tr>
+                <td rowspan="3"><strong>Premium Growth</strong></td>
+                <td>Premium Growth Rate</td>
+                <td>(Current - Previous) / Previous × 100</td>
+                <td>&gt; 15%</td>
+            </tr>
+            <tr>
+                <td>Premium per Agent</td>
+                <td>Total Premium / Number of Agents</td>
+                <td>&gt; ₹50 Lakh</td>
+            </tr>
+            <tr>
+                <td>Average Policy Value</td>
+                <td>Total Premium / Number of Policies</td>
+                <td>&gt; ₹25,000</td>
+            </tr>
+            <tr>
+                <td rowspan="3"><strong>Claims Management</strong></td>
+                <td>Claim Settlement Ratio</td>
+                <td>Claims Settled / Total Claims × 100</td>
+                <td>&gt; 90%</td>
+            </tr>
+            <tr>
+                <td>Claim Ratio</td>
+                <td>Claims Paid / Premium Collected × 100</td>
+                <td>&lt; 60%</td>
+            </tr>
+            <tr>
+                <td>Avg Claim Settlement Time</td>
+                <td>Sum of (Approval Date - Claim Date) / Count</td>
+                <td>&lt; 15 days</td>
+            </tr>
+            <tr>
+                <td rowspan="3"><strong>Customer Retention</strong></td>
+                <td>Policy Renewal Rate</td>
+                <td>Renewed Policies / Expiring Policies × 100</td>
+                <td>&gt; 80%</td>
+            </tr>
+            <tr>
+                <td>Customer Retention Rate</td>
+                <td>Retained Customers / Total Customers × 100</td>
+                <td>&gt; 85%</td>
+            </tr>
+            <tr>
+                <td>Lapse Ratio</td>
+                <td>Lapsed Policies / Total Active Policies × 100</td>
+                <td>&lt; 10%</td>
+            </tr>
+            <tr>
+                <td rowspan="2"><strong>Operational Efficiency</strong></td>
+                <td>Cost Per Policy Issued</td>
+                <td>Total Operational Cost / Policies Issued</td>
+                <td>&lt; ₹2,000</td>
+            </tr>
+            <tr>
+                <td>Policy Issuance TAT</td>
+                <td>Avg time from application to policy issue</td>
+                <td>&lt; 7 days</td>
+            </tr>
+        </table>
+
+        <h3>📈 Leading vs Lagging KPIs</h3>
+
+        <div class="example-box">
+            <strong>Leading Indicators (भविष्य का संकेत):</strong> Predict future performance<br><br>
+
+            <strong>Examples for NIACL:</strong><br>
+            • Number of policy inquiries received<br>
+            • Website traffic to insurance pages<br>
+            • Agent training hours completed<br>
+            • Customer satisfaction score<br>
+            • Number of renewal reminders sent<br><br>
+
+            <strong>Why Important:</strong> Help you take proactive action before problems occur<br><br>
+
+            <hr style="margin: 20px 0;">
+
+            <strong>Lagging Indicators (पिछला प्रदर्शन):</strong> Measure past performance<br><br>
+
+            <strong>Examples for NIACL:</strong><br>
+            • Total premium collected (last month)<br>
+            • Number of claims settled (last quarter)<br>
+            • Policy lapse rate (last year)<br>
+            • Revenue growth (annual)<br><br>
+
+            <strong>Why Important:</strong> Show results of your actions, help evaluate strategy
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>💻 Part 3: Power BI Overview</h2>
+
+        <h3>🔷 What is Power BI?</h3>
+
+        <div class="tool-box">
+            <strong>Microsoft Power BI:</strong> Business intelligence and data visualization tool by Microsoft<br><br>
+
+            <strong>Hindi:</strong> पावर बीआई - व्यापार बुद्धिमत्ता उपकरण<br><br>
+
+            <strong>Key Features:</strong><br>
+            ✓ Connect to 100+ data sources (Excel, SQL, Web, Cloud)<br>
+            ✓ Transform and clean data (Power Query)<br>
+            ✓ Create interactive dashboards and reports<br>
+            ✓ Share reports with stakeholders<br>
+            ✓ Mobile-friendly dashboards<br>
+            ✓ Real-time data refresh<br>
+            ✓ Natural language Q&A (Ask questions in plain English)<br><br>
+
+            <strong>Why NIACL Uses Power BI:</strong><br>
+            • Integration with Microsoft ecosystem (Office 365)<br>
+            • Cost-effective for enterprise<br>
+            • Easy for non-technical users<br>
+            • Strong data modeling capabilities
+        </div>
+
+        <h3>🧩 Power BI Components</h3>
+
+        <table>
+            <tr>
+                <th>Component</th>
+                <th>Purpose</th>
+                <th>Use Case</th>
+            </tr>
+            <tr>
+                <td><strong>Power BI Desktop</strong></td>
+                <td>Windows app for creating reports</td>
+                <td>Analyst builds claim analysis dashboard</td>
+            </tr>
+            <tr>
+                <td><strong>Power BI Service</strong></td>
+                <td>Cloud platform to share reports</td>
+                <td>Manager views dashboard on web browser</td>
+            </tr>
+            <tr>
+                <td><strong>Power BI Mobile</strong></td>
+                <td>Mobile apps (iOS, Android)</td>
+                <td>Executive checks KPIs on phone</td>
+            </tr>
+            <tr>
+                <td><strong>Power Query</strong></td>
+                <td>Data transformation tool</td>
+                <td>Clean and shape raw policy data</td>
+            </tr>
+            <tr>
+                <td><strong>DAX (Data Analysis Expressions)</strong></td>
+                <td>Formula language</td>
+                <td>Calculate claim settlement ratio</td>
+            </tr>
+            <tr>
+                <td><strong>Power BI Gateway</strong></td>
+                <td>Bridge between on-premise and cloud</td>
+                <td>Connect to NIACL's internal database</td>
+            </tr>
+        </table>
+
+        <h3>📊 Common Power BI Visualizations</h3>
+
+        <div class="viz-box">
+            <strong>1. Card Visual:</strong> Display single KPI value<br>
+            <em>Use: Show total premium collected (₹500 Cr)</em><br><br>
+
+            <strong>2. Line Chart:</strong> Show trends over time<br>
+            <em>Use: Monthly premium collection trend</em><br><br>
+
+            <strong>3. Bar/Column Chart:</strong> Compare categories<br>
+            <em>Use: Premium by policy type (Life, Health, Motor)</em><br><br>
+
+            <strong>4. Pie/Donut Chart:</strong> Show percentage distribution<br>
+            <em>Use: Policy mix breakdown</em><br><br>
+
+            <strong>5. Map Visual:</strong> Geographic distribution<br>
+            <em>Use: State-wise premium collection</em><br><br>
+
+            <strong>6. Table/Matrix:</strong> Detailed data display<br>
+            <em>Use: Agent performance details</em><br><br>
+
+            <strong>7. Gauge Chart:</strong> Show progress toward goal<br>
+            <em>Use: Current premium vs monthly target</em><br><br>
+
+            <strong>8. Funnel Chart:</strong> Show conversion stages<br>
+            <em>Use: Lead → Prospect → Customer → Policy Sold</em><br><br>
+
+            <strong>9. Waterfall Chart:</strong> Show cumulative effect<br>
+            <em>Use: Premium breakdown (Base + Riders + Tax = Total)</em><br><br>
+
+            <strong>10. Scatter Plot:</strong> Show correlation<br>
+            <em>Use: Policy value vs customer age relationship</em>
+        </div>
+
+        <h3>🔢 DAX Formulas Examples</h3>
+
+        <div class="formula-box">
+            <strong>1. Total Premium:</strong><br>
+            Total_Premium = SUM(Policy[Premium])<br><br>
+
+            <strong>2. Claim Settlement Ratio:</strong><br>
+            Settlement_Ratio = <br>
+            DIVIDE(<br>
+                COUNTROWS(FILTER(Claim, Claim[Status]="Approved")),<br>
+                COUNTROWS(Claim)<br>
+            ) * 100<br><br>
+
+            <strong>3. Year-over-Year Growth:</strong><br>
+            YoY_Growth = <br>
+            DIVIDE(<br>
+                [Total_Premium] - CALCULATE([Total_Premium], SAMEPERIODLASTYEAR(Date[Date])),<br>
+                CALCULATE([Total_Premium], SAMEPERIODLASTYEAR(Date[Date]))<br>
+            ) * 100<br><br>
+
+            <strong>4. Moving Average (3 months):</strong><br>
+            Premium_MA3 = <br>
+            CALCULATE(<br>
+                [Total_Premium],<br>
+                DATESINPERIOD(Date[Date], LASTDATE(Date[Date]), -3, MONTH)<br>
+            ) / 3<br><br>
+
+            <strong>5. Policy Count by Type:</strong><br>
+            Life_Policies = CALCULATE(COUNTROWS(Policy), Policy[Type]="Life")
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>📈 Part 4: Tableau Overview</h2>
+
+        <h3>🔶 What is Tableau?</h3>
+
+        <div class="tool-box">
+            <strong>Tableau:</strong> Leading data visualization and business intelligence platform<br><br>
+
+            <strong>Key Strengths:</strong><br>
+            ✓ Superior visualization capabilities<br>
+            ✓ Drag-and-drop interface (very intuitive)<br>
+            ✓ Fast performance on large datasets<br>
+            ✓ Advanced analytics (forecasting, clustering)<br>
+            ✓ Strong community and resources<br>
+            ✓ Works on Windows and Mac<br><br>
+
+            <strong>Editions:</strong><br>
+            • <strong>Tableau Desktop:</strong> Create visualizations<br>
+            • <strong>Tableau Server:</strong> Share on-premise<br>
+            • <strong>Tableau Online:</strong> Cloud-based sharing<br>
+            • <strong>Tableau Public:</strong> Free version (public data only)<br>
+            • <strong>Tableau Prep:</strong> Data preparation tool
+        </div>
+
+        <h3>🎨 Tableau Key Concepts</h3>
+
+        <div class="example-box">
+            <strong>1. Dimensions vs Measures:</strong><br><br>
+
+            <strong>Dimensions (आयाम):</strong> Qualitative, categorical data<br>
+            Examples: PolicyType, CustomerCity, AgentName, ClaimStatus<br>
+            <em>Used for: Slicing and filtering data</em><br><br>
+
+            <strong>Measures (माप):</strong> Quantitative, numerical data<br>
+            Examples: Premium, ClaimAmount, PolicyCount, Age<br>
+            <em>Used for: Aggregations (SUM, AVG, COUNT)</em><br><br>
+
+            <hr style="margin: 15px 0;">
+
+            <strong>2. Discrete vs Continuous:</strong><br><br>
+
+            <strong>Discrete (विविक्त):</strong> Individual, separate values (Blue pills in Tableau)<br>
+            Examples: Years (2021, 2022, 2023), Policy Types<br><br>
+
+            <strong>Continuous (सतत):</strong> Range of values (Green pills in Tableau)<br>
+            Examples: Premium amount, Date range, Temperature<br><br>
+
+            <hr style="margin: 15px 0;">
+
+            <strong>3. Shelves in Tableau:</strong><br>
+            • <strong>Rows Shelf:</strong> Creates vertical axis<br>
+            • <strong>Columns Shelf:</strong> Creates horizontal axis<br>
+            • <strong>Filters Shelf:</strong> Filter data<br>
+            • <strong>Marks Card:</strong> Control color, size, label, detail<br>
+            • <strong>Pages Shelf:</strong> Create animations
+        </div>
+
+        <h3>🔧 Tableau Calculations</h3>
+
+        <div class="formula-box">
+            <strong>1. Calculated Field - Claim Ratio:</strong><br>
+            SUM([Claim Amount]) / SUM([Premium]) * 100<br><br>
+
+            <strong>2. IF-THEN Logic - Premium Category:</strong><br>
+            IF [Premium] < 10000 THEN "Low"<br>
+            ELSEIF [Premium] < 50000 THEN "Medium"<br>
+            ELSE "High"<br>
+            END<br><br>
+
+            <strong>3. Date Calculations - Days to Claim:</strong><br>
+            DATEDIFF('day', [Policy Start Date], [Claim Date])<br><br>
+
+            <strong>4. LOD (Level of Detail) - Avg Premium per Customer:</strong><br>
+            { FIXED [Customer ID] : AVG([Premium]) }<br><br>
+
+            <strong>5. Table Calculation - Running Total:</strong><br>
+            RUNNING_SUM(SUM([Premium]))<br><br>
+
+            <strong>6. Parameters - Dynamic Threshold:</strong><br>
+            [Premium] > [Premium Threshold Parameter]
+        </div>
+
+        <h3>📊 Power BI vs Tableau</h3>
+
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Power BI</th>
+                <th>Tableau</th>
+            </tr>
+            <tr>
+                <td><strong>Ease of Learning</strong></td>
+                <td>⭐⭐⭐⭐ (Easier for Excel users)</td>
+                <td>⭐⭐⭐ (Steeper learning curve)</td>
+            </tr>
+            <tr>
+                <td><strong>Visualization Quality</strong></td>
+                <td>⭐⭐⭐⭐ (Good)</td>
+                <td>⭐⭐⭐⭐⭐ (Excellent)</td>
+            </tr>
+            <tr>
+                <td><strong>Data Handling</strong></td>
+                <td>⭐⭐⭐⭐ (Up to 1GB in Desktop)</td>
+                <td>⭐⭐⭐⭐⭐ (Handles very large datasets)</td>
+            </tr>
+            <tr>
+                <td><strong>Price</strong></td>
+                <td>⭐⭐⭐⭐⭐ (More affordable)</td>
+                <td>⭐⭐⭐ (More expensive)</td>
+            </tr>
+            <tr>
+                <td><strong>Microsoft Integration</strong></td>
+                <td>⭐⭐⭐⭐⭐ (Excellent)</td>
+                <td>⭐⭐⭐ (Good)</td>
+            </tr>
+            <tr>
+                <td><strong>Mobile Experience</strong></td>
+                <td>⭐⭐⭐⭐ (Good)</td>
+                <td>⭐⭐⭐⭐ (Good)</td>
+            </tr>
+            <tr>
+                <td><strong>Community Support</strong></td>
+                <td>⭐⭐⭐⭐ (Growing)</td>
+                <td>⭐⭐⭐⭐⭐ (Very large)</td>
+            </tr>
+            <tr>
+                <td><strong>Best For</strong></td>
+                <td>Microsoft ecosystem, Budget-conscious</td>
+                <td>Complex visualizations, Large data</td>
+            </tr>
+        </table>
+
+        <div class="page-break"></div>
+
+        <h2>📖 Part 5: Data Storytelling</h2>
+
+        <h3>🎭 What is Data Storytelling?</h3>
+
+        <div class="example-box">
+            <strong>Data Storytelling:</strong> The art of communicating insights from data using narrative and visualizations to drive action.<br><br>
+
+            <strong>3 Key Components:</strong><br><br>
+
+            <strong>1. Data (डेटा):</strong> The facts and figures<br>
+            <em>Example: Claim settlement ratio dropped from 95% to 88%</em><br><br>
+
+            <strong>2. Narrative (कथा):</strong> The story and context<br>
+            <em>Example: "Our claims team is overwhelmed due to 40% increase in claims this quarter..."</em><br><br>
+
+            <strong>3. Visuals (दृश्य):</strong> Charts and graphics<br>
+            <em>Example: Line chart showing settlement ratio decline with annotation</em>
+        </div>
+
+        <h3>📝 Data Storytelling Framework</h3>
+
+        <div class="formula-box">
+            <strong>1. CONTEXT (संदर्भ):</strong> Set the stage<br>
+            • What is the business situation?<br>
+            • Why should audience care?<br>
+            • What decisions need to be made?<br><br>
+
+            <strong>2. CHALLENGE (चुनौती):</strong> Identify the problem<br>
+            • What's going wrong?<br>
+            • What are the pain points?<br>
+            • What's at stake?<br><br>
+
+            <strong>3. INSIGHTS (अंतर्दृष्टि):</strong> Reveal the findings<br>
+            • What does the data show?<br>
+            • What patterns emerged?<br>
+            • What's the root cause?<br><br>
+
+            <strong>4. ACTION (कार्रवाई):</strong> Recommend next steps<br>
+            • What should we do?<br>
+            • What are the options?<br>
+            • What's the expected impact?
+        </div>
+
+        <h3>🎯 Storytelling Best Practices</h3>
+
+        <div class="key-point">
+            <strong>DO's ✅</strong><br>
+            ✓ Start with the punchline (main insight first)<br>
+            ✓ Use simple language, avoid jargon<br>
+            ✓ Focus on 3-5 key points maximum<br>
+            ✓ Provide context with comparisons (vs last year, vs target)<br>
+            ✓ Highlight insights with annotations<br>
+            ✓ End with clear call-to-action<br>
+            ✓ Use executive summary for busy stakeholders<br><br>
+
+            <strong>DON'Ts ❌</strong><br>
+            ❌ Don't show every data point you found<br>
+            ❌ Don't use complex statistical terms<br>
+            ❌ Don't create chart soup (too many visuals)<br>
+            ❌ Don't hide the conclusion at the end<br>
+            ❌ Don't use 3D charts or unnecessary effects<br>
+            ❌ Don't ignore your audience's expertise level
+        </div>
+
+        <h2>🏢 Part 6: Insurance Analytics Case Studies</h2>
+
+        <h3>Case Study 1: Premium Collection Dashboard</h3>
+
+        <div class="case-study">
+            <strong>Business Problem:</strong> Senior management wants real-time view of premium collection across all branches.<br><br>
+
+            <strong>Dashboard Components:</strong><br><br>
+
+            <strong>Top Section (KPI Cards):</strong><br>
+            • Total Premium Collected: ₹2,450 Cr (↑ 12% vs last month)<br>
+            • Policies Sold: 45,670 (↑ 8%)<br>
+            • Average Premium: ₹53,654<br>
+            • Target Achievement: 98% 🎯<br><br>
+
+            <strong>Middle Section (Visualizations):</strong><br>
+            1. <strong>Line Chart:</strong> Monthly premium trend (last 12 months)<br>
+            2. <strong>Bar Chart:</strong> Premium by policy type (Life, Health, Motor)<br>
+            3. <strong>Map:</strong> State-wise premium distribution<br>
+            4. <strong>Donut Chart:</strong> Product mix percentage<br><br>
+
+            <strong>Bottom Section (Details):</strong><br>
+            • <strong>Matrix Table:</strong> Branch-wise performance with drill-down to agents<br>
+            • <strong>Filters:</strong> Date range, Branch, Policy type<br><br>
+
+            <strong>Key Insights Highlighted:</strong><br>
+            ✓ North zone exceeded target by 15%<br>
+            ⚠️ South zone at 85% - needs attention<br>
+            ✓ Health insurance grew 25% YoY<br><br>
+
+            <strong>Action Items Suggested:</strong><br>
+            1. Replicate North zone strategy in South<br>
+            2. Increase Health insurance marketing budget<br>
+            3. Provide additional training to underperforming branches
+        </div>
+
+        <h3>Case Study 2: Claim Settlement Analysis</h3>
+
+        <div class="case-study">
+            <strong>Business Problem:</strong> Claim settlement ratio dropped below 90% target. Need to identify bottlenecks.<br><br>
+
+            <strong>Analysis Approach:</strong><br><br>
+
+            <strong>Data Sources:</strong><br>
+            • Claim management system<br>
+            • Policy database<br>
+            • Agent information<br><br>
+
+            <strong>Key Metrics Analyzed:</strong><br>
+            • Settlement ratio by claim type<br>
+            • Average settlement time<br>
+            • Claim amount distribution<br>
+            • Approval/Rejection reasons<br><br>
+
+            <strong>Findings (Storytelling Format):</strong><br><br>
+
+            <strong>📊 The Situation:</strong><br>
+            "Our claim settlement ratio declined from 95% to 88% over last quarter, falling below our 90% regulatory requirement."<br><br>
+
+            <strong>🔍 The Analysis:</strong><br>
+            • Health claims: 85% settlement (↓10%)<br>
+            • Motor claims: 92% settlement (stable)<br>
+            • Life claims: 96% settlement (↑2%)<br><br>
+
+            <strong>💡 The Insight:</strong><br>
+            "70% of rejected Health claims are for pre-existing conditions not disclosed during application. Average verification time increased from 5 to 12 days."<br><br>
+
+            <strong>🎯 The Recommendation:</strong><br>
+            1. Implement AI-powered medical history verification at policy issuance<br>
+            2. Hire 5 additional medical assessors<br>
+            3. Improve application form clarity around pre-existing conditions<br><br>
+
+            <strong>📈 Expected Impact:</strong><br>
+            • Settlement ratio to improve to 93% within 2 months<br>
+            • Verification time reduced to 7 days<br>
+            • Customer satisfaction to increase
+        </div>
+
+        <h3>Case Study 3: Agent Performance Dashboard</h3>
+
+        <div class="case-study">
+            <strong>Business Problem:</strong> Need to identify top-performing agents and those needing support.<br><br>
+
+            <strong>Dashboard Design:</strong><br><br>
+
+            <strong>Quadrant Analysis (Scatter Plot):</strong><br>
+            • X-axis: Number of policies sold<br>
+            • Y-axis: Average premium per policy<br>
+            • Size: Total premium value<br>
+            • Color: Performance tier<br><br>
+
+            <table style="font-size: 12px;">
+                <tr>
+                    <th>Quadrant</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+                <tr style="background: #c8e6c9;">
+                    <td><strong>Stars ⭐</strong></td>
+                    <td>High volume + High value</td>
+                    <td>Reward, promote, use as mentors</td>
+                </tr>
+                <tr style="background: #fff9c4;">
+                    <td><strong>Volume Sellers 📊</strong></td>
+                    <td>High volume + Low value</td>
+                    <td>Train on upselling, premium products</td>
+                </tr>
+                <tr style="background: #ffe0b2;">
+                    <td><strong>Premium Specialists 💎</strong></td>
+                    <td>Low volume + High value</td>
+                    <td>Help increase customer reach</td>
+                </tr>
+                <tr style="background: #ffcdd2;">
+                    <td><strong>Needs Support 🆘</strong></td>
+                    <td>Low volume + Low value</td>
+                    <td>Intensive training or reassignment</td>
+                </tr>
+            </table><br>
+
+            <strong>Additional Metrics:</strong><br>
+            • Policy renewal rate per agent<br>
+            • Customer satisfaction score<br>
+            • Commission earned<br>
+            • Training hours completed<br><br>
+
+            <strong>Filters & Drill-downs:</strong><br>
+            • Region, Branch, Tenure, Age group<br>
+            • Click on agent → See customer list, policy details<br><br>
+
+            <strong>Business Impact:</strong><br>
+            ✓ 15% improvement in overall agent productivity<br>
+            ✓ Targeted training reduced low performers by 40%<br>
+            ✓ Top agent strategies documented and shared
+        </div>
+
+        <div class="page-break"></div>
+
+        <h3>Case Study 4: Customer Churn Prediction Dashboard</h3>
+
+        <div class="case-study">
+            <strong>Business Problem:</strong> 20% policy lapse rate. Need to identify at-risk customers for retention campaigns.<br><br>
+
+            <strong>Predictive Analytics Approach:</strong><br><br>
+
+            <strong>Risk Factors Identified:</strong><br>
+            1. No claim filed in last 2 years (60% churn probability)<br>
+            2. Premium increase > 15% at renewal (45% churn)<br>
+            3. No contact with agent in 6 months (40% churn)<br>
+            4. Competitor offering launched in area (35% churn)<br>
+            5. Customer age > 60 years (30% churn)<br><br>
+
+            <strong>Churn Score Calculation:</strong><br>
+            Churn Score = Weighted sum of risk factors (0-100)<br>
+            • 80-100: High risk 🔴<br>
+            • 50-79: Medium risk 🟡<br>
+            • 0-49: Low risk 🟢<br><br>
+
+            <strong>Dashboard Views:</strong><br><br>
+
+            <strong>View 1: Risk Distribution</strong><br>
+            • Gauge chart showing % customers in each risk category<br>
+            • Trend line showing month-over-month change<br><br>
+
+            <strong>View 2: Customer List</strong><br>
+            • Sortable table of at-risk customers<br>
+            • Columns: Name, Risk Score, Last Contact, Policy Value, Renewal Date<br>
+            • Action buttons: Call, Email, Schedule Visit<br><br>
+
+            <strong>View 3: Retention Campaign Tracker</strong><br>
+            • Funnel showing: Identified → Contacted → Offer Made → Retained<br>
+            • Success rate by campaign type<br><br>
+
+            <strong>Success Metrics:</strong><br>
+            ✓ Identified 5,000 high-risk customers<br>
+            ✓ Targeted retention campaigns saved 60% from churning<br>
+            ✓ Overall lapse rate reduced from 20% to 14%<br>
+            ✓ ₹120 Cr premium retained
+        </div>
+
+        <h3>Case Study 5: Fraud Detection Analytics</h3>
+
+        <div class="case-study">
+            <strong>Business Problem:</strong> Suspected fraudulent claims costing ₹50 Cr annually.<br><br>
+
+            <strong>Red Flags Dashboard:</strong><br><br>
+
+            <strong>Anomaly Indicators:</strong><br>
+            1. <strong>Quick Claims:</strong> Filed within 30 days of policy start<br>
+            2. <strong>High Value:</strong> Claim > 80% of sum assured<br>
+            3. <strong>Pattern Matching:</strong> Similar claims from same area/agent<br>
+            4. <strong>Multiple Claims:</strong> Customer filed > 3 claims in 1 year<br>
+            5. <strong>Documentation Issues:</strong> Incomplete or suspicious documents<br><br>
+
+            <strong>Visual Analytics:</strong><br><br>
+
+            <strong>1. Heat Map:</strong><br>
+            • Shows fraud hotspots by geography<br>
+            • Darker color = higher fraud concentration<br><br>
+
+            <strong>2. Network Graph:</strong><br>
+            • Connections between suspicious customers, agents, hospitals<br>
+            • Identifies fraud rings<br><br>
+
+            <strong>3. Timeline View:</strong><br>
+            • Claim filing patterns over time<br>
+            • Spikes indicate coordinated fraud attempts<br><br>
+
+            <strong>4. Scatter Plot:</strong><br>
+            • X-axis: Days between policy and claim<br>
+            • Y-axis: Claim amount<br>
+            • Top-left quadrant = highest fraud risk<br><br>
+
+            <strong>Investigation Workflow:</strong><br>
+            High Risk Alert → Auto-assign to investigator → Track investigation status → Final decision<br><br>
+
+            <strong>Results:</strong><br>
+            ✓ Detected 500+ suspicious claims worth ₹35 Cr<br>
+            ✓ 70% confirmed as fraud after investigation<br>
+            ✓ Recovered ₹15 Cr, prevented ₹20 Cr payout<br>
+            ✓ 12 fraud rings identified and reported to authorities
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>✍️ 25 Practice Questions</h2>
+
+        <h3>Set 1: Dashboard Design (Q1-Q5)</h3>
+
+        <div class="example-box">
+            <strong>Q1.</strong> What is the F-pattern layout in dashboard design? Why is it effective?<br><br>
+
+            <strong>Q2.</strong> List 5 key principles of good dashboard design.<br><br>
+
+            <strong>Q3.</strong> What color should you use to indicate "target not met" in a dashboard? Why?<br><br>
+
+            <strong>Q4.</strong> What is the difference between a dashboard and a report?<br><br>
+
+            <strong>Q5.</strong> Where should you place the most important KPI in a dashboard layout?
+        </div>
+
+        <h3>Set 2: KPIs & Metrics (Q6-Q10)</h3>
+
+        <div class="example-box">
+            <strong>Q6.</strong> Define KPI. How is it different from a regular metric?<br><br>
+
+            <strong>Q7.</strong> Calculate claim settlement ratio if 4,500 claims were approved out of 5,000 total claims.<br><br>
+
+            <strong>Q8.</strong> What is the difference between leading and lagging indicators? Give 2 examples each for insurance.<br><br>
+
+            <strong>Q9.</strong> If total premium collected is ₹1,000 Cr and claims paid is ₹650 Cr, calculate claim ratio.<br><br>
+
+            <strong>Q10.</strong> Name 5 important KPIs for an insurance company.
+        </div>
+
+        <h3>Set 3: Power BI (Q11-Q15)</h3>
+
+        <div class="example-box">
+            <strong>Q11.</strong> What are the three main components of Power BI?<br><br>
+
+            <strong>Q12.</strong> What is DAX? Write a simple DAX formula to calculate total premium.<br><br>
+
+            <strong>Q13.</strong> Name 5 different types of visualizations available in Power BI.<br><br>
+
+            <strong>Q14.</strong> What is Power Query used for?<br><br>
+
+            <strong>Q15.</strong> How does Power BI connect to SQL database?
+        </div>
+
+        <h3>Set 4: Tableau (Q16-Q20)</h3>
+
+        <div class="example-box">
+            <strong>Q16.</strong> What is the difference between Dimensions and Measures in Tableau?<br><br>
+
+            <strong>Q17.</strong> What do blue pills and green pills represent in Tableau?<br><br>
+
+            <strong>Q18.</strong> Name three types of calculations you can create in Tableau.<br><br>
+
+            <strong>Q19.</strong> Compare Power BI and Tableau in terms of ease of learning and visualization quality.<br><br>
+
+            <strong>Q20.</strong> What is a Tableau parameter? Give an example use case.
+        </div>
+
+        <h3>Set 5: Data Storytelling (Q21-Q25)</h3>
+
+        <div class="example-box">
+            <strong>Q21.</strong> What are the 3 key components of data storytelling?<br><br>
+
+            <strong>Q22.</strong> Describe the 4-step framework for data storytelling (Context, Challenge, Insights, Action).<br><br>
+
+            <strong>Q23.</strong> What does "start with the punchline" mean in data storytelling?<br><br>
+
+            <strong>Q24.</strong> Give an example of how to present a declining claim settlement ratio using storytelling.<br><br>
+
+            <strong>Q25.</strong> List 5 best practices for effective data storytelling.
+        </div>
+
+        <h2>📝 Quick Reference Sheet</h2>
+
+        <div class="formula-box">
+            <strong>Dashboard Design Checklist:</strong><br>
+            ☑ Clear title and date<br>
+            ☑ Primary KPI at top<br>
+            ☑ Max 5-7 visualizations per dashboard<br>
+            ☑ Consistent color scheme<br>
+            ☑ Filters visible and accessible<br>
+            ☑ Comparison points (vs target, vs last period)<br>
+            ☑ Mobile-friendly layout<br>
+            ☑ Legend and labels clear<br>
+            ☑ Source data mentioned<br>
+            ☑ Last refresh timestamp<br><br>
+
+            <strong>Visualization Selection Guide:</strong><br>
+            • <strong>Comparison:</strong> Bar chart, Column chart<br>
+            • <strong>Trend:</strong> Line chart, Area chart<br>
+            • <strong>Distribution:</strong> Pie chart, Donut chart<br>
+            • <strong>Relationship:</strong> Scatter plot, Bubble chart<br>
+            • <strong>Geographic:</strong> Map, Filled map<br>
+            • <strong>Part-to-Whole:</strong> Pie, Tree map, Waterfall<br>
+            • <strong>Single Value:</strong> Card, Gauge<br>
+            • <strong>Detailed Data:</strong> Table, Matrix<br><br>
+
+            <strong>Common Insurance KPIs:</strong><br>
+            • Premium Growth Rate<br>
+            • Claim Settlement Ratio<br>
+            • Claim Ratio (Loss Ratio)<br>
+            • Policy Renewal Rate<br>
+            • Customer Retention Rate<br>
+            • Average Premium per Policy<br>
+            • Policy Lapse Ratio<br>
+            • Cost per Acquisition<br>
+            • Net Promoter Score (NPS)<br>
+            • Combined Ratio
+        </div>
+
+        <h2>🎯 Tips for NIACL Interview</h2>
+
+        <div class="key-point">
+            <strong>If Asked About Analytics Tools:</strong><br><br>
+
+            <strong>Good Answer Structure:</strong><br>
+            1. "I have worked with [Power BI/Tableau/Excel]..."<br>
+            2. "I created a dashboard for [specific use case]..."<br>
+            3. "The key challenge was [problem]..."<br>
+            4. "I used [specific feature/technique]..."<br>
+            5. "The impact was [measurable result]..."<br><br>
+
+            <strong>Example:</strong><br>
+            "I created a claims analysis dashboard in Power BI that pulled data from our SQL database. The main challenge was handling 5 years of historical data efficiently. I used Power Query to transform and aggregate the data, then created DAX measures for settlement ratio and average processing time. The dashboard helped management identify that Motor claims had 15% longer processing time, leading to process improvements that reduced it by 8 days."<br><br>
+
+            <strong>Key Points to Mention:</strong><br>
+            ✓ Specific tool/technology used<br>
+            ✓ Business problem you solved<br>
+            ✓ Technical skills applied<br>
+            ✓ Measurable impact/results<br>
+            ✓ Stakeholders involved
+        </div>
+
+        <div class="key-point">
+            <strong>Dashboard Design Interview Questions - How to Answer:</strong><br><br>
+
+            <strong>Q: "How would you design a claims dashboard for senior management?"</strong><br><br>
+
+            <strong>Good Answer:</strong><br>
+            "I would first understand their key questions: Are we meeting settlement targets? Which claim types are problematic? Are there regional differences?<br><br>
+
+            Based on this, I'd design a dashboard with:<br>
+            • Top KPI cards: Settlement ratio, Average processing time, Total claims value<br>
+            • Line chart: Monthly settlement trend vs target<br>
+            • Bar chart: Settlement ratio by claim type<br>
+            • Map: Geographic distribution of claims<br>
+            • Filters: Date range, Claim type, Region<br><br>
+
+            I'd use red/yellow/green indicators for instant status recognition. The design would follow F-pattern with most critical info at top-left. I'd also add drill-down capability so they can click on any region to see branch-level details."
+        </div>
+
+        <h2>📚 For Deep Study</h2>
+
+        <div class="deep-study">
+            <strong>🔗 Recommended Resources:</strong><br><br>
+
+            <strong>Power BI Learning:</strong><br>
+            📺 <strong>Guy in a Cube:</strong> YouTube channel (Microsoft's official)<br>
+            📺 <strong>SQLBI:</strong> Advanced Power BI & DAX<br>
+            📖 <strong>Microsoft Learn:</strong> Free Power BI courses<br>
+            📖 <strong>Power BI Community:</strong> community.powerbi.com<br><br>
+
+            <strong>Tableau Learning:</strong><br>
+            📺 <strong>Tableau Tim:</strong> YouTube tutorials<br>
+            📖 <strong>Tableau Public Gallery:</strong> public.tableau.com/gallery<br>
+            📖 <strong>Makeover Monday:</strong> Weekly visualization challenges<br>
+            🎓 <strong>Tableau Desktop Specialist:</strong> Free certification<br><br>
+
+            <strong>Data Visualization Theory:</strong><br>
+            📕 <strong>"Storytelling with Data"</strong> - Cole Nussbaumer Knaflic<br>
+            📕 <strong>"Information Dashboard Design"</strong> - Stephen Few<br>
+            📕 <strong>"The Visual Display of Quantitative Information"</strong> - Edward Tufte<br><br>
+
+            <strong>Practice Platforms:</strong><br>
+            💻 <strong>DataCamp:</strong> Power BI & Tableau courses<br>
+            💻 <strong>Maven Analytics:</strong> Dashboard design challenges<br>
+            💻 <strong>Kaggle:</strong> Download insurance datasets for practice<br><br>
+
+            <strong>Blogs & Communities:</strong><br>
+            📰 <strong>Power BI Blog:</strong> powerbi.microsoft.com/blog<br>
+            📰 <strong>Tableau Blog:</strong> tableau.com/blog<br>
+            👥 <strong>Data Viz Society:</strong> Join for peer learning<br><br>
+
+            <strong>Practice Strategy:</strong><br>
+            ✅ Create 1 dashboard per week using insurance dataset<br>
+            ✅ Recreate dashboards you see online<br>
+            ✅ Join "Workout Wednesday" challenges<br>
+            ✅ Share your work for feedback<br>
+            ✅ Focus on storytelling, not just pretty charts
+        </div>
+
+        <h2>✅ Self-Assessment Checklist</h2>
+
+        <div class="key-point">
+            <strong>Before Moving to Day 9, Ensure You Can:</strong><br><br>
+
+            ☐ Explain the difference between KPI and metric<br>
+            ☐ List 5 important insurance KPIs with formulas<br>
+            ☐ Describe dashboard design best practices<br>
+            ☐ Understand F-pattern layout<br>
+            ☐ Know when to use different chart types<br>
+            ☐ Explain Power BI components and DAX basics<br>
+            ☐ Understand Tableau dimensions vs measures<br>
+            ☐ Compare Power BI and Tableau<br>
+            ☐ Describe the 4-step data storytelling framework<br>
+            ☐ Create a simple dashboard mockup on paper<br>
+            ☐ Analyze a case study and identify insights<br>
+            ☐ Present data findings in a compelling way<br><br>
+
+            <strong>Minimum Target:</strong> 70% confidence in above topics<br>
+            <strong>If Yes ✅ → You're Ready for Day 9! 💪</strong><br>
+            <strong>If No ❌ → Review case studies again 📖</strong>
+        </div>
+
+        <div style="text-align: center; margin: 40px 0; padding: 30px; border: 3px solid #27ae60; border-radius: 10px; background: #d5f4e6;">
+            <h2 style="color: #27ae60; margin-bottom: 20px;">🎉 Section 4 / Day 8 Complete! 🎉</h2>
+            <p style="font-size: 18px;"><strong>Business Analytics Tools Mastered! ✅</strong></p>
+            <p style="margin-top: 20px;">You now understand dashboards, KPIs, Power BI, Tableau, and data storytelling.</p>
+            <p>Practice creating dashboards on sample insurance data!</p>
+            <p style="margin-top: 30px; font-weight: bold;">Next: Day 9 - Business Process & MIS</p>
+            <p style="margin-top: 10px; color: #666;">BPM Lifecycle, MIS Components, SDLC, Agile & Scrum</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIACL AO - Section 6: Business Process & MIS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .header h1 {
+            color: #667eea;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            color: #764ba2;
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+        
+        .day-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        
+        .section {
+            margin: 30px 0;
+            padding: 25px;
+            background: #f8f9ff;
+            border-left: 5px solid #667eea;
+            border-radius: 8px;
+        }
+        
+        .section h3 {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h4 {
+            color: #764ba2;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+        }
+        
+        .key-point {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #764ba2;
+        }
+        
+        .key-point strong {
+            color: #667eea;
+        }
+        
+        .formula-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .example-box {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        
+        .example-box h5 {
+            color: #28a745;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .question-set {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .question {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9ff;
+            border-radius: 8px;
+        }
+        
+        .question-num {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .solution {
+            background: #e8f5e9;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .solution strong {
+            color: #28a745;
+        }
+        
+        .tip-box {
+            background: #e3f2fd;
+            border-left: 5px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .tip-box::before {
+            content: "💡 ";
+            font-size: 1.2em;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .warning-box::before {
+            content: "⚠️ ";
+            font-size: 1.2em;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tr:hover {
+            background: #f8f9ff;
+        }
+        
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            padding: 10px;
+            margin: 5px 0;
+            background: white;
+            border-radius: 5px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .checklist li::before {
+            content: "✅ ";
+            margin-right: 10px;
+        }
+        
+        .diagram {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .flow-item {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 25px;
+            margin: 10px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        
+        .arrow {
+            font-size: 2em;
+            color: #667eea;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.5em;
+            }
+            
+            .header h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 NIACL AO Study Material</h1>
+            <h2>SECTION 6</h2>
+            <h2>Business Process & Management Information Systems</h2>
+            <div class="day-badge">📅 Day 9</div>
+            <p style="margin-top: 15px; color: #666;">BPM Lifecycle, MIS, SDLC, Agile & Scrum + 50+ Practice Questions</p>
+        </div>
+
+        <!-- Part 1: Business Process Management -->
+        <div class="section">
+            <h3>🔄 Part 1: Business Process Management (BPM)</h3>
+            
+            <h4>What is Business Process?</h4>
+            <div class="key-point">
+                <strong>Definition:</strong> A business process is a collection of structured activities or tasks that produce a specific service or product for customers.
+            </div>
+            
+            <div class="key-point">
+                <strong>Hindi:</strong> व्यवसाय प्रक्रिया (Business Process) - संरचित गतिविधियों का समूह जो ग्राहकों के लिए विशिष्ट सेवा या उत्पाद बनाती है।
+            </div>
+            
+            <h4>Key Components of Business Process</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Component</th>
+                        <th>Description</th>
+                        <th>Insurance Example</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Input</strong></td>
+                        <td>Resources needed to start process</td>
+                        <td>Policy application form, documents</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Activities</strong></td>
+                        <td>Steps performed to transform input</td>
+                        <td>Verification, underwriting, approval</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Output</strong></td>
+                        <td>Final product/service delivered</td>
+                        <td>Issued insurance policy</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Stakeholders</strong></td>
+                        <td>People involved in process</td>
+                        <td>Customer, agent, underwriter, approver</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h4>BPM Lifecycle (5 Phases)</h4>
+            <div class="diagram">
+                <div class="flow-item">1. Design</div>
+                <span class="arrow">→</span>
+                <div class="flow-item">2. Model</div>
+                <span class="arrow">→</span>
+                <div class="flow-item">3. Execute</div>
+                <br>
+                <span class="arrow">↓</span>
+                <br>
+                <div class="flow-item">5. Optimize</div>
+                <span class="arrow">←</span>
+                <div class="flow-item">4. Monitor</div>
+            </div>
+            
+            <div class="key-point">
+                <strong>1. Design Phase (डिज़ाइन चरण):</strong> Identify current process, define objectives, map workflow
+            </div>
+            
+            <div class="key-point">
+                <strong>2. Model Phase (मॉडल चरण):</strong> Create visual representation (flowcharts, BPMN diagrams), simulate scenarios
+            </div>
+            
+            <div class="key-point">
+                <strong>3. Execute Phase (निष्पादन चरण):</strong> Implement the process, assign resources, train staff
+            </div>
+            
+            <div class="key-point">
+                <strong>4. Monitor Phase (निगरानी चरण):</strong> Track KPIs, collect performance data, identify bottlenecks
+            </div>
+            
+            <div class="key-point">
+                <strong>5. Optimize Phase (अनुकूलन चरण):</strong> Analyze data, implement improvements, continuous refinement
+            </div>
+            
+            <div class="example-box">
+                <h5>📋 Example: Insurance Claim Process (BPM Lifecycle)</h5>
+                <p><strong>Design:</strong> Map current claim settlement process, identify delays</p>
+                <p><strong>Model:</strong> Create flowchart with decision points (approve/reject)</p>
+                <p><strong>Execute:</strong> Deploy automated claim system with clear roles</p>
+                <p><strong>Monitor:</strong> Track average settlement time, customer satisfaction</p>
+                <p><strong>Optimize:</strong> Reduce steps from 10 to 6, automate document verification</p>
+            </div>
+            
+            <h4>Types of Business Processes</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Example in Insurance</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Core Process</strong></td>
+                        <td>Primary value-creating activities</td>
+                        <td>Policy underwriting, claim settlement</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Support Process</strong></td>
+                        <td>Enable core processes</td>
+                        <td>IT support, HR, Finance</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Management Process</strong></td>
+                        <td>Govern and control operations</td>
+                        <td>Risk management, compliance audits</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Part 2: Management Information System -->
+        <div class="section">
+            <h3>📊 Part 2: Management Information System (MIS)</h3>
+            
+            <h4>What is MIS?</h4>
+            <div class="key-point">
+                <strong>Definition:</strong> MIS is a computer-based system that provides managers with tools to organize, evaluate, and efficiently manage information for strategic decision-making.
+            </div>
+            
+            <div class="key-point">
+                <strong>Hindi:</strong> प्रबंधन सूचना प्रणाली - कंप्यूटर आधारित प्रणाली जो प्रबंधकों को रणनीतिक निर्णय लेने के लिए जानकारी प्रदान करती है।
+            </div>
+            
+            <h4>Key Components of MIS</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Component</th>
+                        <th>Function</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Hardware</strong></td>
+                        <td>Physical devices</td>
+                        <td>Servers, computers, scanners</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Software</strong></td>
+                        <td>Programs for data processing</td>
+                        <td>Database systems, analytics tools</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Data</strong></td>
+                        <td>Raw facts and figures</td>
+                        <td>Policy records, claim history</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Procedures</strong></td>
+                        <td>Rules for data handling</td>
+                        <td>Data entry standards, backup protocols</td>
+                    </tr>
+                    <tr>
+                        <td><strong>People</strong></td>
+                        <td>Users and IT staff</td>
+                        <td>Managers, analysts, developers</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h4>Types of MIS Reports</h4>
+            <div class="key-point">
+                <strong>1. Scheduled Reports (नियमित रिपोर्ट):</strong> Produced at regular intervals (daily, weekly, monthly)
+                <br>Example: Daily premium collection report
+            </div>
+            
+            <div class="key-point">
+                <strong>2. On-Demand Reports (मांग पर रिपोर्ट):</strong> Generated when requested by manager
+                <br>Example: Specific customer claim history
+            </div>
+            
+            <div class="key-point">
+                <strong>3. Exception Reports (अपवाद रिपोर्ट):</strong> Show only unusual or exceptional data
+                <br>Example: Claims above ₹10 lakh requiring special approval
+            </div>
+            
+            <div class="key-point">
+                <strong>4. Drill-Down Reports (विस्तृत रिपोर्ट):</strong> Allow detailed analysis by drilling into summary data
+                <br>Example: State-wise to district-wise to branch-wise sales
+            </div>
+            
+            <h4>MIS vs Dashboard vs Report</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>MIS</th>
+                        <th>Dashboard</th>
+                        <th>Report</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Purpose</strong></td>
+                        <td>Overall system for information management</td>
+                        <td>Visual summary of KPIs</td>
+                        <td>Detailed analysis of specific area</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Update Frequency</strong></td>
+                        <td>Continuous</td>
+                        <td>Real-time or near real-time</td>
+                        <td>Periodic (daily/weekly/monthly)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Format</strong></td>
+                        <td>System/Database</td>
+                        <td>Visual (charts, gauges)</td>
+                        <td>Tables, detailed text</td>
+                    </tr>
+                    <tr>
+                        <td><strong>User Level</strong></td>
+                        <td>All levels</td>
+                        <td>Executives, managers</td>
+                        <td>Operational staff, analysts</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h4>Benefits of MIS in Insurance</h4>
+            <ul class="checklist">
+                <li>Quick access to policy and claim data</li>
+                <li>Better decision-making with real-time insights</li>
+                <li>Improved efficiency through automation</li>
+                <li>Accurate forecasting of premiums and claims</li>
+                <li>Enhanced customer service with faster processing</li>
+                <li>Regulatory compliance through proper record-keeping</li>
+            </ul>
+        </div>
+
+        <!-- Part 3: SDLC Detailed -->
+        <div class="section">
+            <h3>🔧 Part 3: Software Development Life Cycle (SDLC)</h3>
+            
+            <h4>What is SDLC?</h4>
+            <div class="key-point">
+                <strong>Definition:</strong> SDLC is a structured process for developing software systems, from initial planning to deployment and maintenance.
+            </div>
+            
+            <h4>SDLC Phases (6 Main Phases)</h4>
+            
+            <div class="key-point">
+                <strong>Phase 1: Planning & Requirement Analysis</strong>
+                <br>• Identify project scope and objectives
+                <br>• Gather business requirements from stakeholders
+                <br>• Conduct feasibility study (technical, operational, economic)
+                <br>• Define project timeline and resources
+                <br><em>Deliverable: Requirement Specification Document</em>
+            </div>
+            
+            <div class="key-point">
+                <strong>Phase 2: System Design</strong>
+                <br>• Create high-level design (architecture)
+                <br>• Design database schema, UI/UX mockups
+                <br>• Define technical specifications
+                <br>• Plan security and data flow
+                <br><em>Deliverable: Design Document Specification (DDS)</em>
+            </div>
+            
+            <div class="key-point">
+                <strong>Phase 3: Implementation/Development</strong>
+                <br>• Write code based on design documents
+                <br>• Follow coding standards and best practices
+                <br>• Conduct unit testing during development
+                <br>• Use version control (Git)
+                <br><em>Deliverable: Working Software Code</em>
+            </div>
+            
+            <div class="key-point">
+                <strong>Phase 4: Testing</strong>
+                <br>• Unit Testing (individual components)
+                <br>• Integration Testing (combined modules)
+                <br>• System Testing (complete application)
+                <br>• User Acceptance Testing (UAT by business users)
+                <br><em>Deliverable: Test Reports, Bug Fixes</em>
+            </div>
+            
+            <div class="key-point">
+                <strong>Phase 5: Deployment</strong>
+                <br>• Release software to production environment
+                <br>• Conduct user training sessions
+                <br>• Provide documentation and manuals
+                <br>• Monitor initial performance
+                <br><em>Deliverable: Live Application</em>
+            </div>
+            
+            <div class="key-point">
+                <strong>Phase 6: Maintenance</strong>
+                <br>• Fix bugs reported by users
+                <br>• Implement minor enhancements
+                <br>• Provide ongoing technical support
+                <br>• Plan for major upgrades
+                <br><em>Deliverable: Updated Software Versions</em>
+            </div>
+            
+            <h4>Popular SDLC Models</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Model</th>
+                        <th>Approach</th>
+                        <th>Best For</th>
+                        <th>Limitation</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Waterfall</strong></td>
+                        <td>Sequential, linear phases</td>
+                        <td>Clear, fixed requirements</td>
+                        <td>No flexibility for changes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Agile</strong></td>
+                        <td>Iterative, incremental</td>
+                        <td>Evolving requirements</td>
+                        <td>Requires active user involvement</td>
+                    </tr>
+                    <tr>
+                        <td><strong>V-Model</strong></td>
+                        <td>Testing at each phase</td>
+                        <td>High reliability systems</td>
+                        <td>Rigid, expensive</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Spiral</strong></td>
+                        <td>Risk-driven iterations</td>
+                        <td>Large, complex projects</td>
+                        <td>Complex to manage</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="example-box">
+                <h5>📋 Example: NIACL Policy Management System Development</h5>
+                <p><strong>Planning:</strong> Identify need for digital policy issuance system, gather requirements from agents and underwriters</p>
+                <p><strong>Design:</strong> Create database for policies, design web interface for policy creation</p>
+                <p><strong>Development:</strong> Code policy creation module, payment gateway integration</p>
+                <p><strong>Testing:</strong> Test with sample policies, conduct UAT with branch managers</p>
+                <p><strong>Deployment:</strong> Roll out to all branches, train staff on new system</p>
+                <p><strong>Maintenance:</strong> Fix bugs, add new policy types as required</p>
+            </div>
+        </div>
+
+        <!-- Part 4: Agile & Scrum -->
+        <div class="section">
+            <h3>🏃 Part 4: Agile & Scrum Framework</h3>
+            
+            <h4>What is Agile?</h4>
+            <div class="key-point">
+                <strong>Definition:</strong> Agile is an iterative approach to software development that focuses on continuous delivery, collaboration, and flexibility to change.
+            </div>
+            
+            <div class="key-point">
+                <strong>Hindi:</strong> एजाइल - एक पुनरावृत्त दृष्टिकोण जो निरंतर वितरण, सहयोग और परिवर्तन के लिए लचीलेपन पर केंद्रित है।
+            </div>
+            
+            <h4>Agile Core Values (4 Values from Agile Manifesto)</h4>
+            <div class="key-point">
+                <strong>1.</strong> Individuals and interactions > Processes and tools
+            </div>
+            <div class="key-point">
+                <strong>2.</strong> Working software > Comprehensive documentation
+            </div>
+            <div class="key-point">
+                <strong>3.</strong> Customer collaboration > Contract negotiation
+            </div>
+            <div class="key-point">
+                <strong>4.</strong> Responding to change > Following a plan
+            </div>
+            
+            <h4>Scrum Framework</h4>
+            <div class="key-point">
+                <strong>Definition:</strong> Scrum is the most popular Agile framework that organizes work into fixed-length iterations called "Sprints" (usually 2-4 weeks).
+            </div>
+            
+            <h4>Scrum Roles (3 Key Roles)</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Role</th>
+                        <th>Responsibility</th>
+                        <th>Insurance Example</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Product Owner</strong></td>
+                        <td>Defines product vision, prioritizes backlog, represents stakeholders</td>
+                        <td>Insurance business manager defining features for claim system</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scrum Master</strong></td>
+                        <td>Facilitates Scrum process, removes blockers, coaches team</td>
+                        <td>Agile coach ensuring team follows Scrum practices</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Development Team</strong></td>
+                        <td>Self-organizing team that builds the product (5-9 members)</td>
+                        <td>Developers, testers, BA working on claim portal</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h4>Scrum Artifacts (3 Main Artifacts)</h4>
+            <div class="key-point">
+                <strong>1. Product Backlog:</strong> Prioritized list of features/requirements for entire product
+                <br>Example: List of features for NIACL mobile app (login, view policies, file claim, chat support)
+            </div>
+            
+            <div class="key-point">
+                <strong>2. Sprint Backlog:</strong> Subset of product backlog selected for current sprint
+                <br>Example: In 2-week sprint, team commits to complete "login" and "view policies" features
+            </div>
+            
+            <div class="key-point">
+                <strong>3. Product Increment:</strong> Sum of all completed product backlog items, must be in usable condition
+                <br>Example: After Sprint 1, working login and policy viewing functionality ready for demo
+            </div>
+            
+            <h4>Scrum Ceremonies (5 Key Events)</h4>
+            <div class="key-point">
+                <strong>1. Sprint Planning (Sprint की योजना):</strong> Team selects work for upcoming sprint
+                <br>Duration: 2-4 hours for 2-week sprint
+            </div>
+            
+            <div class="key-point">
+                <strong>2. Daily Standup/Daily Scrum (दैनिक बैठक):</strong> 15-minute daily sync
+                <br>Team answers: What did I do yesterday? What will I do today? Any blockers?
+            </div>
+            
+            <div class="key-point">
+                <strong>3. Sprint Review (Sprint समीक्षा):</strong> Demo completed work to stakeholders
+                <br>Duration: 1-2 hours, gather feedback
+            </div>
+            
+            <div class="key-point">
+                <strong>4. Sprint Retrospective (Sprint पूर्वावलोकन):</strong> Team reflects on process improvements
+                <br>Duration: 1 hour, discuss what went well, what didn't, action items
+            </div>
+            
+            <div class="key-point">
+                <strong>5. Backlog Refinement (बैकलॉग शोधन):</strong> Ongoing activity to clarify and estimate backlog items
+                <br>Duration: ~10% of sprint time
+            </div>
+            
+            <h4>Agile vs Waterfall Comparison</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Waterfall</th>
+                        <th>Agile</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Approach</strong></td>
+                        <td>Sequential, linear</td>
+                        <td>Iterative, incremental</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Requirements</strong></td>
+                        <td>Fixed at start</td>
+                        <td>Evolve throughout project</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Testing</strong></td>
+                        <td>After development phase</td>
+                        <td>Continuous, every sprint</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Customer Involvement</strong></td>
+                        <td>Beginning and end</td>
+                        <td>Throughout the project</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Delivery</strong></td>
+                        <td>One final delivery</td>
+                        <td>Working software every sprint</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Flexibility</strong></td>
+                        <td>Low (difficult to change)</td>
+                        <td>High (welcomes change)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Best For</strong></td>
+                        <td>Well-defined, stable projects</td>
+                        <td>Evolving, dynamic projects</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="tip-box">
+                <strong>Tip:</strong> In insurance, Agile is best for customer-facing applications (mobile apps, portals) while Waterfall may suit compliance-driven projects with fixed regulations.
+            </div>
+        </div>
+
+        <!-- Part 5: Practice Questions Set 1-10 -->
+        <div class="section">
+            <h3>📝 Part 5: Practice Questions (50+ Solved)</h3>
+            
+            <h4>Set 1: BPM Fundamentals (Q1-Q10)</h4>
+            
+            <div class="question-set">
+                <div class="question">
+                    <span class="question-num">Q1.</span> Which phase of BPM lifecycle involves creating flowcharts and BPMN diagrams?
+                    <div class="solution">
+                        <strong>Solution:</strong> Model Phase (मॉडल चरण) - This is where visual representations of the process are created.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q2.</span> In insurance claim settlement, which type of business process does it represent?
+                    <div class="solution">
+                        <strong>Solution:</strong> Core Process - It directly creates value for customers and is a primary business activity.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q3.</span> A process improvement reduced claim settlement time from 10 days to 7 days. What is the percentage improvement?
+                    <div class="solution">
+                        <strong>Solution:</strong> [(10-7)/10] × 100 = 30% improvement
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q4.</span> Which BPM phase focuses on tracking KPIs and identifying bottlenecks?
+                    <div class="solution">
+                        <strong>Solution:</strong> Monitor Phase (निगरानी चरण) - This phase tracks performance metrics and identifies issues.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q5.</span> If a process has 8 steps and optimization reduces it to 5 steps, what is the reduction percentage?
+                    <div class="solution">
+                        <strong>Solution:</strong> [(8-5)/8] × 100 = 37.5% reduction in steps
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q6.</span> HR department providing recruitment services to operations team is an example of which process type?
+                    <div class="solution">
+                        <strong>Solution:</strong> Support Process - HR enables core processes but doesn't directly create customer value.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q7.</span> In BPM, what is the final phase that focuses on continuous improvement?
+                    <div class="solution">
+                        <strong>Solution:</strong> Optimize Phase (अनुकूलन चरण) - Analyzes data and implements improvements.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q8.</span> A company processes 500 claims/month. After BPM implementation, it processes 650 claims. What is the efficiency gain?
+                    <div class="solution">
+                        <strong>Solution:</strong> [(650-500)/500] × 100 = 30% efficiency gain
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q9.</span> Risk management and compliance audits represent which type of process?
+                    <div class="solution">
+                        <strong>Solution:</strong> Management Process - These govern and control overall operations.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q10.</span> What are the three main types of business processes?
+                    <div class="solution">
+                        <strong>Solution:</strong> Core Process, Support Process, and Management Process
+                    </div>
+                </div>
+            </div>
+            
+            <h4>Set 2: MIS Concepts (Q11-Q20)</h4>
+            
+            <div class="question-set">
+                <div class="question">
+                    <span class="question-num">Q11.</span> Which MIS component includes servers, computers, and scanners?
+                    <div class="solution">
+                        <strong>Solution:</strong> Hardware - Physical devices used in the information system.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q12.</span> A report showing only claims above ₹10 lakh is which type of MIS report?
+                    <div class="solution">
+                        <strong>Solution:</strong> Exception Report (अपवाद रिपोर्ट) - Shows only unusual or exceptional data.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q13.</span> Daily premium collection report generated every morning is an example of?
+                    <div class="solution">
+                        <strong>Solution:</strong> Scheduled Report (नियमित रिपोर्ट) - Produced at regular, predetermined intervals.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q14.</span> How many main components are there in an MIS?
+                    <div class="solution">
+                        <strong>Solution:</strong> 5 components - Hardware, Software, Data, Procedures, and People
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q15.</span> A manager requests a specific customer's complete claim history. This is which type of report?
+                    <div class="solution">
+                        <strong>Solution:</strong> On-Demand Report (मांग पर रिपोर्ट) - Generated when specifically requested.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q16.</span> What is the main difference between a Dashboard and a Report?
+                    <div class="solution">
+                        <strong>Solution:</strong> Dashboard provides real-time visual KPI summary; Report provides detailed periodic analysis. Dashboard is for quick overview, Report is for in-depth study.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q17.</span> Branch manager analyzes state-level sales, then drills down to district and branch level. This is?
+                    <div class="solution">
+                        <strong>Solution:</strong> Drill-Down Report (विस्तृत रिपोर्ट) - Allows detailed analysis by drilling into summary data.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q18.</span> Database systems and analytics tools are part of which MIS component?
+                    <div class="solution">
+                        <strong>Solution:</strong> Software - Programs and applications used for data processing and analysis.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q19.</span> An MIS generates 50 reports daily. If 40 are scheduled and rest are exceptions, what percentage are exception reports?
+                    <div class="solution">
+                        <strong>Solution:</strong> Exception reports = 50 - 40 = 10<br>
+                        Percentage = (10/50) × 100 = 20%
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q20.</span> What is the primary benefit of MIS in insurance companies?
+                    <div class="solution">
+                        <strong>Solution:</strong> Quick access to accurate data for better decision-making, improved efficiency, and enhanced customer service through automation and real-time insights.
+                    </div>
+                </div>
+            </div>
+            
+            <h4>Set 3: SDLC Phases (Q21-Q30)</h4>
+            
+            <div class="question-set">
+                <div class="question">
+                    <span class="question-num">Q21.</span> In which SDLC phase is the feasibility study conducted?
+                    <div class="solution">
+                        <strong>Solution:</strong> Planning & Requirement Analysis - This is the first phase where feasibility (technical, operational, economic) is assessed.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q22.</span> What is the deliverable of the System Design phase?
+                    <div class="solution">
+                        <strong>Solution:</strong> Design Document Specification (DDS) - Contains architecture, database schema, UI mockups, and technical specifications.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q23.</span> Which SDLC phase includes User Acceptance Testing (UAT)?
+                    <div class="solution">
+                        <strong>Solution:</strong> Testing Phase - UAT is the final testing where business users validate the system meets requirements.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q24.</span> Bug fixing and minor enhancements after deployment occur in which phase?
+                    <div class="solution">
+                        <strong>Solution:</strong> Maintenance Phase - Ongoing support, bug fixes, and minor updates happen here.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q25.</span> How many main phases are there in a typical SDLC?
+                    <div class="solution">
+                        <strong>Solution:</strong> 6 phases - Planning, Design, Implementation, Testing, Deployment, and Maintenance
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q26.</span> Which SDLC model follows a sequential, linear approach with no flexibility for changes?
+                    <div class="solution">
+                        <strong>Solution:</strong> Waterfall Model - Phases flow sequentially like a waterfall, difficult to go back and make changes.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q27.</span> A project took 2 months for planning, 3 months for design, 6 months for development, 2 months for testing, and 1 month for deployment. What is the total project duration?
+                    <div class="solution">
+                        <strong>Solution:</strong> Total = 2 + 3 + 6 + 2 + 1 = 14 months
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q28.</span> Which SDLC model is best for projects with evolving requirements?
+                    <div class="solution">
+                        <strong>Solution:</strong> Agile Model - It's iterative and flexible, welcoming changes throughout development.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q29.</span> Writing code and conducting unit testing occurs in which phase?
+                    <div class="solution">
+                        <strong>Solution:</strong> Implementation/Development Phase - Developers write code and perform unit testing during development.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q30.</span> What are the four types of testing in the Testing phase?
+                    <div class="solution">
+                        <strong>Solution:</strong> 1. Unit Testing, 2. Integration Testing, 3. System Testing, 4. User Acceptance Testing (UAT)
+                    </div>
+                </div>
+            </div>
+            
+            <h4>Set 4: Agile & Scrum (Q31-Q40)</h4>
+            
+            <div class="question-set">
+                <div class="question">
+                    <span class="question-num">Q31.</span> What is the typical duration of a Sprint in Scrum?
+                    <div class="solution">
+                        <strong>Solution:</strong> 2-4 weeks (most commonly 2 weeks). It's a fixed time-box that doesn't change mid-sprint.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q32.</span> Who is responsible for prioritizing the Product Backlog?
+                    <div class="solution">
+                        <strong>Solution:</strong> Product Owner - They define product vision and prioritize backlog items based on business value.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q33.</span> How long should a Daily Standup meeting last?
+                    <div class="solution">
+                        <strong>Solution:</strong> 15 minutes maximum - It's a quick daily sync, not a detailed discussion meeting.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q34.</span> Which Scrum ceremony focuses on demonstrating completed work to stakeholders?
+                    <div class="solution">
+                        <strong>Solution:</strong> Sprint Review - Team demos the working increment and gathers feedback.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q35.</span> How many core roles are there in Scrum?
+                    <div class="solution">
+                        <strong>Solution:</strong> 3 roles - Product Owner, Scrum Master, and Development Team
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q36.</span> A team completes 50 story points in a 2-week sprint. What is their velocity?
+                    <div class="solution">
+                        <strong>Solution:</strong> Velocity = 50 story points per sprint (or 25 story points per week)
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q37.</span> Which Agile value states "Working software over comprehensive documentation"?
+                    <div class="solution">
+                        <strong>Solution:</strong> The second value from the Agile Manifesto - While documentation is valuable, working software is valued more.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q38.</span> In Scrum, who removes blockers and facilitates the process?
+                    <div class="solution">
+                        <strong>Solution:</strong> Scrum Master - They serve the team by removing impediments and coaching Scrum practices.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q39.</span> A product backlog has 200 story points. If team velocity is 40 points/sprint, how many sprints to complete?
+                    <div class="solution">
+                        <strong>Solution:</strong> Number of sprints = 200 / 40 = 5 sprints
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q40.</span> Which artifact represents the sum of all completed product backlog items?
+                    <div class="solution">
+                        <strong>Solution:</strong> Product Increment - Must be in usable, "done" condition at the end of each sprint.
+                    </div>
+                </div>
+            </div>
+            
+            <h4>Set 5: Scenario-Based Questions (Q41-Q50)</h4>
+            
+            <div class="question-set">
+                <div class="question">
+                    <span class="question-num">Q41.</span> NIACL wants to build a mobile app for customers. The requirements are unclear and may change. Which SDLC model should they use?
+                    <div class="solution">
+                        <strong>Solution:</strong> Agile/Scrum - Best for evolving requirements, allows flexibility, and delivers working features incrementally with customer feedback.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q42.</span> A BPM team reduced process steps from 12 to 8 and time from 15 days to 10 days. What is the time reduction percentage?
+                    <div class="solution">
+                        <strong>Solution:</strong> [(15-10)/15] × 100 = 33.33% time reduction
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q43.</span> In Daily Standup, team members answer three questions. What are they?
+                    <div class="solution">
+                        <strong>Solution:</strong> 1. What did I do yesterday? 2. What will I do today? 3. Are there any blockers/impediments?
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q44.</span> A manager needs to see only those policies where premium is overdue by more than 60 days. Which MIS report type?
+                    <div class="solution">
+                        <strong>Solution:</strong> Exception Report - It shows only exceptional cases (premiums overdue > 60 days) that need attention.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q45.</span> Development team has 7 members. After Sprint Planning, how many should be on the team for that sprint?
+                    <div class="solution">
+                        <strong>Solution:</strong> 7 members - Development team size doesn't change during a sprint. They commit as a whole team.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q46.</span> A compliance audit system needs to follow strict regulations with clear, fixed requirements. Which model is best?
+                    <div class="solution">
+                        <strong>Solution:</strong> Waterfall Model - Best for well-defined, stable projects with fixed requirements and regulatory compliance needs.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q47.</span> NIACL processes 10,000 claims/month with 5% requiring manual review. How many are auto-processed?
+                    <div class="solution">
+                        <strong>Solution:</strong> Manual review = 10,000 × 0.05 = 500<br>
+                        Auto-processed = 10,000 - 500 = 9,500 claims
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q48.</span> In a 2-week sprint, how much time should be allocated for Sprint Retrospective?
+                    <div class="solution">
+                        <strong>Solution:</strong> Approximately 1-1.5 hours for a 2-week sprint. It's typically 45 minutes per week of sprint.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q49.</span> Which BPM phase comes immediately after "Monitor"?
+                    <div class="solution">
+                        <strong>Solution:</strong> Optimize Phase - After monitoring performance and identifying issues, the next step is optimization and improvement.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q50.</span> A team planned 60 story points but completed only 45 in the sprint. What is their achievement percentage?
+                    <div class="solution">
+                        <strong>Solution:</strong> Achievement % = (45/60) × 100 = 75%
+                    </div>
+                </div>
+            </div>
+            
+            <h4>Bonus Questions (Q51-Q55)</h4>
+            
+            <div class="question-set">
+                <div class="question">
+                    <span class="question-num">Q51.</span> What is the ideal Development Team size in Scrum?
+                    <div class="solution">
+                        <strong>Solution:</strong> 5-9 members - Small enough to be agile, large enough to complete significant work each sprint.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q52.</span> MIS generates reports at 9 AM daily (scheduled), on manager request (on-demand), and alerts for claims > ₹5L (exception). If 100 reports were generated in a day - 70 scheduled, 20 on-demand, what is the exception report count?
+                    <div class="solution">
+                        <strong>Solution:</strong> Exception reports = 100 - 70 - 20 = 10 reports
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q53.</span> In Waterfall model, can you go back to the Design phase after Testing has started?
+                    <div class="solution">
+                        <strong>Solution:</strong> No (or very difficult and expensive) - Waterfall is sequential and linear. Going back is not supported in this model, which is its main limitation.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q54.</span> A BPM initiative costs ₹50 lakhs and saves ₹20 lakhs annually. What is the payback period?
+                    <div class="solution">
+                        <strong>Solution:</strong> Payback Period = Investment / Annual Savings = 50 / 20 = 2.5 years
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q55.</span> Name the three Scrum artifacts.
+                    <div class="solution">
+                        <strong>Solution:</strong> 1. Product Backlog, 2. Sprint Backlog, 3. Product Increment
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Reference Section -->
+        <div class="section">
+            <h3>📚 Quick Reference & Formulas</h3>
+            
+            <h4>BPM Key Points</h4>
+            <div class="key-point">
+                <strong>5 Phases:</strong> Design → Model → Execute → Monitor → Optimize (चक्रीय प्रक्रिया)
+            </div>
+            <div class="key-point">
+                <strong>3 Process Types:</strong> Core (value creation), Support (enabler), Management (governance)
+            </div>
+            
+            <h4>MIS Key Points</h4>
+            <div class="key-point">
+                <strong>5 Components:</strong> Hardware, Software, Data, Procedures, People
+            </div>
+            <div class="key-point">
+                <strong>4 Report Types:</strong> Scheduled, On-Demand, Exception, Drill-Down
+            </div>
+            
+            <h4>SDLC Key Points</h4>
+            <div class="key-point">
+                <strong>6 Phases:</strong> Planning → Design → Implementation → Testing → Deployment → Maintenance
+            </div>
+            <div class="key-point">
+                <strong>4 Testing Types:</strong> Unit → Integration → System → UAT
+            </div>
+            
+            <h4>Scrum Key Points</h4>
+            <div class="key-point">
+                <strong>3-5-3 Rule:</strong> 3 Roles, 5 Ceremonies, 3 Artifacts
+            </div>
+            <div class="key-point">
+                <strong>Sprint Duration:</strong> 2-4 weeks (fixed time-box)
+            </div>
+            <div class="key-point">
+                <strong>Daily Standup:</strong> 15 minutes, 3 questions
+            </div>
+            
+            <h4>Common Calculation Formulas</h4>
+            <div class="formula-box">
+                Process Improvement % = [(Old Time - New Time) / Old Time] × 100
+                <br><br>
+                Velocity = Story Points Completed per Sprint
+                <br><br>
+                Number of Sprints = Total Story Points / Team Velocity
+                <br><br>
+                Achievement % = (Completed Points / Planned Points) × 100
+                <br><br>
+                Payback Period = Investment / Annual Savings
+            </div>
+        </div>
+
+        <!-- Exam Tips Section -->
+        <div class="section">
+            <h3>🎯 Exam Strategy for This Section</h3>
+            
+            <div class="tip-box">
+                <strong>Time Management:</strong> This section typically has 8-12 questions in NIACL AO exam. Allocate 10-12 minutes maximum. Most questions are definition-based and quick to answer.
+            </div>
+            
+            <div class="tip-box">
+                <strong>High-Weightage Topics:</strong>
+                <br>• SDLC phases and models (Waterfall vs Agile)
+                <br>• Scrum roles, ceremonies, and artifacts
+                <br>• BPM lifecycle phases
+                <br>• MIS report types
+            </div>
+            
+            <div class="tip-box">
+                <strong>Common Exam Questions:</strong>
+                <br>• "Which SDLC model is best for X scenario?"
+                <br>• "How many phases in BPM/SDLC?"
+                <br>• "What is the role of Product Owner/Scrum Master?"
+                <br>• "Which type of MIS report shows only exceptions?"
+            </div>
+            
+            <div class="warning-box">
+                <strong>Common Mistakes to Avoid:</strong>
+                <br>• Confusing Scrum Master with Product Owner
+                <br>• Mixing up SDLC phases order
+                <br>• Not knowing the difference between Sprint Backlog and Product Backlog
+                <br>• Forgetting that Waterfall is sequential (can't go back)
+            </div>
+            
+            <h4>Memory Tricks (याद रखने की तरकीब)</h4>
+            <div class="key-point">
+                <strong>BPM Phases:</strong> "DeMon ExOpt" - <strong>De</strong>sign, <strong>Mo</strong>del, Execute, <strong>Mon</strong>itor, <strong>Opt</strong>imize
+            </div>
+            <div class="key-point">
+                <strong>SDLC Phases:</strong> "Please Don't Interrupt Testing During Maintenance" - <strong>P</strong>lanning, <strong>D</strong>esign, <strong>I</strong>mplementation, <strong>T</strong>esting, <strong>D</strong>eployment, <strong>M</strong>aintenance
+            </div>
+            <div class="key-point">
+                <strong>Scrum 3-5-3:</strong> 3 Roles (PO, SM, Dev Team), 5 Events (Planning, Daily, Review, Retro, Refinement), 3 Artifacts (Product Backlog, Sprint Backlog, Increment)
+            </div>
+            <div class="key-point">
+                <strong>MIS Components:</strong> "Hari's Soft Data Plays Piano" - <strong>Ha</strong>rdware, <strong>S</strong>oftware, <strong>D</strong>ata, <strong>P</strong>rocedures, <strong>P</strong>eople
+            </div>
+        </div>
+
+        <!-- Self-Assessment Checklist -->
+        <div class="section">
+            <h3>✅ Self-Assessment Checklist</h3>
+            <p style="margin-bottom: 15px;">Before moving to next section, ensure you can:</p>
+            
+            <ul class="checklist">
+                <li>Explain all 5 phases of BPM lifecycle with examples</li>
+                <li>Differentiate between Core, Support, and Management processes</li>
+                <li>List and explain 5 components of MIS</li>
+                <li>Identify different types of MIS reports (Scheduled, On-Demand, Exception, Drill-Down)</li>
+                <li>Describe all 6 SDLC phases in correct order</li>
+                <li>Compare Waterfall and Agile approaches</li>
+                <li>Explain 3 Scrum roles and their responsibilities</li>
+                <li>Describe 5 Scrum ceremonies with duration</li>
+                <li>Name 3 Scrum artifacts</li>
+                <li>Solve calculation questions on process improvement and velocity</li>
+            </ul>
+            
+            <div class="tip-box">
+                <strong>If Yes to All → You're Ready! 💪 Move to Section 7</strong>
+                <br>
+                <strong>If No to Some → Revise those topics again 📖</strong>
+            </div>
+        </div>
+
+        <!-- Resources Section -->
+        <div class="section">
+            <h3>📖 For Deep Study</h3>
+            
+            <h4>Recommended Resources:</h4>
+            <div class="key-point">
+                <strong>Books:</strong>
+                <br>• "Business Process Management" by Jeston & Nelis
+                <br>• "Scrum: The Art of Doing Twice the Work in Half the Time" by Jeff Sutherland
+                <br>• "Software Engineering" by Ian Sommerville
+            </div>
+            
+            <div class="key-point">
+                <strong>Online Resources:</strong>
+                <br>• Scrum Guide (Official): scrumguides.org
+                <br>• Agile Manifesto: agilemanifesto.org
+                <br>• BPM Tutorials: bpmn.io, Lucidchart tutorials
+            </div>
+            
+            <div class="key-point">
+                <strong>YouTube Channels:</strong>
+                <br>• Simplilearn: SDLC and Agile tutorials
+                <br>• edureka!: Scrum Master certification prep
+                <br>• Guru99: BPM and MIS concepts
+            </div>
+            
+            <div class="key-point">
+                <strong>Practice Platforms:</strong>
+                <br>• IndiaBIX: Business Process and SDLC questions
+                <br>• GradeUp: Banking exam-specific questions
+                <br>• Testbook: NIACL AO mock tests
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="header" style="margin-top: 40px; border-top: 3px solid #667eea; border-bottom: none;">
+            <h2 style="color: #28a745;">🎉 Section 6 Complete! 🎉</h2>
+            <p style="margin-top: 15px; color: #666; font-size: 1.1em;">
+                55 Questions Solved! ✅<br>
+                You've mastered Business Process & MIS fundamentals!
+            </p>
+            <div class="day-badge" style="background: linear-gradient(135deg, #28a745, #20c997); margin-top: 20px;">
+                📚 Next: Section 7 - IT & Data Concepts
+            </div>
+        </div>
+    </div>
+</body>
+</html>

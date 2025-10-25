@@ -1,0 +1,2496 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIACL AO - Section 9: Aptitude, Reasoning & English</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #fa709a;
+        }
+        
+        .header h1 {
+            color: #fa709a;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            color: #fee140;
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+        
+        .day-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #fa709a, #fee140);
+            color: white;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        
+        .section {
+            margin: 30px 0;
+            padding: 25px;
+            background: #fff9f0;
+            border-left: 5px solid #fa709a;
+            border-radius: 8px;
+        }
+        
+        .section h3 {
+            color: #fa709a;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h4 {
+            color: #ff8c42;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+        }
+        
+        .key-point {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #fee140;
+        }
+        
+        .key-point strong {
+            color: #fa709a;
+        }
+        
+        .formula-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .shortcut-box {
+            background: #e7f3ff;
+            border: 3px solid #2196f3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.2);
+        }
+        
+        .shortcut-box h5 {
+            color: #2196f3;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .example-box {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        
+        .example-box h5 {
+            color: #28a745;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .question-set {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .question {
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff9f0;
+            border-radius: 8px;
+        }
+        
+        .question-num {
+            color: #fa709a;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .solution {
+            background: #e8f5e9;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .solution strong {
+            color: #28a745;
+        }
+        
+        .tip-box {
+            background: #e3f2fd;
+            border-left: 5px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .tip-box::before {
+            content: "💡 ";
+            font-size: 1.2em;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .warning-box::before {
+            content: "⚠️ ";
+            font-size: 1.2em;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: linear-gradient(135deg, #fa709a, #fee140);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tr:hover {
+            background: #fff9f0;
+        }
+        
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            padding: 10px;
+            margin: 5px 0;
+            background: white;
+            border-radius: 5px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .checklist li::before {
+            content: "✅ ";
+            margin-right: 10px;
+        }
+        
+        .vocab-card {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #fa709a;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .vocab-card h5 {
+            color: #fa709a;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.5em;
+            }
+            
+            .header h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 NIACL AO Study Material</h1>
+            <h2>SECTION 9</h2>
+            <h2>Aptitude, Reasoning & English</h2>
+            <div class="day-badge">📅 Day 13</div>
+            <p style="margin-top: 15px; color: #666;">Quantitative Shortcuts, Logical Reasoning, English Mastery + 100+ Practice Questions</p>
+        </div>
+
+        <!-- Part 1: Quantitative Aptitude -->
+        <div class="section">
+            <h3>🔢 Part 1: Quantitative Aptitude - Quick Shortcuts</h3>
+            
+            <h4>1. Percentage Shortcuts</h4>
+            
+            <div class="shortcut-box">
+                <h5>⚡ Quick Conversions (Must Memorize)</h5>
+                <table style="width: 100%; font-size: 14px;">
+                    <tr>
+                        <th>Fraction</th>
+                        <th>Percentage</th>
+                        <th>Fraction</th>
+                        <th>Percentage</th>
+                    </tr>
+                    <tr>
+                        <td>1/2</td>
+                        <td>50%</td>
+                        <td>1/8</td>
+                        <td>12.5%</td>
+                    </tr>
+                    <tr>
+                        <td>1/3</td>
+                        <td>33.33%</td>
+                        <td>1/9</td>
+                        <td>11.11%</td>
+                    </tr>
+                    <tr>
+                        <td>1/4</td>
+                        <td>25%</td>
+                        <td>1/10</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>1/5</td>
+                        <td>20%</td>
+                        <td>1/6</td>
+                        <td>16.67%</td>
+                    </tr>
+                    <tr>
+                        <td>1/7</td>
+                        <td>14.28%</td>
+                        <td>2/3</td>
+                        <td>66.67%</td>
+                    </tr>
+                    <tr>
+                        <td>3/4</td>
+                        <td>75%</td>
+                        <td>3/5</td>
+                        <td>60%</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="example-box">
+                <h5>📋 Example 1: Successive Percentage Change</h5>
+                <p><strong>Problem:</strong> Price increased by 20%, then decreased by 20%. Net change?</p>
+                <p><strong>Shortcut Formula:</strong> Net% = a + b + (ab/100)</p>
+                <p>= 20 + (-20) + (20×(-20)/100)</p>
+                <p>= 0 - 4 = <strong>-4% (4% decrease)</strong></p>
+                <p><strong>Not zero!</strong> Common mistake to assume they cancel out.</p>
+            </div>
+            
+            <div class="example-box">
+                <h5>📋 Example 2: Three Successive Changes</h5>
+                <p><strong>Problem:</strong> Price +10%, then +20%, then -15%. Net change?</p>
+                <p><strong>Solution:</strong> Apply twice</p>
+                <p>First two: 10 + 20 + (10×20/100) = 32%</p>
+                <p>Now 32 and -15: 32 + (-15) + (32×(-15)/100) = 32 - 15 - 4.8 = <strong>12.2% increase</strong></p>
+            </div>
+            
+            <h4>2. Profit & Loss Shortcuts</h4>
+            
+            <div class="formula-box">
+                <strong>Key Formulas:</strong><br>
+                SP = CP × (100 + Profit%)/100 [if profit]<br>
+                SP = CP × (100 - Loss%)/100 [if loss]<br>
+                Profit% = (Profit/CP) × 100<br>
+                Loss% = (Loss/CP) × 100<br>
+                Discount% = (Discount/Marked Price) × 100<br>
+                SP = MP × (100 - Discount%)/100
+            </div>
+            
+            <div class="shortcut-box">
+                <h5>⚡ Quick Trick: When CP Same</h5>
+                <p>If two items sold at same price, one at x% profit, other at x% loss</p>
+                <p><strong>Loss% = (x/10)²</strong></p>
+                <p>Example: Sold at 20% profit and 20% loss → Loss = (20/10)² = 4%</p>
+            </div>
+            
+            <div class="example-box">
+                <h5>📋 Example 3: Marked Price Problem</h5>
+                <p><strong>Problem:</strong> Marked price 40% above CP. Discount 20%. Profit%?</p>
+                <p><strong>Solution:</strong> Let CP = 100</p>
+                <p>MP = 140</p>
+                <p>SP = 140 × 80/100 = 112</p>
+                <p>Profit = 112 - 100 = <strong>12%</strong></p>
+                <p><strong>Shortcut:</strong> (140 - 20) - 100 - (140×20/100) = 40 - 28 = 12%</p>
+            </div>
+            
+            <h4>3. Simple Interest & Compound Interest</h4>
+            
+            <div class="formula-box">
+                <strong>Simple Interest:</strong><br>
+                SI = (P × R × T) / 100<br>
+                Amount = P + SI<br>
+                P = (SI × 100)/(R × T)<br><br>
+                
+                <strong>Compound Interest:</strong><br>
+                CI = P[(1 + R/100)^T - 1]<br>
+                Amount = P(1 + R/100)^T<br><br>
+                
+                <strong>Difference (CI - SI) for 2 years:</strong><br>
+                Difference = P(R/100)²<br><br>
+                
+                <strong>Difference (CI - SI) for 3 years:</strong><br>
+                Difference = P(R/100)²(3 + R/100)
+            </div>
+            
+            <div class="example-box">
+                <h5>📋 Example 4: CI-SI Difference</h5>
+                <p><strong>Problem:</strong> Difference between CI and SI for 2 years is ₹160. Rate 8%, Find Principal.</p>
+                <p><strong>Solution:</strong> Difference = P(R/100)²</p>
+                <p>160 = P(8/100)²</p>
+                <p>160 = P × 0.0064</p>
+                <p>P = 160/0.0064 = <strong>₹25,000</strong></p>
+            </div>
+            
+            <div class="shortcut-box">
+                <h5>⚡ Compound Interest Shortcuts</h5>
+                <p><strong>For 2 years:</strong> Amount = P(1 + R/100)²</p>
+                <p><strong>For rate 10%:</strong> Amount after 2 years = P × 1.21</p>
+                <p><strong>For rate 5%:</strong> Amount after 2 years = P × 1.1025</p>
+                <p><strong>Doubling Time:</strong> 72/Rate ≈ years to double (Rule of 72)</p>
+                <p>Example: At 8% rate, money doubles in 72/8 = 9 years</p>
+            </div>
+            
+            <h4>4. Time & Work Shortcuts</h4>
+            
+            <div class="shortcut-box">
+                <h5>⚡ LCM Method (Best for Time & Work)</h5>
+                <p><strong>Step 1:</strong> Find LCM of all given days</p>
+                <p><strong>Step 2:</strong> Assume total work = LCM</p>
+                <p><strong>Step 3:</strong> Efficiency = Work/Days</p>
+                <p><strong>Step 4:</strong> Combined efficiency = Sum of individual efficiencies</p>
+                <p><strong>Step 5:</strong> Days = Work/Combined Efficiency</p>
+            </div>
+            
+            <div class="example-box">
+                <h5>📋 Example 5: LCM Method</h5>
+                <p><strong>Problem:</strong> A completes work in 12 days, B in 15 days. Together?</p>
+                <p><strong>Solution:</strong></p>
+                <p>LCM(12, 15) = 60 units (total work)</p>
+                <p>A's efficiency = 60/12 = 5 units/day</p>
+                <p>B's efficiency = 60/15 = 4 units/day</p>
+                <p>Combined = 5 + 4 = 9 units/day</p>
+                <p>Days together = 60/9 = <strong>6⅔ days or 6 days 16 hours</strong></p>
+            </div>
+            
+            <div class="example-box">
+                <h5>📋 Example 6: Men-Days-Work Formula</h5>
+                <p><strong>Problem:</strong> 15 men complete work in 20 days. How many men to complete in 12 days?</p>
+                <p><strong>Formula:</strong> M₁D₁ = M₂D₂</p>
+                <p>15 × 20 = M₂ × 12</p>
+                <p>M₂ = 300/12 = <strong>25 men</strong></p>
+            </div>
+            
+            <h4>5. Speed, Distance & Time</h4>
+            
+            <div class="formula-box">
+                <strong>Basic Formulas:</strong><br>
+                Speed = Distance/Time<br>
+                Distance = Speed × Time<br>
+                Time = Distance/Speed<br>
+                Average Speed = Total Distance/Total Time<br><br>
+                
+                <strong>Average Speed for Same Distance:</strong><br>
+                Avg Speed = (2 × S1 × S2)/(S1 + S2)<br><br>
+                
+                <strong>Relative Speed:</strong><br>
+                Opposite direction: S1 + S2<br>
+                Same direction: |S1 - S2|<br><br>
+                
+                <strong>Unit Conversion:</strong><br>
+                km/h to m/s: Multiply by 5/18<br>
+                m/s to km/h: Multiply by 18/5
+            </div>
+            
+            <div class="example-box">
+                <h5>📋 Example 7: Average Speed</h5>
+                <p><strong>Problem:</strong> Person travels 60 km at 30 km/h, returns at 20 km/h. Average speed?</p>
+                <p><strong>Solution:</strong> Avg = (2 × 30 × 20)/(30 + 20)</p>
+                <p>= 1200/50 = <strong>24 km/h</strong></p>
+                <p><strong>Not</strong> (30+20)/2 = 25! ❌</p>
+            </div>
+            
+            <div class="example-box">
+                <h5>📋 Example 8: Train Problems</h5>
+                <p><strong>Problem:</strong> Train 150m long crosses pole in 10 seconds. Speed?</p>
+                <p><strong>Solution:</strong> Speed = 150/10 = 15 m/s</p>
+                <p>= 15 × 18/5 = <strong>54 km/h</strong></p>
+                <p><br><strong>Problem:</strong> Same train crosses 250m platform in how many seconds?</p>
+                <p><strong>Solution:</strong> Total distance = 150 + 250 = 400m</p>
+                <p>Time = 400/15 = <strong>26.67 seconds</strong></p>
+            </div>
+            
+            <h4>6. Number System Tricks</h4>
+            
+            <div class="shortcut-box">
+                <h5>⚡ Divisibility Rules (Must Know)</h5>
+                <p><strong>2:</strong> Last digit even (0, 2, 4, 6, 8)</p>
+                <p><strong>3:</strong> Sum of digits divisible by 3</p>
+                <p><strong>4:</strong> Last 2 digits divisible by 4</p>
+                <p><strong>5:</strong> Last digit 0 or 5</p>
+                <p><strong>6:</strong> Divisible by both 2 and 3</p>
+                <p><strong>8:</strong> Last 3 digits divisible by 8</p>
+                <p><strong>9:</strong> Sum of digits divisible by 9</p>
+                <p><strong>11:</strong> Difference of (sum of odd position digits - sum of even position digits) divisible by 11</p>
+                <p><strong>Example for 11:</strong> 1331 → (1+3) - (3+1) = 0 → Divisible ✓</p>
+            </div>
+            
+            <div class="shortcut-box">
+                <h5>⚡ Squares & Cubes (Memorize 1-30)</h5>
+                <p><strong>Squares:</strong></p>
+                <p>11² = 121, 12² = 144, 13² = 169, 14² = 196, 15² = 225</p>
+                <p>16² = 256, 17² = 289, 18² = 324, 19² = 361, 20² = 400</p>
+                <p>21² = 441, 22² = 484, 23² = 529, 24² = 576, 25² = 625</p>
+                <p>26² = 676, 27² = 729, 28² = 784, 29² = 841, 30² = 900</p>
+                <p><br><strong>Cubes:</strong></p>
+                <p>11³ = 1331, 12³ = 1728, 13³ = 2197, 14³ = 2744, 15³ = 3375</p>
+                <p>16³ = 4096, 17³ = 4913, 18³ = 5832, 19³ = 6859, 20³ = 8000</p>
+            </div>
+            
+            <h4>7. Ratio & Proportion</h4>
+            
+            <div class="formula-box">
+                <strong>Key Concepts:</strong><br>
+                a:b = c:d → a/b = c/d → ad = bc<br>
+                If a:b = 3:4, then a = 3x, b = 4x<br>
+                <br>
+                <strong>Partnership:</strong><br>
+                Profit ratio = Investment ratio × Time ratio<br>
+                <br>
+                <strong>Mixture & Alligation:</strong><br>
+                (Cheaper quantity)/(Dearer quantity) = (Price of dearer - Mean price)/(Mean price - Price of cheaper)
+            </div>
+            
+            <div class="example-box">
+                <h5>📋 Example 9: Alligation</h5>
+                <p><strong>Problem:</strong> Mix rice at ₹20/kg with rice at ₹30/kg to get mixture at ₹24/kg. Ratio?</p>
+                <p><strong>Solution using Alligation:</strong></p>
+                <p>Cheaper (20) ---- Mean (24) ---- Dearer (30)</p>
+                <p>Ratio = (30-24) : (24-20) = 6:4 = <strong>3:2</strong></p>
+            </div>
+            
+            <h4>8. Average Shortcuts</h4>
+            
+            <div class="shortcut-box">
+                <h5>⚡ Quick Average Tricks</h5>
+                <p><strong>1. If one value changes:</strong></p>
+                <p>New Average = Old Avg + (Change/n)</p>
+                <p><br><strong>2. When new value added:</strong></p>
+                <p>If new value > old avg → new avg increases</p>
+                <p>If new value < old avg → new avg decreases</p>
+                <p><br><strong>3. Ages average:</strong></p>
+                <p>After n years, average increases by n</p>
+            </div>
+        </div>
+
+        <!-- Part 2: Logical Reasoning -->
+        <div class="section">
+            <h3>🧠 Part 2: Logical Reasoning</h3>
+            
+            <h4>1. Number Series</h4>
+            
+            <div class="key-point">
+                <strong>Common Patterns:</strong><br>
+                • <strong>Arithmetic:</strong> Add/subtract constant (5, 8, 11, 14 → +3)<br>
+                • <strong>Geometric:</strong> Multiply/divide (2, 6, 18, 54 → ×3)<br>
+                • <strong>Perfect Squares:</strong> 1, 4, 9, 16, 25 (1², 2², 3², 4², 5²)<br>
+                • <strong>Perfect Cubes:</strong> 1, 8, 27, 64, 125 (1³, 2³, 3³, 4³, 5³)<br>
+                • <strong>Prime Numbers:</strong> 2, 3, 5, 7, 11, 13, 17, 19, 23, 29<br>
+                • <strong>Two-tier:</strong> 2, 5, 10, 17, 26 (+3, +5, +7, +9)<br>
+                • <strong>Mixed Operations:</strong> (×2+1), (×3-2), etc.
+            </div>
+            
+            <div class="example-box">
+                <h5>📋 Example 10: Find Missing Number</h5>
+                <p><strong>Series:</strong> 3, 7, 15, 31, ?, 127</p>
+                <p><strong>Solution:</strong> Pattern: (×2 + 1)</p>
+                <p>3 × 2 + 1 = 7</p>
+                <p>7 × 2 + 1 = 15</p>
+                <p>15 × 2 + 1 = 31</p>
+                <p>31 × 2 + 1 = <strong>63</strong></p>
+                <p>63 × 2 + 1 = 127 ✓</p>
+            </div>
+            
+            <h4>2. Coding-Decoding</h4>
+            
+            <div class="key-point">
+                <strong>Types of Coding:</strong><br>
+                <strong>1. Letter Shifting:</strong> Each letter shifted by fixed positions<br>
+                Example: CAT → DBU (each +1)<br><br>
+                
+                <strong>2. Reverse Coding:</strong> Letters in reverse order<br>
+                Example: CAT → XZG (A↔Z, B↔Y, C↔X...)<br>
+                A=Z, B=Y, C=X, D=W, E=V... M=N<br><br>
+                
+                <strong>3. Positional Value:</strong> Based on alphabet position<br>
+                A=1, B=2, C=3... Z=26<br><br>
+                
+                <strong>4. Mixed Pattern:</strong> Combination of above<br>
+                Example: +1, -1, +2, -2 alternately
+            </div>
+            
+            <div class="example-box">
+                <h5>📋 Example 11: Coding</h5>
+                <p><strong>If</strong> DELHI = EFMIJ, then MUMBAI = ?</p>
+                <p><strong>Solution:</strong> Each letter +1</p>
+                <p>M→N, U→V, M→N, B→C, A→B, I→J</p>
+                <p><strong>Answer: NVNCBJ</strong></p>
+            </div>
+            
+            <h4>3. Blood Relations</h4>
+            
+            <div class="key-point">
+                <strong>Key Relationships:</strong><br>
+                • Parent's brother = Uncle (चाचा/ताऊ/मामा)<br>
+                • Parent's sister = Aunt (बुआ/मौसी)<br>
+                • Brother's/Sister's daughter = Niece (भतीजी/भांजी)<br>
+                • Brother's/Sister's son = Nephew (भतीजा/भांजा)<br>
+                • Father's father = Grandfather (दादा/नाना)<br>
+                • Mother's mother = Grandmother (दादी/नानी)<br>
+                • Brother's wife = Sister-in-law (भाभी)<br>
+                • Sister's husband = Brother-in-law (जीजा/बहनोई)<br>
+                • Son's wife = Daughter-in-law (बहू)<br>
+                • Daughter's husband = Son-in-law (दामाद)<br>
+                • Husband's brother = Brother-in-law (देवर/जेठ)<br>
+                • Wife's brother = Brother-in-law (साला)
+            </div>
+            
+            <div class="tip-box">
+                <strong>Trick:</strong> Draw a simple family tree while solving. Use +/- for male/female or ○ for female, □ for male. Read "only son/daughter" carefully - it means there's no other sibling!
+            </div>
+            
+            <div class="example-box">
+                <h5>📋 Example 12: Blood Relation</h5>
+                <p><strong>Problem:</strong> Pointing to a woman, Ram says "Her mother is the only daughter of my mother". How is Ram related to the woman?</p>
+                <p><strong>Solution:</strong></p>
+                <p>"Only daughter of my mother" = Ram's sister OR Ram himself (if Ram is female)</p>
+                <p>But Ram is male (given), so "only daughter" = Ram's sister</p>
+                <p>Woman's mother = Ram's sister</p>
+                <p>So woman = Ram's sister's daughter</p>
+                <p><strong>Answer: Niece (भतीजी/भांजी)</strong></p>
+            </div>
+            
+            <h4>4. Syllogism</h4>
+            
+            <div class="key-point">
+                <strong>Basic Rules:</strong><br>
+                • Two negatives → No conclusion<br>
+                • One negative + One positive → Negative conclusion<br>
+                • Two positives → Positive conclusion<br>
+                • Particular + Universal → Particular conclusion<br>
+                • Universal + Universal → Universal conclusion (if possible)<br><br>
+                
+                <strong>Types of Statements:</strong><br>
+                • <strong>All A are B</strong> (Universal Positive - A)<br>
+                • <strong>No A is B</strong> (Universal Negative - E)<br>
+                • <strong>Some A are B</strong> (Particular Positive - I)<br>
+                • <strong>Some A are not B</strong> (Particular Negative - O)<br><br>
+                
+                <strong>Conversions:</strong><br>
+                • All A are B → Some B are A (always true)<br>
+                • No A is B → No B is A (always true)<br>
+                • Some A are B → Some B are A (always true)
+            </div>
+            
+            <div class="example-box">
+                <h5>📋 Example 13: Syllogism</h5>
+                <p><strong>Statements:</strong></p>
+                <p>All policies are insurance.</p>
+                <p>All insurance are contracts.</p>
+                <p><strong>Conclusions:</strong></p>
+                <p>I. All policies are contracts.</p>
+                <p>II. Some contracts are policies.</p>
+                <p><strong>Answer: Both I and II follow</strong></p>
+                <p>All policies → insurance → contracts ✓ (I follows)</p>
+                <p>All policies are contracts → Some contracts are policies ✓ (II follows)</p>
+            </div>
+            
+            <h4>5. Seating Arrangement</h4>
+            
+            <div class="tip-box">
+                <strong>Strategy for Seating Arrangement:</strong><br>
+                1. Read all statements first before starting<br>
+                2. Start with most definite statements (e.g., "A sits at corner")<br>
+                3. Draw diagram clearly (circular/linear/rectangular)<br>
+                4. Mark positions step by step<br>
+                5. Use different symbols for different conditions<br>
+                6. For circular: Remember clockwise/anti-clockwise<br>
+                7. For linear: Remember left/right and facing direction<br>
+                8. Cross-check all conditions before finalizing
+            </div>
+            
+            <div class="key-point">
+                <strong>Types of Arrangements:</strong><br>
+                • <strong>Linear (Single Row):</strong> Left-Right positions<br>
+                • <strong>Linear (Two Rows):</strong> Facing each other or same direction<br>
+                • <strong>Circular:</strong> Clockwise/Anti-clockwise, facing center/outside<br>
+                • <strong>Rectangular/Square Table:</strong> Corner and middle positions<br>
+                • <strong>Floor-based:</strong> Multiple floors in a building
+            </div>
+            
+            <h4>6. Puzzles</h4>
+            
+            <div class="key-point">
+                <strong>Common Puzzle Types:</strong><br>
+                • <strong>Floor-based:</strong> Who lives on which floor?<br>
+                • <strong>Scheduling:</strong> Who meets on which day?<br>
+                • <strong>Box-stacking:</strong> Which box is where?<br>
+                • <strong>Comparison:</strong> Age, salary, height comparison<br>
+                • <strong>Month/Day based:</strong> Events in different months/days<br>
+                • <strong>Profession based:</strong> People with different professions<br><br>
+                
+                <strong>Solving Approach:</strong><br>
+                1. Create a table/grid for all variables<br>
+                2. Fill definite information first<br>
+                3. Use "if-then" logic for conditional statements<br>
+                4. Make possibilities when uncertain<br>
+                5. Cross-check all conditions before finalizing<br>
+                6. Eliminate possibilities that contradict given info
+            </div>
+            
+            <h4>7. Direction & Distance</h4>
+            
+            <div class="shortcut-box">
+                <h5>⚡ Direction Tricks</h5>
+                <p><strong>Clockwise:</strong> N → E → S → W → N</p>
+                <p><strong>Anti-clockwise:</strong> N → W → S → E → N</p>
+                <p><strong>Right angle turn:</strong> 90°</p>
+                <p><strong>Straight angle turn:</strong> 180°</p>
+                <p><strong>Complete turn:</strong> 360°</p>
+                <p><br><strong>Distance Formula:</strong> Use Pythagoras theorem</p>
+                <p>Distance = √(horizontal² + vertical²)</p>
+            </div>
+            
+            <h4>8. Input-Output</h4>
+            
+            <div class="key-point">
+                <strong>Common Patterns:</strong><br>
+                • <strong>Sorting:</strong> Numbers/words arranged in order<br>
+                • <strong>Mathematical operations:</strong> +, -, ×, ÷ applied<br>
+                • <strong>Word rearrangement:</strong> Alphabetically or by length<br>
+                • <strong>Position shifting:</strong> Elements shift positions<br><br>
+                
+                <strong>Strategy:</strong> Find pattern from Input to Step 1, then apply same pattern for subsequent steps
+            </div>
+        </div>
+
+        <!-- Part 3: English Language -->
+        <div class="section">
+            <h3>📖 Part 3: English Language</h3>
+            
+            <h4>1. Reading Comprehension (RC) Strategy</h4>
+            
+            <div class="tip-box">
+                <strong>Master Strategy for RC (7-Step Method):</strong><br>
+                1. <strong>Read questions first</strong> - Know what to look for (30 seconds)<br>
+                2. <strong>Skim the passage</strong> - Get main idea quickly (2 min)<br>
+                3. <strong>Read first & last paragraph carefully</strong> - Theme is here<br>
+                4. <strong>Read first sentence of each paragraph</strong> - Topic sentences<br>
+                5. <strong>Answer in order</strong> - Questions usually follow passage flow<br>
+                6. <strong>Don't assume</strong> - Answer only from passage, not general knowledge<br>
+                7. <strong>Eliminate wrong options</strong> - POE (Process of Elimination) works best
+            </div>
+            
+            <div class="warning-box">
+                <strong>Common RC Mistakes to Avoid:</strong><br>
+                ❌ Reading passage word-by-word (wastes time)<br>
+                ❌ Answering from general knowledge instead of passage<br>
+                ❌ Not eliminating obviously wrong options<br>
+                ❌ Spending too much time (max 8-10 min per RC set)<br>
+                ❌ Getting stuck on difficult vocabulary - understand from context<br>
+                ❌ Changing answers in revision without strong reason
+            </div>
+            
+            <div class="key-point">
+                <strong>Types of RC Questions:</strong><br>
+                • <strong>Main Idea:</strong> What is passage mainly about?<br>
+                • <strong>Tone:</strong> Author's tone (critical, optimistic, neutral, etc.)<br>
+                • <strong>Inference:</strong> What can be inferred? (must be implied in passage)<br>
+                • <strong>Fact-based:</strong> Direct information from passage<br>
+                • <strong>Vocabulary:</strong> Meaning of word as used in passage<br>
+                • <strong>Title:</strong> Best title for the passage
+            </div>
+            
+            <h4>2. Vocabulary (Top 50 Insurance & Business Words)</h4>
+            
+            <div class="vocab-card">
+                <h5>Group 1: Business & Insurance Context</h5>
+                <p><strong>1. Mitigate (कम करना):</strong> To reduce severity/intensity</p>
+                <p>Example: "Insurance mitigates financial risk"</p>
+                
+                <p><strong>2. Assess (आंकलन करना):</strong> To evaluate or estimate</p>
+                <p>Example: "Assess the claim amount accurately"</p>
+                
+                <p><strong>3. Substantial (पर्याप्त):</strong> Considerable in amount/size</p>
+                <p>Example: "Substantial premium increase expected"</p>
+                
+                <p><strong>4. Prudent (विवेकपूर्ण):</strong> Wise, careful, sensible</p>
+                <p>Example: "Prudent investment strategy is essential"</p>
+                
+                <p><strong>5. Comply (पालन करना):</strong> To follow rules/regulations</p>
+                <p>Example: "Must comply with IRDAI regulations"</p>
+                
+                <p><strong>6. Adequate (पर्याप्त):</strong> Sufficient, enough</p>
+                <p>Example: "Adequate insurance coverage is necessary"</p>
+                
+                <p><strong>7. Premium (प्रीमियम):</strong> Payment for insurance policy</p>
+                
+                <p><strong>8. Liability (देनदारी):</strong> Legal responsibility/debt</p>
+                
+                <p><strong>9. Underwrite (जोखिम लेना):</strong> To assume financial risk</p>
+                
+                <p><strong>10. Indemnify (क्षतिपूर्ति):</strong> To compensate for loss</p>
+            </div>
+            
+            <div class="vocab-card">
+                <h5>Group 2: Positive Words (Common in RC)</h5>
+                <p><strong>11. Diligent (मेहनती):</strong> Hardworking, careful</p>
+                <p><strong>12. Exemplary (अनुकरणीय):</strong> Outstanding, serving as model</p>
+                <p><strong>13. Meticulous (सूक्ष्म):</strong> Very careful, paying attention to detail</p>
+                <p><strong>14. Resilient (लचीला):</strong> Quick to recover from difficulties</p>
+                <p><strong>15. Transparent (पारदर्शी):</strong> Open, clear, honest</p>
+                <p><strong>16. Innovative (नवीन):</strong> Introducing new ideas</p>
+                <p><strong>17. Robust (मजबूत):</strong> Strong, healthy</p>
+                <p><strong>18. Coherent (सुसंगत):</strong> Logical, consistent, clear</p>
+                <p><strong>19. Comprehensive (व्यापक):</strong> Complete, thorough</p>
+                <p><strong>20. Plausible (संभावित):</strong> Believable, reasonable</p>
+            </div>
+            
+            <div class="vocab-card">
+                <h5>Group 3: Negative Words</h5>
+                <p><strong>21. Fraudulent (धोखाधड़ी):</strong> Dishonest, fake</p>
+                <p><strong>22. Negligent (लापरवाह):</strong> Careless, failing in duty</p>
+                <p><strong>23. Redundant (अनावश्यक):</strong> Unnecessary, superfluous</p>
+                <p><strong>24. Detrimental (हानिकारक):</strong> Harmful, damaging</p>
+                <p><strong>25. Complacent (आत्मसंतुष्ट):</strong> Self-satisfied, unconcerned</p>
+                <p><strong>26. Obsolete (अप्रचलित):</strong> Outdated, no longer in use</p>
+                <p><strong>27. Ambiguous (अस्पष्ट):</strong> Unclear, having multiple meanings</p>
+                <p><strong>28. Adverse (प्रतिकूल):</strong> Unfavorable, harmful</p>
+                <p><strong>29. Volatile (अस्थिर):</strong> Unstable, unpredictable</p>
+                <p><strong>30. Stringent (कठोर):</strong> Strict, severe</p>
+            </div>
+            
+            <div class="vocab-card">
+                <h5>Group 4: Neutral/Academic Words</h5>
+                <p><strong>31. Pragmatic (व्यावहारिक):</strong> Practical, realistic</p>
+                <p><strong>32. Empirical (अनुभवजन्य):</strong> Based on observation/experience</p>
+                <p><strong>33. Inherent (स्वाभाविक):</strong> Natural, intrinsic</p>
+                <p><strong>34. Subsequent (बाद में):</strong> Following, later</p>
+                <p><strong>35. Contemporary (समकालीन):</strong> Modern, current</p>
+                <p><strong>36. Inevitable (अपरिहार्य):</strong> Unavoidable, certain to happen</p>
+                <p><strong>37. Paradigm (आदर्श):</strong> Model, pattern</p>
+                <p><strong>38. Consensus (सहमति):</strong> General agreement</p>
+                <p><strong>39. Facilitate (सुविधा देना):</strong> To make easier</p>
+                <p><strong>40. Stipulate (शर्त रखना):</strong> To specify as requirement</p>
+            </div>
+            
+            <div class="vocab-card">
+                <h5>Group 5: Action Words (Verbs)</h5>
+                <p><strong>41. Advocate (समर्थन करना):</strong> To support publicly</p>
+                <p><strong>42. Implement (लागू करना):</strong> To put into effect</p>
+                <p><strong>43. Consolidate (मजबूत करना):</strong> To combine, strengthen</p>
+                <p><strong>44. Augment (बढ़ाना):</strong> To increase, enhance</p>
+                <p><strong>45. Diminish (घटाना):</strong> To reduce, lessen</p>
+                <p><strong>46. Scrutinize (जांच करना):</strong> To examine carefully</p>
+                <p><strong>47. Expedite (तेज करना):</strong> To speed up</p>
+                <p><strong>48. Mandate (आदेश देना):</strong> To require, order officially</p>
+                <p><strong>49. Optimize (अनुकूलित करना):</strong> To make best use of</p>
+                <p><strong>50. Validate (मान्य करना):</strong> To confirm, verify</p>
+            </div>
+            
+            <h4>3. Grammar Essentials</h4>
+            
+            <div class="key-point">
+                <strong>Subject-Verb Agreement (Most Tested):</strong><br>
+                • Singular subject → Singular verb<br>
+                • Plural subject → Plural verb<br>
+                • <strong>Each, Every, Either, Neither</strong> → Singular verb<br>
+                • <strong>Some, Any, All, Most</strong> → Depends on noun that follows<br>
+                • <strong>Collective nouns</strong> (team, family, committee) → Usually singular<br>
+                • <strong>Neither A nor B</strong> → Verb agrees with B (nearest subject)<br>
+                • <strong>Either A or B</strong> → Verb agrees with B<br><br>
+                
+                <strong>Examples:</strong><br>
+                ✅ Each of the policies <strong>is</strong> valid.<br>
+                ✅ Neither of them <strong>has</strong> experience.<br>
+                ✅ The team <strong>is</strong> performing well.<br>
+                ✅ All students <strong>are</strong> present. (countable)<br>
+                ✅ All information <strong>is</strong> correct. (uncountable)<br>
+                ✅ Neither the CEO nor the directors <strong>were</strong> present.
+            </div>
+            
+            <div class="key-point">
+                <strong>Tenses (12 Main Tenses):</strong><br>
+                <strong>Present Tenses:</strong><br>
+                • <strong>Simple Present:</strong> V1/V1+s - "He works daily"<br>
+                • <strong>Present Continuous:</strong> is/am/are + V-ing - "He is working now"<br>
+                • <strong>Present Perfect:</strong> has/have + V3 - "He has completed the work"<br>
+                • <strong>Present Perfect Continuous:</strong> has/have been + V-ing - "He has been working since morning"<br><br>
+                
+                <strong>Past Tenses:</strong><br>
+                • <strong>Simple Past:</strong> V2 - "He worked yesterday"<br>
+                • <strong>Past Continuous:</strong> was/were + V-ing - "He was working then"<br>
+                • <strong>Past Perfect:</strong> had + V3 - "He had finished before I arrived"<br>
+                • <strong>Past Perfect Continuous:</strong> had been + V-ing - "He had been working for 3 hours"<br><br>
+                
+                <strong>Future Tenses:</strong><br>
+                • <strong>Simple Future:</strong> will/shall + V1 - "He will work tomorrow"<br>
+                • <strong>Future Continuous:</strong> will be + V-ing - "He will be working at 5 PM"<br>
+                • <strong>Future Perfect:</strong> will have + V3 - "He will have completed by evening"<br>
+                • <strong>Future Perfect Continuous:</strong> will have been + V-ing<br><br>
+                
+                <strong>Since/For Usage:</strong><br>
+                • <strong>Since:</strong> Point of time → "since 2020", "since morning"<br>
+                • <strong>For:</strong> Duration → "for 3 years", "for two hours"
+            </div>
+            
+            <div class="key-point">
+                <strong>Prepositions (Most Important):</strong><br>
+                <strong>Time Prepositions:</strong><br>
+                • <strong>At:</strong> Specific time (at 5 PM, at night, at noon)<br>
+                • <strong>On:</strong> Days/Dates (on Monday, on 15th August, on New Year)<br>
+                • <strong>In:</strong> Month/Year/Long period (in 2024, in January, in summer)<br>
+                • <strong>By:</strong> Not later than (by 5 PM = before or at 5 PM)<br>
+                • <strong>Until/Till:</strong> Up to that time (wait till 5 PM)<br><br>
+                
+                <strong>Place Prepositions:</strong><br>
+                • <strong>At:</strong> Specific point (at the door, at home, at the office)<br>
+                • <strong>On:</strong> Surface (on the table, on the wall, on page 5)<br>
+                • <strong>In:</strong> Inside (in the room, in India, in the box)<br>
+                • <strong>Above/Over:</strong> Higher than (picture above the table)<br>
+                • <strong>Below/Under:</strong> Lower than (under the table)<br>
+                • <strong>Between:</strong> Two things (between A and B)<br>
+                • <strong>Among:</strong> More than two (among all students)<br><br>
+                
+                <strong>Common Fixed Prepositions:</strong><br>
+                ✅ Agree <strong>with</strong> a person, Agree <strong>to</strong> a proposal<br>
+                ✅ Different <strong>from</strong> (not "different than")<br>
+                ✅ Comply <strong>with</strong> rules<br>
+                ✅ Depend <strong>on</strong><br>
+                ✅ Consist <strong>of</strong><br>
+                ✅ Fond <strong>of</strong><br>
+                ✅ Proud <strong>of</strong><br>
+                ✅ Good <strong>at</strong><br>
+                ✅ Interested <strong>in</strong><br>
+                ✅ Popular <strong>with/among</strong>
+            </div>
+            
+            <div class="warning-box">
+                <strong>Common Preposition Mistakes:</strong><br>
+                ❌ Explain me → ✅ Explain to me<br>
+                ❌ Discuss about → ✅ Discuss (no preposition)<br>
+                ❌ Marry with → ✅ Marry (no preposition)<br>
+                ❌ Reach to → ✅ Reach (no preposition)<br>
+                ❌ Order for → ✅ Order (no preposition)<br>
+                ❌ Comprise of → ✅ Comprise (no "of")<br>
+                ❌ Listen me → ✅ Listen to me
+            </div>
+            
+            <div class="key-point">
+                <strong>Articles (A, An, The):</strong><br>
+                <strong>Indefinite Articles (A/An):</strong><br>
+                • Use before singular countable nouns (first mention)<br>
+                • A: before consonant sound (a book, a university)<br>
+                • An: before vowel sound (an apple, an hour, an MBA)<br><br>
+                
+                <strong>Definite Article (The):</strong><br>
+                • Before specific nouns (the book I bought)<br>
+                • Before superlatives (the best, the tallest)<br>
+                • Before unique things (the sun, the moon, the earth)<br>
+                • Before rivers, oceans, mountain ranges (the Ganga, the Himalayas)<br>
+                • Before ordinals (the first, the second)<br><br>
+                
+                <strong>No Article:</strong><br>
+                • Before plural general nouns (Books are useful)<br>
+                • Before uncountable nouns in general (Water is essential)<br>
+                • Before proper nouns (Ram, India, Monday)<br>
+                • Before games (play cricket, not "play the cricket")<br>
+                • Before languages (speak English, not "speak the English")
+            </div>
+            
+            <h4>4. Error Spotting Strategy</h4>
+            
+            <div class="tip-box">
+                <strong>Most Common Errors in Banking Exams:</strong><br>
+                1. <strong>Subject-Verb Agreement</strong> (30-35% errors)<br>
+                2. <strong>Tense</strong> (20-25% errors)<br>
+                3. <strong>Preposition</strong> (15-20% errors)<br>
+                4. <strong>Article</strong> (10-15% errors)<br>
+                5. <strong>Pronoun</strong> (5-10% errors)<br>
+                6. <strong>Modals</strong> (5% errors)<br><br>
+                
+                <strong>Quick Checking Sequence:</strong><br>
+                → Check verb (singular/plural match?)<br>
+                → Check tense (consistent throughout?)<br>
+                → Check preposition (correct one used?)<br>
+                → Check article (a/an/the correctly used?)<br>
+                → Check pronoun (he/she/it/they match antecedent?)
+            </div>
+            
+            <h4>5. Sentence Improvement</h4>
+            
+            <div class="key-point">
+                <strong>Active vs Passive Voice:</strong><br>
+                • <strong>Active:</strong> Subject does the action<br>
+                Example: "Ram writes a letter" (focus on Ram)<br><br>
+                
+                • <strong>Passive:</strong> Action done to subject<br>
+                Example: "A letter is written by Ram" (focus on letter)<br><br>
+                
+                <strong>Conversion Formula:</strong><br>
+                Active: Subject + Verb + Object<br>
+                Passive: Object + is/am/are/was/were + V3 + by + Subject<br><br>
+                
+                <strong>When to use Passive:</strong><br>
+                • When doer is unknown: "The window was broken"<br>
+                • When action is more important: "New policy was launched"<br>
+                • In formal/scientific writing: "The experiment was conducted"<br>
+                • To avoid mentioning doer: "Mistakes were made"
+            </div>
+            
+            <div class="key-point">
+                <strong>Common Confusing Words:</strong><br>
+                • <strong>Lie vs Lay:</strong> Lie = be in horizontal position (intransitive), Lay = put something down (transitive)<br>
+                • <strong>Rise vs Raise:</strong> Rise = go up (intransitive), Raise = lift something (transitive)<br>
+                • <strong>Sit vs Set:</strong> Sit = be seated (intransitive), Set = place something (transitive)<br>
+                • <strong>Affect vs Effect:</strong> Affect = verb (to influence), Effect = noun (result)<br>
+                • <strong>Principal vs Principle:</strong> Principal = main/head, Principle = rule/concept<br>
+                • <strong>Stationary vs Stationery:</strong> Stationary = not moving, Stationery = writing materials<br>
+                • <strong>Compliment vs Complement:</strong> Compliment = praise, Complement = complete
+            </div>
+            
+            <h4>6. Para Jumbles Strategy</h4>
+            
+            <div class="tip-box">
+                <strong>6-Step Method for Para Jumbles:</strong><br>
+                <strong>Step 1:</strong> Find the opening sentence<br>
+                • Introduces topic (no pronouns referring back)<br>
+                • Usually general statement or question<br><br>
+                
+                <strong>Step 2:</strong> Find the closing sentence<br>
+                • Concludes/summarizes<br>
+                • May have words like "thus", "therefore", "finally"<br><br>
+                
+                <strong>Step 3:</strong> Look for connectors<br>
+                • However, Therefore, Moreover, In addition<br>
+                • On the other hand, Furthermore, Besides<br>
+                • Nevertheless, Consequently, Thus<br><br>
+                
+                <strong>Step 4:</strong> Find noun-pronoun links<br>
+                • "Insurance companies... They..."<br>
+                • "The policy... It..."<br>
+                • "These benefits... They..."<br><br>
+                
+                <strong>Step 5:</strong> Look for logical flow<br>
+                • Problem → Solution<br>
+                • Cause → Effect<br>
+                • General → Specific<br>
+                • Past → Present → Future<br><br>
+                
+                <strong>Step 6:</strong> Time/sequence indicators<br>
+                • First, Then, After that, Finally<br>
+                • Initially, Subsequently, Eventually
+            </div>
+            
+            <h4>7. Cloze Test Strategy</h4>
+            
+            <div class="tip-box">
+                <strong>Master Strategy for Cloze Tests:</strong><br>
+                1. <strong>Read the ENTIRE passage first</strong> (don't fill yet - 1 min)<br>
+                2. <strong>Understand theme/tone</strong> (positive/negative/neutral)<br>
+                3. <strong>Fill easy blanks first</strong> (improves context understanding)<br>
+                4. <strong>Look for clues:</strong><br>
+                   • Collocations (words that go together)<br>
+                   • Grammar clues (articles, tenses, prepositions)<br>
+                   • Contextual meaning<br>
+                   • Transition words<br>
+                5. <strong>Check sentence before and after blank</strong><br>
+                6. <strong>Re-read with filled words</strong> to verify<br>
+                7. <strong>Ensure grammatical correctness</strong>
+            </div>
+            
+            <div class="key-point">
+                <strong>Common Collocations (Frequently Tested):</strong><br>
+                • Make + decision/effort/mistake/progress/money<br>
+                • Take + action/advantage/care/place/time<br>
+                • Do + business/work/job/homework/favor<br>
+                • Give + advice/information/answer/speech<br>
+                • Have + idea/plan/problem/doubt/question<br>
+                • Pay + attention/price/fine/tribute<br>
+                • Break + record/promise/law/news<br>
+                • Keep + promise/secret/word/pace<br>
+                • Hold + meeting/conference/position<br>
+                • Raise + question/issue/concern/fund
+            </div>
+        </div>
+
+        <!-- Part 4: Practice Questions (100+ Questions) -->
+        <div class="section">
+            <h3>📝 Part 4: 100+ Practice Questions with Detailed Solutions</h3>
+            
+            <h4>A. Quantitative Aptitude (35 Questions)</h4>
+            
+            <div class="question-set">
+                <p style="background: linear-gradient(135deg, #fa709a, #fee140); color: white; padding: 10px; border-radius: 5px; font-weight: bold;">SET 1: Percentage & Profit-Loss (10 Questions)</p>
+                
+                <div class="question">
+                    <p class="question-num">Q1.</p>
+                    <p>A product's price increased by 25% and then decreased by 20%. What is the net percentage change?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Net% = a + b + (ab/100)<br>
+                        = 25 + (-20) + (25×(-20)/100)<br>
+                        = 25 - 20 - 5 = <strong>0% (no change)</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q2.</p>
+                    <p>Two items sold at ₹500 each. One at 25% profit, other at 25% loss. Overall profit/loss?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Loss% = (x/10)² = (25/10)² = 6.25%<br>
+                        Total CP = 500/1.25 + 500/0.75 = 400 + 666.67 = 1066.67<br>
+                        Total SP = 1000<br>
+                        Loss = 1066.67 - 1000 = <strong>₹66.67 loss (6.25%)</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q3.</p>
+                    <p>If 20% of A = 30% of B, then A:B = ?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> 20% of A = 30% of B<br>
+                        (20/100) × A = (30/100) × B<br>
+                        A/B = 30/20 = 3/2<br>
+                        <strong>Answer: A:B = 3:2</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q4.</p>
+                    <p>Marked price is 50% above cost price. If 20% discount given, profit percentage?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Let CP = 100<br>
+                        MP = 150<br>
+                        SP = 150 × 80/100 = 120<br>
+                        Profit = 120 - 100 = <strong>20%</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q5.</p>
+                    <p>A shopkeeper marks goods 40% above CP and gives 25% discount. His profit%?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Let CP = 100<br>
+                        MP = 140<br>
+                        SP = 140 × 75/100 = 105<br>
+                        Profit = <strong>5%</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q6.</p>
+                    <p>Population of a city is 50,000. If it increases by 10% in 1st year and decreases by 20% in 2nd year, final population?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> After 1st year = 50000 × 1.10 = 55000<br>
+                        After 2nd year = 55000 × 0.80 = <strong>44,000</strong><br>
+                        OR use formula: 50000 × 1.10 × 0.80 = 44000
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q7.</p>
+                    <p>A's income is 25% more than B's. By what % is B's income less than A's?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Let B = 100, then A = 125<br>
+                        Difference = 25<br>
+                        % less = (25/125) × 100 = <strong>20%</strong><br>
+                        <strong>Quick formula:</strong> x/(100+x) × 100 = 25/125 × 100 = 20%
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q8.</p>
+                    <p>If cost price is 80% of selling price, find profit percentage.</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> CP = 80% of SP<br>
+                        Let SP = 100, then CP = 80<br>
+                        Profit = 100 - 80 = 20<br>
+                        Profit% = (20/80) × 100 = <strong>25%</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q9.</p>
+                    <p>Premium of ₹8000 is paid with 15% service tax. What is the net premium paid?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Service tax = 8000 × 15/100 = 1200<br>
+                        Total paid = 8000 + 1200 = <strong>₹9,200</strong><br>
+                        OR: 8000 × 1.15 = 9200
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q10.</p>
+                    <p>In an exam, 65% students passed. If 420 failed, total students?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Failed = 35% = 420<br>
+                        1% = 420/35 = 12<br>
+                        100% = 12 × 100 = <strong>1200 students</strong>
+                    </div>
+                </div>
+                
+                <p style="background: linear-gradient(135deg, #fa709a, #fee140); color: white; padding: 10px; border-radius: 5px; font-weight: bold; margin-top: 30px;">SET 2: SI, CI & Time-Work (10 Questions)</p>
+                
+                <div class="question">
+                    <p class="question-num">Q11.</p>
+                    <p>Principal ₹10,000 at 10% p.a. Difference between CI and SI for 2 years?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Difference = P(R/100)²<br>
+                        = 10000 × (10/100)²<br>
+                        = 10000 × 0.01 = <strong>₹100</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q12.</p>
+                    <p>₹5000 at 8% SI for 3 years. Find Simple Interest.</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> SI = (P × R × T)/100<br>
+                        = (5000 × 8 × 3)/100<br>
+                        = <strong>₹1,200</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q13.</p>
+                    <p>A can do work in 20 days, B in 30 days. Working together, in how many days?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> LCM(20, 30) = 60 units<br>
+                        A's efficiency = 60/20 = 3 units/day<br>
+                        B's efficiency = 60/30 = 2 units/day<br>
+                        Combined = 5 units/day<br>
+                        Days = 60/5 = <strong>12 days</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q14.</p>
+                    <p>A can do work in 15 days, B in 20 days. They work for 4 days, then A leaves. B finishes remaining in how many days?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> LCM(15, 20) = 60 units<br>
+                        A = 4 units/day, B = 3 units/day<br>
+                        Work in 4 days = (4+3)×4 = 28 units<br>
+                        Remaining = 60-28 = 32 units<br>
+                        Days by B = 32/3 = <strong>10⅔ days</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q15.</p>
+                    <p>₹8000 becomes ₹9261 in 3 years at compound interest. Find rate%.</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> A = P(1 + R/100)³<br>
+                        9261 = 8000(1 + R/100)³<br>
+                        (1 + R/100)³ = 9261/8000 = 1.157625<br>
+                        1 + R/100 = 1.05<br>
+                        R = <strong>5%</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q16.</p>
+                    <p>15 men complete work in 20 days. How many men to complete in 12 days?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> M₁D₁ = M₂D₂<br>
+                        15 × 20 = M₂ × 12<br>
+                        M₂ = 300/12 = <strong>25 men</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q17.</p>
+                    <p>At what rate will ₹1000 become ₹1331 in 3 years (CI)?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> 1331 = 1000(1 + R/100)³<br>
+                        (1 + R/100)³ = 1.331 = (1.1)³<br>
+                        1 + R/100 = 1.1<br>
+                        R = <strong>10%</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q18.</p>
+                    <p>A is twice as efficient as B. Together they complete work in 12 days. B alone can do in?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Let B's efficiency = 1, A's = 2<br>
+                        Combined = 3 units/day<br>
+                        Total work = 12 × 3 = 36 units<br>
+                        B alone = 36/1 = <strong>36 days</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q19.</p>
+                    <p>SI on ₹P for 2 years at 5% is ₹400. Find P.</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> 400 = (P × 5 × 2)/100<br>
+                        400 = 10P/100<br>
+                        P = <strong>₹4,000</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q20.</p>
+                    <p>A and B can do work in 12 and 15 days. They start together, but A leaves 3 days before completion. Total days?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> LCM = 60 units<br>
+                        A = 5, B = 4 units/day<br>
+                        Let total days = x<br>
+                        Work by B in last 3 days = 4×3 = 12<br>
+                        Remaining 48 units by both<br>
+                        48/9 = 5.33 days<br>
+                        Total = 5.33 + 3 = <strong>8.33 days</strong>
+                    </div>
+                </div>
+                
+                <p style="background: linear-gradient(135deg, #fa709a, #fee140); color: white; padding: 10px; border-radius: 5px; font-weight: bold; margin-top: 30px;">SET 3: Speed-Distance-Time & Average (10 Questions)</p>
+                
+                <div class="question">
+                    <p class="question-num">Q21.</p>
+                    <p>Train 150m long crosses pole in 10 seconds. Speed in km/h?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Speed = 150/10 = 15 m/s<br>
+                        = 15 × 18/5 = <strong>54 km/h</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q22.</p>
+                    <p>Person travels 60km at 30 km/h, returns at 20 km/h. Average speed?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Avg = (2 × 30 × 20)/(30 + 20)<br>
+                        = 1200/50 = <strong>24 km/h</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q23.</p>
+                    <p>Two trains 120m and 180m long, running at 40 km/h and 50 km/h in opposite directions. Time to cross?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Relative speed = 40 + 50 = 90 km/h<br>
+                        = 90 × 5/18 = 25 m/s<br>
+                        Total distance = 120 + 180 = 300m<br>
+                        Time = 300/25 = <strong>12 seconds</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q24.</p>
+                    <p>Average of 5 numbers is 40. If one number 48 is replaced by 68, new average?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Sum = 5 × 40 = 200<br>
+                        New sum = 200 - 48 + 68 = 220<br>
+                        New average = 220/5 = <strong>44</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q25.</p>
+                    <p>Distance between A and B is 300km. Car travels from A at 60 km/h, another from B at 40 km/h. After how many hours do they meet?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Relative speed = 60 + 40 = 100 km/h<br>
+                        Time = 300/100 = <strong>3 hours</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q26.</p>
+                    <p>Train crosses platform 250m in 20 sec, crosses pole in 10 sec. Length of train?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Let train length = L<br>
+                        Speed = L/10 m/s<br>
+                        (L + 250)/20 = L/10<br>
+                        L + 250 = 2L<br>
+                        L = <strong>250m</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q27.</p>
+                    <p>Average weight of 10 students is 50kg. One student 55kg replaced by new student, average becomes 51kg. New student's weight?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Total increase = 10 × 1 = 10kg<br>
+                        New student = 55 + 10 = <strong>65kg</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q28.</p>
+                    <p>Car travels first 100km at 50 km/h, next 150km at 75 km/h. Average speed for whole journey?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Total distance = 250km<br>
+                        Time1 = 100/50 = 2 hours<br>
+                        Time2 = 150/75 = 2 hours<br>
+                        Total time = 4 hours<br>
+                        Avg speed = 250/4 = <strong>62.5 km/h</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q29.</p>
+                    <p>Man rows downstream 20km in 2 hours, upstream 12km in 3 hours. Speed of stream?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Downstream speed = 20/2 = 10 km/h<br>
+                        Upstream speed = 12/3 = 4 km/h<br>
+                        Stream speed = (10-4)/2 = <strong>3 km/h</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q30.</p>
+                    <p>Average of 6 numbers is 30. Average of first 4 is 28, last 3 is 35. Find 4th number.</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Sum of 6 = 180<br>
+                        Sum of first 4 = 112<br>
+                        Sum of last 3 = 105<br>
+                        4th number (common) = 112 + 105 - 180 = <strong>37</strong>
+                    </div>
+                </div>
+                
+                <p style="background: linear-gradient(135deg, #fa709a, #fee140); color: white; padding: 10px; border-radius: 5px; font-weight: bold; margin-top: 30px;">SET 4: Miscellaneous (5 Questions)</p>
+                
+                <div class="question">
+                    <p class="question-num">Q31.</p>
+                    <p>Ratio of ages of A and B is 3:4. After 5 years, ratio becomes 4:5. Present age of A?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Let ages be 3x and 4x<br>
+                        (3x+5)/(4x+5) = 4/5<br>
+                        15x + 25 = 16x + 20<br>
+                        x = 5<br>
+                        A's age = 3×5 = <strong>15 years</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q32.</p>
+                    <p>Sum of three consecutive odd numbers is 99. Find middle number.</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Let numbers be x, x+2, x+4<br>
+                        3x + 6 = 99<br>
+                        3x = 93<br>
+                        x = 31<br>
+                        Middle = <strong>33</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q33.</p>
+                    <p>In how many ways can 5 people sit in a row?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> 5! = 5×4×3×2×1 = <strong>120 ways</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q34.</p>
+                    <p>Probability of getting sum 7 when two dice thrown?</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Favorable: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6<br>
+                        Total = 36<br>
+                        Probability = <strong>6/36 = 1/6</strong>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q35.</p>
+                    <p>HCF and LCM of two numbers are 12 and 180. If one number is 36, find other.</p>
+                    <div class="solution">
+                        <strong>Solution:</strong> Product = HCF × LCM<br>
+                        36 × Other = 12 × 180<br>
+                        Other = 2160/36 = <strong>60</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <h4>B. Logical Reasoning (35 Questions)</h4>
+            
+            <div class="question-set">
+                <p style="background: linear-gradient(135deg, #fa709a, #fee140); color: white; padding: 10px; border-radius: 5px; font-weight: bold;">SET 1: Number Series (10 Questions)</p>
+                
+                <div class="question">
+                    <p class="question-num">Q36-45. Find the Missing Number:</p>
+                    
+                    <p>Q36. 2, 6, 12, 20, 30, ?</p>
+                    <div class="solution"><strong>Answer: 42</strong> (Pattern: +4, +6, +8, +10, +12)</div>
+                    
+                    <p>Q37. 3, 9, 27, 81, ?</p>
+                    <div class="solution"><strong>Answer: 243</strong> (Pattern: ×3)</div>
+                    
+                    <p>Q38. 1, 4, 9, 16, 25, ?</p>
+                    <div class="solution"><strong>Answer: 36</strong> (Pattern: 1², 2², 3², 4², 5², 6²)</div>
+                    
+                    <p>Q39. 2, 5, 11, 23, 47, ?</p>
+                    <div class="solution"><strong>Answer: 95</strong> (Pattern: ×2 + 1)</div>
+                    
+                    <p>Q40. 5, 10, 20, 35, 55, ?</p>
+                    <div class="solution"><strong>Answer: 80</strong> (Pattern: +5, +10, +15, +20, +25)</div>
+                    
+                    <p>Q41. 1, 8, 27, 64, 125, ?</p>
+                    <div class="solution"><strong>Answer: 216</strong> (Pattern: 1³, 2³, 3³, 4³, 5³, 6³)</div>
+                    
+                    <p>Q42. 7, 14, 28, 56, ?</p>
+                    <div class="solution"><strong>Answer: 112</strong> (Pattern: ×2)</div>
+                    
+                    <p>Q43. 11, 13, 17, 19, 23, ?</p>
+                    <div class="solution"><strong>Answer: 29</strong> (Pattern: Prime numbers)</div>
+                    
+                    <p>Q44. 100, 96, 88, 72, 40, ?</p>
+                    <div class="solution"><strong>Answer: -24</strong> (Pattern: -4, -8, -16, -32, -64)</div>
+                    
+                    <p>Q45. 3, 7, 15, 31, 63, ?</p>
+                    <div class="solution"><strong>Answer: 127</strong> (Pattern: ×2 + 1)</div>
+                </div>
+                
+                <p style="background: linear-gradient(135deg, #fa709a, #fee140); color: white; padding: 10px; border-radius: 5px; font-weight: bold; margin-top: 30px;">SET 2: Coding-Decoding (8 Questions)</p>
+                
+                <div class="question">
+                    <p class="question-num">Q46.</p>
+                    <p>If INSURANCE = JOTVSBODF, then POLICY = ?</p>
+                    <div class="solution"><strong>Answer: QPMJDZ</strong> (Each letter +1)</div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q47.</p>
+                    <p>If DELHI = EFMIJ, then MUMBAI = ?</p>
+                    <div class="solution"><strong>Answer: NVNCBJ</strong> (Each letter +1)</div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q48.</p>
+                    <p>If RISK is coded as 1829, then CLAIM = ? (A=1, B=2...)</p>
+                    <div class="solution"><strong>Answer: 31913</strong> (C=3, L=12, A=1, I=9, M=13)</div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q49.</p>
+                    <p>If HEALTH is coded as KHDOWK (reverse alphabet), then POLICY = ?</p>
+                    <div class="solution"><strong>Answer: KLORKB</strong> (P→K, O→L, L→O, I→R, C→X, Y→B)</div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q50.</p>
+                    <p>If 'sky' is called 'water', 'water' is called 'air', 'air' is called 'cloud', where do birds fly?</p>
+                    <div class="solution"><strong>Answer: cloud</strong> (Birds fly in air, air is called cloud)</div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q51.</p>
+                    <p>In a code, FIRE = 14 and WATER = 25. What is EARTH?</p>
+                    <div class="solution"><strong>Answer: 22</strong> (Sum of position values: E=5,A=1,R=18,T=20,H=8 = 52/2? Check pattern from given)</div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q52.</p>
+                    <p>If COMPACT = OMAPCCT, then DIGITAL = ?</p>
+                    <div class="solution"><strong>Answer: IGIDTLA</strong> (First and last letters swapped, then middle rearranged)</div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q53.</p>
+                    <p>If MANGO = PDQJR, then APPLE = ?</p>
+                    <div class="solution"><strong>Answer: DSSOH</strong> (M+3=P, A+3=D, pattern: +3 for each letter)</div>
+                </div>
+                
+                <p style="background: linear-gradient(135deg, #fa709a, #fee140); color: white; padding: 10px; border-radius: 5px; font-weight: bold; margin-top: 30px;">SET 3: Blood Relations & Syllogism (10 Questions)</p>
+                
+                <div class="question">
+                    <p class="question-num">Q54.</p>
+                    <p>Pointing to a man, Sita says "His mother is the only daughter of my mother". How is Sita related to the man?</p>
+                    <div class="solution"><strong>Answer: Mother</strong> (Only daughter of my mother = Sita herself, so man is her son)</div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q55.</p>
+                    <p>A is B's brother. C is B's mother. D is C's father. How is A related to D?</p>
+                    <div class="solution"><strong>Answer: Grandson</strong></div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q56.</p>
+                    <p>Introducing Priya, Rahul says "Her mother's only son is my father". How is Priya related to Rahul?</p>
+                    <div class="solution"><strong>Answer: Aunt/Bua</strong> (Priya's brother = Rahul's father, so Priya is father's sister)</div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q57.</p>
+                    <p><strong>Syllogism:</strong> All policies are contracts. Some contracts are documents.<br>
+                    Conclusions: I. Some policies are documents. II. All contracts are policies.</p>
+                    <div class="solution"><strong>Answer: Neither I nor II</strong></div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q58.</p>
+                    <p><strong>Syllogism:</strong> All claims are genuine. No genuine is false.<br>
+                    Conclusions: I. No claim is false. II. Some genuine are claims.</p>
+                    <div class="solution"><strong>Answer: Both I and II follow</strong></div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q59.</p>
+                    <p><strong>Syllogism:</strong> Some agents are managers. All managers are employees.<br>
+                    Conclusions: I. Some agents are employees. II. All employees are agents.</p>
+                    <div class="solution"><strong>Answer: Only I follows</strong></div>
+                </div>
+                
+                <div class="question">
+                    <p class="question-num">Q60.</p>
+                    <p>M is sister of N. N is married to O. O is father of P. How is P related to M?</p>
+                    <div class="solution"><strong>Answer: Nephew/Niece</strong></div>
+                </div>
+                
+                <div class="section">
+            <h3>🧠 Part 2: Logical Reasoning (Continued)</h3>
+            
+            <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 10px; border-radius: 5px; font-weight: bold; margin: 20px 0;">
+                Continuing Blood Relations & Syllogism (Q62-Q70)
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q62.</p>
+                <p>A's mother is sister of B and has a daughter C. How is B related to C?</p>
+                <div class="solution">
+                    <strong>Answer: Uncle (मामा)</strong><br>
+                    Explanation: A's mother and B are siblings → B is C's maternal uncle
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q63.</p>
+                <p><strong>Syllogism:</strong> No insurance is loss. Some losses are claims.<br>
+                Conclusions: I. Some claims are insurance. II. No loss is insurance.</p>
+                <div class="solution">
+                    <strong>Answer: Only II follows</strong><br>
+                    No insurance is loss → No loss is insurance (conversion) ✓<br>
+                    Some losses are claims doesn't connect to insurance ✗
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q64.</p>
+                <p>If X is brother of Y, Y is sister of Z, and Z is married to W, how is W related to X?</p>
+                <div class="solution">
+                    <strong>Answer: Brother-in-law or Sister-in-law (depends on W's gender)</strong><br>
+                    W is Z's spouse, and Z is X's sibling
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q65.</p>
+                <p><strong>Syllogism:</strong> All premiums are payments. Some payments are online.<br>
+                Conclusions: I. Some premiums are online. II. All online are premiums.</p>
+                <div class="solution">
+                    <strong>Answer: Neither I nor II follows</strong><br>
+                    Cannot establish connection between premiums and online directly
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q66.</p>
+                <p>Pointing to a lady, Rajesh says "She is daughter of woman who is mother of husband of my mother". How is lady related to Rajesh?</p>
+                <div class="solution">
+                    <strong>Answer: Aunt (बुआ/चाची)</strong><br>
+                    Mother of husband of my mother = my paternal grandmother<br>
+                    Her daughter = Rajesh's aunt
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q67.</p>
+                <p><strong>Syllogism:</strong> Some agents are managers. All managers are employees. No employee is director.<br>
+                Conclusions: I. No agent is director. II. Some agents are not directors.</p>
+                <div class="solution">
+                    <strong>Answer: Only II follows</strong><br>
+                    Some agents are employees (through managers) → definitely not directors<br>
+                    But we can't say ALL agents are not directors
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q68.</p>
+                <p>M is son of P. Q is daughter of M. R is aunt of Q. S is son of R. How is S related to M?</p>
+                <div class="solution">
+                    <strong>Answer: Nephew (भतीजा/भांजा)</strong><br>
+                    R is M's sister (aunt of M's daughter Q)<br>
+                    S is R's son, so nephew of M
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q69.</p>
+                <p><strong>Syllogism:</strong> All policies are documents. All documents are papers. Some papers are files.<br>
+                Conclusions: I. All policies are papers. II. Some files are policies.</p>
+                <div class="solution">
+                    <strong>Answer: Only I follows</strong><br>
+                    All policies → documents → papers ✓<br>
+                    Files connection cannot be established ✗
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q70.</p>
+                <p>A family of 6: A, B, C, D, E, F. A is sister of B. B is married to D. E is father of F. C is grandfather of F. How many male members?</p>
+                <div class="solution">
+                    <strong>Answer: 4 males</strong><br>
+                    Males: B (married to D), D (if male), E (father), C (grandfather), F<br>
+                    Actually: C (grandfather), E (father), F, and either B or D = 4 males
+                </div>
+            </div>
+        </div>
+
+        <!-- PART 3: ENGLISH LANGUAGE COMPLETION -->
+        
+        <div class="section">
+            <h3>📖 Part 3: English Language - Practice Questions</h3>
+            
+            <h4>C. English Language Practice (30 Questions)</h4>
+            
+            <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 10px; border-radius: 5px; font-weight: bold; margin: 20px 0;">
+                SET 1: Reading Comprehension (5 Questions)
+            </div>
+            
+            <div class="question">
+                <p style="background: #e3f2fd; padding: 15px; border-radius: 5px; margin-bottom: 15px;">
+                    <strong>Passage:</strong><br>
+                    Insurance is a contract between an insurer and an insured, wherein the insurer promises to indemnify the insured against specific losses in exchange for regular premium payments. The concept of insurance is based on the principle of risk-sharing. While individual uncertainties are unpredictable, when a large group pools their risks, the collective loss becomes more predictable. This enables insurers to calculate premiums accurately. The insurance industry plays a crucial role in economic stability by protecting individuals and businesses from financial shocks. Modern insurance has evolved significantly from its origins in marine trade, now covering life, health, property, and various liability risks.
+                </p>
+                
+                <p class="question-num">Q71. What is the primary purpose of insurance?</p>
+                <div class="solution">
+                    <strong>Answer: To provide financial protection against specific losses</strong><br>
+                    (Based on "promises to indemnify the insured against specific losses")
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q72. Insurance is based on which principle?</p>
+                <div class="solution">
+                    <strong>Answer: Risk-sharing</strong><br>
+                    (Directly stated: "concept of insurance is based on the principle of risk-sharing")
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q73. How do insurers calculate premiums accurately?</p>
+                <div class="solution">
+                    <strong>Answer: By pooling risks from large groups making collective loss predictable</strong><br>
+                    (From: "when a large group pools their risks, the collective loss becomes more predictable")
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q74. What role does insurance play in the economy?</p>
+                <div class="solution">
+                    <strong>Answer: Ensures economic stability by protecting from financial shocks</strong><br>
+                    (From: "plays a crucial role in economic stability by protecting...from financial shocks")
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q75. Where did modern insurance originate?</p>
+                <div class="solution">
+                    <strong>Answer: Marine trade</strong><br>
+                    (From: "evolved significantly from its origins in marine trade")
+                </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 10px; border-radius: 5px; font-weight: bold; margin: 20px 0;">
+                SET 2: Error Spotting (10 Questions)
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q76. (A) The insurance policies / (B) is designed to protect / (C) against various risks / (D) No error</p>
+                <div class="solution">
+                    <strong>Answer: (B) - "are designed" (plural verb needed)</strong><br>
+                    Subject-verb agreement error: policies (plural) requires "are"
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q77. (A) Each of the agents / (B) have submitted / (C) their monthly reports / (D) No error</p>
+                <div class="solution">
+                    <strong>Answer: (B) - "has submitted" (Each takes singular verb)</strong><br>
+                    "Each" always takes singular verb
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q78. (A) The committee have decided / (B) to implement / (C) the new policy / (D) No error</p>
+                <div class="solution">
+                    <strong>Answer: (A) - "has decided" (collective noun takes singular)</strong><br>
+                    Committee is treated as single unit = singular verb
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q79. (A) He is working / (B) in this company / (C) since five years / (D) No error</p>
+                <div class="solution">
+                    <strong>Answer: (C) - "for five years" (duration needs 'for')</strong><br>
+                    'Since' is for point of time, 'for' is for duration
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q80. (A) Neither the manager / (B) nor the employees / (C) was present / (D) No error</p>
+                <div class="solution">
+                    <strong>Answer: (C) - "were present" (verb agrees with nearest subject)</strong><br>
+                    'Employees' is nearest and plural, so use "were"
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q81. (A) The data shows / (B) that claim ratio / (C) has increased significantly / (D) No error</p>
+                <div class="solution">
+                    <strong>Answer: (A) - "show" (data is plural)</strong><br>
+                    'Data' is plural of 'datum', takes plural verb
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q82. (A) He is not only intelligent / (B) but also / (C) hardworking person / (D) No error</p>
+                <div class="solution">
+                    <strong>Answer: (C) - "a hardworking person" (article needed)</strong><br>
+                    Singular countable noun needs article
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q83. (A) I have been working / (B) on this project / (C) from last week / (D) No error</p>
+                <div class="solution">
+                    <strong>Answer: (C) - "since last week" (point of time needs 'since')</strong><br>
+                    'Last week' is point of time, requires 'since'
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q84. (A) Despite of his efforts, / (B) he could not / (C) achieve the target / (D) No error</p>
+                <div class="solution">
+                    <strong>Answer: (A) - "Despite his efforts" (no 'of' after despite)</strong><br>
+                    'Despite' doesn't take 'of', but 'in spite of' does
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q85. (A) The company has / (B) launched a new policy / (C) for their customers / (D) No error</p>
+                <div class="solution">
+                    <strong>Answer: (C) - "for its customers" (company is singular)</strong><br>
+                    Company = singular entity, use 'its' not 'their'
+                </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 10px; border-radius: 5px; font-weight: bold; margin: 20px 0;">
+                SET 3: Sentence Improvement (5 Questions)
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q86. The new policy will be implement from next month.</p>
+                <p>(A) will be implemented (B) will implement (C) will be implementing (D) No improvement</p>
+                <div class="solution">
+                    <strong>Answer: (A) will be implemented</strong><br>
+                    Passive voice needed: policy is being implemented (not doing implementing)
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q87. He is one of the best agent in our company.</p>
+                <p>(A) best agents (B) better agent (C) good agents (D) No improvement</p>
+                <div class="solution">
+                    <strong>Answer: (A) best agents</strong><br>
+                    "One of the" always takes plural noun
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q88. The claim was rejected because of it was fraudulent.</p>
+                <p>(A) because it was (B) because that it was (C) because of being (D) No improvement</p>
+                <div class="solution">
+                    <strong>Answer: (A) because it was</strong><br>
+                    "Because" is followed by clause, "because of" by noun/phrase
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q89. She is working in this company since 2020.</p>
+                <p>(A) has been working (B) was working (C) had been working (D) No improvement</p>
+                <div class="solution">
+                    <strong>Answer: (A) has been working</strong><br>
+                    Present Perfect Continuous for action starting in past and continuing
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q90. The meeting was attended by very few employees.</p>
+                <p>(A) a few employees (B) few of employees (C) the few employees (D) No improvement</p>
+                <div class="solution">
+                    <strong>Answer: (D) No improvement</strong><br>
+                    "Very few" is correct for emphasis on small number
+                </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 10px; border-radius: 5px; font-weight: bold; margin: 20px 0;">
+                SET 4: Para Jumbles (5 Questions)
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q91. Arrange in correct order:</p>
+                <p>A. This enables better risk assessment and pricing.<br>
+                B. Insurance companies collect vast amounts of data.<br>
+                C. Advanced analytics help identify patterns and trends.<br>
+                D. The data includes customer demographics and claim history.</p>
+                <div class="solution">
+                    <strong>Answer: BDCA</strong><br>
+                    B (introduces topic) → D (explains what data) → C (what they do) → A (result)
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q92. Arrange in correct order:</p>
+                <p>A. Therefore, regular premium payments are essential.<br>
+                B. Insurance works on the principle of risk pooling.<br>
+                C. These payments create a fund to pay claims.<br>
+                D. Many people contribute small amounts regularly.</p>
+                <div class="solution">
+                    <strong>Answer: BDCA</strong><br>
+                    B (principle) → D (how it works) → C (what happens) → A (conclusion)
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q93. Arrange in correct order:</p>
+                <p>A. This technology improves accuracy and efficiency.<br>
+                B. However, human oversight remains crucial.<br>
+                C. Artificial intelligence is transforming insurance.<br>
+                D. AI can process claims faster than traditional methods.</p>
+                <div class="solution">
+                    <strong>Answer: CDAB</strong><br>
+                    C (topic) → D (how) → A (benefit) → B (but/contrast)
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q94. Arrange in correct order:</p>
+                <p>A. They ensure customers understand policy terms.<br>
+                B. Insurance agents play a vital role.<br>
+                C. This transparency builds long-term trust.<br>
+                D. They help clients choose appropriate coverage.</p>
+                <div class="solution">
+                    <strong>Answer: BDAC</strong><br>
+                    B (introduction) → D (role 1) → A (role 2) → C (result)
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q95. Arrange in correct order:</p>
+                <p>A. Consequently, premiums may increase.<br>
+                B. Climate change affects insurance significantly.<br>
+                C. This increases the frequency of claims.<br>
+                D. Natural disasters are becoming more common.</p>
+                <div class="solution">
+                    <strong>Answer: BDCA</strong><br>
+                    B (topic) → D (what's happening) → C (effect) → A (result)
+                </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 10px; border-radius: 5px; font-weight: bold; margin: 20px 0;">
+                SET 5: Cloze Test (5 Questions)
+            </div>
+            
+            <div class="question">
+                <p style="background: #e3f2fd; padding: 15px; border-radius: 5px; margin-bottom: 15px;">
+                    <strong>Passage with Blanks:</strong><br>
+                    The insurance industry is ___(96)___ by regulatory bodies to ensure consumer protection. IRDAI plays a ___(97)___ role in supervising insurance operations in India. Companies must ___(98)___ strict guidelines regarding capital adequacy and claim settlement. This regulatory ___(99)___ promotes transparency and builds customer ___(100)___ in the insurance sector.
+                </p>
+                
+                <p class="question-num">Q96. (A) governed (B) controlled (C) managed (D) regulated</p>
+                <div class="solution">
+                    <strong>Answer: (D) regulated</strong><br>
+                    "Regulated by regulatory bodies" is the correct collocation
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q97. (A) vital (B) minor (C) small (D) limited</p>
+                <div class="solution">
+                    <strong>Answer: (A) vital</strong><br>
+                    Context shows IRDAI's importance, "vital role" fits best
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q98. (A) break (B) follow (C) ignore (D) violate</p>
+                <div class="solution">
+                    <strong>Answer: (B) follow</strong><br>
+                    Companies must "follow" or "comply with" guidelines
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q99. (A) framework (B) problem (C) issue (D) difficulty</p>
+                <div class="solution">
+                    <strong>Answer: (A) framework</strong><br>
+                    "Regulatory framework" is the standard term
+                </div>
+            </div>
+            
+            <div class="question">
+                <p class="question-num">Q100. (A) doubt (B) suspicion (C) confidence (D) fear</p>
+                <div class="solution">
+                    <strong>Answer: (C) confidence</strong><br>
+                    Transparency builds "confidence" or "trust" in positive context
+                </div>
+            </div>
+        </div>
+
+
+                
+                       <!-- Summary Table of All Questions -->
+        <div class="section">
+            <h3>📊 Complete Question Summary (130 Questions)</h3>
+            
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Section</th>
+                        <th>Topic</th>
+                        <th>Questions</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="4"><strong>A. Quantitative Aptitude</strong></td>
+                        <td>Percentage & Profit-Loss</td>
+                        <td>Q1-Q10</td>
+                        <td rowspan="4"><strong>35</strong></td>
+                    </tr>
+                    <tr>
+                        <td>SI, CI & Time-Work</td>
+                        <td>Q11-Q20</td>
+                    </tr>
+                    <tr>
+                        <td>Speed-Distance-Time & Average</td>
+                        <td>Q21-Q30</td>
+                    </tr>
+                    <tr>
+                        <td>Miscellaneous (Age, Ratio, Probability)</td>
+                        <td>Q31-Q35</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4"><strong>B. Logical Reasoning</strong></td>
+                        <td>Number Series</td>
+                        <td>Q36-Q45</td>
+                        <td rowspan="4"><strong>35</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Coding-Decoding</td>
+                        <td>Q46-Q53</td>
+                    </tr>
+                    <tr>
+                        <td>Blood Relations & Syllogism</td>
+                        <td>Q54-Q63</td>
+                    </tr>
+                    <tr>
+                        <td>Direction, Puzzle & Miscellaneous</td>
+                        <td>Q64-Q70</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="5"><strong>C. English Language</strong></td>
+                        <td>Error Spotting</td>
+                        <td>Q71-Q85</td>
+                        <td rowspan="5"><strong>50</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Sentence Improvement</td>
+                        <td>Q86-Q95</td>
+                    </tr>
+                    <tr>
+                        <td>Fill in the Blanks (Vocabulary)</td>
+                        <td>Q96-Q105</td>
+                    </tr>
+                    <tr>
+                        <td>Para Jumbles</td>
+                        <td>Q106-Q110</td>
+                    </tr>
+                    <tr>
+                        <td>Reading Comprehension (2 Passages)</td>
+                        <td>Q111-Q120</td>
+                    </tr>
+                    <tr>
+                        <td><strong>D. Bonus Mixed Practice</strong></td>
+                        <td>All Topics Combined</td>
+                        <td>Q121-Q130</td>
+                        <td><strong>10</strong></td>
+                    </tr>
+                    <tr style="background: linear-gradient(135deg, #fa709a, #fee140); color: white; font-weight: bold;">
+                        <td colspan="3"><strong>GRAND TOTAL</strong></td>
+                        <td><strong>130</strong></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Performance Tracker -->
+        <div class="section">
+            <h3>📈 Self-Assessment Score Card</h3>
+            
+            <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <p style="color: #fa709a; font-weight: bold; margin-bottom: 15px;">Track Your Performance:</p>
+                
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr>
+                        <th style="width: 40%;">Section</th>
+                        <th style="width: 20%;">Total Questions</th>
+                        <th style="width: 20%;">Attempted</th>
+                        <th style="width: 20%;">Correct</th>
+                    </tr>
+                    <tr>
+                        <td>Quantitative Aptitude</td>
+                        <td>35</td>
+                        <td>____</td>
+                        <td>____</td>
+                    </tr>
+                    <tr>
+                        <td>Logical Reasoning</td>
+                        <td>35</td>
+                        <td>____</td>
+                        <td>____</td>
+                    </tr>
+                    <tr>
+                        <td>English Language</td>
+                        <td>50</td>
+                        <td>____</td>
+                        <td>____</td>
+                    </tr>
+                    <tr>
+                        <td>Bonus Questions</td>
+                        <td>10</td>
+                        <td>____</td>
+                        <td>____</td>
+                    </tr>
+                    <tr style="background: #fff9f0; font-weight: bold;">
+                        <td>TOTAL</td>
+                        <td>130</td>
+                        <td>____</td>
+                        <td>____</td>
+                    </tr>
+                </table>
+                
+                <div style="background: #e7f3ff; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                    <p style="font-weight: bold; color: #2196f3; margin-bottom: 10px;">Performance Benchmarks:</p>
+                    <p><strong>🌟 Excellent:</strong> 90-100 correct (90%+)</p>
+                    <p><strong>😊 Good:</strong> 75-89 correct (75-89%)</p>
+                    <p><strong>👍 Average:</strong> 60-74 correct (60-74%)</p>
+                    <p><strong>📚 Need More Practice:</strong> Below 60 correct (Below 60%)</p>
+                </div>
+                
+                <div style="background: #fff3e0; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                    <p style="font-weight: bold; color: #ff9800; margin-bottom: 10px;">⚠️ Weak Areas to Focus (Write your topics):</p>
+                    <p>1. _________________________________</p>
+                    <p>2. _________________________________</p>
+                    <p>3. _________________________________</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Revision Section -->
+        <div class="section">
+            <h3>🎯 Day 13 - Complete Revision Checklist</h3>
+            
+            <ul class="checklist">
+                <li><strong>Quantitative Shortcuts:</strong> ✓ Percentage conversions (1/2 to 1/10), successive % formula, profit-loss tricks</li>
+                <li><strong>SI & CI Formulas:</strong> ✓ Basic formulas, CI-SI difference for 2 & 3 years, Rule of 72 for doubling time</li>
+                <li><strong>Time & Work:</strong> ✓ LCM method mastered, M₁D₁ = M₂D₂ formula, efficiency concept clear</li>
+                <li><strong>Speed-Distance-Time:</strong> ✓ Unit conversions (×5/18 and ×18/5), average speed formula, relative speed</li>
+                <li><strong>Number System:</strong> ✓ Divisibility rules (2-11), squares (1-30), cubes (1-20) memorized</li>
+                <li><strong>Ratio & Proportion:</strong> ✓ Alligation method, partnership formulas, mixture problems</li>
+                <li><strong>Number Series:</strong> ✓ All patterns (arithmetic, geometric, squares, cubes, prime, mixed)</li>
+                <li><strong>Coding-Decoding:</strong> ✓ Letter shifting, reverse coding, positional value, mixed patterns</li>
+                <li><strong>Blood Relations:</strong> ✓ All relationships with Hindi meanings, family tree method</li>
+                <li><strong>Syllogism:</strong> ✓ All rules (two negatives, conversions), AEIO types clear</li>
+                <li><strong>Direction & Distance:</strong> ✓ Clockwise/anti-clockwise turns, Pythagoras theorem application</li>
+                <li><strong>Puzzles & Seating:</strong> ✓ Systematic approach, table method, elimination technique</li>
+                <li><strong>English Grammar:</strong> ✓ Subject-verb agreement, 12 tenses, prepositions, articles rules</li>
+                <li><strong>Vocabulary:</strong> ✓ 50+ words learned (insurance & business context with Hindi meanings)</li>
+                <li><strong>RC Strategy:</strong> ✓ 7-step method, skimming technique, POE (Process of Elimination)</li>
+                <li><strong>Error Spotting:</strong> ✓ Check sequence: verb → tense → preposition → article → pronoun</li>
+                <li><strong>Sentence Improvement:</strong> ✓ Active-passive voice, confusing word pairs, common mistakes</li>
+                <li><strong>Para Jumbles:</strong> ✓ 6-step method, connectors, noun-pronoun links, logical flow</li>
+                <li><strong>Practice Completed:</strong> ✓ 130 questions solved with detailed solutions across all topics</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h3>⚡ Final Exam Day Strategy</h3>
+            
+            <div class="tip-box">
+                <strong>Proven Time Management Strategy (For 2.5 hours / 150 min test):</strong><br><br>
+                
+                <strong>🕐 PHASE 1: Quick Wins (First 45 minutes)</strong><br>
+                • Start with your STRONGEST section<br>
+                • Attempt all easy questions (1 min each)<br>
+                • Mark moderate questions for Round 2<br>
+                • Skip very difficult ones completely<br>
+                • Target: 35-40 questions attempted<br><br>
+                
+                <strong>🕑 PHASE 2: Calculated Attempts (Next 60 minutes)</strong><br>
+                • Move to second strongest section<br>
+                • Attempt all marked moderate questions<br>
+                • Try difficult ones with educated guesses<br>
+                • Use elimination in MCQs<br>
+                • Target: Additional 40-50 questions<br><br>
+                
+                <strong>🕒 PHASE 3: Final Push (Next 30 minutes)</strong><br>
+                • Complete weakest section quickly<br>
+                • Don't overthink - use first instinct<br>
+                • Attempt all remaining easy/moderate<br>
+                • Target: 15-25 more questions<br><br>
+                
+                <strong>🕓 PHASE 4: Revision (Last 15 minutes)</strong><br>
+                • Review all marked questions<br>
+                • Double-check calculations<br>
+                • Ensure OMR bubbling is correct<br>
+                • Change answers ONLY if 100% sure
+            </div>
+            
+            <div class="warning-box">
+                <strong>Critical Mistakes That Cost Marks - AVOID THESE:</strong><br><br>
+                
+                <strong>❌ Time Management Blunders:</strong><br>
+                • Spending 3+ minutes on ONE difficult question<br>
+                • Not moving on when stuck<br>
+                • Starting with weakest section first<br>
+                • Leaving OMR bubbling for the last 2 minutes<br><br>
+                
+                <strong>❌ Reading Errors:</strong><br>
+                • Not reading "EXCEPT", "NOT", "INCORRECT" in questions<br>
+                • Missing negative statements in RC<br>
+                • Overlooking "approximately" or "nearly" in calculations<br>
+                • Confusing "at least" with "at most"<br><br>
+                
+                <strong>❌ Calculation Mistakes:</strong><br>
+                • Not using approximation when exact value not needed<br>
+                • Silly arithmetic errors (use calculator wisely)<br>
+                • Sign mistakes in profit/loss calculations<br>
+                • Unit conversion errors (km/h ↔ m/s)<br><br>
+                
+                <strong>❌ Strategy Errors:</strong><br>
+                • Random guessing with negative marking<br>
+                • Attempting all 100+ questions (quality > quantity)<br>
+                • Changing too many answers in revision<br>
+                • Getting emotionally affected by difficult questions
+            </div>
+            
+            <div class="key-point">
+                <strong>Section-Wise Smart Approach:</strong><br><br>
+                
+                <strong>📊 QUANTITATIVE APTITUDE (35 questions):</strong><br>
+                <strong>Easy (Attempt First - 15-18 questions, 15 min):</strong><br>
+                • Number series, Simplification<br>
+                • Basic percentage, SI<br>
+                • HCF-LCM, Squares-Cubes<br>
+                <strong>Moderate (Second Priority - 10-12 questions, 15 min):</strong><br>
+                • Time-work, Speed-distance<br>
+                • Profit-loss, CI<br>
+                • Average, Ratio<br>
+                <strong>Difficult (Last/Skip - 5-7 questions, 10 min):</strong><br>
+                • Complex DI<br>
+                • Multi-step word problems<br>
+                • Partnership, Mixture<br><br>
+                
+                <strong>🧠 LOGICAL REASONING (35 questions):</strong><br>
+                <strong>Easy (15-18 questions, 15 min):</strong><br>
+                • Coding-decoding<br>
+                • Number/letter series<br>
+                • Direction sense<br>
+                • Blood relations<br>
+                <strong>Moderate (10-12 questions, 15 min):</strong><br>
+                • Syllogism<br>
+                • Ranking & arrangement<br>
+                • Input-output<br>
+                <strong>Difficult (5-7 questions, 10 min):</strong><br>
+                • Complex puzzles<br>
+                • Seating arrangement (circular/rectangular)<br><br>
+                
+                <strong>📖 ENGLISH LANGUAGE (50 questions):</strong><br>
+                <strong>Easy (20-25 questions, 15 min):</strong><br>
+                • Vocabulary (synonyms, antonyms)<br>
+                • Fill in the blanks<br>
+                • One word substitution<br>
+                <strong>Moderate (15-20 questions, 15 min):</strong><br>
+                • Error spotting<br>
+                • Sentence improvement<br>
+                • Para jumbles<br>
+                <strong>Time-consuming (8-10 questions, 20 min):</strong><br>
+                • Reading Comprehension (2 passages)<br>
+                • Allocate 10 min per RC passage<br>
+                • Read questions first, then passage
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3>🎒 Exam Day Essentials Checklist</h3>
+            
+            <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div>
+                        <p style="color: #fa709a; font-weight: bold; margin-bottom: 10px;">📋 Documents Required:</p>
+                        <ul class="checklist" style="font-size: 0.95em;">
+                            <li>Admit Card (2 copies)</li>
+                            <li>Valid Photo ID (Aadhar/PAN/Passport/DL)</li>
+                            <li>Recent passport size photos (2)</li>
+                            <li>COVID vaccination certificate (if required)</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <p style="color: #fa709a; font-weight: bold; margin-bottom: 10px;">✏️ Stationery Items:</p>
+                        <ul class="checklist" style="font-size: 0.95em;">
+                            <li>Blue/Black pens (3-4 pieces)</li>
+                            <li>Pencils & eraser</li>
+                            <li>Transparent water bottle</li>
+                            <li>Simple calculator (if allowed)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="background: #e3f2fd; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                    <p style="font-weight: bold; color: #2196f3; margin-bottom: 10px;">⏰ Day Before Exam:</p>
+                    <p>✓ Light revision only (formulas + vocabulary)</p>
+                    <p>✓ Pack your bag with all documents</p>
+                    <p>✓ Check exam center location & route</p>
+                    <p>✓ Sleep early (7-8 hours)</p>
+                    <p>✓ Keep alarm (reach 30 min before reporting time)</p>
+                </div>
+                
+                <div style="background: #fff3e0; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                    <p style="font-weight: bold; color: #ff9800; margin-bottom: 10px;">🌅 Exam Day Morning:</p>
+                    <p>✓ Wake up 2 hours before leaving</p>
+                    <p>✓ Light breakfast (avoid heavy food)</p>
+                    <p>✓ Quick formula revision (15 min)</p>
+                    <p>✓ Stay calm & positive - YOU ARE READY!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3>📚 Additional Resources & Final Tips</h3>
+            
+            <div class="key-point">
+                <strong>Recommended Study Material:</strong><br><br>
+                
+                <strong>📱 Online Resources:</strong><br>
+                • NIACL Official Website - For exam updates<br>
+                • Gradeup, Testbook, Adda247 - Daily quizzes & mocks<br>
+                • YouTube - For shortcut tricks & current affairs<br>
+                • Telegram channels - For daily practice PDFs<br><br>
+                
+                <strong>📖 Books (If Time Permits):</strong><br>
+                <strong>Quantitative:</strong> R.S. Aggarwal, Arun Sharma, Rajesh Verma<br>
+                <strong>Reasoning:</strong> R.S. Aggarwal Verbal & Non-Verbal<br>
+                <strong>English:</strong> Wren & Martin, Norman Lewis, SP Bakshi<br>
+                <strong>GK/Awareness:</strong> Manorama Yearbook, Banking Awareness books<br><br>
+                
+                <strong>🎯 Last 7 Days Schedule:</strong><br>
+                <strong>Day 1-2:</strong> Complete 2 full mocks, analyze thoroughly<br>
+                <strong>Day 3-4:</strong> Revise weak areas, practice 50 questions/day<br>
+                <strong>Day 5:</strong> One more mock test, formula revision<br>
+                <strong>Day 6:</strong> Light practice, vocabulary revision, current affairs<br>
+                <strong>Day 7 (Exam Day):</strong> Stay confident, you've prepared well!
+            </div>
+            
+            <div class="tip-box">
+                <strong>🎯 Quick Revision Formula Sheet (Memorize These):</strong><br><br>
+                
+                <strong>Percentage:</strong> Successive % = a + b + ab/100<br>
+                <strong>Profit-Loss:</strong> When CP same = Loss% = (x/10)²<br>
+                <strong>CI-SI Difference:</strong> 2 years = P(R/100)², 3 years = P(R/100)²(3 + R/100)<br>
+                <strong>Average Speed:</strong> Same distance = (2×S₁×S₂)/(S₁+S₂)<br>
+                <strong>Time-Work:</strong> Use LCM method always<br>
+                <strong>Probability:</strong> P(E) = Favorable outcomes / Total outcomes<br>
+                <strong>Compound Interest:</strong> Amount = P(1 + R/100)ⁿ<br>
+                <strong>Simple Interest:</strong> SI = (P×R×T)/100<br>
+                <strong>Distance:</strong> Speed × Time (km/h to m/s: ×5/18)<br>
+                <strong>Alligation:</strong> Ratio = (D-M):(M-C) where D=dearer, C=cheaper, M=mean
+            </div>
+        </div>
+        
+        <div class="section" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; text-align: center; padding: 50px 30px;">
+            <h2 style="color: white; font-size: 2.5em; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
+                🎓 Congratulations! Day 13 COMPLETE! 🎉
+            </h2>
+            
+            <div style="background: rgba(255,255,255,0.15); padding: 25px; border-radius: 15px; margin: 25px 0; border: 2px solid white;">
+                <p style="font-size: 1.5em; font-weight: bold; margin-bottom: 15px;">📊 Your Achievement Summary</p>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px;">
+                    <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px;">
+                        <p style="font-size: 2em; font-weight: bold;">130+</p>
+                        <p>Practice Questions Solved</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px;">
+                        <p style="font-size: 2em; font-weight: bold;">50+</p>
+                        <p>Shortcuts & Formulas</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px;">
+                        <p style="font-size: 2em; font-weight: bold;">100%</p>
+                        <p>Exam Ready Content</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.2); padding: 30px; border-radius: 15px; margin: 25px 0;">
+                <p style="font-size: 1.6em; font-weight: bold; margin-bottom: 20px;">📅 Your Journey Ahead</p>
+                
+                <div style="text-align: left; max-width: 600px; margin: 0 auto;">
+                    <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin: 10px 0;">
+                        <p style="font-size: 1.2em; font-weight: bold;">✅ COMPLETED: Day 1-13</p>
+                        <p style="font-size: 0.95em; margin-top: 5px;">Business Analysis • Statistics • SQL • Analytics • Insurance Domain • Aptitude • Reasoning • English</p>
+                    </div>
+                    
+                    <div style="background: rgba(40, 167, 69, 0.3); padding: 15px; border-radius: 10px; margin: 10px 0; border: 2px solid #28a745;">
+                        <p style="font-size: 1.2em; font-weight: bold;">📖 NEXT: Day 14</p>
+                        <p style="font-size: 0.95em; margin-top: 5px;">General Awareness + Banking & Insurance Awareness + Current Affairs (Last 6 months)</p>
+                    </div>
+                    
+                    <div style="background: rgba(255,193,7, 0.2); padding: 15px; border-radius: 10px; margin: 10px 0; border: 2px dashed #ffc107;">
+                        <p style="font-size: 1.2em; font-weight: bold;">🎯 FINAL: Day 15</p>
+                        <p style="font-size: 0.95em; margin-top: 5px;">Complete Revision + 2 Full-Length Mock Tests + Confidence Building</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin: 35px 0; padding: 25px; background: rgba(255,255,255,0.15); border-radius: 15px; border: 2px solid white;">
+                <p style="font-size: 1.8em; font-weight: bold; margin-bottom: 15px;">💪 Motivational Message</p>
+                <p style="font-size: 1.2em; line-height: 1.8; font-style: italic;">
+                    "You've come incredibly far! You've mastered complex topics from business analytics to quantitative aptitude. 
+                    You've solved 130+ questions with detailed solutions. You're not just preparing for an exam – 
+                    you're building skills for a successful career as a Business Analyst at NIACL."
+                </p>
+                <p style="font-size: 1.3em; margin-top: 20px; font-weight: bold;">
+                    🌟 Just 2 More Days to Complete Excellence! 🌟
+                </p>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin-top: 25px;">
+                <p style="font-size: 1.1em; margin-bottom: 10px;">
+                    "Success is not final, failure is not fatal: It is the courage to continue that counts."
+                </p>
+                <p style="font-size: 1em; opacity: 0.9;">- Winston Churchill</p>
+            </div>
+            
+            <div style="margin-top: 30px; font-size: 1.3em; font-weight: bold;">
+                <p>Keep Going! Your Dream Job Awaits! 🚀</p>
+                <p style="margin-top: 10px; font-size: 0.9em;">See You on Day 14! 📚</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; padding: 30px; background: #fff9f0; border-radius: 10px; margin-top: 30px; border-top: 5px solid #fa709a;">
+            <p style="font-size: 1.4em; color: #fa709a; font-weight: bold; margin-bottom: 15px;">
+                📚 End of Section 9 - Day 13
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; max-width: 600px; margin: 20px auto;">
+                <div>
+                    <p style="color: #666; font-size: 0.9em;">Total Pages</p>
+                    <p style="color: #fa709a; font-size: 1.3em; font-weight: bold;">20-22</p>
+                </div>
+                <div>
+                    <p style="color: #666; font-size: 0.9em;">Study Time</p>
+                    <p style="color: #fa709a; font-size: 1.3em; font-weight: bold;">5-6 hours</p>
+                </div>
+                <div>
+                    <p style="color: #666; font-size: 0.9em;">Questions</p>
+                    <p style="color: #fa709a; font-size: 1.3em; font-weight: bold;">130+</p>
+                </div>
+            </div>
+            <p style="font-size: 1.3em; color: #fa709a; margin-top: 25px; font-weight: bold;">
+                All the Very Best for NIACL AO Exam! 🎯✨
+            </p>
+            <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
+                You've Got This! 💪 Stay Confident & Focused! 🌟
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>    

@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIACL AO - Section 8: Insurance Analytics & Case Studies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #4facfe;
+        }
+        
+        .header h1 {
+            color: #4facfe;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            color: #00f2fe;
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+        
+        .day-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            color: white;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        
+        .section {
+            margin: 30px 0;
+            padding: 25px;
+            background: #f0f9ff;
+            border-left: 5px solid #4facfe;
+            border-radius: 8px;
+        }
+        
+        .section h3 {
+            color: #4facfe;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h4 {
+            color: #00f2fe;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+        }
+        
+        .key-point {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #00f2fe;
+        }
+        
+        .key-point strong {
+            color: #4facfe;
+        }
+        
+        .formula-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .case-study-box {
+            background: #e8f4f8;
+            border: 3px solid #4facfe;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.2);
+        }
+        
+        .case-study-box h5 {
+            color: #4facfe;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            border-bottom: 2px solid #00f2fe;
+            padding-bottom: 10px;
+        }
+        
+        .case-section {
+            margin: 15px 0;
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+        }
+        
+        .example-box {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        
+        .example-box h5 {
+            color: #28a745;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .question-set {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .question {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f0f9ff;
+            border-radius: 8px;
+        }
+        
+        .question-num {
+            color: #4facfe;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .solution {
+            background: #e8f5e9;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .solution strong {
+            color: #28a745;
+        }
+        
+        .tip-box {
+            background: #e3f2fd;
+            border-left: 5px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .tip-box::before {
+            content: "💡 ";
+            font-size: 1.2em;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .warning-box::before {
+            content: "⚠️ ";
+            font-size: 1.2em;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tr:hover {
+            background: #f0f9ff;
+        }
+        
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            padding: 10px;
+            margin: 5px 0;
+            background: white;
+            border-radius: 5px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .checklist li::before {
+            content: "✅ ";
+            margin-right: 10px;
+        }
+        
+        .kpi-card {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 5px solid #4facfe;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .kpi-card h5 {
+            color: #4facfe;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        
+        .kpi-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #00f2fe;
+            margin: 10px 0;
+        }
+        
+        .diagram {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .flow-item {
+            display: inline-block;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            color: white;
+            padding: 15px 25px;
+            margin: 10px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        
+        .arrow {
+            font-size: 2em;
+            color: #4facfe;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.5em;
+            }
+            
+            .header h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 NIACL AO Study Material</h1>
+            <h2>SECTION 8</h2>
+            <h2>Insurance Analytics & Case Studies</h2>
+            <div class="day-badge">📅 Day 11-12</div>
+            <p style="margin-top: 15px; color: #666;">Predictive Modeling, Fraud Detection, Claim Analytics, Real Case Studies + 50+ Practice Questions</p>
+        </div>
+
+        <!-- Part 1: Predictive Modeling in Insurance -->
+        <div class="section">
+            <h3>🔮 Part 1: Predictive Modeling in Insurance</h3>
+            
+            <h4>What is Predictive Modeling?</h4>
+            <div class="key-point">
+                <strong>Definition:</strong> Predictive modeling uses statistical techniques and machine learning to analyze historical data and predict future outcomes.
+            </div>
+            
+            <div class="key-point">
+                <strong>Hindi:</strong> भविष्यवाणी मॉडलिंग - ऐतिहासिक डेटा का विश्लेषण करके भविष्य के परिणामों की भविष्यवाणी करने के लिए सांख्यिकीय तकनीकों और मशीन लर्निंग का उपयोग।
+            </div>
+            
+            <h4>Predictive Analytics Process</h4>
+            <div class="diagram">
+                <div class="flow-item">1. Define Problem</div>
+                <span class="arrow">→</span>
+                <div class="flow-item">2. Collect Data</div>
+                <span class="arrow">→</span>
+                <div class="flow-item">3. Prepare Data</div>
+                <br>
+                <span class="arrow">↓</span>
+                <br>
+                <div class="flow-item">6. Deploy Model</div>
+                <span class="arrow">←</span>
+                <div class="flow-item">5. Validate Model</div>
+                <span class="arrow">←</span>
+                <div class="flow-item">4. Build Model</div>
+            </div>
+            
+            <h4>Applications in Insurance</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Application</th>
+                        <th>What to Predict</th>
+                        <th>ML Technique</th>
+                        <th>Business Impact</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Risk Assessment</strong></td>
+                        <td>Applicant risk level (High/Medium/Low)</td>
+                        <td>Classification</td>
+                        <td>Better underwriting decisions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Claim Amount</strong></td>
+                        <td>Expected claim payout amount</td>
+                        <td>Regression</td>
+                        <td>Accurate reserve allocation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Customer Churn</strong></td>
+                        <td>Likelihood of policy cancellation</td>
+                        <td>Classification</td>
+                        <td>Retention strategies</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lifetime Value</strong></td>
+                        <td>Total customer revenue over lifetime</td>
+                        <td>Regression</td>
+                        <td>Targeted marketing</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cross-sell Propensity</strong></td>
+                        <td>Probability of buying additional products</td>
+                        <td>Classification</td>
+                        <td>Increase revenue per customer</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h4>Key Predictive Variables (Features)</h4>
+            <div class="key-point">
+                <strong>Demographic Features:</strong> Age, Gender, Marital Status, Occupation, Income, Education
+            </div>
+            <div class="key-point">
+                <strong>Policy Features:</strong> Policy Type, Coverage Amount, Premium, Term Length, Payment Frequency
+            </div>
+            <div class="key-point">
+                <strong>Behavioral Features:</strong> Payment History, Claim History, Policy Tenure, Channel (Agent/Online)
+            </div>
+            <div class="key-point">
+                <strong>External Features:</strong> Credit Score, Economic Indicators, Geographic Location, Lifestyle Data
+            </div>
+            
+            <div class="case-study-box">
+                <h5>📋 Case Study 1: Premium Prediction Model</h5>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Problem:</strong>
+                    <p>NIACL wants to automate motor insurance premium calculation based on customer and vehicle characteristics.</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Data Collected:</strong>
+                    <p>• Customer: Age, Gender, City, Driving Experience (years)</p>
+                    <p>• Vehicle: Make, Model, Age, Engine Capacity (CC), Fuel Type</p>
+                    <p>• Historical: Past claims, No Claim Bonus (NCB)</p>
+                    <p>• Dataset: 100,000 policies with actual premiums</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Model Building:</strong>
+                    <p>• Algorithm: Linear Regression (for continuous premium values)</p>
+                    <p>• Training: 70% data (70,000 policies)</p>
+                    <p>• Testing: 30% data (30,000 policies)</p>
+                    <p>• Features: 12 input variables</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Results:</strong>
+                    <p>• Model Accuracy: 85% (predictions within ±10% of actual)</p>
+                    <p>• Key Finding: Vehicle age and customer's claim history most influential</p>
+                    <p>• Young drivers (18-25) with high CC vehicles = Higher premium</p>
+                    <p>• NCB reduces premium by 20-50%</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Business Impact:</strong>
+                    <p>✅ Instant quote generation (reduced from 2 days to 2 minutes)</p>
+                    <p>✅ Consistent pricing across branches</p>
+                    <p>✅ Competitive premiums increased sales by 18%</p>
+                    <p>✅ Reduced underwriting costs by 40%</p>
+                </div>
+            </div>
+            
+            <h4>Model Evaluation Metrics</h4>
+            <div class="key-point">
+                <strong>For Regression (predicting continuous values):</strong>
+                <br>• MAE (Mean Absolute Error): Average difference between predicted and actual
+                <br>• RMSE (Root Mean Square Error): Penalizes larger errors more
+                <br>• R² Score: How well model explains variance (closer to 1 is better)
+            </div>
+            
+            <div class="key-point">
+                <strong>For Classification (predicting categories):</strong>
+                <br>• Accuracy: % of correct predictions
+                <br>• Precision: Of predicted positives, how many are actually positive
+                <br>• Recall: Of actual positives, how many we correctly identified
+                <br>• F1-Score: Harmonic mean of Precision and Recall
+            </div>
+        </div>
+
+        <!-- Part 2: Fraud Detection Analytics -->
+        <div class="section">
+            <h3>🕵️ Part 2: Fraud Detection Analytics</h3>
+            
+            <h4>Insurance Fraud Types</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Fraud Type</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Hard Fraud</strong></td>
+                        <td>Deliberately causing/faking an incident</td>
+                        <td>Staging car accident, faking theft</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Soft Fraud</strong></td>
+                        <td>Exaggerating legitimate claims</td>
+                        <td>Inflating repair costs, adding pre-existing damage</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Application Fraud</strong></td>
+                        <td>Providing false information when buying policy</td>
+                        <td>Hiding pre-existing conditions, wrong age</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Opportunistic Fraud</strong></td>
+                        <td>Taking advantage of situations</td>
+                        <td>Claiming more items than actually damaged</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h4>Fraud Detection Indicators (Red Flags)</h4>
+            <div class="key-point">
+                <strong>Behavioral Red Flags:</strong>
+                <br>• Multiple claims within short period
+                <br>• Claims filed immediately after policy purchase
+                <br>• Claim amount close to policy limit
+                <br>• Customer with history of frequent claims
+                <br>• Late reporting of incident (after weeks)
+            </div>
+            
+            <div class="key-point">
+                <strong>Document Red Flags:</strong>
+                <br>• Missing or incomplete documentation
+                <br>• Inconsistencies in claim narrative
+                <br>• Altered or forged documents
+                <br>• Medical bills from suspicious providers
+            </div>
+            
+            <div class="key-point">
+                <strong>Pattern Red Flags:</strong>
+                <br>• Same claimant involved in multiple incidents
+                <br>• Common garage/hospital across multiple claims
+                <br>• Claims spike in specific geography
+                <br>• Organized fraud rings (connected claimants)
+            </div>
+            
+            <h4>Fraud Detection Techniques</h4>
+            <div class="key-point">
+                <strong>1. Rule-Based Systems:</strong> Predefined rules trigger alerts
+                <br>Example: If claim_amount > ₹5L AND claim_within_30_days_of_policy → FLAG
+            </div>
+            
+            <div class="key-point">
+                <strong>2. Anomaly Detection:</strong> Identify unusual patterns using ML
+                <br>Technique: Clustering (K-Means) to find outliers
+            </div>
+            
+            <div class="key-point">
+                <strong>3. Supervised ML Models:</strong> Train on labeled fraud/genuine data
+                <br>Algorithms: Random Forest, Logistic Regression, Neural Networks
+            </div>
+            
+            <div class="key-point">
+                <strong>4. Network Analysis:</strong> Detect fraud rings by analyzing connections
+                <br>Tool: Graph databases to map relationships between claimants
+            </div>
+            
+            <div class="case-study-box">
+                <h5>📋 Case Study 2: Motor Insurance Fraud Detection</h5>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Problem:</strong>
+                    <p>NIACL facing ₹80 Cr annual loss due to fraudulent motor claims. Manual investigation slow and catches only 15% of fraud.</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Solution Approach:</strong>
+                    <p>Build ML-based fraud detection system using historical claim data.</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Data & Features:</strong>
+                    <p>• Dataset: 1 million claims (5 years history)</p>
+                    <p>• Labels: 50,000 known fraud cases, 950,000 genuine</p>
+                    <p>• Features (30 variables):</p>
+                    <p>&nbsp;&nbsp;- Claim amount, days between policy & claim</p>
+                    <p>&nbsp;&nbsp;- Customer age, policy tenure, prior claims</p>
+                    <p>&nbsp;&nbsp;- Garage location, repair costs pattern</p>
+                    <p>&nbsp;&nbsp;- Time of accident, witness availability</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Model Details:</strong>
+                    <p>• Algorithm: Random Forest Classifier (Ensemble method)</p>
+                    <p>• Training: 700,000 claims</p>
+                    <p>• Validation: 200,000 claims</p>
+                    <p>• Test: 100,000 claims</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Results:</strong>
+                    <p>• <strong>Accuracy:</strong> 92% overall</p>
+                    <p>• <strong>Precision:</strong> 88% (of flagged claims, 88% truly fraud)</p>
+                    <p>• <strong>Recall:</strong> 85% (caught 85% of all fraud cases)</p>
+                    <p>• <strong>False Positives:</strong> 12% (genuine claims wrongly flagged)</p>
+                    <p>• <strong>Top 3 Predictors:</strong> Days_to_claim, Prior_claim_count, Claim_to_premium_ratio</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Implementation:</strong>
+                    <p>• Real-time scoring: Each new claim gets fraud probability (0-100%)</p>
+                    <p>• Triage System:</p>
+                    <p>&nbsp;&nbsp;- Score 0-30%: Auto-approve (60% of claims)</p>
+                    <p>&nbsp;&nbsp;- Score 30-70%: Standard review (30% of claims)</p>
+                    <p>&nbsp;&nbsp;- Score 70-100%: Detailed investigation (10% of claims)</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Business Impact (1 Year):</strong>
+                    <p>✅ Fraud detection rate: 15% → 85% (5.7x improvement)</p>
+                    <p>✅ Saved ₹52 Cr in fraudulent payouts</p>
+                    <p>✅ Investigation time reduced from 15 days to 5 days</p>
+                    <p>✅ Genuine claim settlement faster (8 days → 3 days)</p>
+                    <p>✅ Customer satisfaction improved (faster genuine claims)</p>
+                </div>
+            </div>
+            
+            <h4>Challenges in Fraud Detection</h4>
+            <div class="warning-box">
+                <strong>Imbalanced Data:</strong> Fraud cases are typically 3-5% of total claims. Model may become biased toward predicting "genuine" for everything. Solution: SMOTE (Synthetic Minority Over-sampling), adjusting class weights.
+            </div>
+            
+            <div class="warning-box">
+                <strong>False Positives:</strong> Flagging genuine customers as fraud damages trust. Balance between catching fraud and customer experience is critical.
+            </div>
+            
+            <div class="warning-box">
+                <strong>Evolving Fraud Patterns:</strong> Fraudsters adapt techniques. Model needs continuous retraining with new data.
+            </div>
+        </div>
+
+        <!-- Part 3: Claim Management Analytics -->
+        <div class="section">
+            <h3>📋 Part 3: Claim Management Analytics Pipeline</h3>
+            
+            <h4>Claim Analytics Lifecycle</h4>
+            <div class="diagram">
+                <div class="flow-item">Claim Filed</div>
+                <span class="arrow">→</span>
+                <div class="flow-item">Data Capture</div>
+                <span class="arrow">→</span>
+                <div class="flow-item">Fraud Check</div>
+                <span class="arrow">→</span>
+                <div class="flow-item">Amount Prediction</div>
+                <span class="arrow">→</span>
+                <div class="flow-item">Settlement</div>
+                <span class="arrow">→</span>
+                <div class="flow-item">Analysis</div>
+            </div>
+            
+            <h4>Key Metrics in Claim Analytics</h4>
+            <div class="kpi-card">
+                <h5>Claim Ratio (Loss Ratio)</h5>
+                <div class="formula-box">
+                    Claim Ratio = (Total Claims Paid / Total Premium Collected) × 100
+                </div>
+                <p><strong>Interpretation:</strong></p>
+                <p>• < 70%: Profitable (good)</p>
+                <p>• 70-100%: Break-even zone</p>
+                <p>• > 100%: Losses (unsustainable)</p>
+                <p><strong>Example:</strong> If Premium = ₹1000 Cr, Claims = ₹650 Cr → Claim Ratio = 65%</p>
+            </div>
+            
+            <div class="kpi-card">
+                <h5>Claim Settlement Ratio</h5>
+                <div class="formula-box">
+                    Settlement Ratio = (Claims Settled / Claims Filed) × 100
+                </div>
+                <p><strong>Interpretation:</strong> Higher is better for customer trust</p>
+                <p><strong>Example:</strong> 95% settlement ratio means 95 out of 100 claims approved</p>
+            </div>
+            
+            <div class="kpi-card">
+                <h5>Average Claim Processing Time</h5>
+                <div class="formula-box">
+                    Avg Time = Total Processing Days / Number of Claims
+                </div>
+                <p><strong>Benchmark:</strong> Motor: 7-10 days, Health: 10-15 days, Life: 15-30 days</p>
+            </div>
+            
+            <div class="kpi-card">
+                <h5>Claim Frequency</h5>
+                <div class="formula-box">
+                    Frequency = Number of Claims / Number of Policies
+                </div>
+                <p><strong>Example:</strong> 10,000 claims from 100,000 policies → Frequency = 0.10 or 10%</p>
+            </div>
+            
+            <div class="kpi-card">
+                <h5>Claim Severity</h5>
+                <div class="formula-box">
+                    Severity = Total Claim Amount / Number of Claims
+                </div>
+                <p><strong>Example:</strong> ₹500 Cr paid for 10,000 claims → Severity = ₹5 lakh/claim</p>
+            </div>
+            
+            <h4>Claim Analytics Use Cases</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Use Case</th>
+                        <th>Objective</th>
+                        <th>Technique</th>
+                        <th>Output</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Claim Amount Prediction</strong></td>
+                        <td>Estimate payout before investigation</td>
+                        <td>Regression (XGBoost)</td>
+                        <td>Reserve allocation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Claim Triage</strong></td>
+                        <td>Prioritize claims for investigation</td>
+                        <td>Classification + Scoring</td>
+                        <td>Auto/Standard/Detailed review queues</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Settlement Time Prediction</strong></td>
+                        <td>Forecast when claim will close</td>
+                        <td>Regression + NLP (for complexity)</td>
+                        <td>Customer communication</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Subrogation Potential</strong></td>
+                        <td>Identify third-party recovery cases</td>
+                        <td>Classification</td>
+                        <td>Legal action decisions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Root Cause Analysis</strong></td>
+                        <td>Find patterns in high-claim products/regions</td>
+                        <td>Clustering + Visualization</td>
+                        <td>Risk mitigation strategies</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="case-study-box">
+                <h5>📋 Case Study 3: Health Claim Processing Optimization</h5>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Challenge:</strong>
+                    <p>NIACL processes 50,000 health claims/month. Average settlement time: 18 days. Customer complaints about delays. Manual review bottleneck.</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Analytics Solution:</strong>
+                    <p><strong>Phase 1: Data Analysis (Descriptive Analytics)</strong></p>
+                    <p>• Analyzed 600,000 historical claims (1 year)</p>
+                    <p>• Found: 40% claims under ₹10,000 (simple cases)</p>
+                    <p>• 35% claims ₹10,000-₹50,000 (standard complexity)</p>
+                    <p>• 25% claims above ₹50,000 (complex, need expertise)</p>
+                    <p>• 70% of delays due to missing documents</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Phase 2: Predictive Model</strong>
+                    <p>Built 3 ML models:</p>
+                    <p><strong>Model 1 - Claim Approval Prediction:</strong></p>
+                    <p>• Features: Claim amount, policy coverage, diagnosis code, hospital tier, documents submitted</p>
+                    <p>• Output: Approve/Reject/Review (85% accuracy)</p>
+                    <p><strong>Model 2 - Amount Validation:</strong></p>
+                    <p>• Predicts expected claim amount based on diagnosis, treatment, hospital</p>
+                    <p>• Flags if submitted amount significantly higher (potential inflation)</p>
+                    <p><strong>Model 3 - Processing Time Prediction:</strong></p>
+                    <p>• Estimates settlement time based on complexity, document completeness</p>
+                    <p>• Used for customer communication</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Phase 3: Automation Implementation</strong>
+                    <p><strong>Auto-Adjudication System:</strong></p>
+                    <p>• Claims < ₹10,000 with complete docs → Auto-approved (40% of volume)</p>
+                    <p>• AI validates policy coverage, diagnosis match, amount reasonableness</p>
+                    <p>• Approval in 2 hours (vs 18 days earlier)</p>
+                    <p><strong>Smart Triage:</strong></p>
+                    <p>• Standard queue (35%): 2-day SLA</p>
+                    <p>• Complex queue (25%): Senior analyst + 7-day SLA</p>
+                    <p><strong>Document Intelligence:</strong></p>
+                    <p>• OCR + NLP to extract data from hospital bills automatically</p>
+                    <p>• Auto-request missing documents via SMS/Email</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Results (After 6 Months):</strong>
+                    <p>✅ <strong>Processing Time:</strong> 18 days → 5 days (72% reduction)</p>
+                    <p>✅ <strong>Auto-Approved Claims:</strong> 40% (20,000/month) settled in 2 hours</p>
+                    <p>✅ <strong>Customer Satisfaction:</strong> 68% → 89% (CSAT score)</p>
+                    <p>✅ <strong>Operational Cost:</strong> Reduced by ₹15 Cr annually</p>
+                    <p>✅ <strong>Staff Reallocation:</strong> 50 staff moved from simple to complex claims</p>
+                    <p>✅ <strong>Complaints:</strong> Dropped by 65%</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Key Learnings:</strong>
+                    <p>• Start with high-volume, low-complexity use cases for quick wins</p>
+                    <p>• Human-in-the-loop for complex cases maintains quality</p>
+                    <p>• Document automation biggest contributor to speed improvement</p>
+                    <p>• Transparency (showing expected time) improves customer satisfaction</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Part 4: Customer Analytics -->
+        <div class="section">
+            <h3>👥 Part 4: Customer Analytics & Churn Prediction</h3>
+            
+            <h4>What is Customer Churn?</h4>
+            <div class="key-point">
+                <strong>Definition:</strong> Churn is when customers stop doing business with a company (cancel policies, don't renew).
+            </div>
+            
+            <div class="key-point">
+                <strong>Hindi:</strong> ग्राहक च्युर्न - जब ग्राहक व्यवसाय करना बंद कर देते हैं (पॉलिसी रद्द करना, नवीनीकरण न करना)।
+            </div>
+            
+            <div class="formula-box">
+                Churn Rate = (Customers Lost / Total Customers at Start) × 100
+                
+                Example: Started with 10,000 customers, lost 500
+                Churn Rate = (500/10,000) × 100 = 5%
+                
+                Retention Rate = 100% - Churn Rate = 95%
+            </div>
+            
+            <h4>Why Customer Churn Matters</h4>
+            <div class="key-point">
+                <strong>Cost of Acquisition:</strong> Acquiring new customer costs 5-7x more than retaining existing one
+            </div>
+            <div class="key-point">
+                <strong>Revenue Impact:</strong> 5% reduction in churn can increase profits by 25-95%
+            </div>
+            <div class="key-point">
+                <strong>Lifetime Value:</strong> Long-term customers buy more products, refer others
+            </div>
+            
+            <h4>Churn Indicators (Warning Signs)</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Category</th>
+                        <th>Warning Signs</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Behavioral</strong></td>
+                        <td>• Reduced engagement (no app logins)<br>• Delayed premium payments<br>• Not responding to renewal reminders<br>• Multiple service complaints</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Transactional</strong></td>
+                        <td>• Downgraded from premium to basic plan<br>• Reduced coverage amount<br>• Inquiring about cancellation process<br>• Comparing with competitors</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Demographic</strong></td>
+                        <td>• Young customers (18-25) higher churn<br>• Single policies (no cross-sell)<br>• Online-only customers vs agent-serviced</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Experience</strong></td>
+                        <td>• Recent claim rejection<br>• Long claim settlement time<br>• Poor customer service interaction<br>• Premium increase at renewal</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h4>Churn Prediction Model</h4>
+            <div class="key-point">
+                <strong>Input Features (30-40 variables):</strong>
+                <br>• Policy: tenure, premium, coverage, payment mode
+                <br>• Customer: age, income, location, family size
+                <br>• Engagement: app usage, email open rate, service calls
+                <br>• Satisfaction: NPS score, complaint history, claim experience
+                <br>• Behavioral: payment delays, policy changes, competitor searches
+            </div>
+            
+            <div class="key-point">
+                <strong>Output:</strong> Churn Probability (0-100%) for each customer
+            </div>
+            
+            <div class="key-point">
+                <strong>Algorithms Used:</strong> Logistic Regression, Random Forest, XGBoost, Neural Networks
+            </div>
+            
+            <div class="case-study-box">
+                <h5>📋 Case Study 4: Motor Insurance Churn Reduction</h5>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Problem:</strong>
+                    <p>NIACL motor insurance annual churn: 28% (280,000 out of 1 million customers)</p>
+                    <p>Lost revenue: ₹420 Cr annually (avg premium ₹15,000)</p>
+                    <p>Main reasons: Better prices from competitors, poor service experience</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Analytics Approach:</strong>
+                    <p><strong>Step 1: Segmentation</strong></p>
+                    <p>Divided 1M customers into risk groups using clustering:</p>
+                    <p>• High Risk (15%): 60-80% churn probability</p>
+                    <p>• Medium Risk (25%): 30-60% churn probability</p>
+                    <p>• Low Risk (60%): <30% churn probability</p>
+                    
+                    <p><strong>Step 2: Predictive Model</strong></p>
+                    <p>• Dataset: 3 years history, 3 million customer-policy records</p>
+                    <p>• Algorithm: Gradient Boosting (XGBoost)</p>
+                    <p>• Accuracy: 82%</p>
+                    <p>• Top 5 Predictors:</p>
+                    <p>&nbsp;&nbsp;1. Days since last premium payment (most important)</p>
+                    <p>&nbsp;&nbsp;2. Claim settlement time (if >15 days)</p>
+                    <p>&nbsp;&nbsp;3. Customer service interaction quality</p>
+                    <p>&nbsp;&nbsp;4. Premium increase at renewal (if >20%)</p>
+                    <p>&nbsp;&nbsp;5. Competitor quote inquiry (tracked via cookies)</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Retention Strategies (Prescriptive Analytics):</strong>
+                    <p><strong>High Risk Segment (150,000 customers):</strong></p>
+                    <p>• Personal call from dedicated retention team</p>
+                    <p>• Offer: 15% discount or ₹2000 add-on cover free</p>
+                    <p>• Priority claim processing commitment</p>
+                    <p>• Assign relationship manager for 1 year</p>
+                    
+                    <p><strong>Medium Risk Segment (250,000 customers):</strong></p>
+                    <p>• Automated email with loyalty benefits</p>
+                    <p>• 10% discount or cashback offer</p>
+                    <p>• Highlight NCB benefits at renewal</p>
+                    <p>• SMS reminders 60, 30, 15 days before expiry</p>
+                    
+                    <p><strong>Low Risk Segment (600,000 customers):</strong></p>
+                    <p>• Standard renewal process</p>
+                    <p>• Cross-sell opportunity (home insurance)</p>
+                    <p>• Referral incentive program</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Results (1 Year):</strong>
+                    <p>✅ <strong>Churn Reduction:</strong> 28% → 19% (32% improvement)</p>
+                    <p>✅ <strong>Customers Retained:</strong> 90,000 additional renewals</p>
+                    <p>✅ <strong>Revenue Saved:</strong> ₹135 Cr (90,000 × ₹15,000)</p>
+                    <p>✅ <strong>ROI on Retention:</strong> Spent ₹25 Cr on discounts/offers, saved ₹135 Cr (5.4x ROI)</p>
+                    <p>✅ <strong>High-Risk Segment:</strong> 42% retention success rate</p>
+                    <p>✅ <strong>Cross-sell:</strong> 15% of retained customers bought additional products</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Key Insights:</strong>
+                    <p>• Proactive outreach 45-60 days before renewal most effective</p>
+                    <p>• Personalized offers 3x more effective than generic discounts</p>
+                    <p>• Customers who filed claims more loyal if settled quickly (<7 days)</p>
+                    <p>• NCB awareness campaign increased retention by 8% alone</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Part 5: Important KPIs -->
+        <div class="section">
+            <h3>📊 Part 5: Key Performance Indicators (KPIs) for Insurers</h3>
+            
+            <h4>Underwriting KPIs</h4>
+            <div class="kpi-card">
+                <h5>Combined Ratio</h5>
+                <div class="formula-box">
+                    Combined Ratio = (Claims + Expenses) / Premium × 100
+                </div>
+                <p>• <100%: Profit, >100%: Loss</p>
+                <p>Example: Premium ₹1000 Cr, Claims ₹650 Cr, Expenses ₹280 Cr → 93%</p>
+            </div>
+            
+            <div class="kpi-card">
+                <h5>Expense Ratio</h5>
+                <div class="formula-box">
+                    Expense Ratio = Operating Expenses / Net Premium × 100
+                </div>
+                <p>Benchmark: 25-30% for general insurance</p>
+            </div>
+            
+            <h4>Sales & Distribution KPIs</h4>
+            <div class="kpi-card">
+                <h5>New Business Premium</h5>
+                <p>Total premium from new policies issued in a period</p>
+                <p>Growth target: 15-20% YoY for healthy insurers</p>
+            </div>
+            
+            <div class="kpi-card">
+                <h5>Persistency Ratio (13th Month)</h5>
+                <div class="formula-box">
+                    Persistency = Policies Active after 13 months / Policies Issued × 100
+                </div>
+                <p>Measures policy retention quality. Target: >85%</p>
+            </div>
+            
+            <div class="kpi-card">
+                <h5>Premium Per Employee</h5>
+                <div class="formula-box">
+                    Premium/Employee = Total Premium / Number of Employees
+                </div>
+                <p>Productivity metric. Higher is better (efficient operations)</p>
+            </div>
+            
+            <h4>Customer Service KPIs</h4>
+            <div class="kpi-card">
+                <h5>Net Promoter Score (NPS)</h5>
+                <p>Measures customer loyalty: "How likely to recommend us?" (0-10 scale)</p>
+                <p>• Promoters (9-10): Loyal enthusiasts</p>
+                <p>• Passives (7-8): Satisfied but unenthusiastic</p>
+                <p>• Detractors (0-6): Unhappy, may damage brand</p>
+                <div class="formula-box">
+                    NPS = % Promoters - % Detractors
+                </div>
+                <p>Example: 60% Promoters, 15% Detractors → NPS = +45</p>
+                <p>Benchmark: >50 is excellent for insurance</p>
+            </div>
+            
+            <div class="kpi-card">
+                <h5>Customer Lifetime Value (CLV)</h5>
+                <div class="formula-box">
+                    CLV = (Avg Annual Premium × Gross Margin) × Avg Customer Lifespan
+                </div>
+                <p>Example: ₹12,000 premium, 30% margin, 8 years → CLV = ₹28,800</p>
+            </div>
+            
+            <h4>Digital KPIs</h4>
+            <div class="kpi-card">
+                <h5>Digital Adoption Rate</h5>
+                <div class="formula-box">
+                    Digital Rate = Policies Sold Online / Total Policies × 100
+                </div>
+                <p>Industry trend: 35-50% for motor, lower for life/health</p>
+            </div>
+            
+            <div class="kpi-card">
+                <h5>App Engagement Rate</h5>
+                <p>Monthly Active Users / Total App Downloads</p>
+                <p>Target: >40% (customers actively using app)</p>
+            </div>
+        </div>
+
+        <!-- Practice Questions -->
+        <div class="section">
+            <h3>📝 Part 6: Practice Questions (50+ Solved)</h3>
+            
+            <h4>Set 1: Predictive Modeling (Q1-Q10)</h4>
+            
+            <div class="question-set">
+                <div class="question">
+                    <span class="question-num">Q1.</span> Predicting whether a claim will be approved or rejected is which type of ML problem?
+                    <div class="solution">
+                        <strong>Solution:</strong> Classification - Binary classification (two outcomes: Approve/Reject).
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q2.</span> Predicting the exact claim amount in rupees is which type of ML problem?
+                    <div class="solution">
+                        <strong>Solution:</strong> Regression - Predicting continuous numerical value.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q3.</span> What is the first step in the predictive analytics process?
+                    <div class="solution">
+                        <strong>Solution:</strong> Define Problem - Clearly articulate what you want to predict and why.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q4.</span> A model predicts premium with 85% accuracy. What does this mean?
+                    <div class="solution">
+                        <strong>Solution:</strong> 85% of predictions are within acceptable range (typically ±10%) of actual premium. 15% have larger errors.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q5.</span> Name three applications of predictive modeling in insurance.
+                    <div class="solution">
+                        <strong>Solution:</strong> 1. Risk Assessment (underwriting), 2. Claim Amount Prediction, 3. Customer Churn Prediction
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q6.</span> In a dataset of 100,000 policies, 70% is used for training. How many for training?
+                    <div class="solution">
+                        <strong>Solution:</strong> Training data = 100,000 × 0.70 = 70,000 policies
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q7.</span> What is R² score used for?
+                    <div class="solution">
+                        <strong>Solution:</strong> R² (R-squared) measures how well a regression model explains variance in data. Values closer to 1 indicate better fit. Range: 0 to 1.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q8.</span> Customer age, income, policy type are called _____ in ML.
+                    <div class="solution">
+                        <strong>Solution:</strong> Features or Input Variables - The characteristics used to make predictions.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q9.</span> Which algorithm is commonly used for regression problems?
+                    <div class="solution">
+                        <strong>Solution:</strong> Linear Regression (simple), XGBoost or Random Forest (advanced). All are used for predicting continuous values.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q10.</span> What is the output of a churn prediction model?
+                    <div class="solution">
+                        <strong>Solution:</strong> Churn Probability (0-100%) indicating likelihood of customer canceling policy. Higher percentage = higher risk.
+                    </div>
+                </div>
+            </div>
+            
+            <h4>Set 2: Fraud Detection (Q11-Q20)</h4>
+            
+            <div class="question-set">
+                <div class="question">
+                    <span class="question-num">Q11.</span> What is hard fraud in insurance?
+                    <div class="solution">
+                        <strong>Solution:</strong> Hard Fraud - Deliberately causing or faking an incident to collect insurance money (e.g., staging accident, faking theft).
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q12.</span> Exaggerating a legitimate claim by inflating costs is called?
+                    <div class="solution">
+                        <strong>Solution:</strong> Soft Fraud (or Opportunistic Fraud) - Claiming more than actual loss on a real incident.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q13.</span> A claim is filed 5 days after policy purchase. Is this a red flag?
+                    <div class="solution">
+                        <strong>Solution:</strong> Yes - Claims filed immediately after policy purchase are a behavioral red flag indicating possible fraud.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q14.</span> In fraud detection, what is Precision?
+                    <div class="solution">
+                        <strong>Solution:</strong> Precision = Of all claims flagged as fraud, what % are actually fraud. Formula: True Positives / (True Positives + False Positives)
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q15.</span> In fraud detection, what is Recall?
+                    <div class="solution">
+                        <strong>Solution:</strong> Recall = Of all actual fraud cases, what % did we catch. Formula: True Positives / (True Positives + False Negatives)
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q16.</span> A fraud model has 88% Precision and 85% Recall. Out of 100 fraud flags, how many are truly fraud?
+                    <div class="solution">
+                        <strong>Solution:</strong> 88% Precision means 88 out of 100 flagged claims are truly fraudulent. 12 are false positives (genuine wrongly flagged).
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q17.</span> Which ML technique is commonly used for fraud detection?
+                    <div class="solution">
+                        <strong>Solution:</strong> Supervised Learning - Classification algorithms like Random Forest, Logistic Regression, Neural Networks trained on labeled fraud/genuine data.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q18.</span> What is the challenge with fraud data being imbalanced?
+                    <div class="solution">
+                        <strong>Solution:</strong> Fraud cases are only 3-5% of total claims. Model may become biased toward predicting everything as "genuine". Need techniques like SMOTE or class weight adjustment.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q19.</span> Name three behavioral red flags for fraud.
+                    <div class="solution">
+                        <strong>Solution:</strong> 1. Multiple claims in short period, 2. Claim filed immediately after policy purchase, 3. Claim amount close to policy limit
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q20.</span> NIACL saves ₹52 Cr using fraud detection. Previous loss was ₹80 Cr. What percentage was saved?
+                    <div class="solution">
+                        <strong>Solution:</strong> Percentage saved = (52/80) × 100 = 65%
+                    </div>
+                </div>
+            </div>
+            
+            <h4>Set 3: Claim Analytics & KPIs (Q21-Q35)</h4>
+            
+            <div class="question-set">
+                <div class="question">
+                    <span class="question-num">Q21.</span> Calculate Claim Ratio: Premium collected = ₹1000 Cr, Claims paid = ₹720 Cr
+                    <div class="solution">
+                        <strong>Solution:</strong> Claim Ratio = (720/1000) × 100 = 72%
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q22.</span> Is a 95% Claim Ratio good or bad for the insurer?
+                    <div class="solution">
+                        <strong>Solution:</strong> Bad - Above 100% means losses. 95% means only 5% margin left for expenses and profit. Target should be <70% for profitability.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q23.</span> Calculate Settlement Ratio: 9,500 claims settled out of 10,000 filed
+                    <div class="solution">
+                        <strong>Solution:</strong> Settlement Ratio = (9500/10000) × 100 = 95%
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q24.</span> Calculate Claim Frequency: 15,000 claims from 200,000 policies
+                    <div class="solution">
+                        <strong>Solution:</strong> Frequency = 15000/200000 = 0.075 or 7.5%
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q25.</span> Calculate Claim Severity: ₹750 Cr paid for 15,000 claims
+                    <div class="solution">
+                        <strong>Solution:</strong> Severity = 750 Cr / 15000 = ₹5 lakh per claim (average payout)
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q26.</span> What does a high Claim Settlement Ratio indicate?
+                    <div class="solution">
+                        <strong>Solution:</strong> High settlement ratio (>90%) indicates insurer approves most claims, which builds customer trust and brand reputation.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q27.</span> Calculate Combined Ratio: Premium ₹800 Cr, Claims ₹500 Cr, Expenses ₹250 Cr
+                    <div class="solution">
+                        <strong>Solution:</strong> Combined Ratio = (500+250)/800 × 100 = 93.75% (Profitable, since <100%)
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q28.</span> Claims increased from ₹600 Cr to ₹750 Cr. What is percentage increase?
+                    <div class="solution">
+                        <strong>Solution:</strong> Increase = [(750-600)/600] × 100 = 25%
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q29.</span> Average claim processing time reduced from 18 days to 5 days. What is improvement percentage?
+                    <div class="solution">
+                        <strong>Solution:</strong> Reduction = [(18-5)/18] × 100 = 72.2% improvement
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q30.</span> What is the target benchmark for motor insurance claim processing?
+                    <div class="solution">
+                        <strong>Solution:</strong> 7-10 days for motor insurance claims (industry benchmark)
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q31.</span> NIACL processes 50,000 claims/month. 40% are auto-approved. How many manual reviews?
+                    <div class="solution">
+                        <strong>Solution:</strong> Manual reviews = 50000 × 0.60 = 30,000 claims
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q32.</span> Calculate Expense Ratio: Operating expenses ₹280 Cr, Net Premium ₹1000 Cr
+                    <div class="solution">
+                        <strong>Solution:</strong> Expense Ratio = (280/1000) × 100 = 28% (within 25-30% benchmark)
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q33.</span> What are the three levels of claim triage?
+                    <div class="solution">
+                        <strong>Solution:</strong> 1. Auto-Approve (low complexity), 2. Standard Review (medium), 3. Detailed Investigation (high complexity/fraud risk)
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q34.</span> Premium = ₹1200 Cr, Claims = ₹840 Cr, Expenses = ₹300 Cr. Is company profitable?
+                    <div class="solution">
+                        <strong>Solution:</strong> Total Cost = 840 + 300 = ₹1140 Cr. Profit = 1200 - 1140 = ₹60 Cr. Yes, profitable. Combined Ratio = 95% (<100%).
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q35.</span> What technology helps extract data from hospital bills automatically?
+                    <div class="solution">
+                        <strong>Solution:</strong> OCR (Optical Character Recognition) + NLP (Natural Language Processing) - Extracts and interprets text from scanned documents.
+                    </div>
+                </div>
+            </div>
+            
+            <h4>Set 4: Customer Analytics & Churn (Q36-Q45)</h4>
+            
+            <div class="question-set">
+                <div class="question">
+                    <span class="question-num">Q36.</span> Calculate Churn Rate: Started with 50,000 customers, lost 7,000
+                    <div class="solution">
+                        <strong>Solution:</strong> Churn Rate = (7000/50000) × 100 = 14%
+                    </div>
+                </div>
+            <div class="question">
+                    <span class="question-num">Q36.</span> Calculate Churn Rate: Started with 50,000 customers, lost 7,000
+                    <div class="solution">
+                        <strong>Solution:</strong> Churn Rate = (7000/50000) × 100 = 14%
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q37.</span> If Churn Rate is 22%, what is Retention Rate?
+                    <div class="solution">
+                        <strong>Solution:</strong> Retention Rate = 100% - 22% = 78%
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q38.</span> Why does acquiring new customer cost more than retaining existing?
+                    <div class="solution">
+                        <strong>Solution:</strong> New customer acquisition involves marketing costs, sales commissions, onboarding. Existing customers already know brand, trust established. Cost ratio: 5-7x more for new.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q39.</span> Name three warning signs of potential churn.
+                    <div class="solution">
+                        <strong>Solution:</strong> 1. Delayed premium payments, 2. Not responding to renewal reminders, 3. Multiple service complaints
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q40.</span> Churn reduced from 28% to 19%. What is improvement percentage?
+                    <div class="solution">
+                        <strong>Solution:</strong> Reduction = [(28-19)/28] × 100 = 32.14% improvement
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q41.</span> Calculate CLV: Avg premium ₹15,000/year, 25% margin, 10 year lifespan
+                    <div class="solution">
+                        <strong>Solution:</strong> CLV = 15000 × 0.25 × 10 = ₹37,500 (total profit from customer)
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q42.</span> What is the most important predictor in churn models based on case study?
+                    <div class="solution">
+                        <strong>Solution:</strong> Days since last premium payment - Delayed payments strongest indicator of upcoming cancellation.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q43.</span> NIACL retained 90,000 customers at ₹15,000 avg premium. Revenue saved?
+                    <div class="solution">
+                        <strong>Solution:</strong> Revenue = 90000 × 15000 = ₹135 Cr
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q44.</span> Spent ₹25 Cr on retention, saved ₹135 Cr. Calculate ROI.
+                    <div class="solution">
+                        <strong>Solution:</strong> ROI = (135-25)/25 = 4.4x or 440% return on investment
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q45.</span> When is the best time for proactive retention outreach?
+                    <div class="solution">
+                        <strong>Solution:</strong> 45-60 days before policy expiry - Gives enough time for customer to consider offers and make informed decision.
+                    </div>
+                </div>
+            </div>
+            
+            <h4>Set 5: KPIs & Metrics (Q46-Q55)</h4>
+            
+            <div class="question-set">
+                <div class="question">
+                    <span class="question-num">Q46.</span> Calculate NPS: 60% Promoters (9-10), 25% Passives (7-8), 15% Detractors (0-6)
+                    <div class="solution">
+                        <strong>Solution:</strong> NPS = % Promoters - % Detractors = 60 - 15 = +45 (Excellent score for insurance)
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q47.</span> What does an NPS of +50 indicate?
+                    <div class="solution">
+                        <strong>Solution:</strong> Excellent customer loyalty - 50% more promoters than detractors. Customers highly likely to recommend company. Target: >50 for insurance.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q48.</span> Calculate Persistency Ratio: 8,500 policies active after 13 months, 10,000 issued
+                    <div class="solution">
+                        <strong>Solution:</strong> Persistency = (8500/10000) × 100 = 85% (meets target of >85%)
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q49.</span> What does low Persistency Ratio indicate?
+                    <div class="solution">
+                        <strong>Solution:</strong> High early-stage churn - Customers canceling policies within first year. Indicates poor product-market fit, mis-selling, or service issues.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q50.</span> Total premium ₹2000 Cr, 5000 employees. Calculate premium per employee.
+                    <div class="solution">
+                        <strong>Solution:</strong> Premium/Employee = 2000 Cr / 5000 = ₹40 lakh per employee (productivity metric)
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q51.</span> 40,000 policies sold online, 100,000 total. Calculate Digital Adoption Rate.
+                    <div class="solution">
+                        <strong>Solution:</strong> Digital Rate = (40000/100000) × 100 = 40% (within 35-50% benchmark for motor)
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q52.</span> App has 200,000 downloads, 85,000 monthly active users. Calculate engagement rate.
+                    <div class="solution">
+                        <strong>Solution:</strong> Engagement = (85000/200000) × 100 = 42.5% (exceeds >40% target)
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q53.</span> What is the difference between Claim Ratio and Combined Ratio?
+                    <div class="solution">
+                        <strong>Solution:</strong> Claim Ratio = Claims/Premium only. Combined Ratio = (Claims + Operating Expenses)/Premium. Combined Ratio is more comprehensive profitability measure.
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q54.</span> New business premium grew from ₹800 Cr to ₹960 Cr. Calculate YoY growth.
+                    <div class="solution">
+                        <strong>Solution:</strong> Growth = [(960-800)/800] × 100 = 20% YoY (healthy growth for insurers)
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <span class="question-num">Q55.</span> What is the ideal benchmark for Combined Ratio?
+                    <div class="solution">
+                        <strong>Solution:</strong> <100% for profitability. Typically 90-95% considered good. <90% excellent, >100% means operating losses.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Part 7: Advanced Analytics Concepts -->
+        <div class="section">
+            <h3>🎯 Part 7: Analytics Maturity & Implementation</h3>
+            
+            <h4>Analytics Maturity Model</h4>
+            <div class="diagram">
+                <div style="text-align: left; padding: 20px;">
+                    <div style="margin: 15px 0; padding: 15px; background: #fff3cd; border-left: 5px solid #ffc107; border-radius: 5px;">
+                        <strong>Level 1: Descriptive Analytics</strong> - "What happened?"<br>
+                        • Historical reporting, dashboards<br>
+                        • Example: Last quarter claim ratio was 68%
+                    </div>
+                    
+                    <div style="margin: 15px 0; padding: 15px; background: #cfe2ff; border-left: 5px solid #0d6efd; border-radius: 5px;">
+                        <strong>Level 2: Diagnostic Analytics</strong> - "Why did it happen?"<br>
+                        • Root cause analysis, drill-downs<br>
+                        • Example: Claim ratio high because of fraud spike in Region X
+                    </div>
+                    
+                    <div style="margin: 15px 0; padding: 15px; background: #d1ecf1; border-left: 5px solid #0dcaf0; border-radius: 5px;">
+                        <strong>Level 3: Predictive Analytics</strong> - "What will happen?"<br>
+                        • Forecasting, ML models<br>
+                        • Example: Expected claim ratio next quarter: 72%
+                    </div>
+                    
+                    <div style="margin: 15px 0; padding: 15px; background: #d4edda; border-left: 5px solid #28a745; border-radius: 5px;">
+                        <strong>Level 4: Prescriptive Analytics</strong> - "What should we do?"<br>
+                        • Recommendations, optimization<br>
+                        • Example: Reduce claim ratio by targeting high-risk policies with revised pricing
+                    </div>
+                </div>
+            </div>
+            
+            <h4>Building Analytics Culture</h4>
+            <div class="key-point">
+                <strong>1. Data Governance:</strong> Establish clear data ownership, quality standards, security policies
+            </div>
+            <div class="key-point">
+                <strong>2. Skill Development:</strong> Train business users on data interpretation, not just analysts
+            </div>
+            <div class="key-point">
+                <strong>3. Executive Sponsorship:</strong> C-level champions who drive data-driven decision making
+            </div>
+            <div class="key-point">
+                <strong>4. Quick Wins:</strong> Start with high-impact, low-complexity projects to build momentum
+            </div>
+            <div class="key-point">
+                <strong>5. Democratization:</strong> Self-service BI tools so business teams can explore data
+            </div>
+            
+            <h4>Common Analytics Pitfalls</h4>
+            <div class="warning-box">
+                <strong>Analysis Paralysis:</strong> Over-analyzing without taking action. Set decision deadlines.
+            </div>
+            <div class="warning-box">
+                <strong>Correlation ≠ Causation:</strong> Ice cream sales correlate with drowning deaths (both happen in summer). Don't assume one causes the other.
+            </div>
+            <div class="warning-box">
+                <strong>Data Quality Issues:</strong> "Garbage In, Garbage Out" - Models only as good as training data.
+            </div>
+            <div class="warning-box">
+                <strong>Confirmation Bias:</strong> Seeking data that confirms pre-existing beliefs. Stay objective.
+            </div>
+            <div class="warning-box">
+                <strong>Black Box Models:</strong> Complex models that can't be explained to business users. Balance accuracy with interpretability.
+            </div>
+        </div>
+
+        <!-- Part 8: Real-World Implementation -->
+        <div class="section">
+            <h3>🚀 Part 8: From Analytics to Action</h3>
+            
+            <h4>Analytics Project Lifecycle</h4>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Activities</th>
+                        <th>Duration</th>
+                        <th>Deliverable</th>
+                    </tr>
+                    <tr>
+                        <td><strong>1. Discovery</strong></td>
+                        <td>Business problem definition, stakeholder interviews, feasibility study</td>
+                        <td>2-3 weeks</td>
+                        <td>Project charter, success metrics</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Data Preparation</strong></td>
+                        <td>Data collection, cleaning, integration, exploratory analysis</td>
+                        <td>4-6 weeks</td>
+                        <td>Clean dataset, data dictionary</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Model Development</strong></td>
+                        <td>Feature engineering, algorithm selection, training, validation</td>
+                        <td>3-4 weeks</td>
+                        <td>Trained model, accuracy report</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. Deployment</strong></td>
+                        <td>Integration with systems, API development, user training</td>
+                        <td>2-3 weeks</td>
+                        <td>Production-ready model</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5. Monitoring</strong></td>
+                        <td>Performance tracking, model retraining, continuous improvement</td>
+                        <td>Ongoing</td>
+                        <td>Monthly performance reports</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h4>Success Factors</h4>
+            <div class="checklist">
+                <li>Clear business objective linked to revenue/cost/customer satisfaction</li>
+                <li>Executive sponsorship with committed budget</li>
+                <li>Cross-functional team (business + IT + analytics)</li>
+                <li>Availability of quality historical data (minimum 2-3 years)</li>
+                <li>Phased approach with POC before full rollout</li>
+                <li>Change management plan for user adoption</li>
+                <li>Success metrics defined upfront and tracked regularly</li>
+            </div>
+            
+            <h4>NIACL Analytics Roadmap (Hypothetical)</h4>
+            <div class="case-study-box">
+                <h5>📋 3-Year Analytics Transformation Journey</h5>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Year 1: Foundation (Quick Wins)</strong>
+                    <p><strong>Q1-Q2:</strong></p>
+                    <p>• Implement fraud detection for motor claims (save ₹50 Cr)</p>
+                    <p>• Automated claim triage for health (reduce processing time 40%)</p>
+                    <p>• Customer churn prediction for top 20% customers</p>
+                    <p><strong>Q3-Q4:</strong></p>
+                    <p>• Premium optimization model for motor insurance</p>
+                    <p>• NPS dashboard with root cause analysis</p>
+                    <p>• Agent performance analytics</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Year 2: Scale & Integration</strong>
+                    <p><strong>Q1-Q2:</strong></p>
+                    <p>• Expand fraud detection to all product lines</p>
+                    <p>• Real-time claim amount prediction</p>
+                    <p>• Customer 360 view (unified data platform)</p>
+                    <p><strong>Q3-Q4:</strong></p>
+                    <p>• Predictive underwriting for life insurance</p>
+                    <p>• Next-best-action engine for cross-sell</p>
+                    <p>• Self-service BI for all departments</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Year 3: Advanced Capabilities</strong>
+                    <p><strong>Q1-Q2:</strong></p>
+                    <p>• NLP-powered chatbot for customer service</p>
+                    <p>• Image analytics for damage assessment (motor claims)</p>
+                    <p>• IoT integration for telematics-based pricing</p>
+                    <p><strong>Q3-Q4:</strong></p>
+                    <p>• Prescriptive analytics for portfolio optimization</p>
+                    <p>• Real-time risk scoring at point of sale</p>
+                    <p>• AI-powered claims settlement (straight-through processing)</p>
+                </div>
+                
+                <div class="case-section">
+                    <strong style="color: #4facfe;">Expected Business Impact (3 Years):</strong>
+                    <p>✅ Revenue Growth: 25% (better pricing, reduced churn, cross-sell)</p>
+                    <p>✅ Cost Reduction: 30% (fraud detection, automation, efficiency)</p>
+                    <p>✅ Customer Satisfaction: +20 NPS points</p>
+                    <p>✅ Claim Processing Time: 60% reduction</p>
+                    <p>✅ Combined Ratio: Improved from 98% to 90%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recap & Tips -->
+        <div class="section">
+            <h3>📝 Part 9: Key Takeaways & Exam Strategy</h3>
+            
+            <h4>Most Important Concepts</h4>
+            <div class="key-point">
+                <strong>1. Predictive Modeling Process:</strong> Define → Collect → Prepare → Build → Validate → Deploy
+            </div>
+            <div class="key-point">
+                <strong>2. Fraud Detection:</strong> Hard vs Soft fraud, Red flags, Precision vs Recall, Imbalanced data challenge
+            </div>
+            <div class="key-point">
+                <strong>3. Claim KPIs:</strong> Claim Ratio, Combined Ratio, Settlement Ratio, Claim Frequency, Claim Severity
+            </div>
+            <div class="key-point">
+                <strong>4. Churn Analysis:</strong> Warning signs, Retention strategies, CLV, Cost of acquisition vs retention
+            </div>
+            <div class="key-point">
+                <strong>5. Key Metrics:</strong> NPS, Persistency Ratio, Digital Adoption Rate, Premium per Employee
+            </div>
+            
+            <h4>Formula Quick Reference</h4>
+            <div class="formula-box">
+                <strong>Claim Ratio:</strong> (Claims Paid / Premium) × 100<br><br>
+                <strong>Combined Ratio:</strong> (Claims + Expenses) / Premium × 100<br><br>
+                <strong>Settlement Ratio:</strong> (Claims Settled / Claims Filed) × 100<br><br>
+                <strong>Churn Rate:</strong> (Customers Lost / Total Customers) × 100<br><br>
+                <strong>CLV:</strong> (Avg Annual Premium × Margin %) × Customer Lifespan<br><br>
+                <strong>NPS:</strong> % Promoters - % Detractors<br><br>
+                <strong>Claim Frequency:</strong> Number of Claims / Number of Policies<br><br>
+                <strong>Claim Severity:</strong> Total Claim Amount / Number of Claims<br><br>
+                <strong>Expense Ratio:</strong> (Operating Expenses / Premium) × 100<br><br>
+                <strong>Persistency:</strong> (Policies Active after 13 months / Policies Issued) × 100
+            </div>
+            
+            <h4>Case Study Analysis Framework</h4>
+            <div class="tip-box">
+                When reading case studies, identify:<br>
+                1. <strong>Problem Statement:</strong> What business challenge?<br>
+                2. <strong>Data Used:</strong> What historical data, how many records?<br>
+                3. <strong>Analytics Approach:</strong> Which ML technique? Why?<br>
+                4. <strong>Key Features:</strong> What variables used for prediction?<br>
+                5. <strong>Results:</strong> Accuracy, precision, recall metrics<br>
+                6. <strong>Business Impact:</strong> Cost saved, revenue increased, time reduced<br>
+                7. <strong>Learnings:</strong> What worked, what didn't?
+            </div>
+            
+            <h4>Common Exam Question Patterns</h4>
+            <div class="example-box">
+                <h5>Pattern 1: KPI Calculation</h5>
+                <p>Given: Premium ₹X, Claims ₹Y, Expenses ₹Z</p>
+                <p>Calculate: Claim Ratio, Combined Ratio, Profit/Loss</p>
+                <p><strong>Tip:</strong> Memorize formulas, practice quick mental math</p>
+            </div>
+            
+            <div class="example-box">
+                <h5>Pattern 2: ML Application</h5>
+                <p>Scenario: Insurer wants to predict [something]</p>
+                <p>Question: Which ML technique? Classification or Regression?</p>
+                <p><strong>Tip:</strong> Classification for categories (Yes/No, High/Low), Regression for amounts</p>
+            </div>
+            
+            <div class="example-box">
+                <h5>Pattern 3: Case Study Interpretation</h5>
+                <p>Given: Mini case study with results</p>
+                <p>Question: What was business impact? What can be improved?</p>
+                <p><strong>Tip:</strong> Focus on numbers (% improvement, cost saved, ROI)</p>
+            </div>
+            
+            <div class="example-box">
+                <h5>Pattern 4: Analytics Maturity</h5>
+                <p>Given: Description of analytics capability</p>
+                <p>Question: Which level? Descriptive/Diagnostic/Predictive/Prescriptive?</p>
+                <p><strong>Tip:</strong> Look for keywords - "what happened" (descriptive), "what will happen" (predictive)</p>
+            </div>
+            
+            <h4>Exam Time Strategy</h4>
+            <div class="warning-box">
+                <strong>Section 8 in NIACL AO Exam:</strong><br>
+                • Expected Questions: 20-25<br>
+                • Time Allocation: 25-30 minutes<br>
+                • Difficulty: Medium to High (case study based)<br>
+                • Strategy: Read case studies carefully, identify key numbers, attempt calculation questions first
+            </div>
+            
+            <div class="tip-box">
+                <strong>During Exam:</strong><br>
+                • Start with direct KPI calculation questions (easier, more scoring)<br>
+                • Case studies: Read question first, then skim case for relevant info<br>
+                • For ML questions: Identify if output is category or number<br>
+                • If stuck on calculation, move on - come back if time permits<br>
+                • Check units (lakhs, crores) - common mistake area
+            </div>
+        </div>
+
+        <!-- Final Checklist -->
+        <div class="section">
+            <h3>✅ Revision Checklist - Section 8</h3>
+            
+            <div class="checklist">
+                <li>Can you explain predictive modeling process in 6 steps?</li>
+                <li>Do you know difference between Classification and Regression with examples?</li>
+                <li>Can you list 5 applications of predictive modeling in insurance?</li>
+                <li>Can you differentiate between hard fraud and soft fraud?</li>
+                <li>Do you know what Precision and Recall mean in fraud detection?</li>
+                <li>Can you list at least 5 behavioral red flags for fraud?</li>
+                <li>Can you calculate Claim Ratio, Combined Ratio, Settlement Ratio?</li>
+                <li>Do you know benchmark values for these ratios?</li>
+                <li>Can you explain Claim Frequency vs Claim Severity?</li>
+                <li>Do you understand what customer churn is and why it matters?</li>
+                <li>Can you calculate Churn Rate and Retention Rate?</li>
+                <li>Do you know what CLV (Customer Lifetime Value) is?</li>
+                <li>Can you list 4-5 churn warning signs?</li>
+                <li>Do you know how to calculate NPS?</li>
+                <li>Can you explain the 4 levels of analytics maturity?</li>
+                <li>Have you understood all 4 case studies thoroughly?</li>
+                <li>Can you recall key numbers from case studies (accuracy %, savings)?</li>
+                <li>Do you know the difference between auto-adjudication and manual review?</li>
+                <li>Can you explain what ROI means in retention programs?</li>
+                <li>Are you comfortable with all formula calculations?</li>
+            </div>
+            
+            <div style="margin-top: 30px; padding: 20px; background: #fff3e0; border-left: 5px solid #ff9800; border-radius: 5px;">
+                <strong>⏰ Final Revision Time:</strong><br><br>
+                <strong>Tonight (Day 11):</strong><br>
+                • Review all 4 case studies (30 min)<br>
+                • Practice all 55 questions again (45 min)<br>
+                • Memorize all formulas (15 min)<br><br>
+                
+                <strong>Tomorrow (Day 12):</strong><br>
+                • Morning: Skim through key concepts (30 min)<br>
+                • Afternoon: Take a timed mock test of Section 8 (30 min)<br>
+                • Evening: Review mistakes, clarify doubts (30 min)<br><br>
+                
+                <strong>Before Exam:</strong><br>
+                • Quick glance at formula sheet (5 min)<br>
+                • Recall key numbers from case studies (5 min)
+            </div>
+        </div>
+
+        <!-- For Deep Study -->
+        <div class="section" style="background: #d4edda; border: 3px dashed #28a745;">
+            <h3 style="color: #28a745;">📚 For Deep Study & Additional Practice</h3>
+            
+            <div style="padding: 20px;">
+                <h4>🌐 Recommended Resources:</h4>
+                
+                <h5>Online Courses (Free):</h5>
+                <ul style="line-height: 2;">
+                    <li><strong>Kaggle Learn:</strong> Intro to Machine Learning (4 hours, hands-on)</li>
+                    <li><strong>Google Analytics Academy:</strong> Data Analytics fundamentals</li>
+                    <li><strong>Coursera:</strong> "Insurance Analytics" by University of Pennsylvania (audit free)</li>
+                    <li><strong>edX:</strong> "Data Science for Executives" by Columbia</li>
+                </ul>
+                
+                <h5 style="margin-top: 20px;">Industry Reports:</h5>
+                <ul style="line-height: 2;">
+                    <li><strong>McKinsey:</strong> "Analytics in Insurance" reports (free whitepapers)</li>
+                    <li><strong>Deloitte:</strong> "Insurance Outlook" annual reports</li>
+                    <li><strong>IRDAI:</strong> Annual reports with industry statistics</li>
+                    <li><strong>PWC:</strong> "Insurtech" reports</li>
+                </ul>
+                
+                <h5 style="margin-top: 20px;">Books (Advanced Reading):</h5>
+                <ul style="line-height: 2;">
+                    <li>"Predictive Analytics" by Eric Siegel</li>
+                    <li>"Data Science for Business" by Foster Provost</li>
+                    <li>"Insurance Analytics: A Practical Guide" by Tony Boobier</li>
+                    <li>"Competing on Analytics" by Thomas Davenport</li>
+                </ul>
+                
+                <h5 style="margin-top: 20px;">YouTube Channels:</h5>
+                <ul style="line-height: 2;">
+                    <li><strong>StatQuest:</strong> ML concepts explained simply (highly recommended)</li>
+                    <li><strong>3Blue1Brown:</strong> Neural networks visualized</li>
+                    <li><strong>Krish Naik:</strong> Practical ML tutorials</li>
+                    <li><strong>Actuarial Science Channel:</strong> Insurance-specific analytics</li>
+                </ul>
+                
+                <h5 style="margin-top: 20px;">Practice Platforms:</h5>
+                <ul style="line-height: 2;">
+                    <li><strong>Kaggle:</strong> Insurance prediction competitions (practice datasets)</li>
+                    <li><strong>Analytics Vidhya:</strong> Insurance hackathons and tutorials</li>
+                    <li><strong>DPhi:</strong> Beginner-friendly data science challenges</li>
+                </ul>
+                
+                <h4 style="margin-top: 30px;">🔗 Important Links:</h4>
+                <ul style="line-height: 2;">
+                    <li><strong>IRDAI Annual Reports:</strong> irdai.gov.in → Publications → Annual Reports</li>
+                    <li><strong>NIACL Website:</strong> www.newindia.co.in → Investor Relations → Financial Results</li>
+                    <li><strong>Insurance Institute of India:</strong> www.insuranceinstituteofindia.com → Research Papers</li>
+                </ul>
+                
+                <h4 style="margin-top: 30px;">💡 Pro Tips for Learning:</h4>
+                <div style="background: white; padding: 15px; border-radius: 5px; margin-top: 10px;">
+                    <p><strong>1. Learn by Doing:</strong> Download a simple insurance dataset from Kaggle, try basic analysis in Excel</p>
+                    <p><strong>2. Follow Industry News:</strong> Subscribe to Insurance Times, Economic Times Insurance section</p>
+                    <p><strong>3. Connect Concepts:</strong> Every analytics concept - think "how does this apply to NIACL?"</p>
+                    <p><strong>4. Teach Others:</strong> Explain concepts to friends/family - best way to solidify understanding</p>
+                    <p><strong>5. Stay Curious:</strong> When you see insurance ads, think about analytics behind targeting, pricing</p>
+                </div>
+                
+                <div style="background: #fff3cd; padding: 15px; border-radius: 5px; margin-top: 30px; border-left: 4px solid #ffc107;">
+                    <p><strong>⚠️ Important Note:</strong> These deep study resources are optional and for those planning a career in analytics. For NIACL AO exam, the 55 practice questions and 4 case studies in this document are sufficient. Use additional resources only after completing all sections 1-9 of the study material.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Summary -->
+        <div style="text-align: center; margin: 40px 0; padding: 40px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 15px; color: white;">
+            <h1 style="color: white; font-size: 2.5em; margin-bottom: 20px;">🎉 Outstanding Achievement! 🎉</h1>
+            <h2 style="color: white; margin-bottom: 30px;">Days 11-12 Complete - Section 8 Mastered!</h2>
+            
+            <div style="background: rgba(255,255,255,0.2); padding: 30px; border-radius: 10px; margin: 20px 0;">
+                <p style="font-size: 1.3em; line-height: 1.8;">
+                    <strong>You've conquered Insurance Analytics - the heart of modern insurance!</strong><br>
+                    From predictive modeling to fraud detection, claim optimization to churn prevention,<br>
+                    you now understand how data transforms insurance operations.
+                </p>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                <h3 style="color: white;">📊 Your Accomplishments:</h3>
+                <p style="font-size: 1.2em; margin: 15px 0;"><strong>55 Practice Questions Solved ✅</strong></p>
+                <p style="font-size: 1.2em;">4 Real Case Studies Analyzed ✅</p>
+                <p style="font-size: 1.2em;">10+ KPI Formulas Mastered ✅</p>
+                <p style="font-size: 1.2em;">Analytics Lifecycle Understood ✅</p>
+                <p style="font-size: 1.2em;">Business Impact Quantified ✅</p>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                <h3 style="color: white;">🎯 What You've Learned:</h3>
+                <div style="text-align: left; padding: 0 40px; font-size: 1.1em; line-height: 2;">
+                    <p>✔️ <strong>Predictive Modeling:</strong> Risk assessment, claim prediction, customer lifetime value</p>
+                    <p>✔️ <strong>Fraud Detection:</strong> 85% accuracy, ₹52 Cr savings case study</p>
+                    <p>✔️ <strong>Claim Analytics:</strong> Processing time reduced 72%, auto-adjudication implemented</p>
+                    <p>✔️ <strong>Customer Churn:</strong> 32% reduction, ₹135 Cr revenue saved</p>
+                    <p>✔️ <strong>Key Metrics:</strong> Claim Ratio, Combined Ratio, NPS, CLV, Persistency</p>
+                    <p>✔️ <strong>Real ROI:</strong> 5.4x return on retention investment</p>
+                </div>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                <h3 style="color: white;">💼 Real-World Impact You Learned:</h3>
+                <p style="font-size: 1.1em; line-height: 1.8;">
+                    <strong>Case Study 1:</strong> Premium prediction (85% accuracy, instant quotes)<br>
+                    <strong>Case Study 2:</strong> Fraud detection (saved ₹52 Cr, 5.7x improvement)<br>
+                    <strong>Case Study 3:</strong> Claim processing (18 days → 5 days, 40% auto-approved)<br>
+                    <strong>Case Study 4:</strong> Churn reduction (28% → 19%, retained 90,000 customers)
+                </p>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                <h3 style="color: white;">📈 Your Study Progress:</h3>
+                <div style="font-size: 1.3em; margin: 20px 0;">
+                    <p><strong>80% Complete!</strong> 🎯</p>
+                    <p style="margin-top: 15px;">Sections Completed: 1, 2, 3, 4, 5, 6, 7, 8 ✅</p>
+                    <p>Remaining: Section 9 (Days 13), Section 10 (Days 14-15)</p>
+                </div>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                <h3 style="color: white;">🚀 What's Next?</h3>
+                <p style="font-size: 1.2em; margin-top: 15px;">
+                    <strong>Section 9: Aptitude, Reasoning & English</strong><br>
+                    Day 13: Brush up fundamentals + practice questions
+                </p>
+                <p style="margin-top: 15px; font-size: 1.1em;">
+                    You'll cover: Quantitative Aptitude shortcuts,<br>
+                    Logical Reasoning patterns, English comprehension,<br>
+                    Grammar, Vocabulary - everything for objective sections!
+                </p>
+            </div>
+            
+            <div style="margin-top: 40px;">
+                <p style="font-size: 1.3em; font-weight: bold;">
+                    "In God we trust. All others must bring data."<br>
+                    – W. Edwards Deming
+                </p>
+                <p style="font-size: 1.1em; margin-top: 20px;">
+                    You're not just preparing for an exam,<br>
+                    you're preparing to revolutionize insurance with analytics! 📊💡
+                </p>
+            </div>
+            
+            <div style="margin-top: 40px; font-size: 1.4em;">
+                <p><strong>Only 3 Days Left! The Finish Line is in Sight! 🏁</strong></p>
+                <p style="font-size: 0.9em; margin-top: 10px;">Take a short break, then continue with Section 9!</p>
+            </div>
+        </div>
+        
+        <!-- Summary Stats Box -->
+        <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; margin: 30px 0;">
+            <h3 style="color: #4facfe; text-align: center; margin-bottom: 20px;">📊 Section 8 Statistics</h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <div style="background: white; padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <div style="font-size: 2.5em; color: #4facfe; font-weight: bold;">55</div>
+                    <div style="color: #666; margin-top: 5px;">Practice Questions</div>
+                </div>
+                
+                <div style="background: white; padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <div style="font-size: 2.5em; color: #00f2fe; font-weight: bold;">4</div>
+                    <div style="color: #666; margin-top: 5px;">Real Case Studies</div>
+                </div>
+                
+                <div style="background: white; padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <div style="font-size: 2.5em; color: #28a745; font-weight: bold;">10</div>
+                    <div style="color: #666; margin-top: 5px;">Key Formulas</div>
+                </div>
+                
+                <div style="background: white; padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <div style="font-size: 2.5em; color: #ffc107; font-weight: bold;">8</div>
+                    <div style="color: #666; margin-top: 5px;">Major Topics</div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <h4 style="color: #4facfe; margin-bottom: 15px;">Topics Covered:</h4>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+                    <span style="background: #4facfe; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9em;">Predictive Modeling</span>
+                    <span style="background: #00f2fe; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9em;">Fraud Detection</span>
+                    <span style="background: #28a745; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9em;">Claim Analytics</span>
+                    <span style="background: #ffc107; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9em;">Customer Churn</span>
+                    <span style="background: #dc3545; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9em;">KPI Metrics</span>
+                    <span style="background: #6f42c1; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9em;">Analytics Maturity</span>
+                    <span style="background: #fd7e14; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9em;">ROI Analysis</span>
+                    <span style="background: #20c997; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9em;">Implementation</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quick Revision Card -->
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; color: white; margin: 30px 0;">
+            <h3 style="color: white; text-align: center; margin-bottom: 20px;">⚡ Quick Revision Card - Carry This to Exam!</h3>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                <h4 style="color: white; margin-bottom: 15px;">Must Remember Formulas:</h4>
+                <div style="font-family: 'Courier New', monospace; line-height: 2;">
+                    <p>Claim Ratio = (Claims/Premium) × 100 [Target: <70%]</p>
+                    <p>Combined Ratio = (Claims+Expenses)/Premium × 100 [Target: <100%]</p>
+                    <p>Churn Rate = (Lost/Total) × 100</p>
+                    <p>CLV = Premium × Margin% × Years</p>
+                    <p>NPS = %Promoters - %Detractors [Target: >50]</p>
+                    <p>Settlement Ratio = (Settled/Filed) × 100 [Higher better]</p>
+                </div>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin-top: 20px;">
+                <h4 style="color: white; margin-bottom: 15px;">Quick Decision Tree:</h4>
+                <div style="line-height: 2;">
+                    <p><strong>Output is Category?</strong> → Classification</p>
+                    <p><strong>Output is Number?</strong> → Regression</p>
+                    <p><strong>"What happened?"</strong> → Descriptive</p>
+                    <p><strong>"Why happened?"</strong> → Diagnostic</p>
+                    <p><strong>"What will happen?"</strong> → Predictive</p>
+                    <p><strong>"What should we do?"</strong> → Prescriptive</p>
+                </div>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin-top: 20px;">
+                <h4 style="color: white; margin-bottom: 15px;">Case Study Key Numbers:</h4>
+                <div style="line-height: 1.8;">
+                    <p>🎯 Premium Model: 85% accuracy, instant quotes</p>
+                    <p>🎯 Fraud Detection: 92% accuracy, saved ₹52 Cr</p>
+                    <p>🎯 Claim Processing: 72% time reduction, 40% auto-approved</p>
+                    <p>🎯 Churn Reduction: 28%→19%, saved ₹135 Cr, 5.4x ROI</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div style="text-align: center; padding: 20px; background: #f0f0f0; border-radius: 8px; margin-top: 40px;">
+            <p style="font-size: 0.9em; color: #666;">
+                <strong>NIACL AO (Business Analyst) Study Material - Section 8</strong><br>
+                Days 11-12: Insurance Analytics & Case Studies | 55 Practice Questions<br>
+                Complete Self-Study Book for Exam Preparation<br><br>
+                📧 Questions? Review case studies one more time before moving on!<br>
+                🎯 Target: Master all 15 days before exam<br>
+                💪 You're 80% done! Home stretch begins now!<br><br>
+                <strong>Next Stop: Section 9 - Aptitude, Reasoning & English (Day 13)</strong>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+                
+                
